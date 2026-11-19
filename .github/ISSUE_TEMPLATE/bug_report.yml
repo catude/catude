@@ -1,0 +1,31 @@
+name: Bug report
+description: Something does not work or shows the wrong thing
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you did, what you expected and what you saw. A screenshot helps.
+    validations:
+      required: true
+  - type: textarea
+    id: debug
+    attributes:
+      label: Output of `catude debug`
+      description: Versions, terminal and paths. It contains no secrets, but read it before pasting.
+      render: text
+    validations:
+      required: true
+  - type: dropdown
+    id: os
+    attributes:
+      label: System
+      options: [Windows 11, Windows 10, macOS, Linux, WSL]
+    validations:
+      required: true
+  - type: input
+    id: terminal
+    attributes:
+      label: Terminal and font
+      placeholder: Windows Terminal with Cascadia Mono, iTerm2, kitty…

@@ -1,0 +1,16 @@
+name: Idea or request
+description: Something catude could show or do
+labels: [idea]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What you are trying to do
+      description: The task or question you have about your Claude setup, in your own words.
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would help
+      description: How you imagine it in catude (a tab, a key, a command). Optional.

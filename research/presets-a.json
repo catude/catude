@@ -1,0 +1,1168 @@
+[
+ {
+  "id": "lauren-tan-pstack",
+  "name": "Lauren Tan",
+  "handle": "@poteto (GitHub poteto)",
+  "role": "Software engineer (GitHub bio: @xai-org) and React Compiler core team member; author of the pstack agent-skills plugin, which she says she uses daily at Cursor. Previously at Meta and Netflix.",
+  "sources": [
+   {
+    "title": "pstack README (cursor/plugins)",
+    "url": "https://github.com/cursor/plugins/tree/main/pstack",
+    "date": null
+   },
+   {
+    "title": "pstack in Claude Code (adapter doc)",
+    "url": "https://github.com/cursor/plugins/blob/main/harness/pstack/claude-code/docs/harness/claude-code.md",
+    "date": null
+   },
+   {
+    "title": "poteto/brainmaxxing: persistent memory for Claude Code",
+    "url": "https://github.com/poteto/brainmaxxing",
+    "date": "2026-02-27"
+   },
+   {
+    "title": "How I Use Cursor (X article, linked from flaviocopes.com/pstack)",
+    "url": "https://x.com/poteto/status/2058975157503570132",
+    "date": null
+   },
+   {
+    "title": "Trust First, Then Parallel (secondary summary of her talk)",
+    "url": "https://redreamality.com/blog/lauren-tan-poteto-trust-before-parallel/",
+    "date": "2026-09-21"
+   }
+  ],
+  "philosophy": "Go deep before going fast: make one agent trustworthy on a whole problem (write less, better, verified code), then parallelise. Turn each correction into structure such as lint rules, types or skills, not more prose.",
+  "process": [
+   "First: /pstack:setup-pstack to pick a reasoning budget and the model for each role (re-run it when pstack's defaults change; an older rule keeps pinning the old defaults)",
+   "Start rigorous work with /pstack:poteto-mode, which matches the task to a playbook (bug fix, feature, refactor, perf, investigation...) and copies its steps into a todo list",
+   "Understand first: /how and /why for code walkthroughs and design rationale",
+   "Design before code: /architect sketches types, signatures and modules",
+   "Build, then clean: /unslop for prose, /no-comments (Comment Sicko subagent) for code",
+   "Verify with evidence: a project-local verification skill (/create-verification-skill) plus adversarial multi-model review (/interrogate)",
+   "Encode lessons (/reflect captures the recipe as a skill edit; /correct turns repeated mistakes into types, lint, CI or tests). Once one agent's output can be trusted, parallelise (/swarm, /arena, autopilot playbooks)"
+  ],
+  "tools": [
+   "git worktrees",
+   "gh",
+   "Chrome DevTools Protocol (verification)",
+   "lint rules / type checker / CI as guardrails"
+  ],
+  "mcp": [],
+  "marketplaces": [
+   {
+    "name": "cursor-plugins",
+    "repo": "cursor/plugins",
+    "commit": "93b916d4a1e806507e22f4716b352fa91f2b227e",
+    "license": "MIT (pstack folder LICENSE, (c) 2026 Lauren Tan); no top-level repo license detected"
+   }
+  ],
+  "plugins": [
+   {
+    "id": "pstack@cursor-plugins",
+    "url": "https://github.com/cursor/plugins/tree/main/harness/pstack/claude-code"
+   }
+  ],
+  "skills": [
+   {
+    "name": "poteto-mode",
+    "repo": "cursor/plugins",
+    "path": "harness/pstack/claude-code/skills/poteto-mode",
+    "commit": "93b916d4a1e806507e22f4716b352fa91f2b227e",
+    "license": "MIT",
+    "description": "Router skill: picks one of 22 playbooks and runs other pstack skills as steps need them."
+   },
+   {
+    "name": "setup-pstack",
+    "repo": "cursor/plugins",
+    "path": "harness/pstack/claude-code/skills/setup-pstack",
+    "commit": "93b916d4a1e806507e22f4716b352fa91f2b227e",
+    "license": "MIT",
+    "description": "Pick models per role and reasoning budget; writes ~/.claude/rules/pstack-models.md in Claude Code."
+   },
+   {
+    "name": "poteto-help",
+    "repo": "cursor/plugins",
+    "path": "harness/pstack/claude-code/skills/poteto-help",
+    "commit": "93b916d4a1e806507e22f4716b352fa91f2b227e",
+    "license": "MIT",
+    "description": "Guide to pstack setup and picking a skill/playbook."
+   },
+   {
+    "name": "how",
+    "repo": "cursor/plugins",
+    "path": "harness/pstack/claude-code/skills/how",
+    "commit": "93b916d4a1e806507e22f4716b352fa91f2b227e",
+    "license": "MIT",
+    "description": "How does X work / where should this live: architectural walkthroughs."
+   },
+   {
+    "name": "why",
+    "repo": "cursor/plugins",
+    "path": "harness/pstack/claude-code/skills/why",
+    "commit": "93b916d4a1e806507e22f4716b352fa91f2b227e",
+    "license": "MIT",
+    "description": "Cited read on design rationale, regressions, postmortems."
+   },
+   {
+    "name": "architect",
+    "repo": "cursor/plugins",
+    "path": "harness/pstack/claude-code/skills/architect",
+    "commit": "93b916d4a1e806507e22f4716b352fa91f2b227e",
+    "license": "MIT",
+    "description": "Sketch types, signatures and module structure before code."
+   },
+   {
+    "name": "interrogate",
+    "repo": "cursor/plugins",
+    "path": "harness/pstack/claude-code/skills/interrogate",
+    "commit": "93b916d4a1e806507e22f4716b352fa91f2b227e",
+    "license": "MIT",
+    "description": "Adversarial, multi-model review of code or plans."
+   },
+   {
+    "name": "unslop",
+    "repo": "cursor/plugins",
+    "path": "harness/pstack/claude-code/skills/unslop",
+    "commit": "93b916d4a1e806507e22f4716b352fa91f2b227e",
+    "license": "MIT",
+    "description": "Cut AI tells from any writing."
+   },
+   {
+    "name": "no-comments",
+    "repo": "cursor/plugins",
+    "path": "harness/pstack/claude-code/skills/no-comments",
+    "commit": "93b916d4a1e806507e22f4716b352fa91f2b227e",
+    "license": "MIT",
+    "description": "Spawn Comment Sicko, fix accepted findings, encode claimed constraints."
+   },
+   {
+    "name": "tdd",
+    "repo": "cursor/plugins",
+    "path": "harness/pstack/claude-code/skills/tdd",
+    "commit": "93b916d4a1e806507e22f4716b352fa91f2b227e",
+    "license": "MIT",
+    "description": "Test-first only when asked or when a cheap local test target exists."
+   },
+   {
+    "name": "swarm",
+    "repo": "cursor/plugins",
+    "path": "harness/pstack/claude-code/skills/swarm",
+    "commit": "93b916d4a1e806507e22f4716b352fa91f2b227e",
+    "license": "MIT",
+    "description": "Fan out N parallel workers and return one report."
+   },
+   {
+    "name": "arena",
+    "repo": "cursor/plugins",
+    "path": "harness/pstack/claude-code/skills/arena",
+    "commit": "93b916d4a1e806507e22f4716b352fa91f2b227e",
+    "license": "MIT",
+    "description": "N parallel candidates on one task; pick a base and graft the best parts."
+   },
+   {
+    "name": "create-verification-skill",
+    "repo": "cursor/plugins",
+    "path": "harness/pstack/claude-code/skills/create-verification-skill",
+    "commit": "93b916d4a1e806507e22f4716b352fa91f2b227e",
+    "license": "MIT",
+    "description": "Generate a project-local skill that drives the app like a user to prove changes work."
+   },
+   {
+    "name": "reflect",
+    "repo": "cursor/plugins",
+    "path": "harness/pstack/claude-code/skills/reflect",
+    "commit": "93b916d4a1e806507e22f4716b352fa91f2b227e",
+    "license": "MIT",
+    "description": "Mine the transcript for durable learnings and edit existing skills."
+   },
+   {
+    "name": "reflect (brainmaxxing)",
+    "repo": "poteto/brainmaxxing",
+    "path": ".agents/skills/reflect",
+    "commit": "ec4d8e43dee639d6f5d94aed3ca16af7b298ecfc",
+    "license": "MIT",
+    "description": "Claude Code memory loop: write learnings to a brain/ markdown vault (also meditate, ruminate, plan, review skills plus SessionStart hooks in .claude/)."
+   }
+  ],
+  "agents": [
+   {
+    "name": "poteto-agent",
+    "repo": "cursor/plugins",
+    "path": "harness/pstack/claude-code/agents/poteto-agent.md",
+    "commit": "93b916d4a1e806507e22f4716b352fa91f2b227e",
+    "license": "MIT",
+    "description": "Delegate subagent spawned by poteto-mode for code-writing/helper tasks (pstack:poteto-agent)."
+   },
+   {
+    "name": "comment-sicko",
+    "repo": "cursor/plugins",
+    "path": "harness/pstack/claude-code/agents/comment-sicko.md",
+    "commit": "93b916d4a1e806507e22f4716b352fa91f2b227e",
+    "license": "MIT",
+    "description": "Comment-hating reviewer that deletes needless comments and flags workaround code."
+   }
+  ],
+  "commands": [],
+  "settings": {
+   "model": "opus",
+   "effortLevel": "xhigh",
+   "notes": "Correct two details: (1) Cursor cloud agents are not simply skipped: 'environment: cloud' maps to a worktree and only steps that need the cloud agent itself are skipped; Bugbot comments are triaged as ordinary review threads; only Automations are always skipped. (2) Add that the default review panel is 'fable 5.2 / opus 5.5 / gemini 4 carbon' and that in Claude Code the Gemini seat falls back to the session model. Known problem to mention: open issue #1270 'poteto-agent's Cursor model slug makes Claude Code run it on a fallback model'. brainmaxxing hooks are SessionStart (startup|resume) and PostToolUse (brain/)."
+  },
+  "unverified": [
+   "Phrase 'all code is slop except mine' not found in any indexed source",
+   "Current employer: a secondary profile (teamday.ai) says she is on the Grok Bot core team; the pstack README itself only says Meta, Netflix and Cursor",
+   "Date of the 'How I Use Cursor' X article (not fetched directly)",
+   "Talk details (title, event, video URL) come only from a secondary summary",
+   "The X article 'How I Use Cursor' (x.com/poteto/status/2058975157503570132) could not be fetched; nothing in the preset depends on it once the README is used as the source",
+   "Whether her team is Cursor or Grok Bot inside SpaceXAI: GitHub bio says @xai-org; the only source for 'Grok Bot core team' is secondary",
+   "The cited talk is known only through a secondary summary (redreamality.com); do not quote it as her words",
+   "cursor/plugins main may have moved past 93b916d (repo pushed_at 2026-11-18T07:33Z)"
+  ],
+  "users_want": [
+   {
+    "point": "Support for harnesses other than Cursor: the most up-voted pstack issue asks for Codex installation and native agents",
+    "url": "https://github.com/cursor/plugins/issues/734"
+   },
+   {
+    "point": "Claude Code users report the port is second-class: poteto-agent runs on a fallback model and review panels cannot use a non-Claude seat",
+    "url": "https://github.com/cursor/plugins/issues/1270"
+   }
+  ],
+  "factchecked": "2026-11-18"
+ },
+ {
+  "id": "boris-cherny-claude-code",
+  "name": "Boris Cherny",
+  "handle": "@bcherny",
+  "role": "Creator and lead of Claude Code at Anthropic.",
+  "sources": [
+   {
+    "title": "Thread: how I use Claude Code (personal setup)",
+    "url": "https://threadreaderapp.com/thread/2007179832300581177",
+    "date": "2026-01-02"
+   },
+   {
+    "title": "Thread: tips from the Claude Code team",
+    "url": "https://x.com/bcherny/status/2017742741636321619",
+    "date": "2026-01-31"
+   },
+   {
+    "title": "Thread: customizing Claude Code",
+    "url": "https://threadreaderapp.com/thread/2021699851499798911",
+    "date": "2026-02-11"
+   },
+   {
+    "title": "Thread: built-in git worktree support",
+    "url": "https://threadreaderapp.com/thread/2025007393290272904.html",
+    "date": "2026-02-21"
+   },
+   {
+    "title": "Summary of the team tips thread (paddo.dev)",
+    "url": "https://paddo.dev/blog/claude-code-team-tips/",
+    "date": "2026-02-01"
+   }
+  ],
+  "philosophy": "A mostly vanilla setup used in parallel. The biggest lever is giving Claude a way to verify its own work, plus a shared CLAUDE.md that grows whenever Claude makes a mistake.",
+  "process": [
+   "Run several sessions in parallel (5 local terminal tabs plus 5-10 on claude.ai/code, or one git worktree / checkout per task)",
+   "Start most sessions in Plan mode (Shift+Tab twice) and go back and forth until the plan is right (team tip: switch back to Plan mode as soon as something goes sideways)",
+   "Switch to auto-accept edits and let Claude implement, usually in one shot",
+   "Verify: tests, bash checks, or browser/simulator testing (Claude Chrome extension), optionally via a background agent or a Stop hook",
+   "Verify, simplify, then open a PR. Jan 2026: code-simplifier and (non-public) verify-app subagents plus /commit-push-pr. Apr 2026: a personal /go skill that tests end to end, runs /simplify and puts up a PR",
+   "After every correction, add a rule to the checked-in CLAUDE.md (also from PR review via @claude and the GitHub Action)",
+   "Turn anything done more than once a day into a slash command or skill checked into git"
+  ],
+  "tools": [
+   "gh",
+   "bq (BigQuery CLI)",
+   "git worktrees / claude --worktree",
+   "Claude Code GitHub Action (/install-github-action)",
+   "Claude in Chrome extension",
+   "iTerm2 / Ghostty",
+   "/sandbox",
+   "/statusline"
+  ],
+  "mcp": [
+   {
+    "name": "Slack",
+    "add": null,
+    "url": "https://threadreaderapp.com/thread/2007179832300581177"
+   }
+  ],
+  "marketplaces": [
+   {
+    "name": "claude-plugins-official",
+    "repo": "anthropics/claude-plugins-official",
+    "commit": "e6143c9807a001832badb63e89d58ffe25d542ec",
+    "license": "Apache-2.0"
+   }
+  ],
+  "plugins": [
+   {
+    "id": "code-simplifier@claude-plugins-official",
+    "url": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/code-simplifier"
+   },
+   {
+    "id": "ralph-loop@claude-plugins-official",
+    "url": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/ralph-loop"
+   },
+   {
+    "id": "commit-commands@claude-plugins-official",
+    "url": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/commit-commands"
+   }
+  ],
+  "skills": [],
+  "agents": [
+   {
+    "name": "code-simplifier",
+    "repo": "anthropics/claude-plugins-official",
+    "path": "plugins/code-simplifier/agents/code-simplifier.md",
+    "commit": "e6143c9807a001832badb63e89d58ffe25d542ec",
+    "license": "Apache-2.0",
+    "description": "Simplifies recently changed code for clarity and maintainability without changing behaviour; Boris names it as one he runs after Claude finishes."
+   }
+  ],
+  "commands": [
+   {
+    "name": "commit-push-pr",
+    "repo": "anthropics/claude-plugins-official",
+    "path": "plugins/commit-commands/commands/commit-push-pr.md",
+    "commit": "e6143c9807a001832badb63e89d58ffe25d542ec",
+    "license": "Apache-2.0",
+    "description": "Branch, commit, push and open a PR with gh, using inline bash to pre-compute git status/diff."
+   },
+   {
+    "name": "commit-push-pr (Claude Code repo copy)",
+    "repo": "anthropics/claude-code",
+    "path": ".claude/commands/commit-push-pr.md",
+    "commit": "762e317bb2152f767e2821606b39492befeebf53",
+    "license": "Proprietary (LICENSE.md: (c) Anthropic PBC, all rights reserved, Commercial Terms)",
+    "description": "Same idea, as checked into the Claude Code repo's .claude/commands."
+   }
+  ],
+  "settings": {
+   "model": "opus",
+   "effortLevel": "xhigh",
+   "notes": "Outdated. Latest statement (2026-04-16, Opus 4.7 thread): 'Personally, I use xhigh effort for most tasks, and max effort for the hardest tasks'; he also recommends auto mode as the safer alternative to --dangerously-skip-permissions and /fewer-permission-prompts to tune the allowlist. 'Opus 4.5 with thinking for everything' (Jan 2026) and 'High for everything' (Feb 2026) are superseded. 'Permission requests routed to Opus by a hook' is a team tip, not his own setup. The rest (PostToolUse formatter, Stop hook, shared .mcp.json for Slack, agent field / --agent, isolation: worktree, Bash(bun run *) wildcard) is supported."
+  },
+  "unverified": [
+   "verify-app subagent is not public; no repo path found",
+   "That the public plugins/code-simplifier is the exact agent the team uses (secondary blogs quote him saying so; his own post was not fetched)",
+   "That ralph-loop is the renamed 'ralph-wiggum' plugin he mentioned (rename claim is secondary; the README confirms it implements the Ralph Wiggum technique)",
+   "He did not name commit-commands; it is listed as the public Apache-2.0 version of his /commit-push-pr",
+   "How the Sentry integration is wired (MCP or CLI) is not stated",
+   "The Jan 31 date for the team thread comes from a summary",
+   "Whether xhigh/Opus is still his choice in Nov 2026: the newest primary statement found is from 2026-04-16",
+   "The Jan 31 date of the team-tips thread is now confirmed by the unrolled thread (https://threadreaderapp.com/thread/2017742741636321619); remove that item from 'unverified'",
+   "His /go skill is not public"
+  ],
+  "users_want": [
+   {
+    "point": "Readers ask what it costs: running 5-15 parallel Opus sessions looks out of reach without Anthropic-level token quotas",
+    "url": "https://news.ycombinator.com/item?id=46522828"
+   },
+   {
+    "point": "Readers ask for clarity on slash commands versus Agent Skills, which the Jan 2026 thread does not mention",
+    "url": "https://news.ycombinator.com/item?id=46522675"
+   }
+  ],
+  "factchecked": "2026-11-18"
+ },
+ {
+  "id": "simon-willison-agentic-engineering",
+  "name": "Simon Willison",
+  "handle": "@simonw (simonwillison.net)",
+  "role": "Independent developer and blogger, co-creator of Django, creator of Datasette and the llm CLI.",
+  "sources": [
+   {
+    "title": "Agentic Engineering Patterns (guide index)",
+    "url": "https://simonwillison.net/guides/agentic-engineering-patterns/",
+    "date": "2026-02-23"
+   },
+   {
+    "title": "Designing agentic loops",
+    "url": "https://simonwillison.net/2025/Sep/30/designing-agentic-loops/",
+    "date": "2025-09-30"
+   },
+   {
+    "title": "Embracing the parallel coding agent lifestyle",
+    "url": "https://simonwillison.net/2025/Oct/5/parallel-coding-agents/",
+    "date": "2025-10-05"
+   },
+   {
+    "title": "Claude Skills are awesome, maybe a bigger deal than MCP",
+    "url": "https://simonwillison.net/2025/Oct/16/claude-skills/",
+    "date": "2025-10-16"
+   },
+   {
+    "title": "Introducing Showboat and Rodney, so agents can demo what they've built",
+    "url": "https://simonwillison.net/2026/Feb/10/showboat-and-rodney/",
+    "date": "2026-02-10"
+   },
+   {
+    "title": "A new way to extract detailed transcripts from Claude Code",
+    "url": "https://simonwillison.net/2025/Dec/25/claude-code-transcripts/",
+    "date": "2025-12-25"
+   }
+  ],
+  "philosophy": "Agentic engineering means professionals amplifying their expertise with agents. Code is cheap now, so spend effort on tests, proof that the code works, and safe sandboxes. Prefer CLI tools and skills over MCP.",
+  "process": [
+   "Open each session with 'First run the tests' (for example uv run pytest) so the agent knows the suite exists",
+   "Implement with 'Use red/green TDD'",
+   "Have the agent prove the feature by hand-testing it and recording a demo (showboat, with rodney for browser screenshots)",
+   "Understand unfamiliar code through linear walkthroughs and interactive explanations",
+   "Run agents in parallel for research, scouting attempts, small maintenance and carefully specified tasks, each in a fresh checkout",
+   "Prefer YOLO mode in a sandbox or on someone else's computer (Docker, Codespaces, Codex Cloud, Claude Code for web) with test/staging credentials and a tight budget; he admits he also runs it locally when he is confident no malicious instructions can reach the context",
+   "Review the code before sharing it, and optionally publish the session transcript with claude-code-transcripts (he links transcripts from his commits)"
+  ],
+  "tools": [
+   "uv / uvx",
+   "pytest",
+   "showboat",
+   "rodney",
+   "claude-code-transcripts",
+   "Codex CLI",
+   "GitHub Codespaces",
+   "Docker"
+  ],
+  "mcp": [],
+  "marketplaces": [],
+  "plugins": [],
+  "skills": [
+   {
+    "name": "uv-tdd",
+    "repo": "simonw/skills",
+    "path": "uv-tdd",
+    "commit": "a6579982ed89adabb9b72ddaad0cf854e8e2218b",
+    "license": "No license file (all rights reserved by default)",
+    "description": "TDD development process for new Python projects built around uv."
+   },
+   {
+    "name": "setup-to-pyproject",
+    "repo": "simonw/skills",
+    "path": "setup-to-pyproject",
+    "commit": "a6579982ed89adabb9b72ddaad0cf854e8e2218b",
+    "license": "No license file (all rights reserved by default)",
+    "description": "Migrate setup.py/setup.cfg to pyproject.toml for uv so that uv run pytest works."
+   },
+   {
+    "name": "cogapp-markdown",
+    "repo": "simonw/skills",
+    "path": "cogapp-markdown",
+    "commit": "a6579982ed89adabb9b72ddaad0cf854e8e2218b",
+    "license": "No license file (all rights reserved by default)",
+    "description": "Use cogapp to generate README sections (for example --help output) from code."
+   },
+   {
+    "name": "upgrade-actions",
+    "repo": "simonw/skills",
+    "path": "upgrade-actions",
+    "commit": "a6579982ed89adabb9b72ddaad0cf854e8e2218b",
+    "license": "No license file (all rights reserved by default)",
+    "description": "Upgrade GitHub Actions workflows."
+   }
+  ],
+  "agents": [],
+  "commands": [],
+  "settings": {
+   "model": null,
+   "effortLevel": null,
+   "notes": "Soften '--dangerously-skip-permissions only in a container or on someone else's computer': that is his recommendation ('Option 2 is my favorite'), while he states he also runs YOLO locally for low-risk tasks. Mark 'Sonnet 4.5 / GPT-5-Codex' as his Oct 2025 daily drivers (13 months old). The rest is supported."
+  },
+  "unverified": [
+   "simonw/skills (last commit 2026-02-23) has no announcement post found and no license; included because it is his repo, but not confirmed as recommended",
+   "Current model choice after Oct 2025 not documented",
+   "No primary source found for his model or effort choice after Oct 2025",
+   "The 'interactive explanations' chapter was fetched but only its title was checked"
+  ],
+  "users_want": [
+   {
+    "point": "Showboat users ask for safeguards so agents cannot fake a demo by editing the Markdown directly",
+    "url": "https://github.com/simonw/showboat/issues/12"
+   },
+   {
+    "point": "Showboat users ask for HTML output of the demo documents",
+    "url": "https://github.com/simonw/showboat/issues/15"
+   }
+  ],
+  "factchecked": "2026-11-18"
+ },
+ {
+  "id": "jesse-vincent-superpowers",
+  "name": "Jesse Vincent",
+  "handle": "@obra",
+  "role": "Founder/CEO of Prime Radiant, creator of the Superpowers skills plugin.",
+  "sources": [
+   {
+    "title": "Superpowers: How I'm using coding agents in October 2025",
+    "url": "https://blog.fsck.com/2025/10/09/superpowers/",
+    "date": "2025-10-09"
+   },
+   {
+    "title": "How I'm using coding agents in September, 2025",
+    "url": "https://blog.fsck.com/2025/10/05/how-im-using-coding-agents-in-september-2025/",
+    "date": "2025-10-05"
+   },
+   {
+    "title": "What a year (Superpowers 7.0)",
+    "url": "https://blog.fsck.com/2026/10/09/what-a-year.md",
+    "date": "2026-10-09"
+   },
+   {
+    "title": "obra/superpowers",
+    "url": "https://github.com/obra/superpowers",
+    "date": null
+   },
+   {
+    "title": "obra/superpowers-marketplace",
+    "url": "https://github.com/obra/superpowers-marketplace",
+    "date": null
+   }
+  ],
+  "philosophy": "Process beats raw model autonomy. The agent must check for and follow mandatory skills (brainstorm, plan, TDD, review) before acting, and new skills are pressure-tested on subagents.",
+  "process": [
+   "brainstorming: question-led design, played back for correction; written design doc for projects",
+   "using-git-worktrees: isolated branch workspace with a clean test baseline",
+   "writing-plans: bite-sized 2-5 minute tasks with exact paths, code and verification steps",
+   "subagent-driven-development (fresh subagent per task plus review) or executing-plans (inline)",
+   "test-driven-development: strict RED-GREEN-REFACTOR",
+   "requesting-code-review between tasks; verification-before-completion before claiming done",
+   "finishing-a-development-branch: merge, PR, keep or discard, then clean up the worktree"
+  ],
+  "tools": [
+   "git worktree",
+   "gh",
+   "tmux (claude-session-driver)",
+   "Chrome via CDP (superpowers-chrome)"
+  ],
+  "mcp": [
+   {
+    "name": "private-journal-mcp",
+    "add": null,
+    "url": "https://github.com/obra/private-journal-mcp"
+   }
+  ],
+  "marketplaces": [
+   {
+    "name": "superpowers-marketplace",
+    "repo": "obra/superpowers-marketplace",
+    "commit": "5c9072877417873fee42be1805aa776a453ec394",
+    "license": "MIT"
+   },
+   {
+    "name": "claude-plugins-official",
+    "repo": "anthropics/claude-plugins-official",
+    "commit": "e6143c9807a001832badb63e89d58ffe25d542ec",
+    "license": "Apache-2.0"
+   }
+  ],
+  "plugins": [
+   {
+    "id": "superpowers@claude-plugins-official",
+    "url": "https://github.com/obra/superpowers"
+   },
+   {
+    "id": "superpowers@superpowers-marketplace",
+    "url": "https://github.com/obra/superpowers"
+   },
+   {
+    "id": "episodic-memory@superpowers-marketplace",
+    "url": "https://github.com/obra/episodic-memory"
+   },
+   {
+    "id": "superpowers-chrome@superpowers-marketplace",
+    "url": "https://github.com/obra/superpowers-chrome"
+   },
+   {
+    "id": "elements-of-style@superpowers-marketplace",
+    "url": "https://github.com/obra/the-elements-of-style"
+   },
+   {
+    "id": "double-shot-latte@superpowers-marketplace",
+    "url": "https://github.com/obra/double-shot-latte"
+   },
+   {
+    "id": "private-journal-mcp@superpowers-marketplace",
+    "url": "https://github.com/obra/private-journal-mcp"
+   }
+  ],
+  "skills": [
+   {
+    "name": "using-superpowers",
+    "repo": "obra/superpowers",
+    "path": "skills/using-superpowers",
+    "commit": "22f0b463e7a5e579904dd6211a520321035526f7",
+    "license": "MIT",
+    "description": "Bootstrap: find and invoke skills before any response."
+   },
+   {
+    "name": "brainstorming",
+    "repo": "obra/superpowers",
+    "path": "skills/brainstorming",
+    "commit": "22f0b463e7a5e579904dd6211a520321035526f7",
+    "license": "MIT",
+    "description": "Mandatory before creative work: draw out intent and design."
+   },
+   {
+    "name": "using-git-worktrees",
+    "repo": "obra/superpowers",
+    "path": "skills/using-git-worktrees",
+    "commit": "22f0b463e7a5e579904dd6211a520321035526f7",
+    "license": "MIT",
+    "description": "Isolated worktree before feature work or plan execution."
+   },
+   {
+    "name": "writing-plans",
+    "repo": "obra/superpowers",
+    "path": "skills/writing-plans",
+    "commit": "22f0b463e7a5e579904dd6211a520321035526f7",
+    "license": "MIT",
+    "description": "Turn a spec into a detailed multi-step plan before touching code."
+   },
+   {
+    "name": "subagent-driven-development",
+    "repo": "obra/superpowers",
+    "path": "skills/subagent-driven-development",
+    "commit": "22f0b463e7a5e579904dd6211a520321035526f7",
+    "license": "MIT",
+    "description": "Execute plan tasks with fresh subagents and review after each."
+   },
+   {
+    "name": "executing-plans",
+    "repo": "obra/superpowers",
+    "path": "skills/executing-plans",
+    "commit": "22f0b463e7a5e579904dd6211a520321035526f7",
+    "license": "MIT",
+    "description": "Inline plan execution with one review at the end."
+   },
+   {
+    "name": "test-driven-development",
+    "repo": "obra/superpowers",
+    "path": "skills/test-driven-development",
+    "commit": "22f0b463e7a5e579904dd6211a520321035526f7",
+    "license": "MIT",
+    "description": "RED-GREEN-REFACTOR before implementation code."
+   },
+   {
+    "name": "systematic-debugging",
+    "repo": "obra/superpowers",
+    "path": "skills/systematic-debugging",
+    "commit": "22f0b463e7a5e579904dd6211a520321035526f7",
+    "license": "MIT",
+    "description": "Root-cause process for any bug or test failure before proposing fixes."
+   },
+   {
+    "name": "requesting-code-review",
+    "repo": "obra/superpowers",
+    "path": "skills/requesting-code-review",
+    "commit": "22f0b463e7a5e579904dd6211a520321035526f7",
+    "license": "MIT",
+    "description": "Review against the plan, by severity."
+   },
+   {
+    "name": "receiving-code-review",
+    "repo": "obra/superpowers",
+    "path": "skills/receiving-code-review",
+    "commit": "22f0b463e7a5e579904dd6211a520321035526f7",
+    "license": "MIT",
+    "description": "Evaluate review feedback critically before implementing it."
+   },
+   {
+    "name": "verification-before-completion",
+    "repo": "obra/superpowers",
+    "path": "skills/verification-before-completion",
+    "commit": "22f0b463e7a5e579904dd6211a520321035526f7",
+    "license": "MIT",
+    "description": "Run verification commands before claiming work is done."
+   },
+   {
+    "name": "dispatching-parallel-agents",
+    "repo": "obra/superpowers",
+    "path": "skills/dispatching-parallel-agents",
+    "commit": "22f0b463e7a5e579904dd6211a520321035526f7",
+    "license": "MIT",
+    "description": "Parallelise 2+ independent tasks."
+   },
+   {
+    "name": "finishing-a-development-branch",
+    "repo": "obra/superpowers",
+    "path": "skills/finishing-a-development-branch",
+    "commit": "22f0b463e7a5e579904dd6211a520321035526f7",
+    "license": "MIT",
+    "description": "Decide merge, PR, keep or discard, and clean up."
+   },
+   {
+    "name": "writing-skills",
+    "repo": "obra/superpowers",
+    "path": "skills/writing-skills",
+    "commit": "22f0b463e7a5e579904dd6211a520321035526f7",
+    "license": "MIT",
+    "description": "Create and pressure-test new skills."
+   }
+  ],
+  "agents": [],
+  "commands": [],
+  "settings": {
+   "model": null,
+   "effortLevel": null,
+   "notes": "'Restart Claude Code after install' comes from the Oct 2025 launch post; the current README does not repeat it for Claude Code. Everything else (v7.0.2, SessionStart matcher startup|clear|compact, both install paths) is confirmed."
+  },
+  "unverified": [
+   "Licenses and HEAD SHAs of the satellite plugins (episodic-memory, superpowers-chrome, private-journal-mcp, double-shot-latte) not checked",
+   "private-journal-mcp is distributed as a plugin; no claude mcp add command documented in sources read",
+   "Whether Jesse personally still uses private-journal-mcp, episodic-memory and double-shot-latte in 2026: they are published in his marketplace, but the only first-person mention found is the Oct 2025 post (the 'feelings journal')",
+   "Licenses and HEAD SHAs of the satellite plugins remain unchecked"
+  ],
+  "users_want": [
+   {
+    "point": "Most up-voted request: support for Claude Code Agent Teams (TeammateTool, SendMessage, TaskList)",
+    "url": "https://github.com/obra/superpowers/issues/429"
+   },
+   {
+    "point": "Complaint about 7.0: the rebuilt brainstorming asks too many questions ('v7's brainstorm questions are rather annoying')",
+    "url": "https://github.com/obra/superpowers/issues/2530"
+   }
+  ],
+  "factchecked": "2026-11-18"
+ },
+ {
+  "id": "matt-pocock-skills",
+  "name": "Matt Pocock",
+  "handle": "@mattpocockuk (GitHub mattpocock)",
+  "role": "TypeScript educator (Total TypeScript, AI Hero), author of the 'Skills For Real Engineers' repo.",
+  "sources": [
+   {
+    "title": "mattpocock/skills README",
+    "url": "https://github.com/mattpocock/skills",
+    "date": null
+   },
+   {
+    "title": "5 agent skills I use every day (AI Hero)",
+    "url": "https://www.aihero.dev/5-agent-skills-i-use-every-day",
+    "date": "2026-03-16"
+   }
+  ],
+  "philosophy": "Small, composable, model-agnostic skills that keep you in control (unlike frameworks that own the process). Align with the agent first by being grilled on the plan, build a shared domain language, and rely on tight feedback loops.",
+  "process": [
+   "Run /setup-matt-pocock-skills once per repo (issue tracker, triage labels, docs location)",
+   "Align: /grill-with-docs for code changes (also maintains GLOSSARY.md and ADRs); /grill-me for non-code plans",
+   "/to-spec: turn the conversation into a spec published to the issue tracker",
+   "/to-tickets: split it into vertical-slice tickets with blocking edges",
+   "/implement with /tdd red-green-refactor (/diagnosing-bugs for hard bugs)",
+   "/code-review against standards and the spec",
+   "/improve-codebase-architecture weekly or after a burst of work; /handoff to pass context to another agent"
+  ],
+  "tools": [
+   "npx skills@latest (skills.sh installer)",
+   "issue tracker of choice (GitHub, GitLab or local files)",
+   "static types, browser access and automated tests as feedback loops"
+  ],
+  "mcp": [],
+  "marketplaces": [
+   {
+    "name": "claude-plugins-official",
+    "repo": "anthropics/claude-plugins-official",
+    "commit": "e6143c9807a001832badb63e89d58ffe25d542ec",
+    "license": "Apache-2.0"
+   },
+   {
+    "name": "mattpocock",
+    "repo": "mattpocock/skills",
+    "commit": "5863806dd4e15c63174bee4e7515a4256792ecfa",
+    "license": "MIT"
+   }
+  ],
+  "plugins": [
+   {
+    "id": "mattpocock-skills@claude-plugins-official",
+    "url": "https://github.com/mattpocock/skills"
+   }
+  ],
+  "skills": [
+   {
+    "name": "setup-matt-pocock-skills",
+    "repo": "mattpocock/skills",
+    "path": "skills/engineering/setup-matt-pocock-skills",
+    "commit": "5863806dd4e15c63174bee4e7515a4256792ecfa",
+    "license": "MIT",
+    "description": "Configure issue tracker, triage labels and domain doc layout."
+   },
+   {
+    "name": "grill-me",
+    "repo": "mattpocock/skills",
+    "path": "skills/productivity/grill-me",
+    "commit": "5863806dd4e15c63174bee4e7515a4256792ecfa",
+    "license": "MIT",
+    "description": "Relentless interview to sharpen a plan or design."
+   },
+   {
+    "name": "grill-with-docs",
+    "repo": "mattpocock/skills",
+    "path": "skills/engineering/grill-with-docs",
+    "commit": "5863806dd4e15c63174bee4e7515a4256792ecfa",
+    "license": "MIT",
+    "description": "Grilling that also writes ADRs and a glossary."
+   },
+   {
+    "name": "to-spec",
+    "repo": "mattpocock/skills",
+    "path": "skills/engineering/to-spec",
+    "commit": "5863806dd4e15c63174bee4e7515a4256792ecfa",
+    "license": "MIT",
+    "description": "Conversation to spec, published to the tracker."
+   },
+   {
+    "name": "to-tickets",
+    "repo": "mattpocock/skills",
+    "path": "skills/engineering/to-tickets",
+    "commit": "5863806dd4e15c63174bee4e7515a4256792ecfa",
+    "license": "MIT",
+    "description": "Spec to tracer-bullet tickets with blocking edges."
+   },
+   {
+    "name": "implement",
+    "repo": "mattpocock/skills",
+    "path": "skills/engineering/implement",
+    "commit": "5863806dd4e15c63174bee4e7515a4256792ecfa",
+    "license": "MIT",
+    "description": "Implement work from a spec or tickets."
+   },
+   {
+    "name": "tdd",
+    "repo": "mattpocock/skills",
+    "path": "skills/engineering/tdd",
+    "commit": "5863806dd4e15c63174bee4e7515a4256792ecfa",
+    "license": "MIT",
+    "description": "Red-green-refactor test-first development."
+   },
+   {
+    "name": "diagnosing-bugs",
+    "repo": "mattpocock/skills",
+    "path": "skills/engineering/diagnosing-bugs",
+    "commit": "5863806dd4e15c63174bee4e7515a4256792ecfa",
+    "license": "MIT",
+    "description": "Phase-gated diagnosis loop for hard bugs and performance regressions."
+   },
+   {
+    "name": "code-review",
+    "repo": "mattpocock/skills",
+    "path": "skills/engineering/code-review",
+    "commit": "5863806dd4e15c63174bee4e7515a4256792ecfa",
+    "license": "MIT",
+    "description": "Review changes since a fixed point on standards and spec."
+   },
+   {
+    "name": "improve-codebase-architecture",
+    "repo": "mattpocock/skills",
+    "path": "skills/engineering/improve-codebase-architecture",
+    "commit": "5863806dd4e15c63174bee4e7515a4256792ecfa",
+    "license": "MIT",
+    "description": "Find deepening opportunities, HTML report, then grill one."
+   },
+   {
+    "name": "handoff",
+    "repo": "mattpocock/skills",
+    "path": "skills/productivity/handoff",
+    "commit": "5863806dd4e15c63174bee4e7515a4256792ecfa",
+    "license": "MIT",
+    "description": "Compact the conversation into a handoff doc for another agent."
+   }
+  ],
+  "agents": [],
+  "commands": [],
+  "settings": {
+   "model": null,
+   "effortLevel": null,
+   "notes": "Remove 'Optional hooks come from git-guardrails-claude-code' (unmaintained, not in the plugin). Qualify '(auto-updates)': README says 'Updates itself by default', but the official marketplace pins sha 49dd158 (not HEAD) and open issue #1164 reports 'Claude Code plugin does not update - still stuck on version 1.2.3'."
+  },
+  "unverified": [
+   "Using 'mattpocock-skills@mattpocock' from Claude Code via 'claude plugin marketplace add mattpocock/skills' is inferred from .claude-plugin/marketplace.json, not documented for Claude Code in the README",
+   "Official marketplace entry pins sha 49dd158d1076134a641b33efb035946536778336, which differs from current HEAD",
+   "The preset lists 12 of 27 promoted skills; notable omissions he documents as daily-use: ask-matt (router), triage, implement-spec, wayfinder, retro, domain-modeling, grilling",
+   "The AI Hero post is dated 'Updated Mar 16, 2026' but already uses the newer names (/to-spec, /to-tickets), so it has been edited since"
+  ],
+  "users_want": [
+   {
+    "point": "Users want the short original grill-me back after it was reworked ('Can we get the old grill-me back?'); Matt calls grill-me/grill-with-docs his most popular skills",
+    "url": "https://github.com/mattpocock/skills/issues/831"
+   },
+   {
+    "point": "Claude Code users report the plugin does not update and stays on an old version",
+    "url": "https://github.com/mattpocock/skills/issues/1164"
+   }
+  ],
+  "factchecked": "2026-11-18"
+ },
+ {
+  "id": "geoffrey-huntley-ralph",
+  "name": "Geoffrey Huntley",
+  "handle": "@GeoffreyHuntley (GitHub ghuntley)",
+  "role": "Engineer and writer who created the 'Ralph Wiggum' agent loop technique.",
+  "sources": [
+   {
+    "title": "Ralph Wiggum as a 'software engineer'",
+    "url": "https://ghuntley.com/ralph/",
+    "date": "2025-07-14"
+   },
+   {
+    "title": "everything is a ralph loop",
+    "url": "https://ghuntley.com/loop/",
+    "date": "2026-01-17"
+   },
+   {
+    "title": "how-to-build-a-coding-agent (workshop)",
+    "url": "https://github.com/ghuntley/how-to-build-a-coding-agent",
+    "date": null
+   },
+   {
+    "title": "The Ralph Playbook (Clayton Farr; fork at ghuntley/how-to-ralph-wiggum)",
+    "url": "https://github.com/ghuntley/how-to-ralph-wiggum",
+    "date": "2026-01-10"
+   },
+   {
+    "title": "Anthropic ralph-loop plugin README (credits Huntley)",
+    "url": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/ralph-loop",
+    "date": null
+   }
+  ],
+  "philosophy": "Software is built as a loop, not brick by brick: a bash while-loop that feeds the same prompt to a fresh agent context, one task per iteration, with tests and type checks as backpressure. Watch the loop and tune the prompt whenever it fails.",
+  "process": [
+   "Talk through the idea and write one spec per topic in specs/*.md",
+   "Planning prompt: have Ralph study the specs and the source and create or update a prioritised @fix_plan.md, then switch from planning to building mode",
+   "Building loop: while :; do cat PROMPT.md | <agent> ; done, picking the single most important item per iteration",
+   "Main context acts as scheduler; subagents search and summarise (many in parallel) but only one runs build/test",
+   "Backpressure: tests, type checkers and static analysis; no placeholders; commit and tag when green",
+   "Watch the stream; when it misbehaves, tune the prompt (add a 'sign') and let Ralph keep @AGENT.md up to date, or git reset --hard and start the loop again",
+   "Prefer greenfield projects"
+  ],
+  "tools": [
+   "Amp",
+   "git",
+   "type checkers / static analysers (e.g. Pyrefly, Dialyzer)"
+  ],
+  "mcp": [],
+  "marketplaces": [
+   {
+    "name": "claude-plugins-official",
+    "repo": "anthropics/claude-plugins-official",
+    "commit": "e6143c9807a001832badb63e89d58ffe25d542ec",
+    "license": "Apache-2.0"
+   }
+  ],
+  "plugins": [],
+  "skills": [],
+  "agents": [],
+  "commands": [],
+  "settings": {
+   "model": null,
+   "effortLevel": null,
+   "notes": "Rewrite. 'Loops run unattended, so permissions are skipped and the run must be sandboxed' is not in either Huntley post (neither mentions sandboxing or --dangerously-skip-permissions); it comes from Clayton Farr's Ralph Playbook, which Huntley only forked. Attribute it to Farr explicitly or drop it. Remove the ralph-loop plugin usage line. The loop.sh/model attribution to Farr and the ghuntley/skills description ('the loop stack', README and LICENSE only) are correct."
+  },
+  "unverified": [
+   "ralph-loop is Anthropic's implementation, not Huntley's; the fetched summary of ghuntley.com/ralph suggests he said a Claude Code plugin 'isn't it'",
+   "how-to-ralph-wiggum is a fork of ClaytonFarr/ralph-playbook (MIT upstream, no license in the fork); the model flag in loop.sh is Farr's, not Huntley's",
+   "ghuntley/loom exists (HEAD 3e6a2f214bcc9489734252a4e33a316f8c2a262f), but the post says it is meant only for himself; license not checked",
+   "how-to-build-a-coding-agent has no LICENSE file",
+   "Whether Huntley endorses the Farr playbook's details (sandbox, AGENTS.md, IMPLEMENTATION_PLAN.md, JTBD specs): the only signal is that he forked it",
+   "The videos linked from ghuntley.com/ralph were not watched, so his exact objection to the plugin is known only from the link text",
+   "ghuntley.com/ralph may show the full text only to subscribers (Farr's README says so); the fetched page contained the full prompt and loop sections"
+  ],
+  "users_want": [
+   {
+    "point": "Users want the real technique, a fresh context every iteration, which Anthropic's plugin does not give (most up-voted ralph issue in the official marketplace)",
+    "url": "https://github.com/anthropics/claude-plugins-official/issues/125"
+   },
+   {
+    "point": "Users want a concrete how-to: Clayton Farr wrote the Ralph Playbook because the original post did not 'click', and Huntley forked it under his own account",
+    "url": "https://github.com/ghuntley/how-to-ralph-wiggum"
+   }
+  ],
+  "factchecked": "2026-11-18"
+ },
+ {
+  "id": "kieran-klaassen-compound-engineering",
+  "name": "Kieran Klaassen",
+  "handle": "@kieranklaassen",
+  "role": "General manager of Cora at Every; co-maintainer (with Trevin Chow) of the Compound Engineering plugin.",
+  "sources": [
+   {
+    "title": "EveryInc/compound-engineering-plugin README",
+    "url": "https://github.com/EveryInc/compound-engineering-plugin",
+    "date": null
+   },
+   {
+    "title": "Compound Engineering guide (Every)",
+    "url": "https://every.to/guides/compound-engineering",
+    "date": null
+   },
+   {
+    "title": "Compound Engineering Gets an Upgrade",
+    "url": "https://every.to/source-code/compound-engineering-gets-an-upgrade",
+    "date": "2026-05-29"
+   },
+   {
+    "title": "Compound Engineering: How Every Codes With Agents (paywalled)",
+    "url": "https://every.to/the-c-suite/compound-engineering-how-every-codes-with-agents",
+    "date": null
+   },
+   {
+    "title": "Install page",
+    "url": "https://every.to/compound-engineering/install/",
+    "date": null
+   }
+  ],
+  "philosophy": "Each unit of engineering work should make the next one easier. Capture every lesson where future agents will find it. About 80% of the effort goes into planning and review, 20% into work and compounding.",
+  "process": [
+   "Ideate (/ce-ideate) and brainstorm requirements (/ce-brainstorm)",
+   "Plan: research the codebase and docs into an implementation-ready plan (/ce-plan)",
+   "Work: execute in a worktree or branch with tests, lint and type checks (/ce-work)",
+   "Simplify fresh code and prune useless tests and comments (/ce-simplify-code)",
+   "Report-only multi-agent review with P0-P3 findings (/ce-code-review), plus browser tests (/ce-test-browser)",
+   "Polish UX with live browser feedback (/ce-polish)",
+   "Compound: record the lesson as a test, lint rule, standard or docs/solutions entry (/ce-compound); /lfg runs the whole chain hands-off"
+  ],
+  "tools": [
+   "git worktrees",
+   "gh"
+  ],
+  "mcp": [],
+  "marketplaces": [
+   {
+    "name": "compound-engineering-plugin",
+    "repo": "EveryInc/compound-engineering-plugin",
+    "commit": "8f7614639e7f3792a6f9337d8742a80a232bd596",
+    "license": "MIT"
+   }
+  ],
+  "plugins": [
+   {
+    "id": "compound-engineering@compound-engineering-plugin",
+    "url": "https://github.com/EveryInc/compound-engineering-plugin"
+   }
+  ],
+  "skills": [
+   {
+    "name": "ce-setup",
+    "repo": "EveryInc/compound-engineering-plugin",
+    "path": "skills/ce-setup",
+    "commit": "8f7614639e7f3792a6f9337d8742a80a232bd596",
+    "license": "MIT",
+    "description": "Check tools and repo config; creates .compound-engineering/config.yaml."
+   },
+   {
+    "name": "ce-ideate",
+    "repo": "EveryInc/compound-engineering-plugin",
+    "path": "skills/ce-ideate",
+    "commit": "8f7614639e7f3792a6f9337d8742a80a232bd596",
+    "license": "MIT",
+    "description": "Generate and evaluate grounded ideas."
+   },
+   {
+    "name": "ce-brainstorm",
+    "repo": "EveryInc/compound-engineering-plugin",
+    "path": "skills/ce-brainstorm",
+    "commit": "8f7614639e7f3792a6f9337d8742a80a232bd596",
+    "license": "MIT",
+    "description": "Turn vague ideas into a requirements-only plan."
+   },
+   {
+    "name": "ce-plan",
+    "repo": "EveryInc/compound-engineering-plugin",
+    "path": "skills/ce-plan",
+    "commit": "8f7614639e7f3792a6f9337d8742a80a232bd596",
+    "license": "MIT",
+    "description": "Structured, implementation-ready plans."
+   },
+   {
+    "name": "ce-work",
+    "repo": "EveryInc/compound-engineering-plugin",
+    "path": "skills/ce-work",
+    "commit": "8f7614639e7f3792a6f9337d8742a80a232bd596",
+    "license": "MIT",
+    "description": "Execute a plan end-to-end with verification and commits."
+   },
+   {
+    "name": "ce-simplify-code",
+    "repo": "EveryInc/compound-engineering-plugin",
+    "path": "skills/ce-simplify-code",
+    "commit": "8f7614639e7f3792a6f9337d8742a80a232bd596",
+    "license": "MIT",
+    "description": "Simplify fresh code; prune low-value tests and comments."
+   },
+   {
+    "name": "ce-code-review",
+    "repo": "EveryInc/compound-engineering-plugin",
+    "path": "skills/ce-code-review",
+    "commit": "8f7614639e7f3792a6f9337d8742a80a232bd596",
+    "license": "MIT",
+    "description": "Report-only multi-agent review of a diff or PR."
+   },
+   {
+    "name": "ce-test-browser",
+    "repo": "EveryInc/compound-engineering-plugin",
+    "path": "skills/ce-test-browser",
+    "commit": "8f7614639e7f3792a6f9337d8742a80a232bd596",
+    "license": "MIT",
+    "description": "Browser-agent testing of features (agent-browser/Playwright)."
+   },
+   {
+    "name": "ce-polish",
+    "repo": "EveryInc/compound-engineering-plugin",
+    "path": "skills/ce-polish",
+    "commit": "8f7614639e7f3792a6f9337d8742a80a232bd596",
+    "license": "MIT",
+    "description": "UX polish through live browser feedback."
+   },
+   {
+    "name": "ce-compound",
+    "repo": "EveryInc/compound-engineering-plugin",
+    "path": "skills/ce-compound",
+    "commit": "8f7614639e7f3792a6f9337d8742a80a232bd596",
+    "license": "MIT",
+    "description": "Capture a solved problem's lesson in its cheapest durable form."
+   },
+   {
+    "name": "ce-debug",
+    "repo": "EveryInc/compound-engineering-plugin",
+    "path": "skills/ce-debug",
+    "commit": "8f7614639e7f3792a6f9337d8742a80a232bd596",
+    "license": "MIT",
+    "description": "Diagnosis loop for bugs and failing behaviour."
+   },
+   {
+    "name": "lfg",
+    "repo": "EveryInc/compound-engineering-plugin",
+    "path": "skills/lfg",
+    "commit": "8f7614639e7f3792a6f9337d8742a80a232bd596",
+    "license": "MIT",
+    "description": "Hands-off: plan, work, simplify, review, compound, browser test, commit, PR and bounded CI repair."
+   }
+  ],
+  "agents": [],
+  "commands": [],
+  "settings": {
+   "model": "opus",
+   "effortLevel": null,
+   "notes": "Quote the guide exactly: 'My current preference is for Cursor with Opus 4.5 or Claude Code' (Opus 4.5 is attached to Cursor, and the sentence is about a year old). Fix the source: the 'How Every Codes With Agents' URL is /chain-of-thought/..., it is not paywalled, and it currently serves the same content as the guide. The alias cc and its conditions, install commands, version and the every-marketplace redirect are confirmed."
+  },
+  "unverified": [
+   "Dates of the Every guide and the 'How Every Codes With Agents' article (paywalled; not fetched)",
+   "Droid/Codex use by the team comes from a search snippet of the paywalled article",
+   "No documented claude mcp add command for Playwright in Kieran's sources",
+   "Current title: his GitHub bio now reads 'Compound Engineer - Frontier Team @ Every' (https://github.com/kieranklaassen), which may supersede 'general manager of Cora' (last confirmed in an Every byline updated 2026-07-09)",
+   "The guide text fetched on 2026-11-18 still describes the four-step loop and old command names (/plan, /changelog), although his May 2026 post says the guide was updated to the expanded loop",
+   "Date of the Every guide is not shown on the page"
+  ],
+  "users_want": [
+   {
+    "point": "Most up-voted open request: make the docs output path (docs/solutions, docs/plans) configurable",
+    "url": "https://github.com/EveryInc/compound-engineering-plugin/issues/338"
+   },
+   {
+    "point": "Users want compounded knowledge shared across projects, and have complained about the plugin's context cost (issue #63: 'Plugin uses 36k tokens of context')",
+    "url": "https://github.com/EveryInc/compound-engineering-plugin/issues/494"
+   }
+  ],
+  "factchecked": "2026-11-18"
+ }
+]

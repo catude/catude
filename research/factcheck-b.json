@@ -1,0 +1,209 @@
+[
+{"id":"dex-horthy",
+ "role_ok":true,"role_fix":null,
+ "philosophy":{"status":"supported","evidence_url":"https://github.com/humanlayer/advanced-context-engineering-for-coding-agents/blob/main/ace-fca.md","fix":null,"quote":"designing your ENTIRE WORKFLOW around context management, and keeping utilization in the 40%-60% range"},
+ "process":[
+  {"step":"Research: parallel read-only subagents (locator/analyzer/pattern-finder) map how the system works and write a research doc to thoughts/","status":"supported","evidence_url":"https://github.com/humanlayer/advanced-context-engineering-for-coding-agents/blob/main/ace-fca.md","fix":null},
+  {"step":"Human reviews the research and discards or redoes it if wrong","status":"supported","evidence_url":"https://github.com/humanlayer/advanced-context-engineering-for-coding-agents/blob/main/ace-fca.md","fix":null},
+  {"step":"Plan: write a phased implementation plan with files, snippets and success criteria; iterate with the human","status":"supported","evidence_url":"https://ai.engineer/talks/context-engineering-for-complex-codebases","fix":null},
+  {"step":"Implement phase by phase and run verification after each phase","status":"supported","evidence_url":"https://github.com/humanlayer/advanced-context-engineering-for-coding-agents/blob/main/ace-fca.md","fix":null},
+  {"step":"Compact progress back into the plan or a handoff doc, then start a fresh session (create_handoff/resume_handoff)","status":"partly","evidence_url":"https://github.com/humanlayer/advanced-context-engineering-for-coding-agents/blob/main/ace-fca.md","fix":"For complex work, compact the current status back into the plan file after each verified phase (the HumanLayer team repo also had create_handoff/resume_handoff commands, mostly written by Kyle Mistele; Dex does not describe them in his write-up)"},
+  {"step":"Validate the implementation against the plan, then describe the PR","status":"partly","evidence_url":"https://github.com/humanlayer/humanlayer/blob/99abe673498cf8bdcd5f989aebe9406a27185b3b/.claude/commands/validate_plan.md","fix":"Optional extras from the HumanLayer team repo: validate_plan checks the work against the plan and describe_pr drafts the PR (not part of Dex's published research/plan/implement write-up)"},
+  {"step":"Newer flow (plugin v0.50.0): research questions, research, design discussion, structure outline, plan, implement, iterate","status":"partly","evidence_url":"https://github.com/humanlayer/humanlayer/tree/main/apps/riptide-rpi-claude-plugin","fix":"Newer flow in HumanLayer's company plugin (rpi v0.50.0, author 'HumanLayer'): research questions, research, design discussion, structure outline, plan, implement, iterate. This is a company product; Dex's own description of it (talk 'From RPI to QRSPI') was not checked"}
+ ],
+ "tools_remove":["Linear CLI (apps/linear-cli)"],
+ "mcp_remove":[],
+ "plugins_remove":[],
+ "artifacts_remove":[
+  {"kind":"skill","name":"subagent-orchestrator","reason":"Added to the HumanLayer repo by Kyle Mistele on 2026-10-22. Dex never references or recommends it, so it is team work presented as Dex's"}
+ ],
+ "settings_fix":{"model":null,"effortLevel":null,"notes":"The project .claude/settings.json sets env MAX_THINKING_TOKENS=32000; HEAD also sets CLAUDE_BASH_MAINTAIN_PROJECT_WORKING_DIR=1. The ACE doc targets 40-60% context use, and the later talk says diminishing returns may start around 40%. The CLAUDE.md advice (under 60 lines, progressive disclosure, a Stop hook running linters) comes from a HumanLayer blog post by Kyle, not by Dex, and should not be attributed to Dex."},
+ "users_want":[
+  {"point":"HN readers praised the write-up as practical and clearly human-written. The main pushback asked why so much context-management process is needed for the tools to work.","url":"https://news.ycombinator.com/item?id=45347532"}
+ ],
+ "new_unverified":[
+  "Most of the cited commands and agents were written by several HumanLayer staff (Allison Durham, Kyle Mistele, Juan Gaitan-Villamizar, Dex). They are company or team work, though Dex links to the research, plan and implement prompts.",
+  "ace-fca links the non-generic research_codebase.md and create_plan.md, but the preset uses the *_generic variants. Dex only says he uses 'a more generic version' in other repos.",
+  "The plugin id riptide-rpi@humanlayer-riptide-rpi resolves to the stale standalone repo (v0.2.0). The monorepo plugin.json is named 'rpi' (v0.50.0), so the install line the preset gives users installs the old version.",
+  "Linear is used by the company's plugin ('workflow for Linear tickets'), but Dex never says he uses the Linear CLI."
+ ]},
+
+{"id":"armin-ronacher",
+ "role_ok":true,"role_fix":null,
+ "philosophy":{"status":"supported","evidence_url":"https://lucumr.pocoo.org/2025/7/30/things-that-didnt-work/","fix":null,"quote":"So I end up doing the simplest thing possible most of the time: just talk to the machine more"},
+ "process":[
+  {"step":"Make the dev environment agent-friendly: Makefile targets, a process manager that refuses double starts, all output logged to files","status":"supported","evidence_url":"https://lucumr.pocoo.org/2025/6/12/agentic-coding/","fix":null},
+  {"step":"Dump full intent into the prompt (speech-to-text), paste links/context, then let the agent run unattended","status":"partly","evidence_url":"https://lucumr.pocoo.org/2025/7/30/things-that-didnt-work/","fix":"Keep audio input going and dump your full train of thought into the prompt, then let the agent work while rarely interrupting"},
+  {"step":"Run with permissions skipped, isolated (Docker / separate checkouts) for parallel work","status":"supported","evidence_url":"https://lucumr.pocoo.org/2025/6/12/agentic-coding/","fix":null},
+  {"step":"Use subagents only for investigative/read-only tasks","status":"supported","evidence_url":"https://lucumr.pocoo.org/2025/7/30/things-that-didnt-work/","fix":null},
+  {"step":"Steer tool use with PATH interceptors (e.g. force uv) instead of hooks","status":"supported","evidence_url":"https://lucumr.pocoo.org/2025/7/30/things-that-didnt-work/","fix":null},
+  {"step":"Plan via an interviewer prompt (/discuss) that inspects the project before asking questions","status":"partly","evidence_url":"https://github.com/mitsuhiko/agent-stuff/blob/0865c849befd2021490679f96a8dee58c84ac857/commands/discuss.md","fix":"Plan through a back-and-forth of questions instead of plan mode ('I don't use plan mode'); his agent-stuff package includes a /discuss interviewer prompt for Pi"},
+  {"step":"Delete automations/skills that stop being used","status":"supported","evidence_url":"https://lucumr.pocoo.org/2025/7/30/things-that-didnt-work/","fix":null}
+ ],
+ "tools_remove":[],
+ "mcp_remove":[],
+ "plugins_remove":[],
+ "artifacts_remove":[],
+ "settings_fix":{"model":null,"effortLevel":null,"notes":null},
+ "users_want":[
+  {"point":"Users asked for the npm package (mitsupi) to be published again, because v1.1.1 had broken tool execute signatures.","url":"https://github.com/mitsuhiko/agent-stuff/issues/7"}
+ ],
+ "new_unverified":[
+  "skills/web-browser/SKILL.md declares 'license: Stolen from Mario', meaning it is derived from Mario Zechner's work. Armin authored the commits, but the origin should be disclosed.",
+  "The PATH interceptor directory name '.claude/interceptors' was not confirmed in the post text. The 2026 Pi setup uses a uv.ts extension instead.",
+  "The 2025-06-12 post does not mention voice or tmux. Voice comes from the 2025-07-30 post; tmux appears only as a skill in agent-stuff."
+ ]},
+
+{"id":"mitchell-hashimoto",
+ "role_ok":true,"role_fix":null,
+ "philosophy":{"status":"supported","evidence_url":"https://mitchellh.com/writing/my-ai-adoption-journey","fix":null,"quote":"To find value, you must use an agent. / I'm not shipping code I don't understand. (non-trivial-vibing)"},
+ "process":[
+  {"step":"Split work into clear tasks; separate planning sessions from execution sessions","status":"supported","evidence_url":"https://mitchellh.com/writing/my-ai-adoption-journey","fix":null},
+  {"step":"Plan with a slow read-only 'oracle' model and save the plan as a spec file","status":"supported","evidence_url":"https://mitchellh.com/writing/non-trivial-vibing","fix":null},
+  {"step":"Give agents ways to verify themselves (filtered test scripts, screenshot scripts)","status":"supported","evidence_url":"https://mitchellh.com/writing/my-ai-adoption-journey","fix":null},
+  {"step":"Use the last 30 minutes of the day for background agents (research, exploration, issue triage that only writes reports)","status":"supported","evidence_url":"https://mitchellh.com/writing/my-ai-adoption-journey","fix":null},
+  {"step":"Each morning hand off sure-win tasks to a single background agent; turn agent notifications off","status":"supported","evidence_url":"https://mitchellh.com/writing/my-ai-adoption-journey","fix":null},
+  {"step":"When an agent repeats a mistake, update AGENTS.md (per-directory) or add a tool","status":"supported","evidence_url":"https://mitchellh.com/writing/my-ai-adoption-journey","fix":null},
+  {"step":"Review everything manually before merging; rewrite parts by hand when needed","status":"supported","evidence_url":"https://mitchellh.com/writing/non-trivial-vibing","fix":null}
+ ],
+ "tools_remove":[],
+ "mcp_remove":[],
+ "plugins_remove":[],
+ "artifacts_remove":[],
+ "settings_fix":{"model":null,"effortLevel":null,"notes":"Turn off agent desktop notifications. Keep per-directory AGENTS.md files (Ghostty has 10). Ghostty's AI policy requires outside contributors to disclose AI use; maintainers are explicitly exempt, so this is a project rule, not Mitchell's personal setting."},
+ "users_want":[
+  {"point":"Readers praised the advice to reproduce your own manual commits with an agent and to break work into small tasks. They asked which agents and models he uses for which tasks, and how to build tools meant for an LLM to use.","url":"https://news.ycombinator.com/item?id=46903558"}
+ ],
+ "new_unverified":[
+  "The writing-commit-messages skill has two commit authors, Jon Parise and Mitchell Hashimoto. It is Ghostty team work, not Mitchell's alone.",
+  "'zig build' and 'nushell scripts' come from the Ghostty project (AGENTS.md; .agents/commands/review-branch, written by Mitchell), not from a statement of his personal tools.",
+  "The adoption post names GPT-5.2-Codex through Amp deep mode. It also says he does not run multiple agents at once."
+ ]},
+
+{"id":"peter-steinberger",
+ "role_ok":false,
+ "role_fix":"Founder of PSPDFKit; creator of OpenClaw (formerly Clawdbot/Moltbot), Peekaboo, mcporter and oracle; joined OpenAI in February 2026, and OpenClaw moved to an independent foundation (widely reported, e.g. https://www.helpnetsecurity.com/2026/02/16/openclaw-creator-peter-steinberger-joins-openai/). His AGENTS.MD does not mention OpenAI.",
+ "philosophy":{"status":"supported","evidence_url":"https://steipete.me/posts/just-talk-to-it","fix":null,"quote":"Almost all MCPs really should be clis. / I spend about 20% of my time on refactoring."},
+ "process":[
+  {"step":"Start a conversation, have the agent read the relevant code and discuss options before saying 'build'","status":"supported","evidence_url":"https://steipete.me/posts/2025/shipping-at-inference-speed","fix":null},
+  {"step":"For tricky features, write a spec to docs/*.md and get a second-model review (oracle / GPT Pro)","status":"supported","evidence_url":"https://steipete.me/posts/2025/shipping-at-inference-speed","fix":null},
+  {"step":"Run 3-8 agents in parallel in a terminal grid, mostly on main without worktrees","status":"partly","evidence_url":"https://github.com/steipete/agent-scripts/blob/2f82700ba9f3e7e93d3583e1990992584561eadc/AGENTS.MD","fix":"Run 3-8 agents in parallel in a terminal grid (Oct 2025: mostly on main without worktrees; his current AGENTS.MD says to create task-owned git worktrees whenever useful)"},
+  {"step":"Iterate with screenshots and short prompts; queue 'continue' messages for long tasks","status":"supported","evidence_url":"https://steipete.me/posts/just-talk-to-it","fix":null},
+  {"step":"Have the model write tests in the same context after each feature","status":"supported","evidence_url":"https://steipete.me/posts/just-talk-to-it","fix":null},
+  {"step":"Agents commit only their own files ('commit/push'); land PRs with /landpr-style prompts","status":"supported","evidence_url":"https://github.com/steipete/agent-scripts/blob/2f82700ba9f3e7e93d3583e1990992584561eadc/docs/slash-commands/landpr.md","fix":null},
+  {"step":"Keep a global AGENTS.md updated whenever something goes wrong","status":"supported","evidence_url":"https://github.com/steipete/agent-scripts/blob/2f82700ba9f3e7e93d3583e1990992584561eadc/AGENTS.MD","fix":null}
+ ],
+ "tools_remove":[],
+ "mcp_remove":[],
+ "plugins_remove":["chrome-devtools-mcp@chrome-devtools-plugins"],
+ "artifacts_remove":[],
+ "settings_fix":{"model":"Codex workers: gpt-6.1-sol, high reasoning, Fast service tier (codex-first skill, dated 2026-10-30); in Dec 2025, gpt-5.2-codex high; Opus for smaller edits and for Clawd","effortLevel":null,"notes":"No plan mode unless explicitly asked, and no issue tracker. AGENTS.MD is the single instruction file (no separate CLAUDE.md). His current AGENTS.MD allows task-owned worktrees whenever useful, so 'rarely worktrees' only describes Oct 2025. Background work in Claude Code runs as tracked run_in_background tasks. Chrome DevTools is used through mcporter's daemon-backed chrome-devtools, not through a Claude plugin."},
+ "users_want":[
+  {"point":"HN readers asked how he keeps up the stamina to supervise many parallel agents. Several were skeptical about code quality and about his praise for Codex.","url":"https://news.ycombinator.com/item?id=45588689"},
+  {"point":"Contributors asked that codex-first also cover the Codex binary bundled with the ChatGPT app on PATH, and that the browser tools be hardened.","url":"https://github.com/steipete/agent-scripts/pull/29"}
+ ],
+ "new_unverified":[
+  "He never names the chrome-devtools-mcp Claude plugin or marketplace; his AGENTS.MD says to use mcporter's chrome-devtools. The marketplace entry 'chrome-devtools-plugins' should go along with the plugin.",
+  "The project-structure skill description is wrong. It generates a compressed symbol map of a TypeScript or Swift repo, not general 'project structure guidance'.",
+  "Wispr Flow and chrome-devtools-mcp come from the Oct 2025 post and were not re-confirmed for 2026."
+ ]},
+
+{"id":"harper-reed",
+ "role_ok":true,"role_fix":null,
+ "philosophy":{"status":"supported","evidence_url":"https://harper.blog/2025/02/16/my-llm-codegen-workflow-atm/","fix":null,"quote":"Ask me one question at a time so we can develop a thorough, step-by-step spec for this idea."},
+ "process":[
+  {"step":"Idea honing: a chat LLM asks one question at a time, giving spec.md","status":"supported","evidence_url":"https://harper.blog/2025/02/16/my-llm-codegen-workflow-atm/","fix":null},
+  {"step":"Planning: a reasoning model turns the spec into small TDD steps (prompt_plan.md) plus todo.md","status":"supported","evidence_url":"https://harper.blog/2025/02/16/my-llm-codegen-workflow-atm/","fix":null},
+  {"step":"Execution: Claude Code takes the next unmarked prompt, implements it with tests, verifies, commits, and marks it done","status":"supported","evidence_url":"https://harper.blog/2025/05/08/basic-claude-code/","fix":null},
+  {"step":"Review between prompts, then reply 'yes/continue' (typically 8-12 steps)","status":"partly","evidence_url":"https://harper.blog/2025/05/08/basic-claude-code/","fix":"After each prompt Claude pauses for your review or feedback; plans are usually 8-12 steps"},
+  {"step":"Pre-commit hooks run tests/types/lint on every commit; formatters (ruff, biome, clippy)","status":"supported","evidence_url":"https://harper.blog/2025/05/08/basic-claude-code/","fix":null},
+  {"step":"Fresh-eyes review of new code via a subagent (careful-review)","status":"supported","evidence_url":"https://github.com/harperreed/dotfiles/blob/2370b1d1545d2674bbbbdf33fe360784650047f4/.claude/commands/careful-review.md","fix":null},
+  {"step":"Existing codebases: repomix + llm CLI via mise tasks for reviews/issues/missing tests","status":"supported","evidence_url":"https://harper.blog/2025/02/16/my-llm-codegen-workflow-atm/","fix":null}
+ ],
+ "tools_remove":["npx skills (vercel-labs/skills)"],
+ "mcp_remove":[],
+ "plugins_remove":["simmer@2389-research"],
+ "artifacts_remove":[],
+ "settings_fix":{"model":null,"effortLevel":null,"notes":null},
+ "users_want":[{"point":"no evidence found","url":null}],
+ "new_unverified":[
+  "None of the 2389 plugins is enabled in Harper's own settings.json; the only enabled plugin is rust-analyzer-lsp. They are 2389 Research team plugins. test-kitchen is co-written with Michael Sugimura (sugi-chan); fresh-eyes-review and scenario-testing are mostly Harper's.",
+  "simmer is mainly authored by Michael Sugimura (about 34 commits against Harper's 2), so it is other-author work under Harper's name.",
+  "The journal MCP is backed by his CLAUDE.md ('your journal for insights, feelings, and frustrations') and the repo is mostly his commits (with Jesse Vincent), but it is not configured in the published settings.json.",
+  "No reference to 'npx skills' or vercel-labs/skills was found in the dotfiles or posts.",
+  "The Feb 2025 workflow ran on claude.ai paste and Aider. Claude Code appears from the May 2025 post onward."
+ ]},
+
+{"id":"steve-yegge",
+ "role_ok":true,"role_fix":null,
+ "philosophy":{"status":"partly","evidence_url":"https://github.com/gastownhall/beads","fix":"Agents forget between sessions, and markdown TODO plans rot. Give them a dependency-aware issue graph they query for ready work and update as they go, and scale by orchestrating many agents (Gas Town).","note":"The Medium posts return 403 and could not be read. The clause 'not by waiting for one smarter model' was not verified in a primary source."},
+ "process":[
+  {"step":"Install bd once and run bd init per repo (writes AGENTS.md section and agent hooks)","status":"supported","evidence_url":"https://github.com/gastownhall/beads/blob/a6b7cd76943765a05c5f26074b10e6a3f7b7db14/README.md","fix":null},
+  {"step":"bd prime is injected at SessionStart/PreCompact to restore workflow context","status":"supported","evidence_url":"https://github.com/gastownhall/beads/blob/a6b7cd76943765a05c5f26074b10e6a3f7b7db14/plugins/beads/.claude-plugin/plugin.json","fix":null},
+  {"step":"Agent runs bd ready to pick unblocked work and claims it (bd update <id> --claim)","status":"supported","evidence_url":"https://github.com/gastownhall/beads/blob/a6b7cd76943765a05c5f26074b10e6a3f7b7db14/README.md","fix":null},
+  {"step":"File newly discovered work as issues with dependencies (bd create, bd dep add) instead of markdown TODOs","status":"supported","evidence_url":"https://github.com/gastownhall/beads/blob/a6b7cd76943765a05c5f26074b10e6a3f7b7db14/README.md","fix":null},
+  {"step":"Close issues and store durable facts (bd close, bd remember) before ending the session","status":"supported","evidence_url":"https://github.com/gastownhall/beads/blob/a6b7cd76943765a05c5f26074b10e6a3f7b7db14/README.md","fix":null},
+  {"step":"Scale to many parallel agents with Gas Town (gt)","status":"supported","evidence_url":"https://github.com/gastownhall/gastown","fix":null}
+ ],
+ "tools_remove":["Codex","Factory Droid"],
+ "mcp_remove":[],
+ "plugins_remove":[],
+ "artifacts_remove":[],
+ "settings_fix":{"model":null,"effortLevel":null,"notes":null},
+ "users_want":[
+  {"point":"Users most want richer agent memory. The 'Memory Beads' proposal is the most discussed issue (134 comments).","url":"https://github.com/gastownhall/beads/issues/5877"},
+  {"point":"Users asked for issue history and versioned beads.","url":"https://github.com/gastownhall/beads/issues/5898"}
+ ],
+ "new_unverified":[
+  "Codex and Factory Droid are integrations that beads and Gas Town support (bd setup codex/factory; Gas Town runtimes). Steve was not found saying he uses them, and Gas Town's default runtime is Claude Code. tmux is a Gas Town requirement and is missing from the tools list.",
+  "The beads repo now lives in a community org ('Gas Town Hall'). Git history at the current paths of the beads skill, prime/create commands and task-agent shows other contributors (matt wilkie, Eugene Brevdo, 'sms'), although plugin.json lists Steve Yegge as author. Personal authorship of these artifacts is unconfirmed.",
+  "The process steps come from project README docs maintained by many contributors, not from Steve's own posts."
+ ]},
+
+{"id":"indydevdan",
+ "role_ok":true,"role_fix":null,
+ "philosophy":{"status":"partly","evidence_url":"https://github.com/disler/claude-code-hooks-mastery","fix":null,"note":"The repo supports 'deterministic (or non-deterministic) control over Claude Code's behavior' and team-based validation. The 'vibe coding to agentic engineering' framing comes from his course and videos and was confirmed only through secondary summaries."},
+ "process":[
+  {"step":"/prime to load codebase context at session start","status":"supported","evidence_url":"https://github.com/disler/claude-code-hooks-mastery/blob/052ad1cbd5aeb1ec4a1def22012d1293c6225625/.claude/commands/prime.md","fix":null},
+  {"step":"/plan_w_team writes a spec into specs/ (validated by Stop hooks)","status":"supported","evidence_url":"https://github.com/disler/claude-code-hooks-mastery/blob/052ad1cbd5aeb1ec4a1def22012d1293c6225625/.claude/commands/plan_w_team.md","fix":null},
+  {"step":"/build implements the plan with builder subagents, one task each","status":"partly","evidence_url":"https://github.com/disler/claude-code-hooks-mastery/blob/052ad1cbd5aeb1ec4a1def22012d1293c6225625/.claude/commands/build.md","fix":"/build reads and executes the spec; the plan's 'Team Orchestration' section assigns builder subagents (one task each) and a validator"},
+  {"step":"Read-only validator subagent checks acceptance criteria","status":"supported","evidence_url":"https://github.com/disler/claude-code-hooks-mastery/blob/052ad1cbd5aeb1ec4a1def22012d1293c6225625/.claude/agents/team/validator.md","fix":null},
+  {"step":"Hooks on every lifecycle event (uv single-file Python) log, block rm -rf and .env access, and give TTS notifications","status":"supported","evidence_url":"https://github.com/disler/claude-code-hooks-mastery","fix":null},
+  {"step":"Use the meta-agent to generate new subagents; /infinite for parallel generative loops from a spec","status":"supported","evidence_url":"https://github.com/disler/infinite-agentic-loop","fix":null}
+ ],
+ "tools_remove":[],
+ "mcp_remove":[],
+ "plugins_remove":[],
+ "artifacts_remove":[],
+ "settings_fix":{"model":null,"effortLevel":null,"notes":null},
+ "users_want":[
+  {"point":"Users hit hooks and agents losing the path to their executable scripts (the uv / $CLAUDE_PROJECT_DIR path problem).","url":"https://github.com/disler/claude-code-hooks-mastery/issues/3"}
+ ],
+ "new_unverified":[
+  "The unverified note 'No LICENSE in disler repos' is too broad. claude-code-hooks-mastery has no LICENSE, but his recent repos (durable-pi, pi-vs-claude-code, learning-cmux-with-agents and others) are MIT.",
+  "Video-based claims were not verified."
+ ]},
+
+{"id":"thorsten-ball",
+ "role_ok":false,
+ "role_fix":"Co-creator of Amp (coding agent), previously at Sourcegraph and Zed; author of 'Writing an Interpreter in Go' and 'How to Build an Agent'",
+ "philosophy":{"status":"partly","evidence_url":"https://ampcode.com/how-to-build-an-agent","fix":"An agent is 'an LLM, a loop, and enough tokens' (an LLM with access to tools). Treat each prompt as a briefing: how is the model supposed to know what I mean? Move the 'how to do things' into the codebase (AGENTS.md files). He currently uses no MCP servers or custom slash commands.","quote":"It's an LLM, a loop, and enough tokens."},
+ "process":[
+  {"step":"You make the architecture decisions; the prompt spells out files, commits and constraints ('paint by numbers')","status":"supported","evidence_url":"https://ampcode.com/notes/how-i-use-amp","fix":null},
+  {"step":"Two-step prompt: first have the agent find/load context, then make the request","status":"supported","evidence_url":"https://ampcode.com/notes/how-i-use-amp","fix":null},
+  {"step":"Attach screenshots generously; give the agent visual feedback (Playwright/Storybook)","status":"supported","evidence_url":"https://ampcode.com/notes/how-i-use-amp","fix":null},
+  {"step":"Start new threads often (quality drops beyond ~100k tokens)","status":"supported","evidence_url":"https://ampcode.com/notes/how-i-use-amp","fix":null},
+  {"step":"Stage good changes in git, discard the rest; ask the agent to review its own diff","status":"supported","evidence_url":"https://ampcode.com/notes/how-i-use-amp","fix":null},
+  {"step":"Put AGENTS.md files throughout the codebase; review load-bearing code closely","status":"supported","evidence_url":"https://thorstenball.com/talks/how-i-prompt/","fix":null}
+ ],
+ "tools_remove":[],
+ "mcp_remove":[],
+ "plugins_remove":[],
+ "artifacts_remove":[],
+ "settings_fix":{"model":null,"effortLevel":null,"notes":"As of the Laracon US talk (2026-07-29) he uses no MCP servers, no custom slash commands, and only one or two skills, and builds custom tools as Amp plugins. He gives the agent a 'super long leash' and documents wherever it fails. In 2025 he used the Playwright and postgres MCP servers (How I Use Amp, now archived)."},
+ "users_want":[{"point":"no evidence found","url":null}],
+ "new_unverified":[
+  "Resolved: in 2025, Playwright screenshots went through the Playwright MCP server (How I Use Amp). The preset's mcp list of [] is correct only for 2026.",
+  "'How I Use Amp' is marked archived and written for an older Amp. The exact 'paint by numbers' wording was not confirmed verbatim."
+ ]}
+]

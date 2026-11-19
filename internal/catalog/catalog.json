@@ -1,0 +1,5586 @@
+{
+ "generated": "2026-11-18",
+ "marketplaces": [
+  {
+   "name": "claude-plugins-official",
+   "repo": "anthropics/claude-plugins-official",
+   "add": "claude plugin marketplace add anthropics/claude-plugins-official",
+   "stars": 47542,
+   "stars_approx": true,
+   "license": "Apache-2.0",
+   "description": "Anthropic official marketplace (~317 plugins). Added automatically on the first interactive session; add manually only on fresh machines/scripts. Anthropic plugins (code-review, commit-commands, feature-dev, security-guidance, frontend-design, skill-creator, LSP plugins...) plus partner plugins (GitHub, Playwright, Context7, Sentry, Linear, Figma, Supabase, Vercel, Stripe, Semgrep, SonarQube, superpowers, mattpocock-skills...). Auto-update on by default.",
+   "official": true,
+   "url": "https://github.com/anthropics/claude-plugins-official"
+  },
+  {
+   "name": "claude-community",
+   "repo": "anthropics/claude-plugins-community",
+   "add": "claude plugin marketplace add anthropics/claude-plugins-community",
+   "stars": 4911,
+   "stars_approx": true,
+   "license": "Apache-2.0",
+   "description": "Anthropic community marketplace (~2,280 third-party plugins submitted to Anthropic, read-only mirror). Install with @claude-community. Entries are pinned to commit SHAs. Auto-update off by default.",
+   "official": true,
+   "url": "https://github.com/anthropics/claude-plugins-community"
+  },
+  {
+   "name": "anthropic-agent-skills",
+   "repo": "anthropics/skills",
+   "add": "claude plugin marketplace add anthropics/skills",
+   "stars": 196516,
+   "stars_approx": true,
+   "license": null,
+   "description": "Anthropic Agent Skills repo as a marketplace: document-skills (docx, xlsx, pptx, pdf), example-skills (skill-creator, mcp-builder, frontend-design, webapp-testing, algorithmic-art...), claude-api, academy-guide, discernment-nudge.",
+   "official": true,
+   "url": "https://github.com/anthropics/skills"
+  },
+  {
+   "name": "knowledge-work-plugins",
+   "repo": "anthropics/knowledge-work-plugins",
+   "add": "claude plugin marketplace add anthropics/knowledge-work-plugins",
+   "stars": 36381,
+   "stars_approx": true,
+   "license": "Apache-2.0",
+   "description": "Anthropic plugins for knowledge workers (primarily Cowork, also Claude Code): productivity, enterprise-search, sales, finance, data, legal, marketing, customer-support, product-management, engineering, design, HR, plus partner plugins (~123). Auto-update off by default.",
+   "official": true,
+   "url": "https://github.com/anthropics/knowledge-work-plugins"
+  },
+  {
+   "name": "claude-for-financial-services",
+   "repo": "anthropics/financial-services",
+   "add": "claude plugin marketplace add anthropics/financial-services",
+   "stars": 41362,
+   "stars_approx": true,
+   "license": "Apache-2.0",
+   "description": "Anthropic financial-services plugins (19): financial-analysis, investment-banking, equity-research, private-equity, fund-admin, KYC screener, model builder, LSEG and S&P Global connectors. Repo was renamed from anthropics/financial-services-plugins.",
+   "official": true,
+   "url": "https://github.com/anthropics/financial-services"
+  },
+  {
+   "name": "claude-for-legal",
+   "repo": "anthropics/claude-for-legal",
+   "add": "claude plugin marketplace add anthropics/claude-for-legal",
+   "stars": 10028,
+   "stars_approx": true,
+   "license": "Apache-2.0",
+   "description": "Anthropic legal plugins (13): commercial, privacy, product, corporate, employment, regulatory, AI governance, litigation, IP, law-student, legal-clinic.",
+   "official": true,
+   "url": "https://github.com/anthropics/claude-for-legal"
+  },
+  {
+   "name": "superpowers-marketplace",
+   "repo": "obra/superpowers-marketplace",
+   "add": "claude plugin marketplace add obra/superpowers-marketplace",
+   "stars": 1329,
+   "stars_approx": true,
+   "license": "MIT",
+   "description": "Jesse Vincent (obra) curated marketplace (10 plugins): superpowers (core skills: brainstorming, plans, TDD, systematic debugging, subagent-driven development), superpowers-chrome, elements-of-style, episodic-memory, superpowers-lab, superpowers-developing-for-claude-code, claude-session-driver, private-journal-mcp, double-shot-latte. superpowers is also in claude-plugins-official.",
+   "official": false,
+   "url": "https://github.com/obra/superpowers-marketplace"
+  },
+  {
+   "name": "mattpocock",
+   "repo": "mattpocock/skills",
+   "add": "claude plugin marketplace add mattpocock/skills",
+   "stars": 326503,
+   "stars_approx": true,
+   "license": "MIT",
+   "description": "Matt Pocock \"Skills for Real Engineers\" as a single plugin (mattpocock-skills): grilling, to-spec/to-tickets, tdd, code-review, diagnosing-bugs, domain-modeling, codebase-design, handoff, writing-for-agents... Also available as mattpocock-skills@claude-plugins-official.",
+   "official": false,
+   "url": "https://github.com/mattpocock/skills"
+  },
+  {
+   "name": "cursor-plugins",
+   "repo": "cursor/plugins",
+   "add": "claude plugin marketplace add cursor/plugins",
+   "stars": 16787,
+   "stars_approx": true,
+   "license": null,
+   "description": "Cursor official plugins repo, also a Claude Code marketplace: pstack (rigorous agent workflows \"if you want to go fast, go deep first\") and origin-apps. pstack upstream is backnotprop/pstack.",
+   "official": false,
+   "url": "https://github.com/cursor/plugins"
+  },
+  {
+   "name": "trailofbits",
+   "repo": "trailofbits/skills",
+   "add": "claude plugin marketplace add trailofbits/skills",
+   "stars": 8247,
+   "stars_approx": true,
+   "license": "CC-BY-SA-4.0",
+   "description": "Trail of Bits security skills (47 plugins): static-analysis (CodeQL/Semgrep/SARIF), differential-review, insecure-defaults, supply-chain-risk-auditor, variant-analysis, sharp-edges, property-based-testing, mutation-testing, semgrep-rule-creator, smart-contract auditing, yara-authoring... License CC-BY-SA-4.0.",
+   "official": false,
+   "url": "https://github.com/trailofbits/skills"
+  },
+  {
+   "name": "claude-code-workflows",
+   "repo": "wshobson/agents",
+   "add": "claude plugin marketplace add wshobson/agents",
+   "stars": 42612,
+   "stars_approx": true,
+   "license": "MIT",
+   "description": "Seth Hobson agents/skills/commands collection (~94 plugins): tdd-workflows, comprehensive-review, security-scanning, unit-testing, code-documentation, kubernetes-operations, cicd-automation, cloud-infrastructure, data-engineering, incident-response, language packs (python-development, javascript-typescript...).",
+   "official": false,
+   "url": "https://github.com/wshobson/agents"
+  },
+  {
+   "name": "compound-engineering-plugin",
+   "repo": "EveryInc/compound-engineering-plugin",
+   "add": "claude plugin marketplace add EveryInc/compound-engineering-plugin",
+   "stars": 26136,
+   "stars_approx": true,
+   "license": "MIT",
+   "description": "Every Inc. Compound Engineering plugin: brainstorm, plan, work, review and \"compound\" learnings back into the repo with specialized agents.",
+   "official": false,
+   "url": "https://github.com/EveryInc/compound-engineering-plugin"
+  },
+  {
+   "name": "ecc",
+   "repo": "affaan-m/ECC",
+   "add": "claude plugin marketplace add affaan-m/ECC",
+   "stars": 305143,
+   "stars_approx": true,
+   "license": "MIT",
+   "description": "Everything Claude Code (ECC) harness: one plugin with ~72 agents, ~327 skills, hooks, rules and install profiles. Very large; review before installing (context cost). Repo renamed from affaan-m/everything-claude-code.",
+   "official": false,
+   "url": "https://github.com/affaan-m/ECC"
+  },
+  {
+   "name": "thedotmack",
+   "repo": "thedotmack/claude-mem",
+   "add": "claude plugin marketplace add thedotmack/claude-mem",
+   "stars": 117891,
+   "stars_approx": true,
+   "license": "Apache-2.0",
+   "description": "claude-mem: persistent memory across sessions (hooks capture tool use, compress it and re-inject relevant context). Also cmem-pro (sends data to cmem.ai cloud).",
+   "official": false,
+   "url": "https://github.com/thedotmack/claude-mem"
+  },
+  {
+   "name": "ui-ux-pro-max-skill",
+   "repo": "nextlevelbuilder/ui-ux-pro-max-skill",
+   "add": "claude plugin marketplace add nextlevelbuilder/ui-ux-pro-max-skill",
+   "stars": 150754,
+   "stars_approx": true,
+   "license": "MIT",
+   "description": "UI/UX Pro Max design-intelligence skill: searchable styles, palettes, typography, charts and UX guidelines for React/Next.js/Vue/Svelte/SwiftUI/Flutter...",
+   "official": false,
+   "url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill"
+  },
+  {
+   "name": "voltagent-subagents",
+   "repo": "VoltAgent/awesome-claude-code-subagents",
+   "add": "claude plugin marketplace add VoltAgent/awesome-claude-code-subagents",
+   "stars": 26620,
+   "stars_approx": true,
+   "license": "MIT",
+   "description": "100+ specialized subagents grouped in 10 plugins: voltagent-core-dev, -lang, -infra, -qa-sec, -data-ai, -dev-exp, -domains, -biz, -meta, -research.",
+   "official": false,
+   "url": "https://github.com/VoltAgent/awesome-claude-code-subagents"
+  },
+  {
+   "name": "ruflo",
+   "repo": "ruvnet/ruflo",
+   "add": "claude plugin marketplace add ruvnet/ruflo",
+   "stars": 81936,
+   "stars_approx": true,
+   "license": "MIT",
+   "description": "Ruflo (formerly claude-flow): multi-agent swarm orchestration, ~49 plugins (ruflo-core, swarm, rag-memory, security-audit, testgen, agentdb...). Heavy/opinionated; review before installing. Repo renamed from ruvnet/claude-flow.",
+   "official": false,
+   "url": "https://github.com/ruvnet/ruflo"
+  },
+  {
+   "name": "chrome-devtools-plugins",
+   "repo": "ChromeDevTools/chrome-devtools-mcp",
+   "add": "claude plugin marketplace add ChromeDevTools/chrome-devtools-mcp",
+   "stars": 57976,
+   "stars_approx": true,
+   "license": "Apache-2.0",
+   "description": "Chrome DevTools team marketplace with one plugin (chrome-devtools-mcp) bundling the MCP server plus skills for performance traces, network, console and screenshots. Also in claude-plugins-official.",
+   "official": false,
+   "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp"
+  },
+  {
+   "name": "humanizer",
+   "repo": "blader/humanizer",
+   "add": "claude plugin marketplace add blader/humanizer",
+   "stars": 70216,
+   "stars_approx": true,
+   "license": "MIT",
+   "description": "humanizer skill: rewrites AI-sounding text to remove typical signs of LLM writing without changing meaning.",
+   "official": false,
+   "url": "https://github.com/blader/humanizer"
+  },
+  {
+   "name": "claude-hud",
+   "repo": "jarrodwatts/claude-hud",
+   "add": "claude plugin marketplace add jarrodwatts/claude-hud",
+   "stars": 29229,
+   "stars_approx": true,
+   "license": "MIT",
+   "description": "claude-hud plugin: always-visible statusline with context usage, active tools, running agents and todo progress.",
+   "official": false,
+   "url": "https://github.com/jarrodwatts/claude-hud"
+  },
+  {
+   "name": "planning-with-files",
+   "repo": "OthmanAdi/planning-with-files",
+   "add": "claude plugin marketplace add OthmanAdi/planning-with-files",
+   "stars": 28111,
+   "stars_approx": true,
+   "license": "MIT",
+   "description": "Persistent markdown planning files with lifecycle hooks that re-inject plan context and recover after /clear or compaction.",
+   "official": false,
+   "url": "https://github.com/OthmanAdi/planning-with-files"
+  },
+  {
+   "name": "context-engineering-marketplace",
+   "repo": "muratcankoylan/Agent-Skills-for-Context-Engineering",
+   "add": "claude plugin marketplace add muratcankoylan/Agent-Skills-for-Context-Engineering",
+   "stars": 18369,
+   "stars_approx": true,
+   "license": "MIT",
+   "description": "context-engineering plugin: skills on context fundamentals, degradation patterns, compression, multi-agent and harness engineering.",
+   "official": false,
+   "url": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering"
+  },
+  {
+   "name": "playwright-skill",
+   "repo": "lackeyjb/playwright-skill",
+   "add": "claude plugin marketplace add lackeyjb/playwright-skill",
+   "stars": 3302,
+   "stars_approx": true,
+   "license": "MIT",
+   "description": "Playwright browser-automation skill: Claude writes and runs custom Playwright scripts for testing pages and validating UX.",
+   "official": false,
+   "url": "https://github.com/lackeyjb/playwright-skill"
+  },
+  {
+   "name": "claude-code-plugins-plus",
+   "repo": "jeremylongshore/tons-of-skills-marketplace",
+   "add": "claude plugin marketplace add jeremylongshore/tons-of-skills-marketplace",
+   "stars": 2925,
+   "stars_approx": true,
+   "license": "MIT",
+   "description": "Very large community catalog (~428 plugins: API, DevOps, security, ML packs). Quality varies by plugin; review each one. Repo renamed from jeremylongshore/claude-code-plugins-plus-skills.",
+   "official": false,
+   "url": "https://github.com/jeremylongshore/tons-of-skills-marketplace"
+  },
+  {
+   "name": "skills",
+   "repo": "microsoft/skills",
+   "add": "claude plugin marketplace add microsoft/skills",
+   "stars": 3222,
+   "license": "MIT",
+   "description": "Marketplace of microsoft/skills.",
+   "official": false,
+   "url": "https://github.com/microsoft/skills",
+   "tags": [
+    "cloud",
+    "python",
+    "typescript",
+    "dotnet"
+   ]
+  },
+  {
+   "name": "gemini-skills",
+   "repo": "google-gemini/gemini-skills",
+   "add": "claude plugin marketplace add google-gemini/gemini-skills",
+   "stars": 4516,
+   "license": "Apache-2.0",
+   "description": "Marketplace of google-gemini/gemini-skills.",
+   "official": false,
+   "url": "https://github.com/google-gemini/gemini-skills",
+   "tags": [
+    "ai-ml",
+    "backend",
+    "cloud"
+   ]
+  },
+  {
+   "name": "firebase",
+   "repo": "firebase/agent-skills",
+   "add": "claude plugin marketplace add firebase/agent-skills",
+   "stars": 519,
+   "license": "Apache-2.0",
+   "description": "Marketplace of firebase/agent-skills.",
+   "official": false,
+   "url": "https://github.com/firebase/agent-skills",
+   "tags": [
+    "backend",
+    "database",
+    "auth",
+    "mobile"
+   ]
+  },
+  {
+   "name": "dart-flutter",
+   "repo": "flutter/agent-plugins",
+   "add": "claude plugin marketplace add flutter/agent-plugins",
+   "stars": 3192,
+   "license": "BSD-3-Clause",
+   "description": "Marketplace of flutter/agent-plugins.",
+   "official": false,
+   "url": "https://github.com/flutter/agent-plugins",
+   "tags": [
+    "mobile",
+    "frontend",
+    "testing"
+   ]
+  },
+  {
+   "name": "gsap-skills",
+   "repo": "greensock/gsap-skills",
+   "add": "claude plugin marketplace add greensock/gsap-skills",
+   "stars": 18686,
+   "license": "MIT",
+   "description": "Marketplace of greensock/gsap-skills.",
+   "official": false,
+   "url": "https://github.com/greensock/gsap-skills",
+   "tags": [
+    "frontend",
+    "design",
+    "performance"
+   ]
+  },
+  {
+   "name": "obsidian-skills",
+   "repo": "obsidianmd/obsidian-skills",
+   "add": "claude plugin marketplace add obsidianmd/obsidian-skills",
+   "stars": 53151,
+   "license": "MIT",
+   "description": "Marketplace of obsidianmd/obsidian-skills.",
+   "official": false,
+   "url": "https://github.com/obsidianmd/obsidian-skills",
+   "tags": [
+    "productivity",
+    "docs",
+    "writing"
+   ]
+  },
+  {
+   "name": "datadog-labs",
+   "repo": "datadog-labs/agent-skills",
+   "add": "claude plugin marketplace add datadog-labs/agent-skills",
+   "stars": 185,
+   "license": "MIT",
+   "description": "Marketplace of datadog-labs/agent-skills.",
+   "official": false,
+   "url": "https://github.com/datadog-labs/agent-skills",
+   "tags": [
+    "observability",
+    "ai-ml",
+    "debugging"
+   ]
+  },
+  {
+   "name": "brave-search",
+   "repo": "brave/brave-search-skills",
+   "add": "claude plugin marketplace add brave/brave-search-skills",
+   "stars": 197,
+   "license": "MIT",
+   "description": "Marketplace of brave/brave-search-skills.",
+   "official": false,
+   "url": "https://github.com/brave/brave-search-skills",
+   "tags": [
+    "web-data",
+    "research",
+    "ai-ml"
+   ]
+  },
+  {
+   "name": "firecrawl-skills",
+   "repo": "firecrawl/skills",
+   "add": "claude plugin marketplace add firecrawl/skills",
+   "stars": 159,
+   "license": "ISC",
+   "description": "Marketplace of firecrawl/skills.",
+   "official": false,
+   "url": "https://github.com/firecrawl/skills",
+   "tags": [
+    "web-data",
+    "research",
+    "backend"
+   ]
+  },
+  {
+   "name": "fal-community",
+   "repo": "fal-ai-community/skills",
+   "add": "claude plugin marketplace add fal-ai-community/skills",
+   "stars": 273,
+   "license": "MIT",
+   "description": "Marketplace of fal-ai-community/skills.",
+   "official": false,
+   "url": "https://github.com/fal-ai-community/skills",
+   "tags": [
+    "media",
+    "ai-ml",
+    "design"
+   ]
+  },
+  {
+   "name": "minimax-skills",
+   "repo": "MiniMax-AI/skills",
+   "add": "claude plugin marketplace add MiniMax-AI/skills",
+   "stars": 13868,
+   "license": "MIT",
+   "description": "Marketplace of MiniMax-AI/skills.",
+   "official": false,
+   "url": "https://github.com/MiniMax-AI/skills",
+   "tags": [
+    "frontend",
+    "mobile",
+    "documents"
+   ]
+  },
+  {
+   "name": "svelte",
+   "repo": "sveltejs/ai-tools",
+   "add": "claude plugin marketplace add sveltejs/ai-tools",
+   "stars": 342,
+   "license": "MIT",
+   "description": "Marketplace of sveltejs/ai-tools.",
+   "official": false,
+   "url": "https://github.com/sveltejs/ai-tools",
+   "tags": [
+    "frontend",
+    "typescript",
+    "mcp"
+   ]
+  },
+  {
+   "name": "vue-skills",
+   "repo": "vuejs-ai/skills",
+   "add": "claude plugin marketplace add vuejs-ai/skills",
+   "stars": 3356,
+   "license": "MIT",
+   "description": "Marketplace of vuejs-ai/skills.",
+   "official": false,
+   "url": "https://github.com/vuejs-ai/skills",
+   "tags": [
+    "frontend",
+    "typescript",
+    "testing"
+   ]
+  },
+  {
+   "name": "agent-browser",
+   "repo": "vercel-labs/agent-browser",
+   "add": "claude plugin marketplace add vercel-labs/agent-browser",
+   "stars": 52574,
+   "license": "Apache-2.0",
+   "description": "Marketplace of vercel-labs/agent-browser.",
+   "official": false,
+   "url": "https://github.com/vercel-labs/agent-browser",
+   "tags": [
+    "browser",
+    "testing",
+    "web-data"
+   ]
+  },
+  {
+   "name": "addy-agent-skills",
+   "repo": "addyosmani/agent-skills",
+   "add": "claude plugin marketplace add addyosmani/agent-skills",
+   "stars": 118859,
+   "license": "MIT",
+   "description": "Marketplace of addyosmani/agent-skills.",
+   "official": false,
+   "url": "https://github.com/addyosmani/agent-skills",
+   "tags": [
+    "workflow",
+    "planning",
+    "review",
+    "testing"
+   ]
+  },
+  {
+   "name": "addy-web-quality-skills",
+   "repo": "addyosmani/web-quality-skills",
+   "add": "claude plugin marketplace add addyosmani/web-quality-skills",
+   "stars": 3106,
+   "license": "MIT",
+   "description": "Marketplace of addyosmani/web-quality-skills.",
+   "official": false,
+   "url": "https://github.com/addyosmani/web-quality-skills",
+   "tags": [
+    "frontend",
+    "performance",
+    "accessibility"
+   ]
+  },
+  {
+   "name": "marketingskills",
+   "repo": "coreyhaines31/marketingskills",
+   "add": "claude plugin marketplace add coreyhaines31/marketingskills",
+   "stars": 61175,
+   "license": "MIT",
+   "description": "Marketplace of coreyhaines31/marketingskills.",
+   "official": false,
+   "url": "https://github.com/coreyhaines31/marketingskills",
+   "tags": [
+    "marketing",
+    "writing",
+    "product"
+   ]
+  },
+  {
+   "name": "agricidaniel-claude-seo",
+   "repo": "AgriciDaniel/claude-seo",
+   "add": "claude plugin marketplace add AgriciDaniel/claude-seo",
+   "stars": 30588,
+   "license": "MIT",
+   "description": "Marketplace of AgriciDaniel/claude-seo.",
+   "official": false,
+   "url": "https://github.com/AgriciDaniel/claude-seo",
+   "tags": [
+    "marketing",
+    "web-data",
+    "research"
+   ]
+  },
+  {
+   "name": "impeccable",
+   "repo": "pbakaus/impeccable",
+   "add": "claude plugin marketplace add pbakaus/impeccable",
+   "stars": 112693,
+   "license": "Apache-2.0",
+   "description": "Marketplace of pbakaus/impeccable.",
+   "official": false,
+   "url": "https://github.com/pbakaus/impeccable",
+   "tags": [
+    "design",
+    "frontend",
+    "review"
+   ]
+  },
+  {
+   "name": "taste-skill",
+   "repo": "Leonxlnx/taste-skill",
+   "add": "claude plugin marketplace add Leonxlnx/taste-skill",
+   "stars": 118205,
+   "license": "MIT",
+   "description": "Marketplace of Leonxlnx/taste-skill.",
+   "official": false,
+   "url": "https://github.com/Leonxlnx/taste-skill",
+   "tags": [
+    "design",
+    "frontend",
+    "marketing"
+   ]
+  },
+  {
+   "name": "interface-design",
+   "repo": "Dammyjay93/interface-design",
+   "add": "claude plugin marketplace add Dammyjay93/interface-design",
+   "stars": 5998,
+   "license": "MIT",
+   "description": "Marketplace of Dammyjay93/interface-design.",
+   "official": false,
+   "url": "https://github.com/Dammyjay93/interface-design",
+   "tags": [
+    "design",
+    "frontend",
+    "review"
+   ]
+  },
+  {
+   "name": "visual-explainer-marketplace",
+   "repo": "nicobailon/visual-explainer",
+   "add": "claude plugin marketplace add nicobailon/visual-explainer",
+   "stars": 11166,
+   "license": "MIT",
+   "description": "Marketplace of nicobailon/visual-explainer.",
+   "official": false,
+   "url": "https://github.com/nicobailon/visual-explainer",
+   "tags": [
+    "docs",
+    "design",
+    "review"
+   ]
+  },
+  {
+   "name": "frontend-slides",
+   "repo": "zarazhangrui/frontend-slides",
+   "add": "claude plugin marketplace add zarazhangrui/frontend-slides",
+   "stars": 32531,
+   "license": "MIT",
+   "description": "Marketplace of zarazhangrui/frontend-slides.",
+   "official": false,
+   "url": "https://github.com/zarazhangrui/frontend-slides",
+   "tags": [
+    "documents",
+    "design",
+    "frontend"
+   ]
+  },
+  {
+   "name": "caveman",
+   "repo": "JuliusBrussee/caveman",
+   "add": "claude plugin marketplace add JuliusBrussee/caveman",
+   "stars": 121235,
+   "license": "Apache-2.0",
+   "description": "Marketplace of JuliusBrussee/caveman.",
+   "official": false,
+   "url": "https://github.com/JuliusBrussee/caveman",
+   "tags": [
+    "productivity",
+    "performance",
+    "meta"
+   ]
+  },
+  {
+   "name": "fullstack-dev-skills",
+   "repo": "Jeffallan/claude-skills",
+   "add": "claude plugin marketplace add Jeffallan/claude-skills",
+   "stars": 12438,
+   "license": "MIT",
+   "description": "Marketplace of Jeffallan/claude-skills.",
+   "official": false,
+   "url": "https://github.com/Jeffallan/claude-skills",
+   "tags": [
+    "backend",
+    "frontend",
+    "devops",
+    "architecture"
+   ]
+  },
+  {
+   "name": "claude-code-skills",
+   "repo": "alirezarezvani/claude-skills",
+   "add": "claude plugin marketplace add alirezarezvani/claude-skills",
+   "stars": 30054,
+   "license": "MIT",
+   "description": "Marketplace of alirezarezvani/claude-skills.",
+   "official": false,
+   "url": "https://github.com/alirezarezvani/claude-skills",
+   "tags": [
+    "business",
+    "marketing",
+    "product",
+    "backend"
+   ]
+  },
+  {
+   "name": "n8n-mcp-skills",
+   "repo": "czlonkowski/n8n-skills",
+   "add": "claude plugin marketplace add czlonkowski/n8n-skills",
+   "stars": 6670,
+   "license": "MIT",
+   "description": "Marketplace of czlonkowski/n8n-skills.",
+   "official": false,
+   "url": "https://github.com/czlonkowski/n8n-skills",
+   "tags": [
+    "productivity",
+    "mcp",
+    "backend"
+   ]
+  },
+  {
+   "name": "conorluddy",
+   "repo": "conorluddy/ios-simulator-skill",
+   "add": "claude plugin marketplace add conorluddy/ios-simulator-skill",
+   "stars": 1330,
+   "license": "MIT",
+   "description": "Marketplace of conorluddy/ios-simulator-skill.",
+   "official": false,
+   "url": "https://github.com/conorluddy/ios-simulator-skill",
+   "tags": [
+    "mobile",
+    "testing",
+    "accessibility"
+   ]
+  },
+  {
+   "name": "agent-toolkit",
+   "repo": "softaworks/agent-toolkit",
+   "add": "claude plugin marketplace add softaworks/agent-toolkit",
+   "stars": 2700,
+   "license": "MIT",
+   "description": "Marketplace of softaworks/agent-toolkit.",
+   "official": false,
+   "url": "https://github.com/softaworks/agent-toolkit",
+   "tags": [
+    "docs",
+    "writing",
+    "productivity",
+    "architecture"
+   ]
+  },
+  {
+   "name": "dev-browser-marketplace",
+   "repo": "SawyerHood/dev-browser",
+   "add": "claude plugin marketplace add SawyerHood/dev-browser",
+   "stars": 6740,
+   "license": "MIT",
+   "description": "Marketplace of SawyerHood/dev-browser.",
+   "official": false,
+   "url": "https://github.com/SawyerHood/dev-browser",
+   "tags": [
+    "browser",
+    "testing",
+    "web-data"
+   ]
+  },
+  {
+   "name": "ai-skills",
+   "repo": "sanjay3290/ai-skills",
+   "add": "claude plugin marketplace add sanjay3290/ai-skills",
+   "stars": 457,
+   "license": "Apache-2.0",
+   "description": "Marketplace of sanjay3290/ai-skills.",
+   "official": false,
+   "url": "https://github.com/sanjay3290/ai-skills",
+   "tags": [
+    "productivity",
+    "database",
+    "research"
+   ]
+  }
+ ],
+ "skills": [
+  {
+   "name": "anthropics/skills (collection)",
+   "repo": "anthropics/skills",
+   "path": "skills",
+   "stars": 196516,
+   "license": "Apache-2.0",
+   "description": "Anthropic official Agent Skills: document skills (docx, xlsx, pptx, pdf) and examples (skill-creator, mcp-builder, frontend-design, webapp-testing...). Install as plugins from anthropic-agent-skills.",
+   "category": "collection",
+   "url": "https://github.com/anthropics/skills/tree/main/skills",
+   "tags": [
+    "documents",
+    "design",
+    "meta"
+   ]
+  },
+  {
+   "name": "skill-creator",
+   "repo": "anthropics/skills",
+   "path": "skills/skill-creator",
+   "stars": 196516,
+   "license": null,
+   "description": "Create, improve and evaluate skills (evals, description optimization). Also skill-creator@claude-plugins-official.",
+   "category": "meta",
+   "url": "https://github.com/anthropics/skills/tree/main/skills/skill-creator",
+   "tags": [
+    "meta",
+    "testing",
+    "writing"
+   ]
+  },
+  {
+   "name": "frontend-design",
+   "repo": "anthropics/skills",
+   "path": "skills/frontend-design",
+   "stars": 196516,
+   "license": null,
+   "description": "Distinctive, production-grade frontend interfaces that avoid generic AI aesthetics.",
+   "category": "design",
+   "url": "https://github.com/anthropics/skills/tree/main/skills/frontend-design",
+   "tags": [
+    "frontend",
+    "design"
+   ]
+  },
+  {
+   "name": "mcp-builder",
+   "repo": "anthropics/skills",
+   "path": "skills/mcp-builder",
+   "stars": 196516,
+   "license": null,
+   "description": "Guide for building high-quality MCP servers.",
+   "category": "devtools",
+   "url": "https://github.com/anthropics/skills/tree/main/skills/mcp-builder",
+   "tags": [
+    "mcp",
+    "backend",
+    "ai-ml"
+   ]
+  },
+  {
+   "name": "webapp-testing",
+   "repo": "anthropics/skills",
+   "path": "skills/webapp-testing",
+   "stars": 196516,
+   "license": null,
+   "description": "Test local web apps with Playwright (screenshots, logs, interaction).",
+   "category": "testing",
+   "url": "https://github.com/anthropics/skills/tree/main/skills/webapp-testing",
+   "tags": [
+    "testing",
+    "browser",
+    "frontend"
+   ]
+  },
+  {
+   "name": "pdf",
+   "repo": "anthropics/skills",
+   "path": "skills/pdf",
+   "stars": 196516,
+   "license": null,
+   "description": "Read, create, merge, split and fill PDF files.",
+   "category": "docs",
+   "url": "https://github.com/anthropics/skills/tree/main/skills/pdf",
+   "tags": [
+    "documents"
+   ]
+  },
+  {
+   "name": "docx",
+   "repo": "anthropics/skills",
+   "path": "skills/docx",
+   "stars": 196516,
+   "license": null,
+   "description": "Create and edit Word documents incl. tracked changes.",
+   "category": "docs",
+   "url": "https://github.com/anthropics/skills/tree/main/skills/docx",
+   "tags": [
+    "documents",
+    "writing"
+   ]
+  },
+  {
+   "name": "xlsx",
+   "repo": "anthropics/skills",
+   "path": "skills/xlsx",
+   "stars": 196516,
+   "license": null,
+   "description": "Create and edit spreadsheets with formulas and formatting.",
+   "category": "data",
+   "url": "https://github.com/anthropics/skills/tree/main/skills/xlsx",
+   "tags": [
+    "documents",
+    "data"
+   ]
+  },
+  {
+   "name": "pptx",
+   "repo": "anthropics/skills",
+   "path": "skills/pptx",
+   "stars": 196516,
+   "license": null,
+   "description": "Create and edit PowerPoint decks.",
+   "category": "docs",
+   "url": "https://github.com/anthropics/skills/tree/main/skills/pptx",
+   "tags": [
+    "documents",
+    "design"
+   ]
+  },
+  {
+   "name": "obra/superpowers (collection)",
+   "repo": "obra/superpowers",
+   "path": "skills",
+   "stars": 319067,
+   "license": "MIT",
+   "description": "Agentic skills framework and methodology: brainstorm -> plan -> subagent-driven implementation with review, red/green TDD, systematic debugging.",
+   "category": "collection",
+   "url": "https://github.com/obra/superpowers/tree/main/skills",
+   "tags": [
+    "workflow",
+    "tdd",
+    "debugging",
+    "planning"
+   ]
+  },
+  {
+   "name": "test-driven-development",
+   "repo": "obra/superpowers",
+   "path": "skills/test-driven-development",
+   "stars": 319067,
+   "license": "MIT",
+   "description": "Strict RED/GREEN/REFACTOR TDD discipline.",
+   "category": "testing",
+   "url": "https://github.com/obra/superpowers/tree/main/skills/test-driven-development",
+   "tags": [
+    "tdd",
+    "testing",
+    "workflow"
+   ]
+  },
+  {
+   "name": "systematic-debugging",
+   "repo": "obra/superpowers",
+   "path": "skills/systematic-debugging",
+   "stars": 319067,
+   "license": "MIT",
+   "description": "Root-cause-first debugging process.",
+   "category": "debugging",
+   "url": "https://github.com/obra/superpowers/tree/main/skills/systematic-debugging",
+   "tags": [
+    "debugging",
+    "workflow"
+   ]
+  },
+  {
+   "name": "brainstorming",
+   "repo": "obra/superpowers",
+   "path": "skills/brainstorming",
+   "stars": 319067,
+   "license": "MIT",
+   "description": "Refine an idea into a design through questions before any code.",
+   "category": "workflow",
+   "url": "https://github.com/obra/superpowers/tree/main/skills/brainstorming",
+   "tags": [
+    "planning",
+    "design",
+    "workflow"
+   ]
+  },
+  {
+   "name": "writing-plans",
+   "repo": "obra/superpowers",
+   "path": "skills/writing-plans",
+   "stars": 319067,
+   "license": "MIT",
+   "description": "Turn a design into a detailed, bite-sized implementation plan.",
+   "category": "workflow",
+   "url": "https://github.com/obra/superpowers/tree/main/skills/writing-plans",
+   "tags": [
+    "planning",
+    "workflow"
+   ]
+  },
+  {
+   "name": "subagent-driven-development",
+   "repo": "obra/superpowers",
+   "path": "skills/subagent-driven-development",
+   "stars": 319067,
+   "license": "MIT",
+   "description": "Dispatch each plan task to a fresh subagent and review it before continuing.",
+   "category": "workflow",
+   "url": "https://github.com/obra/superpowers/tree/main/skills/subagent-driven-development",
+   "tags": [
+    "workflow",
+    "review"
+   ]
+  },
+  {
+   "name": "requesting-code-review",
+   "repo": "obra/superpowers",
+   "path": "skills/requesting-code-review",
+   "stars": 319067,
+   "license": "MIT",
+   "description": "Request an independent code review between tasks.",
+   "category": "code-review",
+   "url": "https://github.com/obra/superpowers/tree/main/skills/requesting-code-review",
+   "tags": [
+    "review",
+    "workflow"
+   ]
+  },
+  {
+   "name": "mattpocock/skills (collection)",
+   "repo": "mattpocock/skills",
+   "path": "skills",
+   "stars": 326503,
+   "license": "MIT",
+   "description": "Matt Pocock \"Skills for Real Engineers\" (engineering + productivity skills).",
+   "category": "collection",
+   "url": "https://github.com/mattpocock/skills/tree/main/skills",
+   "tags": [
+    "planning",
+    "tdd",
+    "review",
+    "architecture"
+   ]
+  },
+  {
+   "name": "tdd",
+   "repo": "mattpocock/skills",
+   "path": "skills/engineering/tdd",
+   "stars": 326503,
+   "license": "MIT",
+   "description": "Test-first red-green-refactor workflow with integration tests.",
+   "category": "testing",
+   "url": "https://github.com/mattpocock/skills/tree/main/skills/engineering/tdd",
+   "tags": [
+    "tdd",
+    "testing"
+   ]
+  },
+  {
+   "name": "grilling",
+   "repo": "mattpocock/skills",
+   "path": "skills/productivity/grilling",
+   "stars": 326503,
+   "license": "MIT",
+   "description": "Stress-test a plan by being interviewed relentlessly before building.",
+   "category": "workflow",
+   "url": "https://github.com/mattpocock/skills/tree/main/skills/productivity/grilling",
+   "tags": [
+    "planning"
+   ]
+  },
+  {
+   "name": "to-spec",
+   "repo": "mattpocock/skills",
+   "path": "skills/engineering/to-spec",
+   "stars": 326503,
+   "license": "MIT",
+   "description": "Turn a conversation into a written spec.",
+   "category": "workflow",
+   "url": "https://github.com/mattpocock/skills/tree/main/skills/engineering/to-spec",
+   "tags": [
+    "planning",
+    "docs"
+   ]
+  },
+  {
+   "name": "code-review",
+   "repo": "mattpocock/skills",
+   "path": "skills/engineering/code-review",
+   "stars": 326503,
+   "license": "MIT",
+   "description": "Structured code review skill.",
+   "category": "code-review",
+   "url": "https://github.com/mattpocock/skills/tree/main/skills/engineering/code-review",
+   "tags": [
+    "review",
+    "git"
+   ]
+  },
+  {
+   "name": "diagnosing-bugs",
+   "repo": "mattpocock/skills",
+   "path": "skills/engineering/diagnosing-bugs",
+   "stars": 326503,
+   "license": "MIT",
+   "description": "Systematic bug diagnosis.",
+   "category": "debugging",
+   "url": "https://github.com/mattpocock/skills/tree/main/skills/engineering/diagnosing-bugs",
+   "tags": [
+    "debugging",
+    "performance"
+   ]
+  },
+  {
+   "name": "codebase-design",
+   "repo": "mattpocock/skills",
+   "path": "skills/engineering/codebase-design",
+   "stars": 326503,
+   "license": "MIT",
+   "description": "Deep-module vocabulary for designing interfaces and seams.",
+   "category": "architecture",
+   "url": "https://github.com/mattpocock/skills/tree/main/skills/engineering/codebase-design",
+   "tags": [
+    "architecture"
+   ]
+  },
+  {
+   "name": "domain-modeling",
+   "repo": "mattpocock/skills",
+   "path": "skills/engineering/domain-modeling",
+   "stars": 326503,
+   "license": "MIT",
+   "description": "Build a domain model, glossary and ADRs.",
+   "category": "architecture",
+   "url": "https://github.com/mattpocock/skills/tree/main/skills/engineering/domain-modeling",
+   "tags": [
+    "architecture",
+    "docs"
+   ]
+  },
+  {
+   "name": "trailofbits/skills (collection)",
+   "repo": "trailofbits/skills",
+   "path": "plugins",
+   "stars": 8247,
+   "license": "CC-BY-SA-4.0",
+   "description": "Trail of Bits security research, vulnerability detection and audit skills (47 plugins).",
+   "category": "security",
+   "url": "https://github.com/trailofbits/skills/tree/main/plugins",
+   "tags": [
+    "security",
+    "review",
+    "testing"
+   ]
+  },
+  {
+   "name": "static-analysis",
+   "repo": "trailofbits/skills",
+   "path": "plugins/static-analysis",
+   "stars": 8247,
+   "license": "CC-BY-SA-4.0",
+   "description": "CodeQL, Semgrep and SARIF parsing toolkit.",
+   "category": "security",
+   "url": "https://github.com/trailofbits/skills/tree/main/plugins/static-analysis",
+   "tags": [
+    "security",
+    "review"
+   ]
+  },
+  {
+   "name": "differential-review",
+   "repo": "trailofbits/skills",
+   "path": "plugins/differential-review",
+   "stars": 8247,
+   "license": "CC-BY-SA-4.0",
+   "description": "Security-focused review of code changes with git history and blast-radius estimation.",
+   "category": "security",
+   "url": "https://github.com/trailofbits/skills/tree/main/plugins/differential-review",
+   "tags": [
+    "security",
+    "review",
+    "git"
+   ]
+  },
+  {
+   "name": "insecure-defaults",
+   "repo": "trailofbits/skills",
+   "path": "plugins/insecure-defaults",
+   "stars": 8247,
+   "license": "CC-BY-SA-4.0",
+   "description": "Detect hardcoded credentials, fallback secrets and weak defaults.",
+   "category": "security",
+   "url": "https://github.com/trailofbits/skills/tree/main/plugins/insecure-defaults",
+   "tags": [
+    "security",
+    "review"
+   ]
+  },
+  {
+   "name": "property-based-testing",
+   "repo": "trailofbits/skills",
+   "path": "plugins/property-based-testing",
+   "stars": 8247,
+   "license": "CC-BY-SA-4.0",
+   "description": "Write and triage property-based tests (Hypothesis, fast-check, proptest, Echidna/Medusa).",
+   "category": "testing",
+   "url": "https://github.com/trailofbits/skills/tree/main/plugins/property-based-testing",
+   "tags": [
+    "testing",
+    "security"
+   ]
+  },
+  {
+   "name": "pstack",
+   "repo": "backnotprop/pstack",
+   "path": null,
+   "stars": 4398,
+   "license": "MIT",
+   "description": "Skills and principles for rigorous AI-assisted engineering (architect, deslop, plan/execute...). Install: claude plugin install pstack@cursor-plugins or npx skills add backnotprop/pstack.",
+   "category": "collection",
+   "url": "https://github.com/backnotprop/pstack",
+   "tags": [
+    "workflow",
+    "planning",
+    "review"
+   ]
+  },
+  {
+   "name": "vercel-labs/agent-skills",
+   "repo": "vercel-labs/agent-skills",
+   "path": "skills",
+   "stars": 34295,
+   "license": null,
+   "description": "Vercel's official agent skills (react-best-practices, web design guidelines...). Install: npx skills add vercel-labs/agent-skills.",
+   "category": "collection",
+   "url": "https://github.com/vercel-labs/agent-skills/tree/main/skills",
+   "tags": [
+    "frontend",
+    "performance",
+    "design"
+   ]
+  },
+  {
+   "name": "react-best-practices",
+   "repo": "vercel-labs/agent-skills",
+   "path": "skills/react-best-practices",
+   "stars": 34295,
+   "license": null,
+   "description": "React/Next.js performance best practices from Vercel.",
+   "category": "frontend",
+   "url": "https://github.com/vercel-labs/agent-skills/tree/main/skills/react-best-practices",
+   "tags": [
+    "frontend",
+    "performance",
+    "typescript"
+   ]
+  },
+  {
+   "name": "ui-ux-pro-max",
+   "repo": "nextlevelbuilder/ui-ux-pro-max-skill",
+   "path": null,
+   "stars": 150754,
+   "license": "MIT",
+   "description": "Design intelligence: searchable UI styles, palettes, font pairings, chart types and UX rules.",
+   "category": "design",
+   "url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
+   "tags": [
+    "design",
+    "frontend"
+   ]
+  },
+  {
+   "name": "humanizer",
+   "repo": "blader/humanizer",
+   "path": null,
+   "stars": 70216,
+   "license": "MIT",
+   "description": "Remove signs of AI-generated writing from text.",
+   "category": "docs",
+   "url": "https://github.com/blader/humanizer",
+   "tags": [
+    "writing"
+   ]
+  },
+  {
+   "name": "playwright-skill",
+   "repo": "lackeyjb/playwright-skill",
+   "path": null,
+   "stars": 3302,
+   "license": "MIT",
+   "description": "General-purpose Playwright browser automation via generated scripts.",
+   "category": "testing",
+   "url": "https://github.com/lackeyjb/playwright-skill",
+   "tags": [
+    "browser",
+    "testing"
+   ]
+  },
+  {
+   "name": "scientific-agent-skills",
+   "repo": "K-Dense-AI/scientific-agent-skills",
+   "path": null,
+   "stars": 57567,
+   "license": "MIT",
+   "description": "170+ scientific skills (bioinformatics, chemistry, data analysis, databases). Install: npx skills add K-Dense-AI/scientific-agent-skills. Renamed from claude-scientific-skills.",
+   "category": "data",
+   "url": "https://github.com/K-Dense-AI/scientific-agent-skills",
+   "tags": [
+    "science",
+    "data",
+    "research"
+   ]
+  },
+  {
+   "name": "context-engineering",
+   "repo": "muratcankoylan/Agent-Skills-for-Context-Engineering",
+   "path": null,
+   "stars": 18369,
+   "license": "MIT",
+   "description": "Context-engineering and multi-agent architecture skills for building agent systems.",
+   "category": "meta",
+   "url": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering",
+   "tags": [
+    "ai-ml",
+    "meta"
+   ]
+  },
+  {
+   "name": "planning-with-files",
+   "repo": "OthmanAdi/planning-with-files",
+   "path": null,
+   "stars": 28111,
+   "license": "MIT",
+   "description": "File-based persistent planning that survives /clear and compaction.",
+   "category": "workflow",
+   "url": "https://github.com/OthmanAdi/planning-with-files",
+   "tags": [
+    "planning",
+    "productivity"
+   ]
+  },
+  {
+   "name": "algorithmic-art",
+   "repo": "anthropics/skills",
+   "path": "skills/algorithmic-art",
+   "stars": 197059,
+   "license": "Apache-2.0",
+   "description": "Generates p5.js generative art with seeded randomness and adjustable parameters.",
+   "category": "design",
+   "url": "https://github.com/anthropics/skills/tree/main/skills/algorithmic-art",
+   "tags": [
+    "design",
+    "media",
+    "frontend"
+   ],
+   "publisher": "anthropic",
+   "kind": "skill",
+   "install": "claude plugin install example-skills@anthropic-agent-skills"
+  },
+  {
+   "name": "canvas-design",
+   "repo": "anthropics/skills",
+   "path": "skills/canvas-design",
+   "stars": 197059,
+   "license": "Apache-2.0",
+   "description": "Produces posters and other static visual pieces as PNG or PDF files from a written design philosophy.",
+   "category": "design",
+   "url": "https://github.com/anthropics/skills/tree/main/skills/canvas-design",
+   "tags": [
+    "design",
+    "media",
+    "documents"
+   ],
+   "publisher": "anthropic",
+   "kind": "skill",
+   "install": "claude plugin install example-skills@anthropic-agent-skills"
+  },
+  {
+   "name": "theme-factory",
+   "repo": "anthropics/skills",
+   "path": "skills/theme-factory",
+   "stars": 197059,
+   "license": "Apache-2.0",
+   "description": "Applies one of ten preset color and font themes, or a new one, to slides, documents, reports and HTML pages.",
+   "category": "design",
+   "url": "https://github.com/anthropics/skills/tree/main/skills/theme-factory",
+   "tags": [
+    "design",
+    "documents",
+    "frontend"
+   ],
+   "publisher": "anthropic",
+   "kind": "skill",
+   "install": "claude plugin install example-skills@anthropic-agent-skills"
+  },
+  {
+   "name": "brand-guidelines",
+   "repo": "anthropics/skills",
+   "path": "skills/brand-guidelines",
+   "stars": 197059,
+   "license": "Apache-2.0",
+   "description": "Applies Anthropic brand colors and typography to artifacts; useful as a template for encoding your own brand rules.",
+   "category": "design",
+   "url": "https://github.com/anthropics/skills/tree/main/skills/brand-guidelines",
+   "tags": [
+    "design",
+    "documents",
+    "marketing"
+   ],
+   "publisher": "anthropic",
+   "kind": "skill",
+   "install": "claude plugin install example-skills@anthropic-agent-skills"
+  },
+  {
+   "name": "internal-comms",
+   "repo": "anthropics/skills",
+   "path": "skills/internal-comms",
+   "stars": 197059,
+   "license": "Apache-2.0",
+   "description": "Drafts internal communications such as status reports, leadership updates, newsletters and FAQs in set formats.",
+   "category": "writing",
+   "url": "https://github.com/anthropics/skills/tree/main/skills/internal-comms",
+   "tags": [
+    "writing",
+    "productivity",
+    "business"
+   ],
+   "publisher": "anthropic",
+   "kind": "skill",
+   "install": "claude plugin install example-skills@anthropic-agent-skills"
+  },
+  {
+   "name": "doc-coauthoring",
+   "repo": "anthropics/skills",
+   "path": "skills/doc-coauthoring",
+   "stars": 197059,
+   "license": "Apache-2.0",
+   "description": "Guides a structured co-writing workflow for specs, proposals and decision documents, from context gathering to reader testing.",
+   "category": "writing",
+   "url": "https://github.com/anthropics/skills/tree/main/skills/doc-coauthoring",
+   "tags": [
+    "writing",
+    "docs",
+    "planning"
+   ],
+   "publisher": "anthropic",
+   "kind": "skill",
+   "install": "claude plugin install example-skills@anthropic-agent-skills"
+  },
+  {
+   "name": "slack-gif-creator",
+   "repo": "anthropics/skills",
+   "path": "skills/slack-gif-creator",
+   "stars": 197059,
+   "license": "Apache-2.0",
+   "description": "Creates animated GIFs sized and validated for Slack emoji and messages.",
+   "category": "media",
+   "url": "https://github.com/anthropics/skills/tree/main/skills/slack-gif-creator",
+   "tags": [
+    "media",
+    "design",
+    "productivity"
+   ],
+   "publisher": "anthropic",
+   "kind": "skill",
+   "install": "claude plugin install example-skills@anthropic-agent-skills"
+  },
+  {
+   "name": "web-artifacts-builder",
+   "repo": "anthropics/skills",
+   "path": "skills/web-artifacts-builder",
+   "stars": 197059,
+   "license": "Apache-2.0",
+   "description": "Builds multi-component HTML artifacts with React, Tailwind CSS and shadcn/ui, bundled into a single file.",
+   "category": "frontend",
+   "url": "https://github.com/anthropics/skills/tree/main/skills/web-artifacts-builder",
+   "tags": [
+    "frontend",
+    "design",
+    "typescript"
+   ],
+   "publisher": "anthropic",
+   "kind": "skill",
+   "install": "claude plugin install example-skills@anthropic-agent-skills"
+  },
+  {
+   "name": "using-git-worktrees",
+   "repo": "obra/superpowers",
+   "path": "skills/using-git-worktrees",
+   "stars": 319806,
+   "license": "MIT",
+   "description": "Creates an isolated git worktree before feature work or plan execution, with checks on directory choice and safety.",
+   "category": "git",
+   "url": "https://github.com/obra/superpowers/tree/main/skills/using-git-worktrees",
+   "tags": [
+    "git",
+    "workflow",
+    "productivity"
+   ],
+   "publisher": "community",
+   "kind": "skill",
+   "install": "claude plugin install superpowers@claude-plugins-official"
+  },
+  {
+   "name": "executing-plans",
+   "repo": "obra/superpowers",
+   "path": "skills/executing-plans",
+   "stars": 319806,
+   "license": "MIT",
+   "description": "Executes a written implementation plan in batches inside the current session, with review checkpoints between batches.",
+   "category": "planning",
+   "url": "https://github.com/obra/superpowers/tree/main/skills/executing-plans",
+   "tags": [
+    "planning",
+    "workflow",
+    "review"
+   ],
+   "publisher": "community",
+   "kind": "skill",
+   "install": "claude plugin install superpowers@claude-plugins-official"
+  },
+  {
+   "name": "finishing-a-development-branch",
+   "repo": "obra/superpowers",
+   "path": "skills/finishing-a-development-branch",
+   "stars": 319806,
+   "license": "MIT",
+   "description": "Once tests pass, presents structured options to merge, open a PR or clean up the branch and worktree.",
+   "category": "git",
+   "url": "https://github.com/obra/superpowers/tree/main/skills/finishing-a-development-branch",
+   "tags": [
+    "git",
+    "workflow",
+    "review"
+   ],
+   "publisher": "community",
+   "kind": "skill",
+   "install": "claude plugin install superpowers@claude-plugins-official"
+  },
+  {
+   "name": "receiving-code-review",
+   "repo": "obra/superpowers",
+   "path": "skills/receiving-code-review",
+   "stars": 319806,
+   "license": "MIT",
+   "description": "Makes the agent verify review feedback technically before applying it, instead of agreeing by default.",
+   "category": "review",
+   "url": "https://github.com/obra/superpowers/tree/main/skills/receiving-code-review",
+   "tags": [
+    "review",
+    "workflow",
+    "git"
+   ],
+   "publisher": "community",
+   "kind": "skill",
+   "install": "claude plugin install superpowers@claude-plugins-official"
+  },
+  {
+   "name": "verification-before-completion",
+   "repo": "obra/superpowers",
+   "path": "skills/verification-before-completion",
+   "stars": 319806,
+   "license": "MIT",
+   "description": "Requires running verification commands and reading their output before claiming work is fixed, complete or passing.",
+   "category": "testing",
+   "url": "https://github.com/obra/superpowers/tree/main/skills/verification-before-completion",
+   "tags": [
+    "testing",
+    "workflow",
+    "debugging"
+   ],
+   "publisher": "community",
+   "kind": "skill",
+   "install": "claude plugin install superpowers@claude-plugins-official"
+  },
+  {
+   "name": "dispatching-parallel-agents",
+   "repo": "obra/superpowers",
+   "path": "skills/dispatching-parallel-agents",
+   "stars": 319806,
+   "license": "MIT",
+   "description": "Splits two or more independent problems across parallel subagents, one per problem domain.",
+   "category": "workflow",
+   "url": "https://github.com/obra/superpowers/tree/main/skills/dispatching-parallel-agents",
+   "tags": [
+    "workflow",
+    "debugging",
+    "productivity"
+   ],
+   "publisher": "community",
+   "kind": "skill",
+   "install": "claude plugin install superpowers@claude-plugins-official"
+  },
+  {
+   "name": "writing-skills",
+   "repo": "obra/superpowers",
+   "path": "skills/writing-skills",
+   "stars": 319806,
+   "license": "MIT",
+   "description": "Applies a test-first method to writing and editing skills, checking that a skill changes agent behavior before deploying it.",
+   "category": "meta",
+   "url": "https://github.com/obra/superpowers/tree/main/skills/writing-skills",
+   "tags": [
+    "meta",
+    "tdd",
+    "writing"
+   ],
+   "publisher": "community",
+   "kind": "skill",
+   "install": "claude plugin install superpowers@claude-plugins-official"
+  },
+  {
+   "name": "to-tickets",
+   "repo": "mattpocock/skills",
+   "path": "skills/engineering/to-tickets",
+   "stars": 327258,
+   "license": "MIT",
+   "description": "Breaks a plan or spec into thin end-to-end tickets with declared blocking dependencies and publishes them to the issue tracker.",
+   "category": "planning",
+   "url": "https://github.com/mattpocock/skills/tree/main/skills/engineering/to-tickets",
+   "tags": [
+    "planning",
+    "workflow",
+    "git"
+   ],
+   "publisher": "community",
+   "kind": "skill",
+   "install": "claude plugin install mattpocock-skills@mattpocock"
+  },
+  {
+   "name": "handoff",
+   "repo": "mattpocock/skills",
+   "path": "skills/productivity/handoff",
+   "stars": 327258,
+   "license": "MIT",
+   "description": "Compacts the current conversation into a handoff document another agent can pick up.",
+   "category": "productivity",
+   "url": "https://github.com/mattpocock/skills/tree/main/skills/productivity/handoff",
+   "tags": [
+    "productivity",
+    "workflow",
+    "docs"
+   ],
+   "publisher": "community",
+   "kind": "skill",
+   "install": "claude plugin install mattpocock-skills@mattpocock"
+  },
+  {
+   "name": "writing-for-agents",
+   "repo": "mattpocock/skills",
+   "path": "skills/productivity/writing-for-agents",
+   "stars": 327258,
+   "license": "MIT",
+   "description": "Guidance for writing documents aimed at agents, such as skills, AGENTS.md and CLAUDE.md.",
+   "category": "meta",
+   "url": "https://github.com/mattpocock/skills/tree/main/skills/productivity/writing-for-agents",
+   "tags": [
+    "meta",
+    "writing",
+    "docs"
+   ],
+   "publisher": "community",
+   "kind": "skill",
+   "install": "claude plugin install mattpocock-skills@mattpocock"
+  },
+  {
+   "name": "improve-codebase-architecture",
+   "repo": "mattpocock/skills",
+   "path": "skills/engineering/improve-codebase-architecture",
+   "stars": 327258,
+   "license": "MIT",
+   "description": "Scans a codebase for places to deepen modules, presents them as an HTML report and then interviews you on the chosen one.",
+   "category": "architecture",
+   "url": "https://github.com/mattpocock/skills/tree/main/skills/engineering/improve-codebase-architecture",
+   "tags": [
+    "architecture",
+    "review",
+    "planning"
+   ],
+   "publisher": "community",
+   "kind": "skill",
+   "install": "claude plugin install mattpocock-skills@mattpocock"
+  },
+  {
+   "name": "triage",
+   "repo": "mattpocock/skills",
+   "path": "skills/engineering/triage",
+   "stars": 327258,
+   "license": "MIT",
+   "description": "Moves issues and external PRs through triage states, categorises and verifies them, and writes agent-ready briefs.",
+   "category": "planning",
+   "url": "https://github.com/mattpocock/skills/tree/main/skills/engineering/triage",
+   "tags": [
+    "planning",
+    "git",
+    "review"
+   ],
+   "publisher": "community",
+   "kind": "skill",
+   "install": "claude plugin install mattpocock-skills@mattpocock"
+  },
+  {
+   "name": "git-guardrails-claude-code",
+   "repo": "mattpocock/skills",
+   "path": "skills/misc/git-guardrails-claude-code",
+   "stars": 327258,
+   "license": "MIT",
+   "description": "Sets up Claude Code hooks that block dangerous git commands such as push, reset --hard, clean and branch -D.",
+   "category": "git",
+   "url": "https://github.com/mattpocock/skills/tree/main/skills/misc/git-guardrails-claude-code",
+   "tags": [
+    "git",
+    "security",
+    "meta"
+   ],
+   "publisher": "community",
+   "kind": "skill",
+   "install": "claude plugin install mattpocock-skills@mattpocock"
+  },
+  {
+   "name": "grill-with-docs",
+   "repo": "mattpocock/skills",
+   "path": "skills/engineering/grill-with-docs",
+   "stars": 327258,
+   "license": "MIT",
+   "description": "Interviews you hard about a plan or design while recording decisions as ADRs and glossary entries.",
+   "category": "planning",
+   "url": "https://github.com/mattpocock/skills/tree/main/skills/engineering/grill-with-docs",
+   "tags": [
+    "planning",
+    "docs",
+    "architecture"
+   ],
+   "publisher": "community",
+   "kind": "skill",
+   "install": "claude plugin install mattpocock-skills@mattpocock"
+  },
+  {
+   "name": "sentry-skills",
+   "repo": "getsentry/skills",
+   "path": "skills",
+   "stars": 1179,
+   "license": "Apache-2.0",
+   "description": "Skills Sentry engineers use day to day: commits, PR writing, code and security review, bug finding and skill authoring.",
+   "category": "review",
+   "url": "https://github.com/getsentry/skills/tree/main/skills",
+   "tags": [
+    "review",
+    "git",
+    "security",
+    "writing"
+   ],
+   "publisher": "vendor",
+   "kind": "collection",
+   "install": "claude plugin install sentry-skills@sentry-skills"
+  },
+  {
+   "name": "hashicorp-agent-skills",
+   "repo": "hashicorp/agent-skills",
+   "path": "",
+   "stars": 931,
+   "license": "MPL-2.0",
+   "description": "HashiCorp skills for Terraform (style guide, modules, providers, tests, stacks, policy) and Packer image builds.",
+   "category": "infra",
+   "url": "https://github.com/hashicorp/agent-skills",
+   "tags": [
+    "infra",
+    "cloud",
+    "devops"
+   ],
+   "publisher": "vendor",
+   "kind": "collection",
+   "install": "claude plugin install terraform@hashicorp"
+  },
+  {
+   "name": "supabase-agent-skills",
+   "repo": "supabase/agent-skills",
+   "path": "skills",
+   "stars": 3102,
+   "license": "MIT",
+   "description": "Supabase product skill and a Postgres best-practices skill for queries, schema design and configuration.",
+   "category": "database",
+   "url": "https://github.com/supabase/agent-skills/tree/main/skills",
+   "tags": [
+    "database",
+    "performance",
+    "backend"
+   ],
+   "publisher": "vendor",
+   "kind": "collection",
+   "install": "claude plugin install postgres-best-practices@supabase-agent-skills"
+  },
+  {
+   "name": "callstack-react-native",
+   "repo": "callstackincubator/agent-skills",
+   "path": "",
+   "stars": 1713,
+   "license": "MIT",
+   "description": "Callstack React Native skills for performance, navigation, upgrades, library development, testing and native-to-RN migration.",
+   "category": "mobile",
+   "url": "https://github.com/callstackincubator/agent-skills",
+   "tags": [
+    "mobile",
+    "performance",
+    "testing"
+   ],
+   "publisher": "vendor",
+   "kind": "collection",
+   "install": "claude plugin install building-react-native-apps@callstack-agent-skills"
+  },
+  {
+   "name": "microsoft-skills",
+   "repo": "microsoft/skills",
+   "path": "",
+   "stars": 3222,
+   "license": "MIT",
+   "description": "Microsoft collection of Azure SDK skills for Python, .NET, TypeScript, Java and Rust, plus AKS, cost and a repository wiki generator.",
+   "category": "cloud",
+   "url": "https://github.com/microsoft/skills",
+   "tags": [
+    "cloud",
+    "python",
+    "typescript",
+    "dotnet"
+   ],
+   "publisher": "vendor",
+   "kind": "collection",
+   "install": null
+  },
+  {
+   "name": "dotnet-skills",
+   "repo": "dotnet/skills",
+   "path": "",
+   "stars": 6270,
+   "license": "MIT",
+   "description": ".NET team skills grouped into plugins for C#, ASP.NET Core, Blazor, EF Core, MSBuild, NuGet, testing, diagnostics and upgrades.",
+   "category": "dotnet",
+   "url": "https://github.com/dotnet/skills",
+   "tags": [
+    "dotnet",
+    "backend",
+    "testing"
+   ],
+   "publisher": "vendor",
+   "kind": "collection",
+   "install": "claude plugin install dotnet@dotnet-agent-skills"
+  },
+  {
+   "name": "stitch-skills",
+   "repo": "google-labs-code/stitch-skills",
+   "path": "",
+   "stars": 10310,
+   "license": "Apache-2.0",
+   "description": "Google Labs skills around Stitch for generating designs, managing design systems and turning designs into React or shadcn/ui code.",
+   "category": "design",
+   "url": "https://github.com/google-labs-code/stitch-skills",
+   "tags": [
+    "design",
+    "frontend",
+    "typescript"
+   ],
+   "publisher": "vendor",
+   "kind": "collection",
+   "install": null
+  },
+  {
+   "name": "elastic-agent-skills",
+   "repo": "elastic/agent-skills",
+   "path": "",
+   "stars": 608,
+   "license": "Apache-2.0",
+   "description": "Elastic skills for Elasticsearch (ES|QL, ingest, index design), Kibana, Observability, Security and Elastic Cloud.",
+   "category": "database",
+   "url": "https://github.com/elastic/agent-skills",
+   "tags": [
+    "database",
+    "observability",
+    "security"
+   ],
+   "publisher": "vendor",
+   "kind": "collection",
+   "install": "claude plugin install elastic-elasticsearch@elastic-agent-skills"
+  },
+  {
+   "name": "grafana-skills",
+   "repo": "grafana/skills",
+   "path": "",
+   "stars": 313,
+   "license": "Apache-2.0",
+   "description": "Grafana skills for dashboards, PromQL, alerting, the LGTM stack (Loki, Tempo, Mimir, Pyroscope), k6 load tests and plugins.",
+   "category": "observability",
+   "url": "https://github.com/grafana/skills",
+   "tags": [
+    "observability",
+    "performance",
+    "testing"
+   ],
+   "publisher": "vendor",
+   "kind": "collection",
+   "install": "claude plugin install grafana-core@grafana-skills"
+  },
+  {
+   "name": "pulumi-agent-skills",
+   "repo": "pulumi/agent-skills",
+   "path": "",
+   "stars": 80,
+   "license": "Apache-2.0",
+   "description": "Pulumi infrastructure-as-code skills plus migration from Terraform, CDK, ARM and CloudFormation.",
+   "category": "infra",
+   "url": "https://github.com/pulumi/agent-skills",
+   "tags": [
+    "infra",
+    "cloud",
+    "devops"
+   ],
+   "publisher": "vendor",
+   "kind": "collection",
+   "install": "claude plugin install pulumi@pulumi-agent-skills"
+  },
+  {
+   "name": "wordpress-agent-skills",
+   "repo": "WordPress/agent-skills",
+   "path": "",
+   "stars": 2385,
+   "license": "GPL-2.0-or-later",
+   "description": "WordPress project skills for blocks, block themes, plugins, the Interactivity API, Playground, PHPStan and performance.",
+   "category": "backend",
+   "url": "https://github.com/WordPress/agent-skills",
+   "tags": [
+    "backend",
+    "frontend",
+    "performance"
+   ],
+   "publisher": "vendor",
+   "kind": "collection",
+   "install": null
+  },
+  {
+   "name": "elevenlabs-skills",
+   "repo": "elevenlabs/skills",
+   "path": "",
+   "stars": 573,
+   "license": "MIT",
+   "description": "ElevenLabs skills for text to speech, speech to text, dubbing, music, sound effects and voice agents.",
+   "category": "media",
+   "url": "https://github.com/elevenlabs/skills",
+   "tags": [
+    "media",
+    "ai-ml",
+    "backend"
+   ],
+   "publisher": "vendor",
+   "kind": "collection",
+   "install": null
+  },
+  {
+   "name": "prisma-skills",
+   "repo": "prisma/skills",
+   "path": "",
+   "stars": 80,
+   "license": "MIT",
+   "description": "Prisma skills for ORM setup, Client API, CLI, Prisma Postgres and upgrading to Prisma 7.",
+   "category": "database",
+   "url": "https://github.com/prisma/skills",
+   "tags": [
+    "database",
+    "backend",
+    "typescript"
+   ],
+   "publisher": "vendor",
+   "kind": "collection",
+   "install": null
+  },
+  {
+   "name": "playwright-cli",
+   "repo": "microsoft/playwright-cli",
+   "path": "skills/playwright-cli",
+   "stars": 15285,
+   "license": "Apache-2.0",
+   "description": "Skill that teaches agents to drive a browser with the Playwright CLI, which uses fewer tokens than the Playwright MCP server.",
+   "category": "browser",
+   "url": "https://github.com/microsoft/playwright-cli/tree/main/skills/playwright-cli",
+   "tags": [
+    "browser",
+    "testing",
+    "frontend"
+   ],
+   "publisher": "vendor",
+   "kind": "skill",
+   "install": null
+  },
+  {
+   "name": "gstack",
+   "repo": "garrytan/gstack",
+   "path": "",
+   "stars": 141985,
+   "license": "MIT",
+   "description": "Garry Tan's opinionated set of role-based skills (CEO, eng manager, designer, reviewer, QA, release) that opens a real browser for QA; installed with its own setup script.",
+   "category": "workflow",
+   "url": "https://github.com/garrytan/gstack",
+   "tags": [
+    "workflow",
+    "review",
+    "browser",
+    "planning"
+   ],
+   "publisher": "community",
+   "kind": "collection",
+   "install": null
+  },
+  {
+   "name": "pm-skills",
+   "repo": "phuryn/pm-skills",
+   "path": "",
+   "stars": 28140,
+   "license": "MIT",
+   "description": "Product management skills split into plugins for discovery, strategy, execution (PRDs, OKRs, roadmaps), market research, analytics and go-to-market.",
+   "category": "product",
+   "url": "https://github.com/phuryn/pm-skills",
+   "tags": [
+    "product",
+    "planning",
+    "research"
+   ],
+   "publisher": "community",
+   "kind": "collection",
+   "install": "claude plugin install pm-execution@pm-skills"
+  },
+  {
+   "name": "ui-skills",
+   "repo": "ibelick/ui-skills",
+   "path": "",
+   "stars": 11187,
+   "license": "MIT",
+   "description": "Small UI skills to fix accessibility, metadata and motion performance, set a baseline UI and improve existing screens.",
+   "category": "frontend",
+   "url": "https://github.com/ibelick/ui-skills",
+   "tags": [
+    "frontend",
+    "design",
+    "accessibility"
+   ],
+   "publisher": "community",
+   "kind": "collection",
+   "install": null
+  },
+  {
+   "name": "context-engineering-kit",
+   "repo": "NeoLabHQ/context-engineering-kit",
+   "path": "",
+   "stars": 1840,
+   "license": "GPL-3.0",
+   "description": "Thirteen plugins of commands and skills for reflection, spec-driven and subagent-driven development, TDD, review and git; GPL-3.0.",
+   "category": "workflow",
+   "url": "https://github.com/NeoLabHQ/context-engineering-kit",
+   "tags": [
+    "workflow",
+    "tdd",
+    "review",
+    "meta"
+   ],
+   "publisher": "community",
+   "kind": "collection",
+   "install": "claude plugin install reflexion@context-engineering-kit"
+  },
+  {
+   "name": "claude-code-skills",
+   "repo": "alirezarezvani/claude-skills",
+   "path": "",
+   "stars": 30054,
+   "license": "MIT",
+   "description": "Very large multi-domain library (about 120 plugins) covering engineering, marketing, product, C-level advisory, compliance and regulated industries.",
+   "category": "business",
+   "url": "https://github.com/alirezarezvani/claude-skills",
+   "tags": [
+    "business",
+    "marketing",
+    "product",
+    "backend"
+   ],
+   "publisher": "community",
+   "kind": "collection",
+   "install": null
+  },
+  {
+   "name": "wondelai-skills",
+   "repo": "wondelai/skills",
+   "path": "",
+   "stars": 2727,
+   "license": "MIT",
+   "description": "Skills that apply frameworks from well-known books (Clean Code, DDIA, Lean Startup, Refactoring UI, Crossing the Chasm and others).",
+   "category": "business",
+   "url": "https://github.com/wondelai/skills",
+   "tags": [
+    "business",
+    "product",
+    "architecture",
+    "design"
+   ],
+   "publisher": "community",
+   "kind": "collection",
+   "install": "claude plugin install code-craftsmanship@wondelai-skills"
+  },
+  {
+   "name": "jezweb-skills",
+   "repo": "jezweb/claude-skills",
+   "path": "",
+   "stars": 1120,
+   "license": "MIT",
+   "description": "Practical skills in ten plugins: Cloudflare apps, Tailwind and shadcn/ui frontends, design assets, WordPress, Shopify, writing and dev tools.",
+   "category": "frontend",
+   "url": "https://github.com/jezweb/claude-skills",
+   "tags": [
+    "frontend",
+    "cloud",
+    "design",
+    "writing"
+   ],
+   "publisher": "community",
+   "kind": "collection",
+   "install": "claude plugin install dev-tools@jezweb-skills"
+  },
+  {
+   "name": "aws-skills",
+   "repo": "zxkane/aws-skills",
+   "path": "",
+   "stars": 379,
+   "license": "MIT",
+   "description": "Community AWS skills for CDK and SST infrastructure, cost operations, serverless event-driven design and Bedrock AgentCore.",
+   "category": "cloud",
+   "url": "https://github.com/zxkane/aws-skills",
+   "tags": [
+    "cloud",
+    "infra",
+    "devops"
+   ],
+   "publisher": "community",
+   "kind": "collection",
+   "install": "claude plugin install aws-iac@aws-skills"
+  },
+  {
+   "name": "posit-dev-skills",
+   "repo": "posit-dev/skills",
+   "path": "",
+   "stars": 568,
+   "license": "MIT",
+   "description": "Posit skills for R package development, Shiny apps, Quarto documents, ggsql and Posit Connect deployment.",
+   "category": "data",
+   "url": "https://github.com/posit-dev/skills",
+   "tags": [
+    "data",
+    "python",
+    "docs"
+   ],
+   "publisher": "vendor",
+   "kind": "collection",
+   "install": "claude plugin install shiny@posit-dev-skills"
+  },
+  {
+   "name": "agent-toolkit",
+   "repo": "softaworks/agent-toolkit",
+   "path": "",
+   "stars": 2700,
+   "license": "MIT",
+   "description": "Collection of standalone skills for READMEs, C4 and Mermaid diagrams, commit messages, meeting updates and handoff documents.",
+   "category": "docs",
+   "url": "https://github.com/softaworks/agent-toolkit",
+   "tags": [
+    "docs",
+    "writing",
+    "productivity",
+    "architecture"
+   ],
+   "publisher": "community",
+   "kind": "collection",
+   "install": null
+  },
+  {
+   "name": "antfu-skills",
+   "repo": "antfu/skills",
+   "path": "",
+   "stars": 6086,
+   "license": "MIT",
+   "description": "Anthony Fu's skills for Vue, Nuxt, Vite, Vitepress, UnoCSS, Pinia and pnpm, plus his own PR and triage conventions.",
+   "category": "frontend",
+   "url": "https://github.com/antfu/skills",
+   "tags": [
+    "frontend",
+    "typescript",
+    "git"
+   ],
+   "publisher": "community",
+   "kind": "collection",
+   "install": null
+  },
+  {
+   "name": "mcollina-skills",
+   "repo": "mcollina/skills",
+   "path": "",
+   "stars": 1972,
+   "license": "MIT",
+   "description": "Matteo Collina's skills for Node.js core, Fastify, TypeScript typing, linting and OAuth.",
+   "category": "backend",
+   "url": "https://github.com/mcollina/skills",
+   "tags": [
+    "backend",
+    "typescript",
+    "docs"
+   ],
+   "publisher": "community",
+   "kind": "collection",
+   "install": null
+  },
+  {
+   "name": "bmad-method",
+   "repo": "bmad-code-org/BMAD-METHOD",
+   "path": "",
+   "stars": 55509,
+   "license": "MIT",
+   "description": "Agile planning framework with analyst, PM, architect and developer agent skills; installed with its own npx installer.",
+   "category": "planning",
+   "url": "https://github.com/bmad-code-org/BMAD-METHOD",
+   "tags": [
+    "planning",
+    "workflow",
+    "product"
+   ],
+   "publisher": "community",
+   "kind": "collection",
+   "install": null
+  },
+  {
+   "name": "lambdatest-agent-skills",
+   "repo": "LambdaTest/agent-skills",
+   "path": "",
+   "stars": 392,
+   "license": "MIT",
+   "description": "TestMu AI (LambdaTest) skills for test frameworks (Playwright, Selenium, Appium, Cypress and others), API testing and migrations.",
+   "category": "testing",
+   "url": "https://github.com/LambdaTest/agent-skills",
+   "tags": [
+    "testing",
+    "browser",
+    "mobile"
+   ],
+   "publisher": "vendor",
+   "kind": "collection",
+   "install": null
+  },
+  {
+   "name": "security-audit",
+   "repo": "cloudflare/security-audit-skill",
+   "path": "",
+   "stars": 75182,
+   "license": "MIT",
+   "description": "Cloudflare defensive security review workflow that looks for vulnerabilities crossing real trust boundaries and proposes minimal fixes.",
+   "category": "security",
+   "url": "https://github.com/cloudflare/security-audit-skill",
+   "tags": [
+    "security",
+    "review",
+    "backend"
+   ],
+   "publisher": "vendor",
+   "kind": "skill",
+   "install": null
+  }
+ ],
+ "plugins": [
+  {
+   "name": "security-guidance",
+   "marketplace": "claude-plugins-official",
+   "install": "claude plugin install security-guidance@claude-plugins-official",
+   "description": "Anthropic. Pattern-based warnings on edits, LLM diff review on Stop and an agentic commit reviewer for Claude-generated code.",
+   "category": "security",
+   "url": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/security-guidance",
+   "tags": [
+    "security",
+    "review"
+   ]
+  },
+  {
+   "name": "claude-security",
+   "marketplace": "claude-plugins-official",
+   "install": "claude plugin install claude-security@claude-plugins-official",
+   "description": "Anthropic. Deep vulnerability scan of your own code inside the session, findings challenged before reporting, verified patches.",
+   "category": "security",
+   "url": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/claude-security",
+   "tags": [
+    "security",
+    "review"
+   ]
+  },
+  {
+   "name": "semgrep",
+   "marketplace": "claude-plugins-official",
+   "install": "claude plugin install semgrep@claude-plugins-official",
+   "description": "Semgrep: real-time vulnerability detection guiding Claude to write secure code.",
+   "category": "security",
+   "url": "https://github.com/semgrep/mcp-marketplace",
+   "tags": [
+    "security",
+    "review"
+   ]
+  },
+  {
+   "name": "sonarqube",
+   "marketplace": "claude-plugins-official",
+   "install": "claude plugin install sonarqube@claude-plugins-official",
+   "description": "SonarSource: enforce SonarQube quality/security rules, secrets scanning and quality gates in the agent loop.",
+   "category": "security",
+   "url": "https://github.com/SonarSource/sonarqube-agent-plugins",
+   "tags": [
+    "security",
+    "review"
+   ]
+  },
+  {
+   "name": "aikido",
+   "marketplace": "claude-plugins-official",
+   "install": "claude plugin install aikido@claude-plugins-official",
+   "description": "Aikido Security: SAST, secrets and IaC scanning via the Aikido MCP server.",
+   "category": "security",
+   "url": "https://github.com/AikidoSec/aikido-claude-plugin",
+   "tags": [
+    "security"
+   ]
+  },
+  {
+   "name": "static-analysis",
+   "marketplace": "trailofbits",
+   "install": "claude plugin install static-analysis@trailofbits",
+   "description": "Trail of Bits: CodeQL, Semgrep and SARIF parsing for vulnerability detection.",
+   "category": "security",
+   "url": "https://github.com/trailofbits/skills/tree/main/plugins/static-analysis",
+   "tags": [
+    "security",
+    "review"
+   ]
+  },
+  {
+   "name": "differential-review",
+   "marketplace": "trailofbits",
+   "install": "claude plugin install differential-review@trailofbits",
+   "description": "Trail of Bits: security-focused diff review with git history and blast-radius estimation.",
+   "category": "security",
+   "url": "https://github.com/trailofbits/skills/tree/main/plugins/differential-review",
+   "tags": [
+    "security",
+    "review",
+    "git"
+   ]
+  },
+  {
+   "name": "insecure-defaults",
+   "marketplace": "trailofbits",
+   "install": "claude plugin install insecure-defaults@trailofbits",
+   "description": "Trail of Bits: detects hardcoded credentials, fallback secrets and weak auth defaults.",
+   "category": "security",
+   "url": "https://github.com/trailofbits/skills/tree/main/plugins/insecure-defaults",
+   "tags": [
+    "security",
+    "review"
+   ]
+  },
+  {
+   "name": "supply-chain-risk-auditor",
+   "marketplace": "trailofbits",
+   "install": "claude plugin install supply-chain-risk-auditor@trailofbits",
+   "description": "Trail of Bits: audit npm/PyPI/Go dependencies for advisories, abandoned upstreams and supply-chain risk.",
+   "category": "security",
+   "url": "https://github.com/trailofbits/skills/tree/main/plugins/supply-chain-risk-auditor",
+   "tags": [
+    "security",
+    "review"
+   ]
+  },
+  {
+   "name": "sharp-edges",
+   "marketplace": "trailofbits",
+   "install": "claude plugin install sharp-edges@trailofbits",
+   "description": "Trail of Bits: identify error-prone APIs, dangerous configs and footgun designs.",
+   "category": "security",
+   "url": "https://github.com/trailofbits/skills/tree/main/plugins/sharp-edges",
+   "tags": [
+    "security",
+    "review"
+   ]
+  },
+  {
+   "name": "variant-analysis",
+   "marketplace": "trailofbits",
+   "install": "claude plugin install variant-analysis@trailofbits",
+   "description": "Trail of Bits: find similar bugs/vulnerabilities across a codebase.",
+   "category": "security",
+   "url": "https://github.com/trailofbits/skills/tree/main/plugins/variant-analysis",
+   "tags": [
+    "security",
+    "review"
+   ]
+  },
+  {
+   "name": "semgrep-rule-creator",
+   "marketplace": "trailofbits",
+   "install": "claude plugin install semgrep-rule-creator@trailofbits",
+   "description": "Trail of Bits: create custom Semgrep rules.",
+   "category": "security",
+   "url": "https://github.com/trailofbits/skills/tree/main/plugins/semgrep-rule-creator",
+   "tags": [
+    "security"
+   ]
+  },
+  {
+   "name": "security-scanning",
+   "marketplace": "claude-code-workflows",
+   "install": "claude plugin install security-scanning@claude-code-workflows",
+   "description": "wshobson: SAST, dependency scanning, OWASP Top 10 and container hardening.",
+   "category": "security",
+   "url": "https://github.com/wshobson/agents",
+   "tags": [
+    "security",
+    "review"
+   ]
+  },
+  {
+   "name": "superpowers",
+   "marketplace": "claude-plugins-official",
+   "install": "claude plugin install superpowers@claude-plugins-official",
+   "description": "obra/superpowers via the official marketplace: brainstorming, subagent-driven development with review, systematic debugging, red/green TDD.",
+   "category": "testing",
+   "url": "https://github.com/obra/superpowers",
+   "tags": [
+    "workflow",
+    "tdd",
+    "debugging",
+    "planning"
+   ]
+  },
+  {
+   "name": "superpowers",
+   "marketplace": "superpowers-marketplace",
+   "install": "claude plugin install superpowers@superpowers-marketplace",
+   "description": "Same superpowers core skills from the author's own marketplace (pick one source, not both).",
+   "category": "testing",
+   "url": "https://github.com/obra/superpowers",
+   "tags": [
+    "workflow",
+    "tdd",
+    "debugging",
+    "planning"
+   ]
+  },
+  {
+   "name": "tdd-workflows",
+   "marketplace": "claude-code-workflows",
+   "install": "claude plugin install tdd-workflows@claude-code-workflows",
+   "description": "wshobson: red-green-refactor TDD with code review.",
+   "category": "testing",
+   "url": "https://github.com/wshobson/agents",
+   "tags": [
+    "tdd",
+    "testing",
+    "workflow"
+   ]
+  },
+  {
+   "name": "unit-testing",
+   "marketplace": "claude-code-workflows",
+   "install": "claude plugin install unit-testing@claude-code-workflows",
+   "description": "wshobson: unit and integration test automation for Python and JavaScript.",
+   "category": "testing",
+   "url": "https://github.com/wshobson/agents",
+   "tags": [
+    "testing",
+    "python",
+    "typescript"
+   ]
+  },
+  {
+   "name": "property-based-testing",
+   "marketplace": "trailofbits",
+   "install": "claude plugin install property-based-testing@trailofbits",
+   "description": "Trail of Bits: property-based tests with Hypothesis, fast-check, proptest, Echidna/Medusa.",
+   "category": "testing",
+   "url": "https://github.com/trailofbits/skills/tree/main/plugins/property-based-testing",
+   "tags": [
+    "testing",
+    "security"
+   ]
+  },
+  {
+   "name": "mutation-testing",
+   "marketplace": "trailofbits",
+   "install": "claude plugin install mutation-testing@trailofbits",
+   "description": "Trail of Bits: mutation-testing campaigns and surviving-mutant analysis.",
+   "category": "testing",
+   "url": "https://github.com/trailofbits/skills/tree/main/plugins/mutation-testing",
+   "tags": [
+    "testing"
+   ]
+  },
+  {
+   "name": "playwright",
+   "marketplace": "claude-plugins-official",
+   "install": "claude plugin install playwright@claude-plugins-official",
+   "description": "Microsoft Playwright MCP: browser automation and E2E testing.",
+   "category": "testing",
+   "url": "https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins/playwright",
+   "tags": [
+    "browser",
+    "testing",
+    "mcp"
+   ]
+  },
+  {
+   "name": "chrome-devtools-mcp",
+   "marketplace": "claude-plugins-official",
+   "install": "claude plugin install chrome-devtools-mcp@claude-plugins-official",
+   "description": "Chrome DevTools MCP + skills: control a live Chrome, performance traces, network, console.",
+   "category": "testing",
+   "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+   "tags": [
+    "browser",
+    "debugging",
+    "performance",
+    "mcp"
+   ]
+  },
+  {
+   "name": "playwright-skill",
+   "marketplace": "playwright-skill",
+   "install": "claude plugin install playwright-skill@playwright-skill",
+   "description": "Playwright automation via scripts the agent writes and runs.",
+   "category": "testing",
+   "url": "https://github.com/lackeyjb/playwright-skill",
+   "tags": [
+    "browser",
+    "testing"
+   ]
+  },
+  {
+   "name": "code-review",
+   "marketplace": "claude-plugins-official",
+   "install": "claude plugin install code-review@claude-plugins-official",
+   "description": "Anthropic. Automated PR review with multiple specialized agents and confidence scoring to filter false positives.",
+   "category": "code-review",
+   "url": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/code-review",
+   "tags": [
+    "review",
+    "git"
+   ]
+  },
+  {
+   "name": "pr-review-toolkit",
+   "marketplace": "claude-plugins-official",
+   "install": "claude plugin install pr-review-toolkit@claude-plugins-official",
+   "description": "Anthropic. PR review agents for comments, tests, error handling, type design, code quality and simplification.",
+   "category": "code-review",
+   "url": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/pr-review-toolkit",
+   "tags": [
+    "review",
+    "git"
+   ]
+  },
+  {
+   "name": "code-simplifier",
+   "marketplace": "claude-plugins-official",
+   "install": "claude plugin install code-simplifier@claude-plugins-official",
+   "description": "Anthropic. Agent that simplifies recently modified code while preserving behavior.",
+   "category": "code-review",
+   "url": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/code-simplifier",
+   "tags": [
+    "review"
+   ]
+  },
+  {
+   "name": "coderabbit",
+   "marketplace": "claude-plugins-official",
+   "install": "claude plugin install coderabbit@claude-plugins-official",
+   "description": "CodeRabbit external review with 40+ static analyzers.",
+   "category": "code-review",
+   "url": "https://github.com/coderabbitai/skills",
+   "tags": [
+    "review",
+    "git"
+   ]
+  },
+  {
+   "name": "greptile",
+   "marketplace": "claude-plugins-official",
+   "install": "claude plugin install greptile@claude-plugins-official",
+   "description": "Greptile AI review: view/resolve PR comments and review your branch.",
+   "category": "code-review",
+   "url": "https://github.com/greptileai/skills",
+   "tags": [
+    "review",
+    "git"
+   ]
+  },
+  {
+   "name": "comprehensive-review",
+   "marketplace": "claude-code-workflows",
+   "install": "claude plugin install comprehensive-review@claude-code-workflows",
+   "description": "wshobson: multi-perspective review (architecture, security, best practices).",
+   "category": "code-review",
+   "url": "https://github.com/wshobson/agents",
+   "tags": [
+    "review",
+    "architecture",
+    "security"
+   ]
+  },
+  {
+   "name": "voltagent-qa-sec",
+   "marketplace": "voltagent-subagents",
+   "install": "claude plugin install voltagent-qa-sec@voltagent-subagents",
+   "description": "VoltAgent: testing, security and code-quality subagents (code review, pentest, QA automation).",
+   "category": "code-review",
+   "url": "https://github.com/VoltAgent/awesome-claude-code-subagents",
+   "tags": [
+    "testing",
+    "security",
+    "review"
+   ]
+  },
+  {
+   "name": "commit-commands",
+   "marketplace": "claude-plugins-official",
+   "install": "claude plugin install commit-commands@claude-plugins-official",
+   "description": "Anthropic. Commands for commit, push and PR creation.",
+   "category": "workflow",
+   "url": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/commit-commands",
+   "tags": [
+    "git"
+   ]
+  },
+  {
+   "name": "feature-dev",
+   "marketplace": "claude-plugins-official",
+   "install": "claude plugin install feature-dev@claude-plugins-official",
+   "description": "Anthropic. Feature workflow with agents for exploration, architecture and quality review.",
+   "category": "workflow",
+   "url": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/feature-dev",
+   "tags": [
+    "workflow",
+    "architecture",
+    "planning"
+   ]
+  },
+  {
+   "name": "mattpocock-skills",
+   "marketplace": "claude-plugins-official",
+   "install": "claude plugin install mattpocock-skills@claude-plugins-official",
+   "description": "Matt Pocock skills (grilling, spec/ticket flows, TDD, code review, domain modelling) pinned by the official marketplace.",
+   "category": "workflow",
+   "url": "https://github.com/mattpocock/skills",
+   "tags": [
+    "planning",
+    "tdd",
+    "review",
+    "architecture"
+   ]
+  },
+  {
+   "name": "pstack",
+   "marketplace": "cursor-plugins",
+   "install": "claude plugin install pstack@cursor-plugins",
+   "description": "pstack rigorous agent workflows (go deep first, write less but higher-quality code).",
+   "category": "workflow",
+   "url": "https://github.com/backnotprop/pstack",
+   "tags": [
+    "workflow",
+    "planning",
+    "review"
+   ]
+  },
+  {
+   "name": "compound-engineering",
+   "marketplace": "compound-engineering-plugin",
+   "install": "claude plugin install compound-engineering@compound-engineering-plugin",
+   "description": "Every: brainstorm, plan, debug, review and compound learnings with agents.",
+   "category": "workflow",
+   "url": "https://github.com/EveryInc/compound-engineering-plugin",
+   "tags": [
+    "workflow",
+    "planning",
+    "review",
+    "debugging"
+   ]
+  },
+  {
+   "name": "ralph-loop",
+   "marketplace": "claude-plugins-official",
+   "install": "claude plugin install ralph-loop@claude-plugins-official",
+   "description": "Anthropic. Iterative self-referential loops (Ralph Wiggum technique); replaces ralph-wiggum.",
+   "category": "workflow",
+   "url": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/ralph-loop",
+   "tags": [
+    "workflow",
+    "productivity"
+   ]
+  },
+  {
+   "name": "planning-with-files",
+   "marketplace": "planning-with-files",
+   "install": "claude plugin install planning-with-files@planning-with-files",
+   "description": "Persistent file-based plans re-injected by hooks.",
+   "category": "workflow",
+   "url": "https://github.com/OthmanAdi/planning-with-files",
+   "tags": [
+    "planning",
+    "productivity"
+   ]
+  },
+  {
+   "name": "claude-mem",
+   "marketplace": "thedotmack",
+   "install": "claude plugin install claude-mem@thedotmack",
+   "description": "Persistent memory across sessions via hooks.",
+   "category": "memory",
+   "url": "https://github.com/thedotmack/claude-mem",
+   "tags": [
+    "productivity",
+    "meta"
+   ]
+  },
+  {
+   "name": "episodic-memory",
+   "marketplace": "superpowers-marketplace",
+   "install": "claude plugin install episodic-memory@superpowers-marketplace",
+   "description": "Semantic search over past Claude Code/Codex conversations.",
+   "category": "memory",
+   "url": "https://github.com/obra/superpowers-marketplace",
+   "tags": [
+    "productivity",
+    "meta"
+   ]
+  },
+  {
+   "name": "context7",
+   "marketplace": "claude-plugins-official",
+   "install": "claude plugin install context7@claude-plugins-official",
+   "description": "Upstash Context7 hosted MCP: up-to-date library documentation lookup.",
+   "category": "docs",
+   "url": "https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins/context7",
+   "tags": [
+    "docs",
+    "mcp"
+   ]
+  },
+  {
+   "name": "claude-md-management",
+   "marketplace": "claude-plugins-official",
+   "install": "claude plugin install claude-md-management@claude-plugins-official",
+   "description": "Anthropic. Audit and improve CLAUDE.md files and capture session learnings.",
+   "category": "docs",
+   "url": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/claude-md-management",
+   "tags": [
+    "meta",
+    "docs"
+   ]
+  },
+  {
+   "name": "code-documentation",
+   "marketplace": "claude-code-workflows",
+   "install": "claude plugin install code-documentation@claude-code-workflows",
+   "description": "wshobson: documentation generation, code explanation and tutorials.",
+   "category": "docs",
+   "url": "https://github.com/wshobson/agents",
+   "tags": [
+    "docs"
+   ]
+  },
+  {
+   "name": "document-skills",
+   "marketplace": "anthropic-agent-skills",
+   "install": "claude plugin install document-skills@anthropic-agent-skills",
+   "description": "Anthropic Excel, Word, PowerPoint and PDF skills.",
+   "category": "docs",
+   "url": "https://github.com/anthropics/skills/tree/main/skills",
+   "tags": [
+    "documents"
+   ]
+  },
+  {
+   "name": "example-skills",
+   "marketplace": "anthropic-agent-skills",
+   "install": "claude plugin install example-skills@anthropic-agent-skills",
+   "description": "Anthropic example skills: skill-creator, mcp-builder, frontend-design, webapp-testing, art, internal comms...",
+   "category": "meta",
+   "url": "https://github.com/anthropics/skills/tree/main/skills",
+   "tags": [
+    "design",
+    "meta",
+    "documents"
+   ]
+  },
+  {
+   "name": "elements-of-style",
+   "marketplace": "superpowers-marketplace",
+   "install": "claude plugin install elements-of-style@superpowers-marketplace",
+   "description": "Writing guidance based on Strunk's The Elements of Style.",
+   "category": "docs",
+   "url": "https://github.com/obra/superpowers-marketplace",
+   "tags": [
+    "writing"
+   ]
+  },
+  {
+   "name": "humanizer",
+   "marketplace": "humanizer",
+   "install": "claude plugin install humanizer@humanizer",
+   "description": "Rewrite AI-sounding text naturally.",
+   "category": "docs",
+   "url": "https://github.com/blader/humanizer",
+   "tags": [
+    "writing"
+   ]
+  },
+  {
+   "name": "skill-creator",
+   "marketplace": "claude-plugins-official",
+   "install": "claude plugin install skill-creator@claude-plugins-official",
+   "description": "Anthropic. Create, improve and measure skills with evals.",
+   "category": "meta",
+   "url": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/skill-creator",
+   "tags": [
+    "meta",
+    "testing"
+   ]
+  },
+  {
+   "name": "plugin-dev",
+   "marketplace": "claude-plugins-official",
+   "install": "claude plugin install plugin-dev@claude-plugins-official",
+   "description": "Anthropic. Toolkit for building Claude Code plugins (hooks, MCP, commands, agents).",
+   "category": "meta",
+   "url": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/plugin-dev",
+   "tags": [
+    "meta"
+   ]
+  },
+  {
+   "name": "hookify",
+   "marketplace": "claude-plugins-official",
+   "install": "claude plugin install hookify@claude-plugins-official",
+   "description": "Anthropic. Create hooks from simple markdown rules to block unwanted behaviors.",
+   "category": "meta",
+   "url": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/hookify",
+   "tags": [
+    "meta"
+   ]
+  },
+  {
+   "name": "claude-code-setup",
+   "marketplace": "claude-plugins-official",
+   "install": "claude plugin install claude-code-setup@claude-plugins-official",
+   "description": "Anthropic. Analyze a codebase and recommend hooks, skills, MCP servers and subagents.",
+   "category": "meta",
+   "url": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/claude-code-setup",
+   "tags": [
+    "meta",
+    "productivity"
+   ]
+  },
+  {
+   "name": "session-report",
+   "marketplace": "claude-plugins-official",
+   "install": "claude plugin install session-report@claude-plugins-official",
+   "description": "Anthropic. HTML report of session usage: tokens, cache efficiency, subagents, most expensive prompts.",
+   "category": "usage",
+   "url": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/session-report",
+   "tags": [
+    "meta",
+    "productivity"
+   ]
+  },
+  {
+   "name": "claude-hud",
+   "marketplace": "claude-hud",
+   "install": "claude plugin install claude-hud@claude-hud",
+   "description": "Statusline with context usage, tools, agents and todo progress.",
+   "category": "usage",
+   "url": "https://github.com/jarrodwatts/claude-hud",
+   "tags": [
+    "meta",
+    "productivity"
+   ]
+  },
+  {
+   "name": "context-engineering",
+   "marketplace": "context-engineering-marketplace",
+   "install": "claude plugin install context-engineering@context-engineering-marketplace",
+   "description": "Context-engineering skills for agent systems.",
+   "category": "meta",
+   "url": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering",
+   "tags": [
+    "ai-ml",
+    "meta"
+   ]
+  },
+  {
+   "name": "frontend-design",
+   "marketplace": "claude-plugins-official",
+   "install": "claude plugin install frontend-design@claude-plugins-official",
+   "description": "Anthropic. Distinctive, production-grade frontends avoiding generic AI aesthetics.",
+   "category": "design",
+   "url": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/frontend-design",
+   "tags": [
+    "frontend",
+    "design"
+   ]
+  },
+  {
+   "name": "figma",
+   "marketplace": "claude-plugins-official",
+   "install": "claude plugin install figma@claude-plugins-official",
+   "description": "Figma MCP: design files, components, tokens -> code.",
+   "category": "design",
+   "url": "https://github.com/figma/mcp-server-guide",
+   "tags": [
+    "design",
+    "frontend",
+    "mcp"
+   ]
+  },
+  {
+   "name": "playground",
+   "marketplace": "claude-plugins-official",
+   "install": "claude plugin install playground@claude-plugins-official",
+   "description": "Anthropic. Self-contained interactive HTML playgrounds with live preview.",
+   "category": "design",
+   "url": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/playground",
+   "tags": [
+    "frontend",
+    "design"
+   ]
+  },
+  {
+   "name": "ui-ux-pro-max",
+   "marketplace": "ui-ux-pro-max-skill",
+   "install": "claude plugin install ui-ux-pro-max@ui-ux-pro-max-skill",
+   "description": "UI/UX design intelligence (styles, palettes, typography, UX rules).",
+   "category": "design",
+   "url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
+   "tags": [
+    "design",
+    "frontend"
+   ]
+  },
+  {
+   "name": "design",
+   "marketplace": "knowledge-work-plugins",
+   "install": "claude plugin install design@knowledge-work-plugins",
+   "description": "Anthropic: design critique, design systems, UX writing, accessibility audits, dev handoff.",
+   "category": "design",
+   "url": "https://github.com/anthropics/knowledge-work-plugins",
+   "tags": [
+    "design",
+    "accessibility",
+    "writing"
+   ]
+  },
+  {
+   "name": "typescript-lsp",
+   "marketplace": "claude-plugins-official",
+   "install": "claude plugin install typescript-lsp@claude-plugins-official",
+   "description": "Anthropic. TypeScript/JavaScript language server for go-to-definition and diagnostics.",
+   "category": "code-intelligence",
+   "url": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/typescript-lsp",
+   "tags": [
+    "typescript"
+   ]
+  },
+  {
+   "name": "pyright-lsp",
+   "marketplace": "claude-plugins-official",
+   "install": "claude plugin install pyright-lsp@claude-plugins-official",
+   "description": "Anthropic. Pyright Python language server.",
+   "category": "code-intelligence",
+   "url": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/pyright-lsp",
+   "tags": [
+    "python"
+   ]
+  },
+  {
+   "name": "serena",
+   "marketplace": "claude-plugins-official",
+   "install": "claude plugin install serena@claude-plugins-official",
+   "description": "Serena semantic code navigation/refactoring MCP (LSP-backed).",
+   "category": "code-intelligence",
+   "url": "https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins/serena",
+   "tags": [
+    "mcp",
+    "architecture"
+   ]
+  },
+  {
+   "name": "supabase",
+   "marketplace": "claude-plugins-official",
+   "install": "claude plugin install supabase@claude-plugins-official",
+   "description": "Supabase MCP: SQL, auth, storage, projects.",
+   "category": "data",
+   "url": "https://github.com/supabase-community/supabase-plugin",
+   "tags": [
+    "database",
+    "backend",
+    "auth",
+    "mcp"
+   ]
+  },
+  {
+   "name": "mongodb",
+   "marketplace": "claude-plugins-official",
+   "install": "claude plugin install mongodb@claude-plugins-official",
+   "description": "MongoDB official plugin (MCP server + skills).",
+   "category": "data",
+   "url": "https://github.com/mongodb/agent-skills",
+   "tags": [
+    "database",
+    "mcp"
+   ]
+  },
+  {
+   "name": "data",
+   "marketplace": "knowledge-work-plugins",
+   "install": "claude plugin install data@knowledge-work-plugins",
+   "description": "Anthropic: SQL, dataset exploration, visualizations and dashboards.",
+   "category": "data",
+   "url": "https://github.com/anthropics/knowledge-work-plugins",
+   "tags": [
+    "data",
+    "database"
+   ]
+  },
+  {
+   "name": "data-engineering",
+   "marketplace": "claude-code-workflows",
+   "install": "claude plugin install data-engineering@claude-code-workflows",
+   "description": "wshobson: ETL pipelines, warehouse design, batch workflows.",
+   "category": "data",
+   "url": "https://github.com/wshobson/agents",
+   "tags": [
+    "data",
+    "database"
+   ]
+  },
+  {
+   "name": "github",
+   "marketplace": "claude-plugins-official",
+   "install": "claude plugin install github@claude-plugins-official",
+   "description": "GitHub official MCP server: issues, PRs, code review, repo search.",
+   "category": "devops",
+   "url": "https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins/github",
+   "tags": [
+    "git",
+    "mcp"
+   ]
+  },
+  {
+   "name": "sentry",
+   "marketplace": "claude-plugins-official",
+   "install": "claude plugin install sentry@claude-plugins-official",
+   "description": "Sentry: error reports, stack traces and issue search.",
+   "category": "devops",
+   "url": "https://github.com/getsentry/plugin-claude",
+   "tags": [
+    "observability",
+    "debugging",
+    "mcp"
+   ]
+  },
+  {
+   "name": "linear",
+   "marketplace": "claude-plugins-official",
+   "install": "claude plugin install linear@claude-plugins-official",
+   "description": "Linear issues and projects.",
+   "category": "productivity",
+   "url": "https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins/linear",
+   "tags": [
+    "planning",
+    "mcp"
+   ]
+  },
+  {
+   "name": "atlassian",
+   "marketplace": "claude-plugins-official",
+   "install": "claude plugin install atlassian@claude-plugins-official",
+   "description": "Jira and Confluence via Atlassian remote MCP.",
+   "category": "productivity",
+   "url": "https://github.com/atlassian/atlassian-mcp-server",
+   "tags": [
+    "planning",
+    "docs",
+    "mcp"
+   ]
+  },
+  {
+   "name": "notion",
+   "marketplace": "claude-plugins-official",
+   "install": "claude plugin install notion@claude-plugins-official",
+   "description": "Notion pages and databases.",
+   "category": "productivity",
+   "url": "https://github.com/makenotion/claude-code-notion-plugin",
+   "tags": [
+    "docs",
+    "productivity",
+    "mcp"
+   ]
+  },
+  {
+   "name": "slack",
+   "marketplace": "claude-plugins-official",
+   "install": "claude plugin install slack@claude-plugins-official",
+   "description": "Slack search, channels and threads.",
+   "category": "productivity",
+   "url": "https://github.com/slackapi/slack-mcp-plugin",
+   "tags": [
+    "productivity",
+    "mcp"
+   ]
+  },
+  {
+   "name": "terraform",
+   "marketplace": "claude-plugins-official",
+   "install": "claude plugin install terraform@claude-plugins-official",
+   "description": "HashiCorp Terraform MCP server (registry, providers, modules).",
+   "category": "devops",
+   "url": "https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins/terraform",
+   "tags": [
+    "infra",
+    "cloud",
+    "mcp"
+   ]
+  },
+  {
+   "name": "vercel",
+   "marketplace": "claude-plugins-official",
+   "install": "claude plugin install vercel@claude-plugins-official",
+   "description": "Vercel deployments, build status, logs, domains.",
+   "category": "devops",
+   "url": "https://github.com/vercel/vercel-plugin",
+   "tags": [
+    "cloud",
+    "devops",
+    "frontend"
+   ]
+  },
+  {
+   "name": "cloudflare",
+   "marketplace": "claude-plugins-official",
+   "install": "claude plugin install cloudflare@claude-plugins-official",
+   "description": "Cloudflare skills: Workers, Durable Objects, Agents SDK, Wrangler.",
+   "category": "devops",
+   "url": "https://github.com/cloudflare/skills",
+   "tags": [
+    "cloud",
+    "devops",
+    "backend"
+   ]
+  },
+  {
+   "name": "aws-core",
+   "marketplace": "claude-plugins-official",
+   "install": "claude plugin install aws-core@claude-plugins-official",
+   "description": "AWS: IaC authoring, core services and common tasks.",
+   "category": "devops",
+   "url": "https://github.com/aws/agent-toolkit-for-aws",
+   "tags": [
+    "cloud",
+    "infra",
+    "devops"
+   ]
+  },
+  {
+   "name": "datadog",
+   "marketplace": "claude-plugins-official",
+   "install": "claude plugin install datadog@claude-plugins-official",
+   "description": "Datadog MCP: logs, metrics, traces, dashboards.",
+   "category": "devops",
+   "url": "https://github.com/datadog-labs/claude-code-plugin",
+   "tags": [
+    "observability",
+    "mcp"
+   ]
+  },
+  {
+   "name": "kubernetes-operations",
+   "marketplace": "claude-code-workflows",
+   "install": "claude plugin install kubernetes-operations@claude-code-workflows",
+   "description": "wshobson: Kubernetes manifests, policies, GitOps, autoscaling.",
+   "category": "devops",
+   "url": "https://github.com/wshobson/agents",
+   "tags": [
+    "infra",
+    "devops"
+   ]
+  },
+  {
+   "name": "cicd-automation",
+   "marketplace": "claude-code-workflows",
+   "install": "claude plugin install cicd-automation@claude-code-workflows",
+   "description": "wshobson: CI/CD pipelines (GitHub Actions, GitLab CI).",
+   "category": "devops",
+   "url": "https://github.com/wshobson/agents",
+   "tags": [
+    "devops",
+    "git"
+   ]
+  },
+  {
+   "name": "incident-response",
+   "marketplace": "claude-code-workflows",
+   "install": "claude plugin install incident-response@claude-code-workflows",
+   "description": "wshobson: incident triage and resolution workflows.",
+   "category": "devops",
+   "url": "https://github.com/wshobson/agents",
+   "tags": [
+    "observability",
+    "debugging"
+   ]
+  },
+  {
+   "name": "claude-api",
+   "marketplace": "anthropic-agent-skills",
+   "install": "claude plugin install claude-api@anthropic-agent-skills",
+   "description": "Reference skill for building on the Claude API and Anthropic SDKs: models, parameters, tool use, caching and streaming.",
+   "category": "ai-ml",
+   "url": "https://github.com/anthropics/skills/tree/main/skills/claude-api",
+   "tags": [
+    "ai-ml",
+    "backend",
+    "docs"
+   ],
+   "stars": 197059,
+   "license": "Apache-2.0",
+   "publisher": "anthropic"
+  },
+  {
+   "name": "discernment-nudge",
+   "marketplace": "anthropic-agent-skills",
+   "install": "claude plugin install discernment-nudge@anthropic-agent-skills",
+   "description": "Adds two or three short follow-up questions after substantive answers so the user can check key facts and assumptions.",
+   "category": "research",
+   "url": "https://github.com/anthropics/skills/tree/main/skills/discernment-nudge",
+   "tags": [
+    "research",
+    "education",
+    "productivity"
+   ],
+   "stars": 197059,
+   "license": "Apache-2.0",
+   "publisher": "anthropic"
+  },
+  {
+   "name": "champion-kit",
+   "marketplace": "claude-plugins-official",
+   "install": "claude plugin install champion-kit@claude-plugins-official",
+   "description": "Helps internal Claude Code champions run hackathons and office hours, build FAQs, assess AI adoption maturity and spot patterns worth sharing.",
+   "category": "education",
+   "url": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/champion-kit",
+   "tags": [
+    "education",
+    "productivity",
+    "meta"
+   ],
+   "stars": 47633,
+   "license": "Apache-2.0",
+   "publisher": "anthropic"
+  },
+  {
+   "name": "mcp-server-dev",
+   "marketplace": "claude-plugins-official",
+   "install": "claude plugin install mcp-server-dev@claude-plugins-official",
+   "description": "Three skills for designing and building MCP servers, MCP apps with interactive UI, and MCPB bundles for local servers.",
+   "category": "mcp",
+   "url": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/mcp-server-dev",
+   "tags": [
+    "mcp",
+    "backend",
+    "ai-ml"
+   ],
+   "stars": 47633,
+   "license": "Apache-2.0",
+   "publisher": "anthropic"
+  },
+  {
+   "name": "project-artifact",
+   "marketplace": "claude-plugins-official",
+   "install": "claude plugin install project-artifact@claude-plugins-official",
+   "description": "Generates and publishes a tabbed project status page with overview, success criteria and progress for large projects.",
+   "category": "planning",
+   "url": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/project-artifact",
+   "tags": [
+    "planning",
+    "productivity",
+    "docs"
+   ],
+   "stars": 47633,
+   "license": "Apache-2.0",
+   "publisher": "anthropic"
+  },
+  {
+   "name": "receipts",
+   "marketplace": "claude-plugins-official",
+   "install": "claude plugin install receipts@claude-plugins-official",
+   "description": "Builds a personal Claude Code usage and impact report from local session transcripts, for example to justify usage to a manager.",
+   "category": "productivity",
+   "url": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/receipts",
+   "tags": [
+    "productivity",
+    "meta",
+    "data"
+   ],
+   "stars": 47633,
+   "license": "Apache-2.0",
+   "publisher": "anthropic"
+  },
+  {
+   "name": "math-olympiad",
+   "marketplace": "claude-plugins-official",
+   "install": "claude plugin install math-olympiad@claude-plugins-official",
+   "description": "Solves competition math problems (IMO, Putnam, USAMO, AIME) with adversarial verification of each solution.",
+   "category": "science",
+   "url": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/math-olympiad",
+   "tags": [
+    "science",
+    "research",
+    "education"
+   ],
+   "stars": 47633,
+   "license": "Apache-2.0",
+   "publisher": "anthropic"
+  },
+  {
+   "name": "math-proof",
+   "marketplace": "claude-plugins-official",
+   "install": "claude plugin install math-proof@claude-plugins-official",
+   "description": "Two skills for hard mathematics problems, one solo and one with judged rounds of sub-agents, each ending in a self-contained proof.",
+   "category": "science",
+   "url": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/math-proof",
+   "tags": [
+    "science",
+    "research",
+    "education"
+   ],
+   "stars": 47633,
+   "license": "Apache-2.0",
+   "publisher": "anthropic"
+  },
+  {
+   "name": "productivity",
+   "marketplace": "knowledge-work-plugins",
+   "install": "claude plugin install productivity@knowledge-work-plugins",
+   "description": "Task management, daily planning and a running memory of work context, syncing with calendar, email and chat connectors.",
+   "category": "productivity",
+   "url": "https://github.com/anthropics/knowledge-work-plugins/tree/main/productivity",
+   "tags": [
+    "productivity",
+    "planning",
+    "business"
+   ],
+   "stars": 36498,
+   "license": "Apache-2.0",
+   "publisher": "anthropic"
+  },
+  {
+   "name": "engineering",
+   "marketplace": "knowledge-work-plugins",
+   "install": "claude plugin install engineering@knowledge-work-plugins",
+   "description": "Engineering team skills for standups, code review, architecture decisions, incident response, tech debt and testing strategy.",
+   "category": "architecture",
+   "url": "https://github.com/anthropics/knowledge-work-plugins/tree/main/engineering",
+   "tags": [
+    "architecture",
+    "review",
+    "docs",
+    "observability"
+   ],
+   "stars": 36498,
+   "license": "Apache-2.0",
+   "publisher": "anthropic"
+  },
+  {
+   "name": "product-management",
+   "marketplace": "knowledge-work-plugins",
+   "install": "claude plugin install product-management@knowledge-work-plugins",
+   "description": "Skills for writing feature specs, updating roadmaps, planning sprints, synthesizing user research and updating stakeholders.",
+   "category": "product",
+   "url": "https://github.com/anthropics/knowledge-work-plugins/tree/main/product-management",
+   "tags": [
+    "product",
+    "planning",
+    "research"
+   ],
+   "stars": 36498,
+   "license": "Apache-2.0",
+   "publisher": "anthropic"
+  },
+  {
+   "name": "marketing",
+   "marketplace": "knowledge-work-plugins",
+   "install": "claude plugin install marketing@knowledge-work-plugins",
+   "description": "Marketing skills for campaign plans, content drafts, email sequences, SEO audits, brand reviews and performance reports.",
+   "category": "marketing",
+   "url": "https://github.com/anthropics/knowledge-work-plugins/tree/main/marketing",
+   "tags": [
+    "marketing",
+    "writing",
+    "business"
+   ],
+   "stars": 36498,
+   "license": "Apache-2.0",
+   "publisher": "anthropic"
+  },
+  {
+   "name": "legal",
+   "marketplace": "knowledge-work-plugins",
+   "install": "claude plugin install legal@knowledge-work-plugins",
+   "description": "In-house legal workflows: contract review, NDA triage, compliance checks, risk assessment and legal briefs.",
+   "category": "business",
+   "url": "https://github.com/anthropics/knowledge-work-plugins/tree/main/legal",
+   "tags": [
+    "business",
+    "documents",
+    "review"
+   ],
+   "stars": 36498,
+   "license": "Apache-2.0",
+   "publisher": "anthropic"
+  },
+  {
+   "name": "finance",
+   "marketplace": "knowledge-work-plugins",
+   "install": "claude plugin install finance@knowledge-work-plugins",
+   "description": "Finance and accounting workflows: journal entries, reconciliations, close management, variance analysis, financial statements and SOX testing.",
+   "category": "business",
+   "url": "https://github.com/anthropics/knowledge-work-plugins/tree/main/finance",
+   "tags": [
+    "business",
+    "data",
+    "documents"
+   ],
+   "stars": 36498,
+   "license": "Apache-2.0",
+   "publisher": "anthropic"
+  },
+  {
+   "name": "operations",
+   "marketplace": "knowledge-work-plugins",
+   "install": "claude plugin install operations@knowledge-work-plugins",
+   "description": "Operations skills for vendor reviews, process documentation, change requests, capacity planning, runbooks and status reports.",
+   "category": "business",
+   "url": "https://github.com/anthropics/knowledge-work-plugins/tree/main/operations",
+   "tags": [
+    "business",
+    "planning",
+    "docs"
+   ],
+   "stars": 36498,
+   "license": "Apache-2.0",
+   "publisher": "anthropic"
+  },
+  {
+   "name": "human-resources",
+   "marketplace": "knowledge-work-plugins",
+   "install": "claude plugin install human-resources@knowledge-work-plugins",
+   "description": "People operations skills for recruiting pipelines, interview prep, offers, onboarding, performance reviews and compensation analysis.",
+   "category": "business",
+   "url": "https://github.com/anthropics/knowledge-work-plugins/tree/main/human-resources",
+   "tags": [
+    "business",
+    "writing",
+    "documents"
+   ],
+   "stars": 36498,
+   "license": "Apache-2.0",
+   "publisher": "anthropic"
+  },
+  {
+   "name": "customer-support",
+   "marketplace": "knowledge-work-plugins",
+   "install": "claude plugin install customer-support@knowledge-work-plugins",
+   "description": "Support team skills to triage tickets, draft responses, handle escalations, research customers and write knowledge base articles.",
+   "category": "business",
+   "url": "https://github.com/anthropics/knowledge-work-plugins/tree/main/customer-support",
+   "tags": [
+    "business",
+    "writing",
+    "docs"
+   ],
+   "stars": 36498,
+   "license": "Apache-2.0",
+   "publisher": "anthropic"
+  },
+  {
+   "name": "sales",
+   "marketplace": "knowledge-work-plugins",
+   "install": "claude plugin install sales@knowledge-work-plugins",
+   "description": "Sales skills for account research, call prep and summaries, pipeline and deal reviews, forecasting and outreach drafts.",
+   "category": "business",
+   "url": "https://github.com/anthropics/knowledge-work-plugins/tree/main/sales",
+   "tags": [
+    "business",
+    "research",
+    "writing"
+   ],
+   "stars": 36498,
+   "license": "Apache-2.0",
+   "publisher": "anthropic"
+  },
+  {
+   "name": "small-business",
+   "marketplace": "knowledge-work-plugins",
+   "install": "claude plugin install small-business@knowledge-work-plugins",
+   "description": "About forty workflows for running a small business (invoicing, payroll prep, cash flow, leads, content), with user approval on steps that touch money or customers.",
+   "category": "business",
+   "url": "https://github.com/anthropics/knowledge-work-plugins/tree/main/small-business",
+   "tags": [
+    "business",
+    "productivity",
+    "marketing"
+   ],
+   "stars": 36498,
+   "license": "Apache-2.0",
+   "publisher": "anthropic"
+  },
+  {
+   "name": "enterprise-search",
+   "marketplace": "knowledge-work-plugins",
+   "install": "claude plugin install enterprise-search@knowledge-work-plugins",
+   "description": "Searches across connected company tools (email, chat, documents, wikis) from one place.",
+   "category": "research",
+   "url": "https://github.com/anthropics/knowledge-work-plugins/tree/main/enterprise-search",
+   "tags": [
+    "research",
+    "productivity",
+    "business"
+   ],
+   "stars": 36498,
+   "license": "Apache-2.0",
+   "publisher": "anthropic"
+  },
+  {
+   "name": "superpowers-lab",
+   "marketplace": "superpowers-marketplace",
+   "install": "claude plugin install superpowers-lab@superpowers-marketplace",
+   "description": "Experimental skills: tmux control of interactive CLIs, on-demand MCP use via a CLI, duplicate-function detection and a headless Windows VM.",
+   "category": "productivity",
+   "url": "https://github.com/obra/superpowers-lab",
+   "tags": [
+    "productivity",
+    "mcp",
+    "review"
+   ],
+   "stars": 438,
+   "license": "MIT",
+   "publisher": "community"
+  },
+  {
+   "name": "superpowers-chrome",
+   "marketplace": "superpowers-marketplace",
+   "install": "claude plugin install superpowers-chrome@superpowers-marketplace",
+   "description": "A browsing skill (plus an optional MCP mode) that drives Chrome directly through the DevTools Protocol; marked beta by its author.",
+   "category": "browser",
+   "url": "https://github.com/obra/superpowers-chrome",
+   "tags": [
+    "browser",
+    "testing",
+    "mcp"
+   ],
+   "stars": 374,
+   "license": "MIT",
+   "publisher": "community"
+  },
+  {
+   "name": "audit-context-building",
+   "marketplace": "trailofbits",
+   "install": "claude plugin install audit-context-building@trailofbits",
+   "description": "Reads a codebase function by function and records assumptions before any bug hunting starts.",
+   "category": "security",
+   "url": "https://github.com/trailofbits/skills/tree/main/plugins/audit-context-building",
+   "tags": [
+    "security",
+    "review",
+    "architecture"
+   ],
+   "stars": 8273,
+   "license": "CC-BY-SA-4.0",
+   "publisher": "community"
+  },
+  {
+   "name": "building-secure-contracts",
+   "marketplace": "trailofbits",
+   "install": "claude plugin install building-secure-contracts@trailofbits",
+   "description": "Smart contract security toolkit from Trail of Bits with vulnerability scanners for six blockchains and development guideline assistants.",
+   "category": "security",
+   "url": "https://github.com/trailofbits/skills/tree/main/plugins/building-secure-contracts",
+   "tags": [
+    "security",
+    "review",
+    "testing"
+   ],
+   "stars": 8273,
+   "license": "CC-BY-SA-4.0",
+   "publisher": "community"
+  },
+  {
+   "name": "agentic-actions-auditor",
+   "marketplace": "trailofbits",
+   "install": "claude plugin install agentic-actions-auditor@trailofbits",
+   "description": "Audits GitHub Actions workflows that run AI agents (Claude Code Action, Gemini CLI and others) for security issues.",
+   "category": "security",
+   "url": "https://github.com/trailofbits/skills/tree/main/plugins/agentic-actions-auditor",
+   "tags": [
+    "security",
+    "devops",
+    "ai-ml"
+   ],
+   "stars": 8273,
+   "license": "CC-BY-SA-4.0",
+   "publisher": "community"
+  },
+  {
+   "name": "modern-python",
+   "marketplace": "trailofbits",
+   "install": "claude plugin install modern-python@trailofbits",
+   "description": "Current Python project practices for new projects, scripts and migrations of existing ones.",
+   "category": "python",
+   "url": "https://github.com/trailofbits/skills/tree/main/plugins/modern-python",
+   "tags": [
+    "python",
+    "backend",
+    "testing"
+   ],
+   "stars": 8273,
+   "license": "CC-BY-SA-4.0",
+   "publisher": "community"
+  },
+  {
+   "name": "testing-handbook-skills",
+   "marketplace": "trailofbits",
+   "install": "claude plugin install testing-handbook-skills@trailofbits",
+   "description": "Fifteen skills from the Trail of Bits Application Security Testing Handbook covering fuzzers, sanitizers, coverage analysis and crypto test vectors.",
+   "category": "security",
+   "url": "https://github.com/trailofbits/skills/tree/main/plugins/testing-handbook-skills",
+   "tags": [
+    "security",
+    "testing",
+    "review"
+   ],
+   "stars": 8273,
+   "license": "CC-BY-SA-4.0",
+   "publisher": "community"
+  },
+  {
+   "name": "second-opinion",
+   "marketplace": "trailofbits",
+   "install": "claude plugin install second-opinion@trailofbits",
+   "description": "Gets an independent review of uncommitted changes, branch diffs or commits from another coding agent such as Codex.",
+   "category": "review",
+   "url": "https://github.com/trailofbits/skills/tree/main/plugins/second-opinion",
+   "tags": [
+    "review",
+    "git",
+    "workflow"
+   ],
+   "stars": 8273,
+   "license": "CC-BY-SA-4.0",
+   "publisher": "community"
+  },
+  {
+   "name": "c-review",
+   "marketplace": "trailofbits",
+   "install": "claude plugin install c-review@trailofbits",
+   "description": "Security code review for C and C++ with coverage checked against a parse of the source.",
+   "category": "security",
+   "url": "https://github.com/trailofbits/skills/tree/main/plugins/c-review",
+   "tags": [
+    "security",
+    "review",
+    "debugging"
+   ],
+   "stars": 8273,
+   "license": "CC-BY-SA-4.0",
+   "publisher": "community"
+  },
+  {
+   "name": "rust-review",
+   "marketplace": "trailofbits",
+   "install": "claude plugin install rust-review@trailofbits",
+   "description": "Rust security review with specialised agents for the safe/unsafe boundary, memory safety and related bug classes.",
+   "category": "security",
+   "url": "https://github.com/trailofbits/skills/tree/main/plugins/rust-review",
+   "tags": [
+    "security",
+    "review",
+    "debugging"
+   ],
+   "stars": 8273,
+   "license": "CC-BY-SA-4.0",
+   "publisher": "community"
+  },
+  {
+   "name": "devcontainer-setup",
+   "marketplace": "trailofbits",
+   "install": "claude plugin install devcontainer-setup@trailofbits",
+   "description": "Creates preconfigured devcontainers with Claude Code and language-specific tooling.",
+   "category": "devops",
+   "url": "https://github.com/trailofbits/skills/tree/main/plugins/devcontainer-setup",
+   "tags": [
+    "devops",
+    "security",
+    "meta"
+   ],
+   "stars": 8273,
+   "license": "CC-BY-SA-4.0",
+   "publisher": "community"
+  },
+  {
+   "name": "open-sourcing",
+   "marketplace": "trailofbits",
+   "install": "claude plugin install open-sourcing@trailofbits",
+   "description": "Prepares a repository for public release: secrets in history, license choice, documentation and CI readiness.",
+   "category": "security",
+   "url": "https://github.com/trailofbits/skills/tree/main/plugins/open-sourcing",
+   "tags": [
+    "security",
+    "git",
+    "docs"
+   ],
+   "stars": 8273,
+   "license": "CC-BY-SA-4.0",
+   "publisher": "community"
+  },
+  {
+   "name": "spec-to-code-compliance",
+   "marketplace": "trailofbits",
+   "install": "claude plugin install spec-to-code-compliance@trailofbits",
+   "description": "Checks code against the specification it implements, one agent per requirement, and filters divergences before reporting them.",
+   "category": "review",
+   "url": "https://github.com/trailofbits/skills/tree/main/plugins/spec-to-code-compliance",
+   "tags": [
+    "review",
+    "testing",
+    "security"
+   ],
+   "stars": 8273,
+   "license": "CC-BY-SA-4.0",
+   "publisher": "community"
+  },
+  {
+   "name": "expo",
+   "marketplace": "claude-plugins-official",
+   "install": "claude plugin install expo@claude-plugins-official",
+   "description": "Expo team skills for building, deploying (EAS), upgrading and debugging React Native apps made with Expo.",
+   "category": "mobile",
+   "url": "https://github.com/expo/skills/tree/main/plugins/expo",
+   "tags": [
+    "mobile",
+    "frontend",
+    "devops"
+   ],
+   "stars": 4185,
+   "license": "MIT",
+   "publisher": "vendor"
+  },
+  {
+   "name": "huggingface-skills",
+   "marketplace": "claude-plugins-official",
+   "install": "claude plugin install huggingface-skills@claude-plugins-official",
+   "description": "Hugging Face skills for training, evaluating and publishing open models, datasets, Gradio apps and Spaces.",
+   "category": "ai-ml",
+   "url": "https://github.com/huggingface/skills",
+   "tags": [
+    "ai-ml",
+    "data",
+    "cloud"
+   ],
+   "stars": 11363,
+   "license": "Apache-2.0",
+   "publisher": "vendor"
+  },
+  {
+   "name": "azure",
+   "marketplace": "claude-plugins-official",
+   "install": "claude plugin install azure@claude-plugins-official",
+   "description": "Microsoft plugin that combines the Azure MCP server with skills for deploying and managing Azure resources.",
+   "category": "cloud",
+   "url": "https://github.com/microsoft/azure-skills",
+   "tags": [
+    "cloud",
+    "devops",
+    "infra"
+   ],
+   "stars": 1656,
+   "license": "MIT",
+   "publisher": "vendor"
+  },
+  {
+   "name": "duckdb-skills",
+   "marketplace": "claude-plugins-official",
+   "install": "claude plugin install duckdb-skills@claude-plugins-official",
+   "description": "DuckDB skills to read any data file, attach and query databases, explore S3 and search the DuckDB docs.",
+   "category": "data",
+   "url": "https://github.com/duckdb/duckdb-skills",
+   "tags": [
+    "data",
+    "database",
+    "cloud"
+   ],
+   "stars": 618,
+   "license": "MIT",
+   "publisher": "vendor"
+  },
+  {
+   "name": "clickhouse-best-practices",
+   "marketplace": "claude-plugins-official",
+   "install": "claude plugin install clickhouse-best-practices@claude-plugins-official",
+   "description": "Prioritised ClickHouse rules for schema design, query optimisation and data ingestion.",
+   "category": "database",
+   "url": "https://github.com/ClickHouse/agent-skills",
+   "tags": [
+    "database",
+    "performance",
+    "data"
+   ],
+   "stars": 572,
+   "license": "Apache-2.0",
+   "publisher": "vendor"
+  },
+  {
+   "name": "redis-development",
+   "marketplace": "claude-plugins-official",
+   "install": "claude plugin install redis-development@claude-plugins-official",
+   "description": "Redis practices for core data structures, connections, clustering, search and vector search, semantic caching, security and agent memory.",
+   "category": "database",
+   "url": "https://github.com/redis/agent-skills/tree/main/plugins/redis-development",
+   "tags": [
+    "database",
+    "backend",
+    "ai-ml"
+   ],
+   "stars": 177,
+   "license": "MIT",
+   "publisher": "vendor"
+  },
+  {
+   "name": "qdrant-skills",
+   "marketplace": "claude-plugins-official",
+   "install": "claude plugin install qdrant-skills@claude-plugins-official",
+   "description": "Qdrant vector search skills on scaling, performance, search quality, monitoring, deployment and SDK use.",
+   "category": "database",
+   "url": "https://github.com/qdrant/skills",
+   "tags": [
+    "database",
+    "ai-ml",
+    "performance"
+   ],
+   "stars": 271,
+   "license": "Apache-2.0",
+   "publisher": "vendor"
+  },
+  {
+   "name": "neon",
+   "marketplace": "claude-plugins-official",
+   "install": "claude plugin install neon@claude-plugins-official",
+   "description": "Neon serverless Postgres skill plus MCP server for managing projects, branches and databases.",
+   "category": "database",
+   "url": "https://github.com/neondatabase/agent-skills/tree/main/plugins/neon-postgres",
+   "tags": [
+    "database",
+    "cloud",
+    "backend"
+   ],
+   "stars": 116,
+   "license": "Apache-2.0",
+   "publisher": "vendor"
+  },
+  {
+   "name": "auth0",
+   "marketplace": "claude-plugins-official",
+   "install": "claude plugin install auth0@claude-plugins-official",
+   "description": "Auth0 skills for adding login, SSO and MFA, quickstarts and migrating from other identity providers.",
+   "category": "auth",
+   "url": "https://github.com/auth0/agent-skills/tree/main/plugins/auth0",
+   "tags": [
+    "auth",
+    "security",
+    "backend"
+   ],
+   "stars": 59,
+   "license": "Apache-2.0",
+   "publisher": "vendor"
+  },
+  {
+   "name": "workos",
+   "marketplace": "claude-plugins-official",
+   "install": "claude plugin install workos@claude-plugins-official",
+   "description": "WorkOS integration skills for AuthKit, SSO, Directory Sync, RBAC, Vault and audit logs.",
+   "category": "auth",
+   "url": "https://github.com/workos/skills/tree/main/plugins/workos",
+   "tags": [
+    "auth",
+    "security",
+    "backend"
+   ],
+   "stars": 47,
+   "license": "MIT",
+   "publisher": "vendor"
+  },
+  {
+   "name": "mapbox",
+   "marketplace": "claude-plugins-official",
+   "install": "claude plugin install mapbox@claude-plugins-official",
+   "description": "Mapbox skills and MCP servers for maps, geocoding, navigation and geospatial data visualisation on web and mobile.",
+   "category": "frontend",
+   "url": "https://github.com/mapbox/mapbox-agent-skills",
+   "tags": [
+    "frontend",
+    "mobile",
+    "data"
+   ],
+   "stars": 87,
+   "license": "MIT",
+   "publisher": "vendor"
+  },
+  {
+   "name": "netlify-skills",
+   "marketplace": "claude-plugins-official",
+   "install": "claude plugin install netlify-skills@claude-plugins-official",
+   "description": "Netlify platform skills: functions, edge functions, blobs, forms, caching, configuration and deploys.",
+   "category": "cloud",
+   "url": "https://github.com/netlify/context-and-tools",
+   "tags": [
+    "cloud",
+    "devops",
+    "frontend"
+   ],
+   "stars": 55,
+   "license": "MIT",
+   "publisher": "vendor"
+  },
+  {
+   "name": "railway",
+   "marketplace": "claude-plugins-official",
+   "install": "claude plugin install railway@claude-plugins-official",
+   "description": "Deploys and manages apps, databases and infrastructure on Railway.",
+   "category": "cloud",
+   "url": "https://github.com/railwayapp/railway-skills/tree/main/plugins/railway",
+   "tags": [
+    "cloud",
+    "devops",
+    "database"
+   ],
+   "stars": 343,
+   "license": "MIT",
+   "publisher": "vendor"
+  },
+  {
+   "name": "render",
+   "marketplace": "claude-plugins-official",
+   "install": "claude plugin install render@claude-plugins-official",
+   "description": "Skills for Render blueprints, deploys, troubleshooting and monitoring.",
+   "category": "cloud",
+   "url": "https://github.com/render-oss/render-plugin-claude-code",
+   "tags": [
+    "cloud",
+    "devops",
+    "observability"
+   ],
+   "stars": 1,
+   "license": "MIT",
+   "publisher": "vendor"
+  },
+  {
+   "name": "mlflow",
+   "marketplace": "claude-plugins-official",
+   "install": "claude plugin install mlflow@claude-plugins-official",
+   "description": "MLflow skills for tracing, evaluating and improving AI agents and analysing their traces.",
+   "category": "ai-ml",
+   "url": "https://github.com/mlflow/skills",
+   "tags": [
+    "ai-ml",
+    "observability",
+    "testing"
+   ],
+   "stars": 91,
+   "license": "Apache-2.0",
+   "publisher": "vendor"
+  },
+  {
+   "name": "langfuse",
+   "marketplace": "claude-plugins-official",
+   "install": "claude plugin install langfuse@claude-plugins-official",
+   "description": "Skills for Langfuse tracing, prompt management and evaluation of LLM applications, including migration to Langfuse.",
+   "category": "ai-ml",
+   "url": "https://github.com/langfuse/skills",
+   "tags": [
+    "ai-ml",
+    "observability",
+    "testing"
+   ],
+   "stars": 342,
+   "license": "MIT",
+   "publisher": "vendor"
+  },
+  {
+   "name": "deepeval",
+   "marketplace": "claude-plugins-official",
+   "install": "claude plugin install deepeval@claude-plugins-official",
+   "description": "Adds DeepEval evaluations, tracing and datasets to LLM applications.",
+   "category": "ai-ml",
+   "url": "https://github.com/confident-ai/deepeval",
+   "tags": [
+    "ai-ml",
+    "testing",
+    "observability"
+   ],
+   "stars": 19545,
+   "license": "Apache-2.0",
+   "publisher": "vendor"
+  },
+  {
+   "name": "pydantic-ai",
+   "marketplace": "claude-plugins-official",
+   "install": "claude plugin install pydantic-ai@claude-plugins-official",
+   "description": "Current patterns for building agents with Pydantic AI and for porting agents from other frameworks.",
+   "category": "ai-ml",
+   "url": "https://github.com/pydantic/skills/tree/main/plugins/ai",
+   "tags": [
+    "ai-ml",
+    "python",
+    "backend"
+   ],
+   "stars": 155,
+   "license": "MIT",
+   "publisher": "vendor"
+  },
+  {
+   "name": "logfire",
+   "marketplace": "claude-plugins-official",
+   "install": "claude plugin install logfire@claude-plugins-official",
+   "description": "Adds Pydantic Logfire observability to applications with auto-instrumentation.",
+   "category": "observability",
+   "url": "https://github.com/pydantic/skills/tree/main/plugins/logfire",
+   "tags": [
+    "observability",
+    "python",
+    "performance"
+   ],
+   "stars": 155,
+   "license": "MIT",
+   "publisher": "vendor"
+  },
+  {
+   "name": "nvidia-skills",
+   "marketplace": "claude-plugins-official",
+   "install": "claude plugin install nvidia-skills@claude-plugins-official",
+   "description": "Large NVIDIA catalogue (several hundred skills) with a finder skill for GPU acceleration, CUDA, data loading and AI agents.",
+   "category": "ai-ml",
+   "url": "https://github.com/NVIDIA/skills/tree/main/plugins/nvidia-skills",
+   "tags": [
+    "ai-ml",
+    "performance",
+    "data"
+   ],
+   "stars": 4061,
+   "license": "Apache-2.0",
+   "publisher": "vendor"
+  },
+  {
+   "name": "shopify-ai-toolkit",
+   "marketplace": "claude-plugins-official",
+   "install": "claude plugin install shopify-ai-toolkit@claude-plugins-official",
+   "description": "Shopify development skills for the Admin API, Functions, Hydrogen, Liquid, Polaris and app review.",
+   "category": "frontend",
+   "url": "https://github.com/Shopify/Shopify-AI-Toolkit",
+   "tags": [
+    "frontend",
+    "backend",
+    "business"
+   ],
+   "stars": 650,
+   "license": "MIT",
+   "publisher": "vendor"
+  },
+  {
+   "name": "modern-web-guidance",
+   "marketplace": "claude-plugins-official",
+   "install": "claude plugin install modern-web-guidance@claude-plugins-official",
+   "description": "Chrome team guidance that keeps agents current on web platform features and best practices, plus a Chrome extensions skill.",
+   "category": "frontend",
+   "url": "https://github.com/GoogleChrome/modern-web-guidance",
+   "tags": [
+    "frontend",
+    "accessibility",
+    "performance"
+   ],
+   "stars": 22635,
+   "license": "Apache-2.0",
+   "publisher": "vendor"
+  },
+  {
+   "name": "mcp-apps",
+   "marketplace": "claude-plugins-official",
+   "install": "claude plugin install mcp-apps@claude-plugins-official",
+   "description": "Skills for creating MCP Apps (interactive UI in MCP servers) with the MCP Apps SDK, including converting existing web apps.",
+   "category": "mcp",
+   "url": "https://github.com/modelcontextprotocol/ext-apps/tree/main/plugins/mcp-apps",
+   "tags": [
+    "mcp",
+    "frontend",
+    "backend"
+   ],
+   "stars": 3117,
+   "license": null,
+   "publisher": "vendor"
+  },
+  {
+   "name": "resend",
+   "marketplace": "claude-plugins-official",
+   "install": "claude plugin install resend@claude-plugins-official",
+   "description": "Skills for sending and receiving email with Resend, React Email templates and email deliverability practices.",
+   "category": "backend",
+   "url": "https://github.com/resend/resend-skills",
+   "tags": [
+    "backend",
+    "frontend",
+    "typescript"
+   ],
+   "stars": 213,
+   "license": "MIT",
+   "publisher": "vendor"
+  },
+  {
+   "name": "twilio-developer-kit",
+   "marketplace": "claude-plugins-official",
+   "install": "claude plugin install twilio-developer-kit@claude-plugins-official",
+   "description": "Twilio and SendGrid skills that tell agents which APIs to use and in what order for messaging, voice and email.",
+   "category": "backend",
+   "url": "https://github.com/twilio/ai",
+   "tags": [
+    "backend",
+    "ai-ml",
+    "business"
+   ],
+   "stars": 41,
+   "license": "MIT",
+   "publisher": "vendor"
+  },
+  {
+   "name": "tavily",
+   "marketplace": "claude-plugins-official",
+   "install": "claude plugin install tavily@claude-plugins-official",
+   "description": "Tavily search, extract, crawl and research skills for giving agents current web data.",
+   "category": "web-data",
+   "url": "https://github.com/tavily-ai/skills",
+   "tags": [
+    "web-data",
+    "research",
+    "ai-ml"
+   ],
+   "stars": 493,
+   "license": "MIT",
+   "publisher": "vendor"
+  },
+  {
+   "name": "brightdata-plugin",
+   "marketplace": "claude-plugins-official",
+   "install": "claude plugin install brightdata-plugin@claude-plugins-official",
+   "description": "Bright Data skills for web scraping, search, structured datasets and browser access, with MCP integration.",
+   "category": "web-data",
+   "url": "https://github.com/brightdata/skills",
+   "tags": [
+    "web-data",
+    "research",
+    "browser"
+   ],
+   "stars": 272,
+   "license": "MIT",
+   "publisher": "vendor"
+  },
+  {
+   "name": "adobe-for-creativity",
+   "marketplace": "claude-plugins-official",
+   "install": "claude plugin install adobe-for-creativity@claude-plugins-official",
+   "description": "Adobe Creative Cloud skills for editing images, vectors, layouts and video through Adobe tools.",
+   "category": "design",
+   "url": "https://github.com/adobe/skills/tree/main/plugins/creative-cloud/adobe-for-creativity",
+   "tags": [
+    "design",
+    "media",
+    "marketing"
+   ],
+   "stars": 333,
+   "license": "Apache-2.0",
+   "publisher": "vendor"
+  },
+  {
+   "name": "canva",
+   "marketplace": "claude-plugins-official",
+   "install": "claude plugin install canva@claude-plugins-official",
+   "description": "Creates, edits, resizes and brand-checks Canva designs and decks through the Canva MCP server.",
+   "category": "design",
+   "url": "https://github.com/canva-sdks/canva-skills/tree/main/plugins/canva",
+   "tags": [
+    "design",
+    "documents",
+    "marketing"
+   ],
+   "stars": 167,
+   "license": "Apache-2.0",
+   "publisher": "vendor"
+  },
+  {
+   "name": "hyperframes",
+   "marketplace": "claude-plugins-official",
+   "install": "claude plugin install hyperframes@claude-plugins-official",
+   "description": "HeyGen HyperFrames skills for composing videos in HTML (captions, overlays, motion, GSAP) and rendering them.",
+   "category": "media",
+   "url": "https://github.com/heygen-com/hyperframes",
+   "tags": [
+    "media",
+    "frontend",
+    "design"
+   ],
+   "stars": 86347,
+   "license": "Apache-2.0",
+   "publisher": "vendor"
+  },
+  {
+   "name": "aws-serverless",
+   "marketplace": "claude-plugins-official",
+   "install": "claude plugin install aws-serverless@claude-plugins-official",
+   "description": "Designs, builds, deploys, tests and debugs serverless applications with AWS Lambda, API Gateway and Step Functions.",
+   "category": "cloud",
+   "url": "https://github.com/awslabs/agent-plugins/tree/main/plugins/aws-serverless",
+   "tags": [
+    "cloud",
+    "backend",
+    "devops"
+   ],
+   "stars": 947,
+   "license": "Apache-2.0",
+   "publisher": "vendor"
+  },
+  {
+   "name": "deploy-on-aws",
+   "marketplace": "claude-plugins-official",
+   "install": "claude plugin install deploy-on-aws@claude-plugins-official",
+   "description": "Deploys applications to AWS with architecture recommendations, cost estimates and infrastructure as code.",
+   "category": "cloud",
+   "url": "https://github.com/awslabs/agent-plugins/tree/main/plugins/deploy-on-aws",
+   "tags": [
+    "cloud",
+    "devops",
+    "infra"
+   ],
+   "stars": 947,
+   "license": "Apache-2.0",
+   "publisher": "vendor"
+  },
+  {
+   "name": "apollo-skills",
+   "marketplace": "claude-plugins-official",
+   "install": "claude plugin install apollo-skills@claude-plugins-official",
+   "description": "Apollo GraphQL skills for Client, Server, Federation, Router, Connectors, schema design and operations.",
+   "category": "backend",
+   "url": "https://github.com/apollographql/skills",
+   "tags": [
+    "backend",
+    "frontend",
+    "typescript"
+   ],
+   "stars": 133,
+   "license": "MIT",
+   "publisher": "vendor"
+  },
+  {
+   "name": "sanity",
+   "marketplace": "claude-plugins-official",
+   "install": "claude plugin install sanity@claude-plugins-official",
+   "description": "Sanity CMS skills for content modelling, GROQ, Studio upgrades, migrations, Portable Text and SEO, bundled with an MCP server.",
+   "category": "backend",
+   "url": "https://github.com/sanity-io/agent-toolkit",
+   "tags": [
+    "backend",
+    "frontend",
+    "marketing"
+   ],
+   "stars": 200,
+   "license": "MIT",
+   "publisher": "vendor"
+  },
+  {
+   "name": "stripe",
+   "marketplace": "claude-plugins-official",
+   "install": "claude plugin install stripe@claude-plugins-official",
+   "description": "Stripe skills for best practices, implementation planning, Connect, Stripe Apps and API upgrades, bundled with the hosted Stripe MCP server.",
+   "category": "payments",
+   "url": "https://github.com/stripe/ai/tree/main/providers/claude/plugin",
+   "tags": [
+    "payments",
+    "backend",
+    "mcp"
+   ],
+   "stars": 2072,
+   "license": "MIT",
+   "publisher": "vendor"
+  },
+  {
+   "name": "dynatrace",
+   "marketplace": "claude-plugins-official",
+   "install": "claude plugin install dynatrace@claude-plugins-official",
+   "description": "Dynatrace skills for DQL queries, dashboards, alerting and investigating applications, infrastructure and Kubernetes.",
+   "category": "observability",
+   "url": "https://github.com/Dynatrace/dynatrace-for-ai",
+   "tags": [
+    "observability",
+    "cloud",
+    "infra"
+   ],
+   "stars": 184,
+   "license": "Apache-2.0",
+   "publisher": "vendor"
+  },
+  {
+   "name": "codspeed",
+   "marketplace": "claude-plugins-official",
+   "install": "claude plugin install codspeed@claude-plugins-official",
+   "description": "Skills for writing benchmarks, setting up the CodSpeed harness and optimising code against measured results.",
+   "category": "performance",
+   "url": "https://github.com/CodSpeedHQ/codspeed",
+   "tags": [
+    "performance",
+    "testing",
+    "devops"
+   ],
+   "stars": 399,
+   "license": "Apache-2.0",
+   "publisher": "vendor"
+  },
+  {
+   "name": "salesforce-development",
+   "marketplace": "claude-plugins-official",
+   "install": "claude plugin install salesforce-development@claude-plugins-official",
+   "description": "Salesforce skills for metadata, Apex, Lightning components and Agentforce agents.",
+   "category": "backend",
+   "url": "https://github.com/forcedotcom/sf-skills/tree/main/plugins/builder/salesforce-development",
+   "tags": [
+    "backend",
+    "business",
+    "ai-ml"
+   ],
+   "stars": 1170,
+   "license": "Apache-2.0",
+   "publisher": "vendor"
+  },
+  {
+   "name": "gemini-skills",
+   "marketplace": "gemini-skills",
+   "install": "claude plugin install gemini-skills@gemini-skills",
+   "description": "Google skills for building with the Gemini API, the Live API and the Gemini API command line tool.",
+   "category": "ai-ml",
+   "url": "https://github.com/google-gemini/gemini-skills",
+   "tags": [
+    "ai-ml",
+    "backend",
+    "cloud"
+   ],
+   "stars": 4516,
+   "license": "Apache-2.0",
+   "publisher": "vendor"
+  },
+  {
+   "name": "firebase",
+   "marketplace": "firebase",
+   "install": "claude plugin install firebase@firebase",
+   "description": "Firebase skills for Firestore, Auth, Hosting, Crashlytics, Remote Config and security rules review.",
+   "category": "backend",
+   "url": "https://github.com/firebase/agent-skills",
+   "tags": [
+    "backend",
+    "database",
+    "auth",
+    "mobile"
+   ],
+   "stars": 519,
+   "license": "Apache-2.0",
+   "publisher": "vendor"
+  },
+  {
+   "name": "dart-flutter",
+   "marketplace": "dart-flutter",
+   "install": "claude plugin install dart-flutter@dart-flutter",
+   "description": "Dart and Flutter team skills for layouts, architecture, JSON serialization, static analysis, FFI and coverage.",
+   "category": "mobile",
+   "url": "https://github.com/flutter/agent-plugins",
+   "tags": [
+    "mobile",
+    "frontend",
+    "testing"
+   ],
+   "stars": 3192,
+   "license": "BSD-3-Clause",
+   "publisher": "vendor"
+  },
+  {
+   "name": "gsap-skills",
+   "marketplace": "gsap-skills",
+   "install": "claude plugin install gsap-skills@gsap-skills",
+   "description": "GSAP animation skills covering core, timelines, ScrollTrigger, plugins, React use and performance.",
+   "category": "frontend",
+   "url": "https://github.com/greensock/gsap-skills",
+   "tags": [
+    "frontend",
+    "design",
+    "performance"
+   ],
+   "stars": 18686,
+   "license": "MIT",
+   "publisher": "vendor"
+  },
+  {
+   "name": "obsidian",
+   "marketplace": "obsidian-skills",
+   "install": "claude plugin install obsidian@obsidian-skills",
+   "description": "Skills for Obsidian Markdown, Bases, JSON Canvas and the Obsidian CLI, plus clean web page extraction with Defuddle.",
+   "category": "productivity",
+   "url": "https://github.com/obsidianmd/obsidian-skills",
+   "tags": [
+    "productivity",
+    "docs",
+    "writing"
+   ],
+   "stars": 53151,
+   "license": "MIT",
+   "publisher": "vendor"
+  },
+  {
+   "name": "agent-skills",
+   "marketplace": "datadog-labs",
+   "install": "claude plugin install agent-skills@datadog-labs",
+   "description": "Datadog skills for monitoring, logs, tracing and LLM agent observability experiments.",
+   "category": "observability",
+   "url": "https://github.com/datadog-labs/agent-skills",
+   "tags": [
+    "observability",
+    "ai-ml",
+    "debugging"
+   ],
+   "stars": 185,
+   "license": "MIT",
+   "publisher": "vendor"
+  },
+  {
+   "name": "brave-search-skills",
+   "marketplace": "brave-search",
+   "install": "claude plugin install brave-search-skills@brave-search",
+   "description": "Brave Search API skills for web, news, image, video and local search plus LLM context retrieval.",
+   "category": "web-data",
+   "url": "https://github.com/brave/brave-search-skills",
+   "tags": [
+    "web-data",
+    "research",
+    "ai-ml"
+   ],
+   "stars": 197,
+   "license": "MIT",
+   "publisher": "vendor"
+  },
+  {
+   "name": "firecrawl",
+   "marketplace": "firecrawl-skills",
+   "install": "claude plugin install firecrawl@firecrawl-skills",
+   "description": "Firecrawl skills to scrape, crawl, map, search and monitor websites and to build apps on the Firecrawl API.",
+   "category": "web-data",
+   "url": "https://github.com/firecrawl/skills",
+   "tags": [
+    "web-data",
+    "research",
+    "backend"
+   ],
+   "stars": 159,
+   "license": "ISC",
+   "publisher": "vendor"
+  },
+  {
+   "name": "fal-ai",
+   "marketplace": "fal-community",
+   "install": "claude plugin install fal-ai@fal-community",
+   "description": "fal.ai community skills for generating images, video, audio and 3D with fal models, including prompting recipes.",
+   "category": "media",
+   "url": "https://github.com/fal-ai-community/skills",
+   "tags": [
+    "media",
+    "ai-ml",
+    "design"
+   ],
+   "stars": 273,
+   "license": "MIT",
+   "publisher": "vendor"
+  },
+  {
+   "name": "minimax-skills",
+   "marketplace": "minimax-skills",
+   "install": "claude plugin install minimax-skills@minimax-skills",
+   "description": "MiniMax skills for frontend, full-stack, Android and iOS development, slide decks, Word documents and media generation.",
+   "category": "frontend",
+   "url": "https://github.com/MiniMax-AI/skills",
+   "tags": [
+    "frontend",
+    "mobile",
+    "documents"
+   ],
+   "stars": 13868,
+   "license": "MIT",
+   "publisher": "vendor"
+  },
+  {
+   "name": "svelte",
+   "marketplace": "svelte",
+   "install": "claude plugin install svelte@svelte",
+   "description": "Svelte team skills for writing Svelte 5 code and following its best practices.",
+   "category": "frontend",
+   "url": "https://github.com/sveltejs/ai-tools",
+   "tags": [
+    "frontend",
+    "typescript",
+    "mcp"
+   ],
+   "stars": 342,
+   "license": "MIT",
+   "publisher": "vendor"
+  },
+  {
+   "name": "vue-skills-bundle",
+   "marketplace": "vue-skills",
+   "install": "claude plugin install vue-skills-bundle@vue-skills",
+   "description": "Vue skills for best practices, Pinia, Vue Router, testing, JSX, Options API and debugging; community maintained.",
+   "category": "frontend",
+   "url": "https://github.com/vuejs-ai/skills",
+   "tags": [
+    "frontend",
+    "typescript",
+    "testing"
+   ],
+   "stars": 3356,
+   "license": "MIT",
+   "publisher": "community"
+  },
+  {
+   "name": "agent-browser",
+   "marketplace": "agent-browser",
+   "install": "claude plugin install agent-browser@agent-browser",
+   "description": "Vercel Labs browser automation CLI for agents, shipped with skills for core use, Electron apps, Slack and dogfooding.",
+   "category": "browser",
+   "url": "https://github.com/vercel-labs/agent-browser",
+   "tags": [
+    "browser",
+    "testing",
+    "web-data"
+   ],
+   "stars": 52574,
+   "license": "Apache-2.0",
+   "publisher": "vendor"
+  },
+  {
+   "name": "agent-skills",
+   "marketplace": "addy-agent-skills",
+   "install": "claude plugin install agent-skills@addy-agent-skills",
+   "description": "Engineering workflow skills from spec and planning to incremental implementation, review, security, performance and shipping.",
+   "category": "workflow",
+   "url": "https://github.com/addyosmani/agent-skills",
+   "tags": [
+    "workflow",
+    "planning",
+    "review",
+    "testing"
+   ],
+   "stars": 118859,
+   "license": "MIT",
+   "publisher": "community"
+  },
+  {
+   "name": "web-quality-skills",
+   "marketplace": "addy-web-quality-skills",
+   "install": "claude plugin install web-quality-skills@addy-web-quality-skills",
+   "description": "Web quality audits based on Lighthouse areas: performance, Core Web Vitals, accessibility, SEO and best practices.",
+   "category": "frontend",
+   "url": "https://github.com/addyosmani/web-quality-skills",
+   "tags": [
+    "frontend",
+    "performance",
+    "accessibility"
+   ],
+   "stars": 3106,
+   "license": "MIT",
+   "publisher": "community"
+  },
+  {
+   "name": "marketing-skills",
+   "marketplace": "marketingskills",
+   "install": "claude plugin install marketing-skills@marketingskills",
+   "description": "About fifty marketing skills: copywriting, CRO, SEO, pricing, launches, cold email, ads and analytics.",
+   "category": "marketing",
+   "url": "https://github.com/coreyhaines31/marketingskills",
+   "tags": [
+    "marketing",
+    "writing",
+    "product"
+   ],
+   "stars": 61175,
+   "license": "MIT",
+   "publisher": "community"
+  },
+  {
+   "name": "claude-seo",
+   "marketplace": "agricidaniel-claude-seo",
+   "install": "claude plugin install claude-seo@agricidaniel-claude-seo",
+   "description": "SEO analysis plugin with sub-skills for technical audits, schema, content, local SEO, hreflang, sitemaps and AI search visibility.",
+   "category": "marketing",
+   "url": "https://github.com/AgriciDaniel/claude-seo",
+   "tags": [
+    "marketing",
+    "web-data",
+    "research"
+   ],
+   "stars": 30588,
+   "license": "MIT",
+   "publisher": "community"
+  },
+  {
+   "name": "impeccable",
+   "marketplace": "impeccable",
+   "install": "claude plugin install impeccable@impeccable",
+   "description": "Frontend design skill for designing, critiquing, auditing and polishing web and native app interfaces, with a small CLI for automated checks.",
+   "category": "design",
+   "url": "https://github.com/pbakaus/impeccable",
+   "tags": [
+    "design",
+    "frontend",
+    "review"
+   ],
+   "stars": 112693,
+   "license": "Apache-2.0",
+   "publisher": "community"
+  },
+  {
+   "name": "taste-skill",
+   "marketplace": "taste-skill",
+   "install": "claude plugin install taste-skill@taste-skill",
+   "description": "Opinionated skill for building company and product websites with rules for copy, layout, imagery and motion, plus a browser-based finish check.",
+   "category": "design",
+   "url": "https://github.com/Leonxlnx/taste-skill",
+   "tags": [
+    "design",
+    "frontend",
+    "marketing"
+   ],
+   "stars": 118205,
+   "license": "MIT",
+   "publisher": "community"
+  },
+  {
+   "name": "interface-design",
+   "marketplace": "interface-design",
+   "install": "claude plugin install interface-design@interface-design",
+   "description": "Design skill for dashboards, admin panels and app interfaces focused on hierarchy, design tokens, component states and visual direction.",
+   "category": "design",
+   "url": "https://github.com/Dammyjay93/interface-design",
+   "tags": [
+    "design",
+    "frontend",
+    "review"
+   ],
+   "stars": 5998,
+   "license": "MIT",
+   "publisher": "community"
+  },
+  {
+   "name": "visual-explainer",
+   "marketplace": "visual-explainer-marketplace",
+   "install": "claude plugin install visual-explainer@visual-explainer-marketplace",
+   "description": "Turns explanations, diffs and plans into self-contained HTML pages with diagrams and tables instead of long terminal text.",
+   "category": "docs",
+   "url": "https://github.com/nicobailon/visual-explainer",
+   "tags": [
+    "docs",
+    "design",
+    "review"
+   ],
+   "stars": 11166,
+   "license": "MIT",
+   "publisher": "community"
+  },
+  {
+   "name": "frontend-slides",
+   "marketplace": "frontend-slides",
+   "install": "claude plugin install frontend-slides@frontend-slides",
+   "description": "Builds animated HTML slide decks from scratch or by converting PowerPoint files.",
+   "category": "documents",
+   "url": "https://github.com/zarazhangrui/frontend-slides",
+   "tags": [
+    "documents",
+    "design",
+    "frontend"
+   ],
+   "stars": 32531,
+   "license": "MIT",
+   "publisher": "community"
+  },
+  {
+   "name": "caveman",
+   "marketplace": "caveman",
+   "install": "claude plugin install caveman@caveman",
+   "description": "Makes the agent answer in terse fragments to cut output tokens, with modes for commits, reviews and memory-file compression.",
+   "category": "productivity",
+   "url": "https://github.com/JuliusBrussee/caveman",
+   "tags": [
+    "productivity",
+    "performance",
+    "meta"
+   ],
+   "stars": 121235,
+   "license": "Apache-2.0",
+   "publisher": "community"
+  },
+  {
+   "name": "fullstack-dev-skills",
+   "marketplace": "fullstack-dev-skills",
+   "install": "claude plugin install fullstack-dev-skills@fullstack-dev-skills",
+   "description": "About sixty role and framework skills (Django, FastAPI, Angular, Go, Kubernetes, cloud architecture, debugging) in one plugin.",
+   "category": "backend",
+   "url": "https://github.com/Jeffallan/claude-skills",
+   "tags": [
+    "backend",
+    "frontend",
+    "devops",
+    "architecture"
+   ],
+   "stars": 12438,
+   "license": "MIT",
+   "publisher": "community"
+  },
+  {
+   "name": "n8n-mcp-skills",
+   "marketplace": "n8n-mcp-skills",
+   "install": "claude plugin install n8n-mcp-skills@n8n-mcp-skills",
+   "description": "Skills for building n8n workflows with the n8n-mcp server: expressions, node configuration, validation, code nodes and patterns.",
+   "category": "productivity",
+   "url": "https://github.com/czlonkowski/n8n-skills",
+   "tags": [
+    "productivity",
+    "mcp",
+    "backend"
+   ],
+   "stars": 6670,
+   "license": "MIT",
+   "publisher": "community"
+  },
+  {
+   "name": "ios-simulator-skill",
+   "marketplace": "conorluddy",
+   "install": "claude plugin install ios-simulator-skill@conorluddy",
+   "description": "Scripts and guidance for building, running and testing iOS apps in the simulator through accessibility-based navigation.",
+   "category": "mobile",
+   "url": "https://github.com/conorluddy/ios-simulator-skill",
+   "tags": [
+    "mobile",
+    "testing",
+    "accessibility"
+   ],
+   "stars": 1330,
+   "license": "MIT",
+   "publisher": "community"
+  },
+  {
+   "name": "dev-browser",
+   "marketplace": "dev-browser-marketplace",
+   "install": "claude plugin install dev-browser@dev-browser-marketplace",
+   "description": "Browser skill backed by a CLI that controls a real Chrome with short Puppeteer scripts and keeps named pages alive between runs.",
+   "category": "browser",
+   "url": "https://github.com/SawyerHood/dev-browser",
+   "tags": [
+    "browser",
+    "testing",
+    "web-data"
+   ],
+   "stars": 6740,
+   "license": "MIT",
+   "publisher": "community"
+  },
+  {
+   "name": "ai-skills",
+   "marketplace": "ai-skills",
+   "install": "claude plugin install ai-skills@ai-skills",
+   "description": "Integration skills for Google Workspace, Atlassian, Azure DevOps, SQL databases, NotebookLM and deep research.",
+   "category": "productivity",
+   "url": "https://github.com/sanjay3290/ai-skills",
+   "tags": [
+    "productivity",
+    "database",
+    "research"
+   ],
+   "stars": 457,
+   "license": "Apache-2.0",
+   "publisher": "community"
+  }
+ ],
+ "mcp": [
+  {
+   "name": "github",
+   "add": "claude mcp add --transport http github https://api.githubcopilot.com/mcp/ --header \"Authorization: Bearer YOUR_GITHUB_PAT\"",
+   "description": "GitHub official remote MCP (repos, issues, PRs, Actions, code search). Needs a PAT; read-only toolsets advisable. Alternative: github@claude-plugins-official.",
+   "official": true,
+   "url": "https://github.com/github/github-mcp-server",
+   "category": "vcs",
+   "tags": [
+    "git",
+    "mcp"
+   ]
+  },
+  {
+   "name": "playwright",
+   "add": "claude mcp add playwright -- npx -y @playwright/mcp@0.0.85",
+   "description": "Microsoft Playwright MCP: browser automation via accessibility snapshots, E2E testing, screenshots. Pinned to npm version current on 2026-11-17.",
+   "official": true,
+   "url": "https://github.com/microsoft/playwright-mcp",
+   "category": "browser-testing",
+   "tags": [
+    "browser",
+    "testing",
+    "mcp"
+   ]
+  },
+  {
+   "name": "context7",
+   "add": "claude mcp add --transport http context7 https://mcp.context7.com/mcp",
+   "description": "Upstash Context7 hosted MCP: version-specific library docs. Optional API key via --header \"Authorization: Bearer KEY\" for higher limits. Alternative: npx ctx7 setup (CLI + skill, no MCP).",
+   "official": true,
+   "url": "https://github.com/upstash/context7",
+   "category": "docs",
+   "tags": [
+    "docs",
+    "mcp"
+   ]
+  },
+  {
+   "name": "chrome-devtools",
+   "add": "claude mcp add chrome-devtools --scope user -- npx -y chrome-devtools-mcp@1.13.0",
+   "description": "Google Chrome DevTools MCP: live Chrome control, performance traces, network, console. Pinned npm version.",
+   "official": true,
+   "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+   "category": "browser-testing",
+   "tags": [
+    "browser",
+    "debugging",
+    "performance",
+    "mcp"
+   ]
+  },
+  {
+   "name": "sentry",
+   "add": "claude mcp add --transport http sentry https://mcp.sentry.dev/mcp",
+   "description": "Sentry hosted MCP (OAuth): issues, stack traces, releases, Seer analysis.",
+   "official": true,
+   "url": "https://github.com/getsentry/sentry-mcp",
+   "category": "observability",
+   "tags": [
+    "observability",
+    "debugging",
+    "mcp"
+   ]
+  },
+  {
+   "name": "linear",
+   "add": "claude mcp add --transport http linear-server https://mcp.linear.app/mcp",
+   "description": "Linear hosted MCP (OAuth via /mcp): issues, projects, comments.",
+   "official": true,
+   "url": "https://linear.app/docs/mcp",
+   "category": "project-management",
+   "tags": [
+    "planning",
+    "mcp"
+   ]
+  },
+  {
+   "name": "notion",
+   "add": "claude mcp add --transport http notion https://mcp.notion.com/mcp",
+   "description": "Notion hosted MCP (OAuth): search, read and edit pages and databases.",
+   "official": true,
+   "url": "https://github.com/makenotion/notion-mcp-server",
+   "category": "productivity",
+   "tags": [
+    "docs",
+    "productivity",
+    "mcp"
+   ]
+  },
+  {
+   "name": "atlassian",
+   "add": "claude mcp add --transport http atlassian https://mcp.atlassian.com/v2/mcp",
+   "description": "Atlassian Rovo remote MCP: Jira, Confluence, JSM, Bitbucket (OAuth).",
+   "official": true,
+   "url": "https://github.com/atlassian/atlassian-mcp-server",
+   "category": "project-management",
+   "tags": [
+    "planning",
+    "docs",
+    "mcp"
+   ]
+  },
+  {
+   "name": "figma",
+   "add": "claude mcp add --transport http figma https://mcp.figma.com/mcp",
+   "description": "Figma remote MCP: design context, components, variables -> code.",
+   "official": true,
+   "url": "https://github.com/figma/mcp-server-guide",
+   "category": "design",
+   "tags": [
+    "design",
+    "frontend",
+    "mcp"
+   ]
+  },
+  {
+   "name": "stripe",
+   "add": "claude mcp add --transport http stripe https://mcp.stripe.com",
+   "description": "Stripe hosted MCP: API objects, docs search (OAuth or restricted key).",
+   "official": true,
+   "url": "https://github.com/stripe/ai",
+   "category": "payments",
+   "tags": [
+    "payments",
+    "mcp"
+   ]
+  },
+  {
+   "name": "supabase",
+   "add": "claude mcp add --transport http supabase https://mcp.supabase.com/mcp",
+   "description": "Supabase hosted MCP: projects, SQL, migrations, logs. Scope to a project / read-only via URL params.",
+   "official": true,
+   "url": "https://github.com/supabase/mcp",
+   "category": "database",
+   "tags": [
+    "database",
+    "backend",
+    "mcp"
+   ]
+  },
+  {
+   "name": "neon",
+   "add": "claude mcp add --transport http neon https://mcp.neon.tech/mcp",
+   "description": "Neon Postgres hosted MCP: projects, branches, SQL.",
+   "official": true,
+   "url": "https://github.com/neondatabase/mcp-server-neon",
+   "category": "database",
+   "tags": [
+    "database",
+    "mcp"
+   ]
+  },
+  {
+   "name": "mongodb",
+   "add": "claude mcp add --env MDB_MCP_CONNECTION_STRING=YOUR_CONNECTION_STRING --transport stdio mongodb -- npx -y mongodb-mcp-server@3.3.0 --readOnly",
+   "description": "MongoDB official MCP (databases and Atlas). Read-only flag recommended. Pinned npm version.",
+   "official": true,
+   "url": "https://github.com/mongodb-js/mongodb-mcp-server",
+   "category": "database",
+   "tags": [
+    "database",
+    "mcp"
+   ]
+  },
+  {
+   "name": "vercel",
+   "add": "claude mcp add --transport http vercel https://mcp.vercel.com",
+   "description": "Vercel official remote MCP (OAuth): docs search, projects, deployments, logs.",
+   "official": true,
+   "url": "https://github.com/vercel/vercel-plugin",
+   "category": "devops",
+   "tags": [
+    "cloud",
+    "devops",
+    "mcp"
+   ]
+  },
+  {
+   "name": "cloudflare-docs",
+   "add": "claude mcp add --transport http cloudflare-docs https://docs.mcp.cloudflare.com/mcp",
+   "description": "Cloudflare documentation MCP (no auth). Other product servers at https://mcp.cloudflare.com/mcp.",
+   "official": true,
+   "url": "https://github.com/cloudflare/mcp-server-cloudflare",
+   "category": "docs",
+   "tags": [
+    "docs",
+    "cloud",
+    "mcp"
+   ]
+  },
+  {
+   "name": "microsoft-learn",
+   "add": "claude mcp add --transport http microsoft-learn https://learn.microsoft.com/api/mcp",
+   "description": "Microsoft Learn MCP (no auth): official Microsoft/Azure docs and code samples.",
+   "official": true,
+   "url": "https://github.com/MicrosoftDocs/mcp",
+   "category": "docs",
+   "tags": [
+    "docs",
+    "cloud",
+    "mcp"
+   ]
+  },
+  {
+   "name": "aws-docs",
+   "add": "claude mcp add aws-docs -- uvx awslabs.aws-documentation-mcp-server@1.2.5",
+   "description": "AWS Labs documentation MCP (search/read AWS docs). Pinned PyPI version; requires uv.",
+   "official": true,
+   "url": "https://github.com/awslabs/mcp",
+   "category": "docs",
+   "tags": [
+    "docs",
+    "cloud",
+    "mcp"
+   ]
+  },
+  {
+   "name": "terraform",
+   "add": "claude mcp add terraform -s user -t stdio -- docker run -i --rm hashicorp/terraform-mcp-server",
+   "description": "HashiCorp Terraform MCP: registry providers/modules/policies. Requires Docker; pin an image tag for reproducibility.",
+   "official": true,
+   "url": "https://github.com/hashicorp/terraform-mcp-server",
+   "category": "devops",
+   "tags": [
+    "infra",
+    "mcp"
+   ]
+  },
+  {
+   "name": "kubernetes",
+   "add": "claude mcp add kubernetes -- npx -y kubernetes-mcp-server@0.1.3",
+   "description": "Kubernetes/OpenShift MCP (containers org, Red Hat). Uses your kubeconfig; supports --read-only. Pinned npm version.",
+   "official": false,
+   "url": "https://github.com/containers/kubernetes-mcp-server",
+   "category": "devops",
+   "tags": [
+    "infra",
+    "devops",
+    "mcp"
+   ]
+  },
+  {
+   "name": "serena",
+   "add": "claude mcp add --scope user serena -- serena start-mcp-server --context claude-code --project-from-cwd",
+   "description": "Serena: LSP-backed semantic code retrieval and editing. Requires the serena CLI installed first (docs: serena setup claude-code). Also serena@claude-plugins-official.",
+   "official": false,
+   "url": "https://github.com/oraios/serena",
+   "category": "code-intelligence",
+   "tags": [
+    "architecture",
+    "mcp"
+   ]
+  },
+  {
+   "name": "exa",
+   "add": "claude mcp add --transport http exa https://mcp.exa.ai/mcp",
+   "description": "Exa hosted MCP: web search and crawling (API key / OAuth).",
+   "official": true,
+   "url": "https://github.com/exa-labs/exa-mcp-server",
+   "category": "web-search",
+   "tags": [
+    "web-data",
+    "research",
+    "mcp"
+   ]
+  },
+  {
+   "name": "tavily",
+   "add": "claude mcp add --transport http tavily https://mcp.tavily.com/mcp/",
+   "description": "Tavily hosted MCP: search, extract, map, crawl (API key required).",
+   "official": true,
+   "url": "https://github.com/tavily-ai/tavily-mcp",
+   "category": "web-search",
+   "tags": [
+    "web-data",
+    "research",
+    "mcp"
+   ]
+  },
+  {
+   "name": "firecrawl",
+   "add": "claude mcp add --env FIRECRAWL_API_KEY=YOUR_KEY --transport stdio firecrawl -- npx -y firecrawl-mcp@3.40.0",
+   "description": "Firecrawl official MCP: scrape/crawl sites into LLM-ready markdown. Pinned npm version.",
+   "official": true,
+   "url": "https://github.com/firecrawl/firecrawl-mcp-server",
+   "category": "web-search",
+   "tags": [
+    "web-data",
+    "mcp"
+   ]
+  },
+  {
+   "name": "memory",
+   "add": "claude mcp add memory -- npx -y @modelcontextprotocol/server-memory@2.1.1",
+   "description": "MCP reference server: knowledge-graph persistent memory. Reference implementation, not production-hardened.",
+   "official": true,
+   "url": "https://github.com/modelcontextprotocol/servers",
+   "category": "memory",
+   "tags": [
+    "productivity",
+    "mcp"
+   ]
+  },
+  {
+   "name": "sequential-thinking",
+   "add": "claude mcp add sequential-thinking -- npx -y @modelcontextprotocol/server-sequential-thinking@2.1.1",
+   "description": "MCP reference server for step-by-step reflective problem solving. Largely redundant with effort/ultrathink on current models.",
+   "official": true,
+   "url": "https://github.com/modelcontextprotocol/servers",
+   "category": "reasoning",
+   "tags": [
+    "planning",
+    "mcp"
+   ]
+  }
+ ],
+ "tools": [
+  {
+   "name": "ccusage",
+   "repo": "ccusage/ccusage",
+   "stars": 19467,
+   "kind": "usage-cost",
+   "description": "CLI that analyzes local Claude Code JSONL logs: daily/monthly/session/5-hour-block token usage and cost. Run: npx ccusage@20.0.51 (repo moved from ryoppippi/ccusage).",
+   "url": "https://github.com/ccusage/ccusage"
+  },
+  {
+   "name": "Claude-Code-Usage-Monitor",
+   "repo": "Maciek-roboblog/Claude-Code-Usage-Monitor",
+   "stars": 8807,
+   "kind": "usage-cost",
+   "description": "Real-time terminal usage monitor with burn rate, predictions and limit warnings. Install: uv tool install claude-monitor.",
+   "url": "https://github.com/Maciek-roboblog/Claude-Code-Usage-Monitor"
+  },
+  {
+   "name": "CodexBar",
+   "repo": "steipete/CodexBar",
+   "stars": 23193,
+   "kind": "usage-cost",
+   "description": "macOS menu-bar app showing Claude Code and Codex usage limits without logging in.",
+   "url": "https://github.com/steipete/CodexBar"
+  },
+  {
+   "name": "ccstatusline",
+   "repo": "sirmalloc/ccstatusline",
+   "stars": 13617,
+   "kind": "statusline",
+   "description": "Highly customizable statusline (powerline, themes, model, context, git, cost). Run: npx ccstatusline@2.2.34.",
+   "url": "https://github.com/sirmalloc/ccstatusline"
+  },
+  {
+   "name": "claude-hud",
+   "repo": "jarrodwatts/claude-hud",
+   "stars": 29229,
+   "kind": "statusline",
+   "description": "Plugin statusline with context usage, active tools, running agents, todos. claude plugin install claude-hud@claude-hud.",
+   "url": "https://github.com/jarrodwatts/claude-hud"
+  },
+  {
+   "name": "claude-powerline",
+   "repo": "Owloops/claude-powerline",
+   "stars": 1180,
+   "kind": "statusline",
+   "description": "Vim-style powerline statusline (npm @owloops/claude-powerline).",
+   "url": "https://github.com/Owloops/claude-powerline"
+  },
+  {
+   "name": "claude-swap",
+   "repo": "realiti4/claude-swap",
+   "stars": 4783,
+   "kind": "account-switcher",
+   "description": "Multi-account switcher for Claude Code (also VS Code ext): cswap add / cswap switch, rate-limit-aware rotation (--strategy), usage dashboard, parallel sessions. Install: uv tool install claude-swap (or pipx). Python 3.12+. Handles OAuth credentials locally: review before use.",
+   "url": "https://github.com/realiti4/claude-swap"
+  },
+  {
+   "name": "claude-squad",
+   "repo": "smtg-ai/claude-squad",
+   "stars": 8822,
+   "kind": "session-manager",
+   "description": "TUI to run many Claude Code/Codex/OpenCode/Amp agents in tmux + git worktrees.",
+   "url": "https://github.com/smtg-ai/claude-squad"
+  },
+  {
+   "name": "ccmanager",
+   "repo": "kbwo/ccmanager",
+   "stars": 1279,
+   "kind": "session-manager",
+   "description": "Session manager for Claude Code and other agent CLIs across git worktrees (npm ccmanager).",
+   "url": "https://github.com/kbwo/ccmanager"
+  },
+  {
+   "name": "Crystal / Nimbalyst",
+   "repo": "stravu/crystal",
+   "stars": 3128,
+   "kind": "session-manager",
+   "description": "Desktop app running parallel Claude Code/Codex sessions in worktrees (Crystal is now Nimbalyst).",
+   "url": "https://github.com/stravu/crystal"
+  },
+  {
+   "name": "opcode",
+   "repo": "winfunc/opcode",
+   "stars": 22450,
+   "kind": "gui",
+   "description": "Desktop GUI/toolkit for Claude Code: custom agents, interactive sessions, background agents, usage analytics (formerly Claudia).",
+   "url": "https://github.com/winfunc/opcode"
+  },
+  {
+   "name": "CloudCLI (claudecodeui)",
+   "repo": "siteboon/claudecodeui",
+   "stars": 14660,
+   "kind": "gui",
+   "description": "Web/mobile UI for Claude Code, Codex, Cursor CLI and OpenCode sessions.",
+   "url": "https://github.com/siteboon/claudecodeui"
+  },
+  {
+   "name": "claude-code-viewer",
+   "repo": "d-kimuson/claude-code-viewer",
+   "stars": 1306,
+   "kind": "gui",
+   "description": "Web client to browse and continue Claude Code projects/sessions.",
+   "url": "https://github.com/d-kimuson/claude-code-viewer"
+  },
+  {
+   "name": "happy",
+   "repo": "slopus/happy",
+   "stars": 24677,
+   "kind": "mobile",
+   "description": "Open-source mobile/desktop client to drive Claude Code/Codex sessions remotely, reusing your subscriptions.",
+   "url": "https://github.com/slopus/happy"
+  },
+  {
+   "name": "claudecode.nvim",
+   "repo": "coder/claudecode.nvim",
+   "stars": 3159,
+   "kind": "editor",
+   "description": "Neovim IDE integration implementing the Claude Code IDE protocol (by Coder).",
+   "url": "https://github.com/coder/claudecode.nvim"
+  },
+  {
+   "name": "claude-code-ide.el",
+   "repo": "manzaltu/claude-code-ide.el",
+   "stars": 1689,
+   "kind": "editor",
+   "description": "Emacs integration for Claude Code with MCP-based IDE tools.",
+   "url": "https://github.com/manzaltu/claude-code-ide.el"
+  },
+  {
+   "name": "claude-agent-acp",
+   "repo": "agentclientprotocol/claude-agent-acp",
+   "stars": 2785,
+   "kind": "editor",
+   "description": "Agent Client Protocol adapter to use Claude Agent SDK/Claude Code from ACP clients such as Zed (moved from zed-industries/claude-code-acp).",
+   "url": "https://github.com/agentclientprotocol/claude-agent-acp"
+  },
+  {
+   "name": "claude-code-router",
+   "repo": "musistudio/claude-code-router",
+   "stars": 38203,
+   "kind": "router",
+   "description": "Local proxy to route Claude Code requests to other model providers.",
+   "url": "https://github.com/musistudio/claude-code-router"
+  },
+  {
+   "name": "tweakcc",
+   "repo": "Piebald-AI/tweakcc",
+   "stars": 2616,
+   "kind": "customization",
+   "description": "Customize Claude Code system prompts, toolsets, themes, spinners (patches the install; unofficial).",
+   "url": "https://github.com/Piebald-AI/tweakcc"
+  },
+  {
+   "name": "rtk",
+   "repo": "rtk-ai/rtk",
+   "stars": 86885,
+   "kind": "token-optimization",
+   "description": "Rust CLI proxy that compresses output of common dev commands to cut token usage.",
+   "url": "https://github.com/rtk-ai/rtk"
+  },
+  {
+   "name": "claude-mem",
+   "repo": "thedotmack/claude-mem",
+   "stars": 117891,
+   "kind": "memory",
+   "description": "Persistent cross-session memory plugin (claude plugin install claude-mem@thedotmack).",
+   "url": "https://github.com/thedotmack/claude-mem"
+  },
+  {
+   "name": "claude-code-templates (aitmpl)",
+   "repo": "davila7/claude-code-templates",
+   "stars": 33908,
+   "kind": "registry",
+   "description": "Registry + CLI of agents, commands, skills, hooks, MCPs and settings; analytics and health-check. Run: npx claude-code-templates@latest. Not a /plugin marketplace repo (no root .claude-plugin/marketplace.json).",
+   "url": "https://github.com/davila7/claude-code-templates"
+  },
+  {
+   "name": "rulesync",
+   "repo": "dyoshikawa/rulesync",
+   "stars": 1622,
+   "kind": "config-sync",
+   "description": "Generate/sync rules, MCP and commands config across Claude Code, Cursor, Copilot and other agents.",
+   "url": "https://github.com/dyoshikawa/rulesync"
+  },
+  {
+   "name": "claude-code-action",
+   "repo": "anthropics/claude-code-action",
+   "stars": 9991,
+   "kind": "ci",
+   "description": "Official GitHub Action to run Claude Code on PRs/issues (@claude mentions, automation).",
+   "url": "https://github.com/anthropics/claude-code-action"
+  },
+  {
+   "name": "claude-code-security-review",
+   "repo": "anthropics/claude-code-security-review",
+   "stars": 6975,
+   "kind": "ci",
+   "description": "Official GitHub Action for AI security review of PR diffs.",
+   "url": "https://github.com/anthropics/claude-code-security-review"
+  },
+  {
+   "name": "claude-code-hooks-mastery",
+   "repo": "disler/claude-code-hooks-mastery",
+   "stars": 3987,
+   "kind": "reference",
+   "description": "Worked examples of every Claude Code hook event.",
+   "url": "https://github.com/disler/claude-code-hooks-mastery"
+  },
+  {
+   "name": "awesome-claude-code",
+   "repo": "hesreallyhim/awesome-claude-code",
+   "stars": 58219,
+   "kind": "awesome-list",
+   "description": "Curated list of Claude Code skills, hooks, slash commands, tooling and workflows.",
+   "url": "https://github.com/hesreallyhim/awesome-claude-code"
+  },
+  {
+   "name": "awesome-claude-skills",
+   "repo": "ComposioHQ/awesome-claude-skills",
+   "stars": 79706,
+   "kind": "awesome-list",
+   "description": "Curated list of Claude Skills and resources.",
+   "url": "https://github.com/ComposioHQ/awesome-claude-skills"
+  },
+  {
+   "name": "claude-code-tips",
+   "repo": "ykdojo/claude-code-tips",
+   "stars": 10351,
+   "kind": "guide",
+   "description": "45+ practical Claude Code tips incl. statusline script.",
+   "url": "https://github.com/ykdojo/claude-code-tips"
+  },
+  {
+   "name": "claude-code-best-practice",
+   "repo": "shanraisshan/claude-code-best-practice",
+   "stars": 69156,
+   "kind": "guide",
+   "description": "Community best-practice compendium for Claude Code configuration.",
+   "url": "https://github.com/shanraisshan/claude-code-best-practice"
+  }
+ ],
+ "practices": [
+  {
+   "rule": "Keep CLAUDE.md short: only commands to verify work, misleading spots, decisions not in the repo, and things you corrected twice. Aim under 200 lines; personal prefs go in CLAUDE.local.md; area-specific rules go in .claude/rules/*.md with a paths: filter.",
+   "why": "CLAUDE.md loads into every session and every line takes attention on every task; Claude can already read your layout and conventions.",
+   "source": "https://code.claude.com/docs/en/best-practices#keep-claudemd-short"
+  },
+  {
+   "rule": "Give Claude a pass/fail check (tests, build exit code, linter, screenshot vs mockup) and ask for evidence: the command and its output.",
+   "why": "Without a check Claude stops when work \"looks done\"; with one it closes the loop itself.",
+   "source": "https://code.claude.com/docs/en/best-practices#give-claude-a-check-to-run"
+  },
+  {
+   "rule": "Rules with zero exceptions go in hooks, deny rules or managed settings, not in CLAUDE.md; keep the enforced set small.",
+   "why": "CLAUDE.md is guidance the model may decide does not apply; the harness always executes hooks and deny rules. Adding IMPORTANT/caps does not fix it.",
+   "source": "https://code.claude.com/docs/en/best-practices#enforce-the-rules-that-cant-have-exceptions"
+  },
+  {
+   "rule": "Deny secrets explicitly (e.g. \"deny\": [\"Read(./.env)\", \"Read(./secrets/**)\"]) and turn on the sandbox (/sandbox) for OS-level limits.",
+   "why": "Deny rules hold in every permission mode, including auto and bypassPermissions; the sandbox also confines scripts and curl that rules miss.",
+   "source": "https://code.claude.com/docs/en/best-practices#limit-access-with-permission-rules-and-the-sandbox"
+  },
+  {
+   "rule": "Put team procedures in skills (.claude/skills/<name>/SKILL.md); mark side-effect workflows (release, deploy) with disable-model-invocation: true.",
+   "why": "Only the name/description load until needed, so long procedures do not weigh on unrelated tasks; side-effect skills then run only when you type them.",
+   "source": "https://code.claude.com/docs/en/best-practices#put-team-procedures-in-skills"
+  },
+  {
+   "rule": "Write specific prompts: name the file, the symptom and what \"fixed\" means; say \"be ambitious\" when you want the fuller scope.",
+   "why": "Saves correction rounds; Claude reads requests conservatively and cannot see how much you wanted.",
+   "source": "https://code.claude.com/docs/en/best-practices#write-a-specific-prompt"
+  },
+  {
+   "rule": "When unsure, have Claude interview you into a SPEC.md, then build it in a fresh session.",
+   "why": "The build starts with clean context and a written definition of done to review against.",
+   "source": "https://code.claude.com/docs/en/best-practices#brainstorm-with-claude-first"
+  },
+  {
+   "rule": "Use plan mode (Shift+Tab, /plan or --permission-mode plan) to explore a codebase before changing it.",
+   "why": "Claude reads and plans but cannot edit source until you approve the plan.",
+   "source": "https://code.claude.com/docs/en/permission-modes"
+  },
+  {
+   "rule": "Run /clear between unrelated tasks, /compact with a focus on long ones, and check /usage when a task costs more than expected.",
+   "why": "Every request resends the whole conversation; old tasks keep costing tokens and dilute attention.",
+   "source": "https://code.claude.com/docs/en/best-practices#keep-cost-and-context-down"
+  },
+  {
+   "rule": "Watch the first minute, press Esc on drift, and after two failed corrections /clear and write a better prompt (or /rewind).",
+   "why": "A third correction just adds failed attempts for Claude to re-read.",
+   "source": "https://code.claude.com/docs/en/best-practices#steer-the-session"
+  },
+  {
+   "rule": "Use subagents for parallel work, noisy output and independent review; give reviewers read-only tools (Read, Grep, Glob) and model: haiku for simple jobs.",
+   "why": "Subagents cost extra tokens and are not smarter; their value is parallelism, isolation and a fresh pair of eyes. Tool limits are enforced by the harness.",
+   "source": "https://code.claude.com/docs/en/best-practices#know-what-subagents-cost"
+  },
+  {
+   "rule": "Get an independent review (/code-review or a reviewer against SPEC.md) and tell it to \"skip style\".",
+   "why": "A reviewer that did not write the code is not swayed by its reasoning; without \"skip style\" it always finds something and you over-engineer.",
+   "source": "https://code.claude.com/docs/en/best-practices#review-against-your-spec"
+  },
+  {
+   "rule": "Before installing a plugin or MCP server, read its hooks/hooks.json, .mcp.json and bin/; disable MCP servers you do not use.",
+   "why": "Plugins run code with your user privileges outside the sandbox and can auto-update; connected MCP servers add context cost and prompt-injection risk.",
+   "source": "https://code.claude.com/docs/en/plugins/security"
+  },
+  {
+   "rule": "Skill authoring: description in third person stating what it does and when to use it; SKILL.md body under 500 lines; reference files one level deep; build evaluations first.",
+   "why": "The description is what Claude uses to pick among 100+ skills; progressive disclosure keeps context lean; evals ensure the skill solves real gaps.",
+   "source": "https://platform.claude.com/docs/en/agents-and-tools/agent-skills/best-practices"
+  },
+  {
+   "rule": "Before any unattended run: define done, give it a check, restrict what it can touch (permissions, worktree, branch), cap it (--max-turns / --max-budget-usd) and have a human sign off.",
+   "why": "Nobody is there to catch a wrong assumption; caps and approvals bound the damage.",
+   "source": "https://code.claude.com/docs/en/best-practices#let-claude-run-without-you"
+  },
+  {
+   "rule": "[HumanLayer] Keep the root CLAUDE.md tiny (theirs is under 60 lines) and use progressive disclosure: task docs in separate files referenced from it. Never send an LLM to do a linter's job.",
+   "why": "Instruction budget is limited; deterministic tools or a Stop hook enforce style better. (They also advise hand-writing it rather than relying on /init; official docs suggest /init then pruning.)",
+   "source": "https://www.humanlayer.dev/blog/writing-a-good-claude-md"
+  },
+  {
+   "rule": "[Armin Ronacher] Make tools fast and quiet, log everything to files the agent can read, wrap critical commands in a Makefile with guards, and write \"the dumbest possible thing that will work\".",
+   "why": "Agent efficiency is dominated by tool latency and noisy output; simple code and guarded commands avoid agent mistakes.",
+   "source": "https://lucumr.pocoo.org/2025/6/12/agentic-coding/"
+  },
+  {
+   "rule": "[Jesse Vincent / Superpowers] Brainstorm -> written plan -> implement task by task with subagents, reviewing each task, using strict red/green TDD.",
+   "why": "Planning first and test-first cycles keep long agent runs on track; per-task review catches drift early.",
+   "source": "https://blog.fsck.com/2025/10/09/superpowers/"
+  },
+  {
+   "rule": "[Every / Compound Engineering] Loop plan -> work -> review -> compound: record each lesson as prompts/skills that live in the repo.",
+   "why": "Each fix makes the next task easier for every developer and agent instead of being re-learned.",
+   "source": "https://every.to/chain-of-thought/compound-engineering-how-every-codes-with-agents"
+  },
+  {
+   "rule": "[Harper Reed] Hone the idea into spec.md by having the LLM ask one question at a time, turn it into a step-by-step prompt_plan.md + todo.md, then execute and test step by step.",
+   "why": "Small, tested increments from an explicit spec beat one big prompt.",
+   "source": "https://harper.blog/2025/02/16/my-llm-codegen-workflow-atm/"
+  }
+ ],
+ "tags": [
+  {
+   "tag": "frontend",
+   "meaning": "Web UI work: HTML, CSS, components and frontend frameworks (React, Vue, Svelte, Angular)."
+  },
+  {
+   "tag": "backend",
+   "meaning": "Server-side code, APIs, services and integrations with third-party APIs."
+  },
+  {
+   "tag": "mobile",
+   "meaning": "iOS, Android, React Native, Expo and Flutter apps."
+  },
+  {
+   "tag": "typescript",
+   "meaning": "JavaScript and TypeScript code and tooling (Node.js, Vite, npm ecosystem)."
+  },
+  {
+   "tag": "python",
+   "meaning": "Python code, packaging and Python-specific tooling."
+  },
+  {
+   "tag": "dotnet",
+   "meaning": ".NET and C# development."
+  },
+  {
+   "tag": "testing",
+   "meaning": "Writing, running or fixing tests, test automation and QA."
+  },
+  {
+   "tag": "tdd",
+   "meaning": "Test-driven development: write the failing test first."
+  },
+  {
+   "tag": "debugging",
+   "meaning": "Finding root causes of bugs, failures and regressions."
+  },
+  {
+   "tag": "review",
+   "meaning": "Code review, PR review and second opinions on changes."
+  },
+  {
+   "tag": "security",
+   "meaning": "Application security, audits, vulnerabilities and secure defaults."
+  },
+  {
+   "tag": "auth",
+   "meaning": "Authentication and authorization: login, SSO, MFA, identity providers."
+  },
+  {
+   "tag": "git",
+   "meaning": "Git, branches, worktrees, commits, pull requests and issue triage."
+  },
+  {
+   "tag": "planning",
+   "meaning": "Specs, plans, brainstorming, tickets and roadmaps before or around implementation."
+  },
+  {
+   "tag": "workflow",
+   "meaning": "End-to-end agent development methods that chain several steps (plan, build, verify, ship)."
+  },
+  {
+   "tag": "architecture",
+   "meaning": "Software and system design: modules, boundaries, ADRs and design reviews."
+  },
+  {
+   "tag": "docs",
+   "meaning": "Technical documentation: READMEs, API docs, diagrams, CLAUDE.md and wikis."
+  },
+  {
+   "tag": "writing",
+   "meaning": "Prose quality and business writing: emails, posts, reports and editing."
+  },
+  {
+   "tag": "documents",
+   "meaning": "Office-style files and decks: Word, PDF, PowerPoint, spreadsheets and slides."
+  },
+  {
+   "tag": "design",
+   "meaning": "Visual and UI/UX design, design systems, branding and graphics."
+  },
+  {
+   "tag": "media",
+   "meaning": "Generating or editing images, video, audio, GIFs and animation."
+  },
+  {
+   "tag": "data",
+   "meaning": "Data analysis, data engineering, notebooks and analytics."
+  },
+  {
+   "tag": "database",
+   "meaning": "Database engines, schemas, queries and data stores (SQL, NoSQL, vector)."
+  },
+  {
+   "tag": "ai-ml",
+   "meaning": "Building or evaluating LLM apps, agents and ML models."
+  },
+  {
+   "tag": "mcp",
+   "meaning": "Building, configuring or using Model Context Protocol servers and apps."
+  },
+  {
+   "tag": "devops",
+   "meaning": "CI/CD, deployment, containers and release automation."
+  },
+  {
+   "tag": "cloud",
+   "meaning": "Cloud and hosting platforms (AWS, Azure, Google Cloud, Cloudflare, Netlify, Railway...)."
+  },
+  {
+   "tag": "infra",
+   "meaning": "Infrastructure as code and platform operations (Terraform, Pulumi, CDK, Kubernetes)."
+  },
+  {
+   "tag": "observability",
+   "meaning": "Monitoring, logging, tracing, alerting and incident response."
+  },
+  {
+   "tag": "performance",
+   "meaning": "Profiling, benchmarking and speed or cost optimisation."
+  },
+  {
+   "tag": "accessibility",
+   "meaning": "Accessibility audits and fixes (WCAG, screen readers)."
+  },
+  {
+   "tag": "browser",
+   "meaning": "Driving a real browser from the agent (Playwright, Chrome DevTools, Puppeteer)."
+  },
+  {
+   "tag": "web-data",
+   "meaning": "Web search, scraping, crawling and extraction of web content."
+  },
+  {
+   "tag": "science",
+   "meaning": "Mathematics, scientific computing and domain science (biology, chemistry, physics)."
+  },
+  {
+   "tag": "research",
+   "meaning": "Gathering and checking information: deep research, fact checking and literature review."
+  },
+  {
+   "tag": "productivity",
+   "meaning": "Personal or team productivity: tasks, notes, handoffs, token savings and automations."
+  },
+  {
+   "tag": "meta",
+   "meaning": "Working on Claude Code itself: skills, plugins, hooks, CLAUDE.md and agent behaviour."
+  },
+  {
+   "tag": "product",
+   "meaning": "Product management: discovery, strategy, PRDs, OKRs and roadmaps."
+  },
+  {
+   "tag": "marketing",
+   "meaning": "Marketing, SEO, copywriting, growth and campaigns."
+  },
+  {
+   "tag": "business",
+   "meaning": "Non-engineering business functions: sales, finance, legal, HR, operations, commerce."
+  },
+  {
+   "tag": "payments",
+   "meaning": "Payment processing and billing integrations."
+  },
+  {
+   "tag": "education",
+   "meaning": "Learning and teaching: courses, tutoring, explanations and enablement."
+  }
+ ]
+}

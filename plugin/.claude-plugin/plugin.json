@@ -1,0 +1,11 @@
+{
+  "name": "catude",
+  "description": "Slash commands that run catude and let Claude explain the result: /catude:doctor, /catude:audit, /catude:sessions, /catude:models.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/catude/catude",
+  "license": "MIT",
+  "author": {
+    "name": "catude contributors"
+  },
+  "icon": "./.claude-plugin/icon.png"
+}

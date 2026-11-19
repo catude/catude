@@ -1,0 +1,70 @@
+name: maintenance
+# Every Monday: refresh the catalog's GitHub facts (stars, last push, archived) in a pull request, and
+# open an issue when Anthropic's settings documentation lists settings that reference.json does not.
+# Pull requests from this workflow need "Allow GitHub Actions to create and approve pull requests"
+# (Settings, Actions, General).
+on:
+  schedule:
+    - cron: "17 6 * * 1"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  catalog:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Refresh stars and activity
+        id: refresh
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          node scripts/refresh-catalog.mjs > refresh.txt
+          cat refresh.txt
+      - name: Open a pull request when something changed
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if git diff --quiet internal/catalog/catalog.json; then echo "nothing changed"; exit 0; fi
+          branch="catalog-refresh-$(date +%Y%m%d)"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git switch -c "$branch"
+          git add internal/catalog/catalog.json
+          git commit -m "catalog: refresh stars and activity"
+          git push -f origin "$branch"
+          gh pr create --title "catalog: refresh stars and activity" --body-file refresh.txt --head "$branch" || echo "a pull request for $branch already exists"
+
+  settings-drift:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Compare reference.json with the documentation
+        id: drift
+        run: |
+          set +e
+          node scripts/check-settings-drift.mjs --markdown > drift.md
+          code=$?
+          cat drift.md
+          echo "code=$code" >> "$GITHUB_OUTPUT"
+          if [ $code -eq 2 ]; then exit 1; fi
+      - name: Open or update the drift issue
+        if: steps.drift.outputs.code == '1'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          title="Settings reference differs from Anthropic's documentation"
+          n=$(gh issue list --state open --search "in:title \"$title\"" --json number --jq '.[0].number')
+          if [ -n "$n" ]; then gh issue edit "$n" --body-file drift.md; else gh issue create --title "$title" --body-file drift.md; fi

@@ -1,0 +1,1119 @@
+[
+ {
+  "id": "dex-horthy",
+  "name": "Dex Horthy",
+  "handle": "dexhorthy",
+  "role": "Founder/CEO of HumanLayer; author of 12-factor-agents and 'advanced context engineering' (research-plan-implement)",
+  "sources": [
+   {
+    "title": "Getting AI to Work in Complex Codebases (ace-fca.md)",
+    "url": "https://github.com/humanlayer/advanced-context-engineering-for-coding-agents/blob/main/ace-fca.md",
+    "date": "2025-08-29"
+   },
+   {
+    "title": "12-Factor Agents",
+    "url": "https://github.com/humanlayer/12-factor-agents",
+    "date": null
+   },
+   {
+    "title": "No Vibes Allowed: Solving Hard Problems in Complex Codebases (AI Engineer talk)",
+    "url": "https://ai.engineer/talks/context-engineering-for-complex-codebases",
+    "date": null
+   },
+   {
+    "title": "Writing a good CLAUDE.md (HumanLayer blog, author Kyle)",
+    "url": "https://www.humanlayer.dev/blog/writing-a-good-claude-md",
+    "date": "2025-11-25"
+   },
+   {
+    "title": "riptide-rpi Claude Code plugin (monorepo)",
+    "url": "https://github.com/humanlayer/humanlayer/tree/main/apps/riptide-rpi-claude-plugin",
+    "date": "2026-11-16"
+   }
+  ],
+  "philosophy": "Today's models can work in large codebases if the whole workflow is built around managing context. Keep context use around 40-60%, compact often into written artifacts, and put human review on the research and the plan, where it has the most leverage.",
+  "process": [
+   "Research: parallel read-only subagents (locator/analyzer/pattern-finder) map how the system works and write a research doc to thoughts/",
+   "Human reviews the research and discards or redoes it if wrong",
+   "Plan: write a phased implementation plan with files, snippets and success criteria; iterate with the human",
+   "Implement phase by phase and run verification after each phase",
+   "For complex work, compact the current status back into the plan file after each verified phase (the HumanLayer team repo also had create_handoff/resume_handoff commands, mostly written by Kyle Mistele; Dex does not describe them in his write-up)",
+   "Optional extras from the HumanLayer team repo: validate_plan checks the work against the plan and describe_pr drafts the PR (not part of Dex's published research/plan/implement write-up)",
+   "Newer flow in HumanLayer's company plugin (rpi v0.50.0, author 'HumanLayer'): research questions, research, design discussion, structure outline, plan, implement, iterate. This is a company product; Dex's own description of it (talk 'From RPI to QRSPI') was not checked"
+  ],
+  "tools": [
+   "claude (Claude Code)",
+   "humanlayer CLI",
+   "gh",
+   "git worktrees"
+  ],
+  "mcp": [],
+  "marketplaces": [
+   {
+    "name": "humanlayer-riptide-rpi",
+    "repo": "humanlayer/riptide-rpi",
+    "commit": "21cfe2cbb84b2ef994aa26f7392680e95551e0e0",
+    "license": "none (no LICENSE file in repo; plugin.json in monorepo declares Apache-2.0)"
+   }
+  ],
+  "plugins": [
+   {
+    "id": "riptide-rpi@humanlayer-riptide-rpi",
+    "url": "https://github.com/humanlayer/humanlayer/blob/main/apps/riptide-rpi-claude-plugin/README.md"
+   }
+  ],
+  "skills": [
+   {
+    "name": "create-research-questions",
+    "repo": "humanlayer/humanlayer",
+    "path": "apps/riptide-rpi-claude-plugin/skills/create-research-questions",
+    "commit": "2f5b58d3dfd18b13f4456b67ab0787df44233231",
+    "license": "Apache-2.0",
+    "description": "RPI step: draft research questions"
+   },
+   {
+    "name": "create-research",
+    "repo": "humanlayer/humanlayer",
+    "path": "apps/riptide-rpi-claude-plugin/skills/create-research",
+    "commit": "2f5b58d3dfd18b13f4456b67ab0787df44233231",
+    "license": "Apache-2.0",
+    "description": "RPI step: write research doc"
+   },
+   {
+    "name": "create-design-discussion",
+    "repo": "humanlayer/humanlayer",
+    "path": "apps/riptide-rpi-claude-plugin/skills/create-design-discussion",
+    "commit": "2f5b58d3dfd18b13f4456b67ab0787df44233231",
+    "license": "Apache-2.0",
+    "description": "RPI step: design discussion doc"
+   },
+   {
+    "name": "create-structure-outline",
+    "repo": "humanlayer/humanlayer",
+    "path": "apps/riptide-rpi-claude-plugin/skills/create-structure-outline",
+    "commit": "2f5b58d3dfd18b13f4456b67ab0787df44233231",
+    "license": "Apache-2.0",
+    "description": "RPI step: structure outline"
+   },
+   {
+    "name": "create-plan",
+    "repo": "humanlayer/humanlayer",
+    "path": "apps/riptide-rpi-claude-plugin/skills/create-plan",
+    "commit": "2f5b58d3dfd18b13f4456b67ab0787df44233231",
+    "license": "Apache-2.0",
+    "description": "RPI step: implementation plan"
+   },
+   {
+    "name": "implement-plan",
+    "repo": "humanlayer/humanlayer",
+    "path": "apps/riptide-rpi-claude-plugin/skills/implement-plan",
+    "commit": "2f5b58d3dfd18b13f4456b67ab0787df44233231",
+    "license": "Apache-2.0",
+    "description": "RPI step: implement plan phase by phase"
+   },
+   {
+    "name": "describe-pr",
+    "repo": "humanlayer/humanlayer",
+    "path": "apps/riptide-rpi-claude-plugin/skills/describe-pr",
+    "commit": "2f5b58d3dfd18b13f4456b67ab0787df44233231",
+    "license": "Apache-2.0",
+    "description": "Generate PR description/walkthrough"
+   }
+  ],
+  "agents": [
+   {
+    "name": "codebase-locator",
+    "repo": "humanlayer/humanlayer",
+    "path": ".claude/agents/codebase-locator.md",
+    "commit": "99abe673498cf8bdcd5f989aebe9406a27185b3b",
+    "license": "Apache-2.0",
+    "description": "Super grep/glob; tools Grep,Glob,LS; model sonnet"
+   },
+   {
+    "name": "codebase-analyzer",
+    "repo": "humanlayer/humanlayer",
+    "path": ".claude/agents/codebase-analyzer.md",
+    "commit": "99abe673498cf8bdcd5f989aebe9406a27185b3b",
+    "license": "Apache-2.0",
+    "description": "Explains implementation details; model sonnet"
+   },
+   {
+    "name": "codebase-pattern-finder",
+    "repo": "humanlayer/humanlayer",
+    "path": ".claude/agents/codebase-pattern-finder.md",
+    "commit": "99abe673498cf8bdcd5f989aebe9406a27185b3b",
+    "license": "Apache-2.0",
+    "description": "Finds similar implementations with code examples; model sonnet"
+   },
+   {
+    "name": "web-search-researcher",
+    "repo": "humanlayer/humanlayer",
+    "path": ".claude/agents/web-search-researcher.md",
+    "commit": "99abe673498cf8bdcd5f989aebe9406a27185b3b",
+    "license": "Apache-2.0",
+    "description": "Web research subagent; model sonnet"
+   },
+   {
+    "name": "thoughts-locator",
+    "repo": "humanlayer/humanlayer",
+    "path": ".claude/agents/thoughts-locator.md",
+    "commit": "99abe673498cf8bdcd5f989aebe9406a27185b3b",
+    "license": "Apache-2.0",
+    "description": "Finds docs in thoughts/ dir; model sonnet"
+   },
+   {
+    "name": "thoughts-analyzer",
+    "repo": "humanlayer/humanlayer",
+    "path": ".claude/agents/thoughts-analyzer.md",
+    "commit": "99abe673498cf8bdcd5f989aebe9406a27185b3b",
+    "license": "Apache-2.0",
+    "description": "Extracts insights from thoughts/ docs"
+   }
+  ],
+  "commands": [
+   {
+    "name": "research_codebase_generic",
+    "repo": "humanlayer/humanlayer",
+    "path": ".claude/commands/research_codebase_generic.md",
+    "commit": "99abe673498cf8bdcd5f989aebe9406a27185b3b",
+    "license": "Apache-2.0",
+    "description": "Research codebase with parallel sub-agents (model: opus)"
+   },
+   {
+    "name": "create_plan_generic",
+    "repo": "humanlayer/humanlayer",
+    "path": ".claude/commands/create_plan_generic.md",
+    "commit": "99abe673498cf8bdcd5f989aebe9406a27185b3b",
+    "license": "Apache-2.0",
+    "description": "Interactive implementation plan (model: opus)"
+   },
+   {
+    "name": "iterate_plan",
+    "repo": "humanlayer/humanlayer",
+    "path": ".claude/commands/iterate_plan.md",
+    "commit": "99abe673498cf8bdcd5f989aebe9406a27185b3b",
+    "license": "Apache-2.0",
+    "description": "Update an existing plan (model: opus)"
+   },
+   {
+    "name": "implement_plan",
+    "repo": "humanlayer/humanlayer",
+    "path": ".claude/commands/implement_plan.md",
+    "commit": "99abe673498cf8bdcd5f989aebe9406a27185b3b",
+    "license": "Apache-2.0",
+    "description": "Implement plan from thoughts/shared/plans with verification"
+   },
+   {
+    "name": "validate_plan",
+    "repo": "humanlayer/humanlayer",
+    "path": ".claude/commands/validate_plan.md",
+    "commit": "99abe673498cf8bdcd5f989aebe9406a27185b3b",
+    "license": "Apache-2.0",
+    "description": "Verify implementation vs plan success criteria"
+   },
+   {
+    "name": "create_handoff",
+    "repo": "humanlayer/humanlayer",
+    "path": ".claude/commands/create_handoff.md",
+    "commit": "99abe673498cf8bdcd5f989aebe9406a27185b3b",
+    "license": "Apache-2.0",
+    "description": "Write handoff doc for next session"
+   },
+   {
+    "name": "resume_handoff",
+    "repo": "humanlayer/humanlayer",
+    "path": ".claude/commands/resume_handoff.md",
+    "commit": "99abe673498cf8bdcd5f989aebe9406a27185b3b",
+    "license": "Apache-2.0",
+    "description": "Resume from handoff doc"
+   }
+  ],
+  "settings": {
+   "model": "opus for research/plan commands; sonnet for subagents",
+   "effortLevel": null,
+   "notes": "The project .claude/settings.json sets env MAX_THINKING_TOKENS=32000; HEAD also sets CLAUDE_BASH_MAINTAIN_PROJECT_WORKING_DIR=1. The ACE doc targets 40-60% context use, and the later talk says diminishing returns may start around 40%. The CLAUDE.md advice (under 60 lines, progressive disclosure, a Stop hook running linters) comes from a HumanLayer blog post by Kyle, not by Dex, and should not be attributed to Dex."
+  },
+  "unverified": [
+   "Files come from the HumanLayer team repositories: not all of them were written by Dex Horthy himself",
+   "Classic commands/agents were deleted from HEAD on 2026-10-22 (commit d8197bab); paths above are pinned to the last commit containing them (99abe67, 2026-06-18). Links in ace-fca.md to blob/main/.claude/commands/* now 404.",
+   "The *_generic commands may still reference HumanLayer-specific scripts/thoughts layout (spec_metadata.sh)",
+   "Standalone humanlayer/riptide-rpi repo is stale (v0.2.0, 2025-12-29, only a setup skill) while the README install line points to it; the up-to-date v0.50.0 plugin lives in a monorepo subdirectory with no documented marketplace-add for that path",
+   "Meaning of 'QRSPI' (later talk 'From RPI to QRSPI') not read",
+   "Exact AI Engineer talk date not confirmed",
+   "Most of the cited commands and agents were written by several HumanLayer staff (Allison Durham, Kyle Mistele, Juan Gaitan-Villamizar, Dex). They are company or team work, though Dex links to the research, plan and implement prompts.",
+   "ace-fca links the non-generic research_codebase.md and create_plan.md, but the preset uses the *_generic variants. Dex only says he uses 'a more generic version' in other repos.",
+   "The plugin id riptide-rpi@humanlayer-riptide-rpi resolves to the stale standalone repo (v0.2.0). The monorepo plugin.json is named 'rpi' (v0.50.0), so the install line the preset gives users installs the old version.",
+   "Linear is used by the company's plugin ('workflow for Linear tickets'), but Dex never says he uses the Linear CLI."
+  ],
+  "users_want": [
+   {
+    "point": "HN readers praised the write-up as practical and clearly human-written. The main pushback asked why so much context-management process is needed for the tools to work.",
+    "url": "https://news.ycombinator.com/item?id=45347532"
+   }
+  ],
+  "factchecked": "2026-11-18"
+ },
+ {
+  "id": "armin-ronacher",
+  "name": "Armin Ronacher",
+  "handle": "mitsuhiko",
+  "role": "Creator of Flask/Jinja; co-founder of Earendil; prolific writer on agentic coding",
+  "sources": [
+   {
+    "title": "Agentic Coding Recommendations",
+    "url": "https://lucumr.pocoo.org/2025/6/12/agentic-coding/",
+    "date": "2025-06-12"
+   },
+   {
+    "title": "Agentic Coding Things That Didn't Work",
+    "url": "https://lucumr.pocoo.org/2025/7/30/things-that-didnt-work/",
+    "date": "2025-07-30"
+   },
+   {
+    "title": "Skills vs Dynamic MCP Loadouts",
+    "url": "https://lucumr.pocoo.org/2025/12/13/skills-vs-mcp/",
+    "date": "2025-12-13"
+   },
+   {
+    "title": "Pi: The Minimal Agent Within OpenClaw",
+    "url": "https://lucumr.pocoo.org/2026/1/31/pi/",
+    "date": "2026-01-31"
+   },
+   {
+    "title": "agent-stuff (Pi package: skills, extensions, commands)",
+    "url": "https://github.com/mitsuhiko/agent-stuff",
+    "date": "2026-09-27"
+   }
+  ],
+  "philosophy": "Simple, fast, observable tooling (Makefile, log files, CLIs) beats clever automation. Talk to the agent a lot, often by voice, and keep only automations you actually use. He prefers skills that wrap CLIs over MCP.",
+  "process": [
+   "Make the dev environment agent-friendly: Makefile targets, a process manager that refuses double starts, all output logged to files",
+   "Keep audio input going and dump your full train of thought into the prompt, then let the agent work while rarely interrupting",
+   "Run with permissions skipped, isolated (Docker / separate checkouts) for parallel work",
+   "Use subagents only for investigative/read-only tasks",
+   "Steer tool use with PATH interceptors (e.g. force uv) instead of hooks",
+   "Plan through a back-and-forth of questions instead of plan mode ('I don't use plan mode'); his agent-stuff package includes a /discuss interviewer prompt for Pi",
+   "Delete automations/skills that stop being used"
+  ],
+  "tools": [
+   "Claude Code (2025)",
+   "Pi coding agent (badlogic/pi-mono; almost exclusive from 2026)",
+   "uv",
+   "make",
+   "psql",
+   "tmux",
+   "gh",
+   "Vim"
+  ],
+  "mcp": [
+   {
+    "name": "playwright-mcp (used in mid-2025, later replaced by a skill)",
+    "add": "claude mcp add playwright npx @playwright/mcp@latest",
+    "url": "https://github.com/microsoft/playwright-mcp"
+   }
+  ],
+  "marketplaces": [],
+  "plugins": [],
+  "skills": [
+   {
+    "name": "commit",
+    "repo": "mitsuhiko/agent-stuff",
+    "path": "skills/commit",
+    "commit": "0865c849befd2021490679f96a8dee58c84ac857",
+    "license": "Apache-2.0",
+    "description": "Concise git commits with good subjects/bodies"
+   },
+   {
+    "name": "github",
+    "repo": "mitsuhiko/agent-stuff",
+    "path": "skills/github",
+    "commit": "0865c849befd2021490679f96a8dee58c84ac857",
+    "license": "Apache-2.0",
+    "description": "Use gh CLI for issues/PRs/runs/API"
+   },
+   {
+    "name": "tmux",
+    "repo": "mitsuhiko/agent-stuff",
+    "path": "skills/tmux",
+    "commit": "0865c849befd2021490679f96a8dee58c84ac857",
+    "license": "Apache-2.0",
+    "description": "Drive interactive CLIs via tmux keystrokes/pane scraping"
+   },
+   {
+    "name": "web-browser",
+    "repo": "mitsuhiko/agent-stuff",
+    "path": "skills/web-browser",
+    "commit": "0865c849befd2021490679f96a8dee58c84ac857",
+    "license": "Apache-2.0",
+    "description": "Automate Chrome via CDP (replaces Playwright MCP)"
+   },
+   {
+    "name": "uv",
+    "repo": "mitsuhiko/agent-stuff",
+    "path": "skills/uv",
+    "commit": "0865c849befd2021490679f96a8dee58c84ac857",
+    "license": "Apache-2.0",
+    "description": "Prefer uv for Python"
+   },
+   {
+    "name": "librarian",
+    "repo": "mitsuhiko/agent-stuff",
+    "path": "skills/librarian",
+    "commit": "0865c849befd2021490679f96a8dee58c84ac857",
+    "license": "Apache-2.0",
+    "description": "Cache remote git repos for reference"
+   },
+   {
+    "name": "sentry",
+    "repo": "mitsuhiko/agent-stuff",
+    "path": "skills/sentry",
+    "commit": "0865c849befd2021490679f96a8dee58c84ac857",
+    "license": "Apache-2.0",
+    "description": "Fetch/analyze Sentry issues (replaces Sentry MCP)"
+   },
+   {
+    "name": "update-changelog",
+    "repo": "mitsuhiko/agent-stuff",
+    "path": "skills/update-changelog",
+    "commit": "0865c849befd2021490679f96a8dee58c84ac857",
+    "license": "Apache-2.0",
+    "description": "Changelog update guidance"
+   }
+  ],
+  "agents": [],
+  "commands": [
+   {
+    "name": "discuss",
+    "repo": "mitsuhiko/agent-stuff",
+    "path": "commands/discuss.md",
+    "commit": "0865c849befd2021490679f96a8dee58c84ac857",
+    "license": "Apache-2.0",
+    "description": "Planning interviewer: inspect project, ask focused questions in rounds"
+   }
+  ],
+  "settings": {
+   "model": "sonnet (as of 2025-06-12)",
+   "effortLevel": null,
+   "notes": "Ran claude --dangerously-skip-permissions through a 'claude-yolo' alias and suggested Docker isolation. Found that hooks and most slash commands did not help him. Uses PATH interceptors in .claude/interceptors."
+  },
+  "unverified": [
+   "agent-stuff is packaged for Pi (npm 'mitsupi'); Claude Code compatibility of each SKILL.md not tested",
+   "README lists skills/frontend-design but it was not in the tree at this commit",
+   "Current (late 2026) model/harness choice beyond Pi not checked",
+   "skills/web-browser/SKILL.md declares 'license: Stolen from Mario', meaning it is derived from Mario Zechner's work. Armin authored the commits, but the origin should be disclosed.",
+   "The PATH interceptor directory name '.claude/interceptors' was not confirmed in the post text. The 2026 Pi setup uses a uv.ts extension instead.",
+   "The 2025-06-12 post does not mention voice or tmux. Voice comes from the 2025-07-30 post; tmux appears only as a skill in agent-stuff."
+  ],
+  "users_want": [
+   {
+    "point": "Users asked for the npm package (mitsupi) to be published again, because v1.1.1 had broken tool execute signatures.",
+    "url": "https://github.com/mitsuhiko/agent-stuff/issues/7"
+   }
+  ],
+  "factchecked": "2026-11-18"
+ },
+ {
+  "id": "mitchell-hashimoto",
+  "name": "Mitchell Hashimoto",
+  "handle": "mitchellh",
+  "role": "Co-founder of HashiCorp; creator of Ghostty terminal",
+  "sources": [
+   {
+    "title": "My AI Adoption Journey",
+    "url": "https://mitchellh.com/writing/my-ai-adoption-journey",
+    "date": "2026-02-05"
+   },
+   {
+    "title": "Vibing a Non-Trivial Ghostty Feature",
+    "url": "https://mitchellh.com/writing/non-trivial-vibing",
+    "date": "2025-10-11"
+   },
+   {
+    "title": "Ghostty AGENTS.md",
+    "url": "https://github.com/ghostty-org/ghostty/blob/main/AGENTS.md",
+    "date": null
+   },
+   {
+    "title": "Ghostty AI_POLICY.md",
+    "url": "https://github.com/ghostty-org/ghostty/blob/main/AI_POLICY.md",
+    "date": null
+   }
+  ],
+  "philosophy": "Use real agents, not chat. Get good at them by redoing your own work, and when an agent makes a mistake, fix the harness (AGENTS.md, scripts) so it does not happen again. Never ship AI code you don't understand or haven't reviewed.",
+  "process": [
+   "Split work into clear tasks; separate planning sessions from execution sessions",
+   "Plan with a slow read-only 'oracle' model and save the plan as a spec file",
+   "Give agents ways to verify themselves (filtered test scripts, screenshot scripts)",
+   "Use the last 30 minutes of the day for background agents (research, exploration, issue triage that only writes reports)",
+   "Each morning hand off sure-win tasks to a single background agent; turn agent notifications off",
+   "When an agent repeats a mistake, update AGENTS.md (per-directory) or add a tool",
+   "Review everything manually before merging; rewrite parts by hand when needed"
+  ],
+  "tools": [
+   "Amp (incl. oracle / deep mode)",
+   "Claude Code",
+   "gh",
+   "zig build",
+   "nushell scripts"
+  ],
+  "mcp": [],
+  "marketplaces": [],
+  "plugins": [],
+  "skills": [
+   {
+    "name": "writing-commit-messages",
+    "repo": "ghostty-org/ghostty",
+    "path": ".agents/skills/writing-commit-messages",
+    "commit": "7a8ff4d992edd2aad7537e5bef73ec911aa126bf",
+    "license": "MIT",
+    "description": "Ghostty project skill for writing git commit messages"
+   }
+  ],
+  "agents": [],
+  "commands": [],
+  "settings": {
+   "model": null,
+   "effortLevel": null,
+   "notes": "Turn off agent desktop notifications. Keep per-directory AGENTS.md files (Ghostty has 10). Ghostty's AI policy requires outside contributors to disclose AI use; maintainers are explicitly exempt, so this is a project rule, not Mitchell's personal setting."
+  },
+  "unverified": [
+   "Authorship of the Ghostty skill by Mitchell personally",
+   "No personal Claude Code settings, MCP or plugin list published",
+   "Ghostty .agents/commands/review-branch is a nushell script, not a Claude slash command (excluded)",
+   "The writing-commit-messages skill has two commit authors, Jon Parise and Mitchell Hashimoto. It is Ghostty team work, not Mitchell's alone.",
+   "'zig build' and 'nushell scripts' come from the Ghostty project (AGENTS.md; .agents/commands/review-branch, written by Mitchell), not from a statement of his personal tools.",
+   "The adoption post names GPT-5.2-Codex through Amp deep mode. It also says he does not run multiple agents at once."
+  ],
+  "users_want": [
+   {
+    "point": "Readers praised the advice to reproduce your own manual commits with an agent and to break work into small tasks. They asked which agents and models he uses for which tasks, and how to build tools meant for an LLM to use.",
+    "url": "https://news.ycombinator.com/item?id=46903558"
+   }
+  ],
+  "factchecked": "2026-11-18"
+ },
+ {
+  "id": "peter-steinberger",
+  "name": "Peter Steinberger",
+  "handle": "steipete",
+  "role": "Founder of PSPDFKit; creator of OpenClaw (formerly Clawdbot/Moltbot), Peekaboo, mcporter and oracle; joined OpenAI in February 2026, and OpenClaw moved to an independent foundation (widely reported, e.g. https://www.helpnetsecurity.com/2026/02/16/openclaw-creator-peter-steinberger-joins-openai/). His AGENTS.MD does not mention OpenAI.",
+  "sources": [
+   {
+    "title": "Just Talk To It - the no-bs Way of Agentic Engineering",
+    "url": "https://steipete.me/posts/just-talk-to-it",
+    "date": null
+   },
+   {
+    "title": "Shipping at Inference-Speed",
+    "url": "https://steipete.me/posts/2025/shipping-at-inference-speed",
+    "date": null
+   },
+   {
+    "title": "agent-scripts (AGENTS.MD, skills, slash-command prompts)",
+    "url": "https://github.com/steipete/agent-scripts",
+    "date": "2026-11-14"
+   },
+   {
+    "title": "mcporter",
+    "url": "https://github.com/steipete/mcporter",
+    "date": null
+   },
+   {
+    "title": "oracle",
+    "url": "https://github.com/steipete/oracle",
+    "date": null
+   }
+  ],
+  "philosophy": "Just talk to the model: short prompts and screenshots, many parallel agents, no ceremony like plan mode or issue trackers. Start with a CLI before reaching for MCP, and spend about 20% of the time on refactoring.",
+  "process": [
+   "Start a conversation, have the agent read the relevant code and discuss options before saying 'build'",
+   "For tricky features, write a spec to docs/*.md and get a second-model review (oracle / GPT Pro)",
+   "Run 3-8 agents in parallel in a terminal grid (Oct 2025: mostly on main without worktrees; his current AGENTS.MD says to create task-owned git worktrees whenever useful)",
+   "Iterate with screenshots and short prompts; queue 'continue' messages for long tasks",
+   "Have the model write tests in the same context after each feature",
+   "Agents commit only their own files ('commit/push'); land PRs with /landpr-style prompts",
+   "Keep a global AGENTS.md updated whenever something goes wrong"
+  ],
+  "tools": [
+   "Codex CLI (daily driver)",
+   "Claude Code (routes implementation to Codex via codex-first skill)",
+   "oracle",
+   "mcporter",
+   "peekaboo",
+   "gh",
+   "tmux",
+   "ast-grep",
+   "jscpd",
+   "knip",
+   "Wispr Flow",
+   "summarize"
+  ],
+  "mcp": [
+   {
+    "name": "chrome-devtools-mcp (used through mcporter)",
+    "add": null,
+    "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp"
+   }
+  ],
+  "marketplaces": [
+   {
+    "name": "chrome-devtools-plugins",
+    "repo": "ChromeDevTools/chrome-devtools-mcp",
+    "commit": "4b9acc9961a081f462d6a30040b8af729b1d7dc3",
+    "license": "Apache-2.0"
+   }
+  ],
+  "plugins": [],
+  "skills": [
+   {
+    "name": "oracle",
+    "repo": "steipete/agent-scripts",
+    "path": "skills/oracle",
+    "commit": "2f82700ba9f3e7e93d3583e1990992584561eadc",
+    "license": "MIT",
+    "description": "Second-model review: bundle prompts/files for debug/refactor/design"
+   },
+   {
+    "name": "codex-first",
+    "repo": "steipete/agent-scripts",
+    "path": "skills/codex-first",
+    "commit": "2f82700ba9f3e7e93d3583e1990992584561eadc",
+    "license": "MIT",
+    "description": "Claude Code keeps spec/judgment/verification, delegates hands-on work to Codex"
+   },
+   {
+    "name": "create-cli",
+    "repo": "steipete/agent-scripts",
+    "path": "skills/create-cli",
+    "commit": "2f82700ba9f3e7e93d3583e1990992584561eadc",
+    "license": "MIT",
+    "description": "CLI UX/spec design: flags, help, output, errors, dry-run"
+   },
+   {
+    "name": "github-deep-review",
+    "repo": "steipete/agent-scripts",
+    "path": "skills/github-deep-review",
+    "commit": "2f82700ba9f3e7e93d3583e1990992584561eadc",
+    "license": "MIT",
+    "description": "Deep GitHub PR review"
+   },
+   {
+    "name": "project-structure",
+    "repo": "steipete/agent-scripts",
+    "path": "skills/project-structure",
+    "commit": "2f82700ba9f3e7e93d3583e1990992584561eadc",
+    "license": "MIT",
+    "description": "Project structure guidance"
+   }
+  ],
+  "agents": [],
+  "commands": [
+   {
+    "name": "landpr",
+    "repo": "steipete/agent-scripts",
+    "path": "docs/slash-commands/landpr.md",
+    "commit": "2f82700ba9f3e7e93d3583e1990992584561eadc",
+    "license": "MIT",
+    "description": "Land PR: temp rebase, full gate, merge, verify MERGED"
+   },
+   {
+    "name": "fixissue",
+    "repo": "steipete/agent-scripts",
+    "path": "docs/slash-commands/fixissue.md",
+    "commit": "2f82700ba9f3e7e93d3583e1990992584561eadc",
+    "license": "MIT",
+    "description": "Fix issue end-to-end: tests, changelog, commit, push, close"
+   },
+   {
+    "name": "handoff",
+    "repo": "steipete/agent-scripts",
+    "path": "docs/slash-commands/handoff.md",
+    "commit": "2f82700ba9f3e7e93d3583e1990992584561eadc",
+    "license": "MIT",
+    "description": "Capture state for the next agent"
+   },
+   {
+    "name": "pickup",
+    "repo": "steipete/agent-scripts",
+    "path": "docs/slash-commands/pickup.md",
+    "commit": "2f82700ba9f3e7e93d3583e1990992584561eadc",
+    "license": "MIT",
+    "description": "Rehydrate context when starting work"
+   }
+  ],
+  "settings": {
+   "model": "Codex workers: gpt-6.1-sol, high reasoning, Fast service tier (codex-first skill, dated 2026-10-30); in Dec 2025, gpt-5.2-codex high; Opus for smaller edits and for Clawd",
+   "effortLevel": "high (Codex)",
+   "notes": "No plan mode unless explicitly asked, and no issue tracker. AGENTS.MD is the single instruction file (no separate CLAUDE.md). His current AGENTS.MD allows task-owned worktrees whenever useful, so 'rarely worktrees' only describes Oct 2025. Background work in Claude Code runs as tracked run_in_background tasks. Chrome DevTools is used through mcporter's daemon-backed chrome-devtools, not through a Claude plugin."
+  },
+  "unverified": [
+   "Exact publication dates of both posts (inferred Oct 2025 and late Dec 2025)",
+   "Several slash-command files use Codex-style frontmatter (summary/read_when), not Claude command frontmatter",
+   "skills/frontend-design contains its own LICENSE.txt (likely third-party)",
+   "Many skills are tied to his personal machines/accounts",
+   "He never names the chrome-devtools-mcp Claude plugin or marketplace; his AGENTS.MD says to use mcporter's chrome-devtools. The marketplace entry 'chrome-devtools-plugins' should go along with the plugin.",
+   "The project-structure skill description is wrong. It generates a compressed symbol map of a TypeScript or Swift repo, not general 'project structure guidance'.",
+   "Wispr Flow and chrome-devtools-mcp come from the Oct 2025 post and were not re-confirmed for 2026."
+  ],
+  "users_want": [
+   {
+    "point": "HN readers asked how he keeps up the stamina to supervise many parallel agents. Several were skeptical about code quality and about his praise for Codex.",
+    "url": "https://news.ycombinator.com/item?id=45588689"
+   },
+   {
+    "point": "Contributors asked that codex-first also cover the Codex binary bundled with the ChatGPT app on PATH, and that the browser tools be hardened.",
+    "url": "https://github.com/steipete/agent-scripts/pull/29"
+   }
+  ],
+  "factchecked": "2026-11-18"
+ },
+ {
+  "id": "harper-reed",
+  "name": "Harper Reed",
+  "handle": "harperreed",
+  "role": "CEO of 2389 Research; former CTO of Obama 2012 campaign",
+  "sources": [
+   {
+    "title": "My LLM codegen workflow atm",
+    "url": "https://harper.blog/2025/02/16/my-llm-codegen-workflow-atm/",
+    "date": "2025-02-16"
+   },
+   {
+    "title": "Basic Claude Code",
+    "url": "https://harper.blog/2025/05/08/basic-claude-code/",
+    "date": "2025-05-08"
+   },
+   {
+    "title": "harperreed/dotfiles (.claude/)",
+    "url": "https://github.com/harperreed/dotfiles/tree/master/.claude",
+    "date": "2026-11-12"
+   },
+   {
+    "title": "2389 Research Claude Code plugin marketplace",
+    "url": "https://github.com/2389-research/claude-plugins",
+    "date": "2026-11-18"
+   }
+  ],
+  "philosophy": "Spec, then plan, then execute in small steps. Hone the idea one question at a time, turn it into small TDD prompts, and let the agent work through them. Tests, linters and pre-commit hooks keep it honest.",
+  "process": [
+   "Idea honing: a chat LLM asks one question at a time, giving spec.md",
+   "Planning: a reasoning model turns the spec into small TDD steps (prompt_plan.md) plus todo.md",
+   "Execution: Claude Code takes the next unmarked prompt, implements it with tests, verifies, commits, and marks it done",
+   "After each prompt Claude pauses for your review or feedback; plans are usually 8-12 steps",
+   "Pre-commit hooks run tests/types/lint on every commit; formatters (ruff, biome, clippy)",
+   "Fresh-eyes review of new code via a subagent (careful-review)",
+   "Existing codebases: repomix + llm CLI via mise tasks for reviews/issues/missing tests"
+  ],
+  "tools": [
+   "Claude Code",
+   "Aider (earlier)",
+   "repomix",
+   "llm (simonw)",
+   "mise",
+   "uv",
+   "pre-commit",
+   "ruff",
+   "biome",
+   "clippy"
+  ],
+  "mcp": [
+   {
+    "name": "journal (2389 private journaling MCP)",
+    "add": null,
+    "url": "https://github.com/2389-research/journal-mcp"
+   }
+  ],
+  "marketplaces": [
+   {
+    "name": "2389-research",
+    "repo": "2389-research/claude-plugins",
+    "commit": "225fac7112796d0ae29171f5b5bc8150f11dce04",
+    "license": "MIT"
+   }
+  ],
+  "plugins": [
+   {
+    "id": "test-kitchen@2389-research",
+    "url": "https://github.com/2389-research/test-kitchen"
+   },
+   {
+    "id": "fresh-eyes-review@2389-research",
+    "url": "https://github.com/2389-research/fresh-eyes-review"
+   },
+   {
+    "id": "scenario-testing@2389-research",
+    "url": "https://github.com/2389-research/scenario-testing"
+   },
+   {
+    "id": "journal@2389-research",
+    "url": "https://github.com/2389-research/journal-mcp"
+   }
+  ],
+  "skills": [],
+  "agents": [],
+  "commands": [
+   {
+    "name": "careful-review",
+    "repo": "harperreed/dotfiles",
+    "path": ".claude/commands/careful-review.md",
+    "commit": "2370b1d1545d2674bbbbdf33fe360784650047f4",
+    "license": "none (no LICENSE file)",
+    "description": "Fresh-eyes review of just-written code via subagent, then fix"
+   },
+   {
+    "name": "story-loop",
+    "repo": "harperreed/dotfiles",
+    "path": ".claude/commands/story-loop.md",
+    "commit": "2370b1d1545d2674bbbbdf33fe360784650047f4",
+    "license": "none (no LICENSE file)",
+    "description": "Catalog capabilities as e2e scenario cards; loop test-fix-retest"
+   }
+  ],
+  "settings": {
+   "model": "claude-fable-5-1[1m] (dotfiles settings.json)",
+   "effortLevel": null,
+   "notes": "skipDangerousModePermissionPrompt: true. There is a SessionStart hook for agent state and a hooks/utilities/UserPromptSubmit/append_ultrathink.py file. The global CLAUDE.md says: YAGNI, TDD, for changes under ~100 lines no spec or plan document, and the agent owns design decisions. Enabled plugin: rust-analyzer-lsp@claude-plugins-official."
+  },
+  "unverified": [
+   "The plugins come from the 2389 Research team marketplace, not from Harper Reed alone, and none is enabled in his own settings",
+   "Whether append_ultrathink.py is actually registered (not in settings.json shown)",
+   "His CLAUDE.md mentions overriding 'superpowers' defaults, implying obra/superpowers use, but it is not in enabledPlugins",
+   "Plugin sub-repo SHAs: test-kitchen 31003fd2cc86bfa16769f074f36c2b218387b6d0, fresh-eyes-review 44b6a772f3fbe1b27a79dee3c880361893df178b, scenario-testing 041aa412768956145984861937ca6861efcacbda, simmer 2dbec0e8e70dea963a2743c476169595e70a55ed (all MIT); the marketplace is the 2389 team's, not Harper-only",
+   "None of the 2389 plugins is enabled in Harper's own settings.json; the only enabled plugin is rust-analyzer-lsp. They are 2389 Research team plugins. test-kitchen is co-written with Michael Sugimura (sugi-chan); fresh-eyes-review and scenario-testing are mostly Harper's.",
+   "simmer is mainly authored by Michael Sugimura (about 34 commits against Harper's 2), so it is other-author work under Harper's name.",
+   "The journal MCP is backed by his CLAUDE.md ('your journal for insights, feelings, and frustrations') and the repo is mostly his commits (with Jesse Vincent), but it is not configured in the published settings.json.",
+   "No reference to 'npx skills' or vercel-labs/skills was found in the dotfiles or posts.",
+   "The Feb 2025 workflow ran on claude.ai paste and Aider. Claude Code appears from the May 2025 post onward."
+  ],
+  "users_want": [],
+  "factchecked": "2026-11-18"
+ },
+ {
+  "id": "steve-yegge",
+  "name": "Steve Yegge",
+  "handle": "steveyegge",
+  "role": "Ex-Amazon/Google/Sourcegraph engineer; author of Beads (agent issue tracker) and Gas Town (multi-agent orchestrator)",
+  "sources": [
+   {
+    "title": "Introducing Beads: A Coding Agent Memory System",
+    "url": "https://steve-yegge.medium.com/introducing-beads-a-coding-agent-memory-system-637d7d92514a",
+    "date": "2025-10-13"
+   },
+   {
+    "title": "Welcome to Gas Town",
+    "url": "https://steve-yegge.medium.com/welcome-to-gas-town-4f25ee16dd04",
+    "date": "2026-01-01"
+   },
+   {
+    "title": "beads repo (now gastownhall/beads)",
+    "url": "https://github.com/gastownhall/beads",
+    "date": "2026-11-17"
+   },
+   {
+    "title": "Beads Claude Code plugin docs",
+    "url": "https://github.com/gastownhall/beads/blob/main/docs/integrations/claude-code-plugin.md",
+    "date": null
+   },
+   {
+    "title": "gastown repo",
+    "url": "https://github.com/gastownhall/gastown",
+    "date": "2026-11-12"
+   }
+  ],
+  "philosophy": "Agents forget between sessions, and markdown TODO plans rot. Give them a dependency-aware issue graph they query for ready work and update as they go, and scale by orchestrating many agents (Gas Town).",
+  "process": [
+   "Install bd once and run bd init per repo (writes AGENTS.md section and agent hooks)",
+   "bd prime is injected at SessionStart/PreCompact to restore workflow context",
+   "Agent runs bd ready to pick unblocked work and claims it (bd update <id> --claim)",
+   "File newly discovered work as issues with dependencies (bd create, bd dep add) instead of markdown TODOs",
+   "Close issues and store durable facts (bd close, bd remember) before ending the session",
+   "Scale to many parallel agents with Gas Town (gt)"
+  ],
+  "tools": [
+   "bd (beads)",
+   "gt (Gas Town)",
+   "Dolt",
+   "Claude Code"
+  ],
+  "mcp": [
+   {
+    "name": "beads-mcp (only for MCP-only clients; CLI+hooks preferred)",
+    "add": null,
+    "url": "https://github.com/gastownhall/beads/blob/main/docs/integrations/mcp-server.md"
+   }
+  ],
+  "marketplaces": [
+   {
+    "name": "beads-marketplace",
+    "repo": "gastownhall/beads",
+    "commit": "a6b7cd76943765a05c5f26074b10e6a3f7b7db14",
+    "license": "MIT"
+   }
+  ],
+  "plugins": [
+   {
+    "id": "beads@beads-marketplace",
+    "url": "https://github.com/gastownhall/beads/blob/main/docs/integrations/claude-code-plugin.md"
+   }
+  ],
+  "skills": [
+   {
+    "name": "beads",
+    "repo": "gastownhall/beads",
+    "path": "plugins/beads/skills/beads",
+    "commit": "a6b7cd76943765a05c5f26074b10e6a3f7b7db14",
+    "license": "MIT",
+    "description": "Multi-session issue tracking with dependencies and memory across compaction"
+   }
+  ],
+  "agents": [
+   {
+    "name": "task-agent",
+    "repo": "gastownhall/beads",
+    "path": "plugins/beads/agents/task-agent.md",
+    "commit": "a6b7cd76943765a05c5f26074b10e6a3f7b7db14",
+    "license": "MIT",
+    "description": "Autonomous agent that finds and completes ready tasks"
+   }
+  ],
+  "commands": [
+   {
+    "name": "prime",
+    "repo": "gastownhall/beads",
+    "path": "plugins/beads/skills/beads/commands/prime.md",
+    "commit": "a6b7cd76943765a05c5f26074b10e6a3f7b7db14",
+    "license": "MIT",
+    "description": "Load beads workflow context"
+   },
+   {
+    "name": "create",
+    "repo": "gastownhall/beads",
+    "path": "plugins/beads/skills/beads/commands/create.md",
+    "commit": "a6b7cd76943765a05c5f26074b10e6a3f7b7db14",
+    "license": "MIT",
+    "description": "Create a beads issue"
+   }
+  ],
+  "settings": {
+   "model": null,
+   "effortLevel": null,
+   "notes": "The plugin adds SessionStart and PreCompact hooks that run 'bd prime'. Without the plugin, use 'bd setup claude' (or --global) to add a SessionStart hook running 'bd prime --hook-json' plus a minimal CLAUDE.md section. Install the CLI with brew install beads or npm install -g @beads/bd. Plugin install from the docs: '/plugin marketplace add gastownhall/beads' then '/plugin install beads'."
+  },
+  "unverified": [
+   "beads is maintained by a team (gastownhall); who wrote each skill, agent and command is not confirmed",
+   "Medium posts could not be fetched (403); dates come from search results (Gas Town date from secondary source)",
+   "steveyegge/beads and steveyegge/gastown now 301-redirect to gastownhall/*",
+   "Install command for MCP in Claude Code not documented (docs give uv tool install beads-mcp + JSON config)",
+   "Codex and Factory Droid are integrations that beads and Gas Town support (bd setup codex/factory; Gas Town runtimes). Steve was not found saying he uses them, and Gas Town's default runtime is Claude Code. tmux is a Gas Town requirement and is missing from the tools list.",
+   "The beads repo now lives in a community org ('Gas Town Hall'). Git history at the current paths of the beads skill, prime/create commands and task-agent shows other contributors (matt wilkie, Eugene Brevdo, 'sms'), although plugin.json lists Steve Yegge as author. Personal authorship of these artifacts is unconfirmed.",
+   "The process steps come from project README docs maintained by many contributors, not from Steve's own posts."
+  ],
+  "users_want": [
+   {
+    "point": "Users most want richer agent memory. The 'Memory Beads' proposal is the most discussed issue (134 comments).",
+    "url": "https://github.com/gastownhall/beads/issues/5877"
+   },
+   {
+    "point": "Users asked for issue history and versioned beads.",
+    "url": "https://github.com/gastownhall/beads/issues/5898"
+   }
+  ],
+  "factchecked": "2026-11-18"
+ },
+ {
+  "id": "indydevdan",
+  "name": "IndyDevDan",
+  "handle": "disler",
+  "role": "YouTuber/educator on agentic engineering (Tactical Agentic Coding course); GitHub disler",
+  "sources": [
+   {
+    "title": "claude-code-hooks-mastery",
+    "url": "https://github.com/disler/claude-code-hooks-mastery",
+    "date": "2026-02-01"
+   },
+   {
+    "title": "infinite-agentic-loop",
+    "url": "https://github.com/disler/infinite-agentic-loop",
+    "date": "2026-03-09"
+   },
+   {
+    "title": "IndyDevDan YouTube channel",
+    "url": "https://www.youtube.com/@indydevdan",
+    "date": null
+   },
+   {
+    "title": "disler repositories",
+    "url": "https://github.com/disler?tab=repositories",
+    "date": null
+   }
+  ],
+  "philosophy": "Move from vibe coding to agentic engineering. Write reusable prompts, subagents and hooks so agent workflows are deterministic, observable and safe, and invest in the harness.",
+  "process": [
+   "/prime to load codebase context at session start",
+   "/plan_w_team writes a spec into specs/ (validated by Stop hooks)",
+   "/build reads and executes the spec; the plan's 'Team Orchestration' section assigns builder subagents (one task each) and a validator",
+   "Read-only validator subagent checks acceptance criteria",
+   "Hooks on every lifecycle event (uv single-file Python) log, block rm -rf and .env access, and give TTS notifications",
+   "Use the meta-agent to generate new subagents; /infinite for parallel generative loops from a spec"
+  ],
+  "tools": [
+   "Claude Code",
+   "uv (single-file scripts)",
+   "Pi agent (later repos)",
+   "cmux",
+   "ElevenLabs TTS"
+  ],
+  "mcp": [
+   {
+    "name": "ElevenLabs MCP",
+    "add": null,
+    "url": "https://github.com/elevenlabs/elevenlabs-mcp"
+   },
+   {
+    "name": "Firecrawl MCP",
+    "add": null,
+    "url": "https://www.firecrawl.dev/mcp"
+   }
+  ],
+  "marketplaces": [],
+  "plugins": [],
+  "skills": [],
+  "agents": [
+   {
+    "name": "meta-agent",
+    "repo": "disler/claude-code-hooks-mastery",
+    "path": ".claude/agents/meta-agent.md",
+    "commit": "052ad1cbd5aeb1ec4a1def22012d1293c6225625",
+    "license": "none (no LICENSE file)",
+    "description": "Generates new subagent configs (model opus; uses firecrawl MCP tools)"
+   },
+   {
+    "name": "builder",
+    "repo": "disler/claude-code-hooks-mastery",
+    "path": ".claude/agents/team/builder.md",
+    "commit": "052ad1cbd5aeb1ec4a1def22012d1293c6225625",
+    "license": "none (no LICENSE file)",
+    "description": "Executes one engineering task at a time (opus, PostToolUse hooks)"
+   },
+   {
+    "name": "validator",
+    "repo": "disler/claude-code-hooks-mastery",
+    "path": ".claude/agents/team/validator.md",
+    "commit": "052ad1cbd5aeb1ec4a1def22012d1293c6225625",
+    "license": "none (no LICENSE file)",
+    "description": "Read-only verification of builder output (opus, Write/Edit disallowed)"
+   }
+  ],
+  "commands": [
+   {
+    "name": "prime",
+    "repo": "disler/claude-code-hooks-mastery",
+    "path": ".claude/commands/prime.md",
+    "commit": "052ad1cbd5aeb1ec4a1def22012d1293c6225625",
+    "license": "none (no LICENSE file)",
+    "description": "Load codebase context for a new session"
+   },
+   {
+    "name": "plan_w_team",
+    "repo": "disler/claude-code-hooks-mastery",
+    "path": ".claude/commands/plan_w_team.md",
+    "commit": "052ad1cbd5aeb1ec4a1def22012d1293c6225625",
+    "license": "none (no LICENSE file)",
+    "description": "Write implementation plan to specs/ (opus, Stop-hook validated)"
+   },
+   {
+    "name": "build",
+    "repo": "disler/claude-code-hooks-mastery",
+    "path": ".claude/commands/build.md",
+    "commit": "052ad1cbd5aeb1ec4a1def22012d1293c6225625",
+    "license": "none (no LICENSE file)",
+    "description": "Implement the plan"
+   },
+   {
+    "name": "infinite",
+    "repo": "disler/infinite-agentic-loop",
+    "path": ".claude/commands/infinite.md",
+    "commit": "6e9a012f81ef2291faf174d67176f7e69832cc0a",
+    "license": "none (no LICENSE file)",
+    "description": "Spec-driven parallel subagent generation loop"
+   }
+  ],
+  "settings": {
+   "model": "opus for planning/builder/validator agents",
+   "effortLevel": null,
+   "notes": "The repo settings.json allows mkdir/uv/find/mv/grep/npm/ls/cp/chmod/touch plus Write/Edit. It sets a statusLine (uv-run python) and registers hooks for all events. pre_tool_use.py blocks rm -rf variants and .env access. Output styles live in .claude/output-styles. .mcp.json.sample configures ElevenLabs via 'uvx elevenlabs-mcp'."
+  },
+  "unverified": [
+   "No LICENSE in disler repos, so reuse rights are unclear (copying likely needs permission)",
+   "Video-based claims (YouTube) not individually verified",
+   "Recent repos (2026) shift toward Pi agent; current preferred harness not confirmed",
+   "The unverified note 'No LICENSE in disler repos' is too broad. claude-code-hooks-mastery has no LICENSE, but his recent repos (durable-pi, pi-vs-claude-code, learning-cmux-with-agents and others) are MIT.",
+   "Video-based claims were not verified."
+  ],
+  "users_want": [
+   {
+    "point": "Users hit hooks and agents losing the path to their executable scripts (the uv / $CLAUDE_PROJECT_DIR path problem).",
+    "url": "https://github.com/disler/claude-code-hooks-mastery/issues/3"
+   }
+  ],
+  "factchecked": "2026-11-18"
+ },
+ {
+  "id": "thorsten-ball",
+  "name": "Thorsten Ball",
+  "handle": "thorstenball",
+  "role": "Co-creator of Amp (coding agent), previously at Sourcegraph and Zed; author of 'Writing an Interpreter in Go' and 'How to Build an Agent'",
+  "sources": [
+   {
+    "title": "How to Build an Agent",
+    "url": "https://ampcode.com/how-to-build-an-agent",
+    "date": "2025-04-15"
+   },
+   {
+    "title": "How I Use Amp",
+    "url": "https://ampcode.com/notes/how-i-use-amp",
+    "date": "2025-05-15"
+   },
+   {
+    "title": "Think Harder: How I Prompt (Laracon US talk)",
+    "url": "https://thorstenball.com/talks/how-i-prompt/",
+    "date": "2026-07-29"
+   }
+  ],
+  "philosophy": "An agent is 'an LLM, a loop, and enough tokens' (an LLM with access to tools). Treat each prompt as a briefing: how is the model supposed to know what I mean? Move the 'how to do things' into the codebase (AGENTS.md files). He currently uses no MCP servers or custom slash commands.",
+  "process": [
+   "You make the architecture decisions; the prompt spells out files, commits and constraints ('paint by numbers')",
+   "Two-step prompt: first have the agent find/load context, then make the request",
+   "Attach screenshots generously; give the agent visual feedback (Playwright/Storybook)",
+   "Start new threads often (quality drops beyond ~100k tokens)",
+   "Stage good changes in git, discard the rest; ask the agent to review its own diff",
+   "Put AGENTS.md files throughout the codebase; review load-bearing code closely"
+  ],
+  "tools": [
+   "Amp",
+   "git",
+   "Playwright (screenshots)",
+   "Storybook"
+  ],
+  "mcp": [],
+  "marketplaces": [],
+  "plugins": [],
+  "skills": [],
+  "agents": [],
+  "commands": [],
+  "settings": {
+   "model": null,
+   "effortLevel": null,
+   "notes": "As of the Laracon US talk (2026-07-29) he uses no MCP servers, no custom slash commands, and only one or two skills, and builds custom tools as Amp plugins. He gives the agent a 'super long leash' and documents wherever it fails. In 2025 he used the Playwright and postgres MCP servers (How I Use Amp, now archived)."
+  },
+  "unverified": [
+   "Uses Amp, not Claude Code; no published Claude Code config",
+   "Whether 2025 Playwright screenshot access was via MCP not confirmed",
+   "Talk content taken from thorstenball.com summary page, not the video",
+   "Resolved: in 2025, Playwright screenshots went through the Playwright MCP server (How I Use Amp). The preset's mcp list of [] is correct only for 2026.",
+   "'How I Use Amp' is marked archived and written for an older Amp. The exact 'paint by numbers' wording was not confirmed verbatim."
+  ],
+  "users_want": [],
+  "factchecked": "2026-11-18"
+ }
+]

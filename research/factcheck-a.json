@@ -1,0 +1,637 @@
+[
+  {
+    "id": "lauren-tan-pstack",
+    "role_ok": false,
+    "role_fix": "Software engineer at xAI / SpaceXAI (Cursor), ex-Meta and Netflix; React core team (React Compiler); author of the pstack agent-skills plugin.",
+    "role_evidence": "GitHub profile bio (fetched 2026-11-18): 'Software Engineer @xai-org & @react compiler core team' (https://github.com/poteto). pstack README: 'the same skills i use every day to ship high quality code at Cursor'. 'ex-Cursor' is not supported by any source; she has not left.",
+    "philosophy": {
+      "status": "supported",
+      "evidence_url": "https://github.com/cursor/plugins/tree/main/pstack",
+      "quote": "if you want to go fast, go deep first ... pstack helps you write less, but higher quality code.",
+      "quote_2": "Encode the rule as a lint, metadata flag, runtime check, or script instead of more text. (principle encode-lessons-in-structure)",
+      "fix": null
+    },
+    "process": [
+      {
+        "step": "Once per machine: /pstack:setup-pstack to choose models per role and a reasoning budget",
+        "status": "partly",
+        "evidence_url": "https://github.com/cursor/plugins/tree/main/pstack",
+        "fix": "First: /pstack:setup-pstack to pick a reasoning budget and the model for each role (re-run it when pstack's defaults change; an older rule keeps pinning the old defaults)",
+        "note": "README says 'run /setup-pstack, pick a reasoning budget, and choose which models you want'. 'Once per machine' is not stated, and the README says a rule written before a default change must be regenerated."
+      },
+      {
+        "step": "Start rigorous work with /pstack:poteto-mode, which matches the task to a playbook (bug fix, feature, refactor, perf, investigation...) and copies its steps into a todo list",
+        "status": "supported",
+        "evidence_url": "https://github.com/cursor/plugins/tree/main/pstack",
+        "fix": null
+      },
+      {
+        "step": "Understand first: /how and /why for code walkthroughs and design rationale",
+        "status": "supported",
+        "evidence_url": "https://github.com/cursor/plugins/tree/main/pstack",
+        "fix": null,
+        "note": "In Claude Code the names are /pstack:how and /pstack:why (README: 'claude code prefixes plugin commands and agents'). Same prefix applies to every command in steps 4-7."
+      },
+      {
+        "step": "Design before code: /architect sketches types, signatures and modules",
+        "status": "supported",
+        "evidence_url": "https://github.com/cursor/plugins/tree/main/pstack",
+        "fix": null
+      },
+      {
+        "step": "Build, then clean: /unslop for prose, /no-comments (Comment Sicko subagent) for code",
+        "status": "supported",
+        "evidence_url": "https://github.com/cursor/plugins/tree/main/pstack",
+        "fix": null
+      },
+      {
+        "step": "Verify with evidence: a project-local verification skill (/create-verification-skill) plus adversarial multi-model review (/interrogate)",
+        "status": "supported",
+        "evidence_url": "https://github.com/cursor/plugins/tree/main/pstack",
+        "fix": null,
+        "note": "In Claude Code every review seat runs on Claude (non-Claude slugs map to the session model), so 'multi-model' is weaker there; see open issue https://github.com/cursor/plugins/issues/809."
+      },
+      {
+        "step": "Encode lessons (/reflect), and only then parallelise (/swarm, /arena, autopilot playbooks)",
+        "status": "partly",
+        "evidence_url": "https://github.com/cursor/plugins/tree/main/pstack",
+        "fix": "Encode lessons (/reflect captures the recipe as a skill edit; /correct turns repeated mistakes into types, lint, CI or tests). Once one agent's output can be trusted, parallelise (/swarm, /arena, autopilot playbooks)",
+        "note": "README supports 'go deep on one agent ... then you can truly parallelize with confidence', but it does not order /reflect before parallel work; that sequencing is the preset's inference. The skill that actually encodes corrections in structure is /correct, which the preset omits."
+      }
+    ],
+    "tools_remove": ["bun (poteto-mode scripts)", "rg"],
+    "tools_notes": "bun appears only as the shebang of one bundled script (skills/poteto-mode/scripts/watch-pr); rg appears only in the Claude Code adapter table as a Grep/Glob fallback. Neither is something she says she uses or recommends. git worktrees, gh, CDP and lint/types/CI are named in the skills and principles and can stay.",
+    "mcp_remove": [],
+    "plugins_remove": [],
+    "artifacts_remove": [],
+    "artifacts_notes": "All 14 pstack skills and both agents exist at the cited paths and are authored by her (plugin.json author 'Lauren Tan', LICENSE (c) 2026 Lauren Tan). 'reflect (brainmaxxing)' is also hers but is a separate Feb-2026 Claude Code project that pre-dates pstack and is not referenced by it; it ships a /plan skill, while the pstack README now says 'personally, i don't believe in planning. the best spec is code.' Keep it clearly labelled as a separate, older project or drop it.",
+    "settings_fix": {
+      "model": null,
+      "effortLevel": null,
+      "notes": "Correct two details: (1) Cursor cloud agents are not simply skipped: 'environment: cloud' maps to a worktree and only steps that need the cloud agent itself are skipped; Bugbot comments are triaged as ordinary review threads; only Automations are always skipped. (2) Add that the default review panel is 'fable 5.2 / opus 5.5 / gemini 4 carbon' and that in Claude Code the Gemini seat falls back to the session model. Known problem to mention: open issue #1270 'poteto-agent's Cursor model slug makes Claude Code run it on a fallback model'. brainmaxxing hooks are SessionStart (startup|resume) and PostToolUse (brain/)."
+    },
+    "stars": {
+      "cursor/plugins": 17026,
+      "poteto/brainmaxxing": 389
+    },
+    "users_want": [
+      {
+        "point": "Support for harnesses other than Cursor: the most up-voted pstack issue asks for Codex installation and native agents",
+        "url": "https://github.com/cursor/plugins/issues/734"
+      },
+      {
+        "point": "Claude Code users report the port is second-class: poteto-agent runs on a fallback model and review panels cannot use a non-Claude seat",
+        "url": "https://github.com/cursor/plugins/issues/1270"
+      }
+    ],
+    "new_unverified": [
+      "The X article 'How I Use Cursor' (x.com/poteto/status/2058975157503570132) could not be fetched; nothing in the preset depends on it once the README is used as the source",
+      "Whether her team is Cursor or Grok Bot inside SpaceXAI: GitHub bio says @xai-org; the only source for 'Grok Bot core team' is secondary",
+      "The cited talk is known only through a secondary summary (redreamality.com); do not quote it as her words",
+      "cursor/plugins main may have moved past 93b916d (repo pushed_at 2026-11-18T07:33Z)"
+    ]
+  },
+  {
+    "id": "boris-cherny-claude-code",
+    "role_ok": true,
+    "role_fix": null,
+    "role_evidence": "Thread: 'I'm Boris and I created Claude Code'; GitHub bio 'Claude Code @ Anthropic' (https://github.com/bcherny). Press in 2026 calls him head of Claude Code; no Nov-2026 source contradicts it.",
+    "philosophy": {
+      "status": "supported",
+      "evidence_url": "https://threadreaderapp.com/thread/2007179832300581177",
+      "quote": "My setup might be surprisingly vanilla! ... probably the most important thing ... give Claude a way to verify its work.",
+      "fix": null
+    },
+    "process": [
+      {
+        "step": "Run several sessions in parallel (5 local terminal tabs plus 5-10 on claude.ai/code, or one git worktree / checkout per task)",
+        "status": "supported",
+        "evidence_url": "https://threadreaderapp.com/thread/2007179832300581177",
+        "fix": null,
+        "note": "He personally uses multiple git checkouts; worktrees are what most of the team prefers (https://threadreaderapp.com/thread/2017742741636321619)."
+      },
+      {
+        "step": "Start non-trivial work in Plan mode (Shift+Tab twice), iterate on the plan, and re-plan when things go off track",
+        "status": "partly",
+        "evidence_url": "https://threadreaderapp.com/thread/2007179832300581177",
+        "fix": "Start most sessions in Plan mode (Shift+Tab twice) and go back and forth until the plan is right (team tip: switch back to Plan mode as soon as something goes sideways)",
+        "note": "'Re-plan when things go off track' is a teammate's tip he relays ('Another says the moment something goes sideways, they switch back to plan mode'), not his own stated habit."
+      },
+      {
+        "step": "Switch to auto-accept edits and let Claude implement, usually in one shot",
+        "status": "supported",
+        "evidence_url": "https://threadreaderapp.com/thread/2007179832300581177",
+        "fix": null
+      },
+      {
+        "step": "Verify: tests, bash checks, or browser/simulator testing (Claude Chrome extension), optionally via a background agent or a Stop hook",
+        "status": "supported",
+        "evidence_url": "https://threadreaderapp.com/thread/2007179832300581177",
+        "fix": null
+      },
+      {
+        "step": "Simplify and check with subagents (code-simplifier, verify-app), then /commit-push-pr",
+        "status": "partly",
+        "evidence_url": "https://threadreaderapp.com/thread/2044847848035156457",
+        "fix": "Verify, simplify, then open a PR. Jan 2026: code-simplifier and (non-public) verify-app subagents plus /commit-push-pr. Apr 2026: a personal /go skill that tests end to end, runs /simplify and puts up a PR",
+        "note": "True for Jan 2026, but outdated: on 2026-04-16 he wrote 'many of my prompts these days look like \"Claude do blah blah /go\"' where /go tests end to end, runs the /simplify skill and puts up a PR. The ordering simplify-then-verify is the preset's."
+      },
+      {
+        "step": "After every correction, add a rule to the checked-in CLAUDE.md (also from PR review via @claude and the GitHub Action)",
+        "status": "supported",
+        "evidence_url": "https://threadreaderapp.com/thread/2007179832300581177",
+        "fix": null
+      },
+      {
+        "step": "Turn anything done more than once a day into a slash command or skill checked into git",
+        "status": "supported",
+        "evidence_url": "https://threadreaderapp.com/thread/2017742741636321619",
+        "fix": null,
+        "note": "'More than once a day' is a team tip he relays; his own wording is 'every inner loop workflow that I end up doing many times a day'."
+      }
+    ],
+    "tools_remove": [],
+    "tools_notes": "gh is never named by him; it is only implied by the allowed-tools of /commit-push-pr. Ghostty is what 'the team loves', not his own terminal; iTerm2 appears only in a notifications tip. Label these as team/implied rather than his.",
+    "mcp_remove": ["Sentry (error logs)"],
+    "mcp_notes": "He says Claude 'grabs error logs from Sentry' without saying it is an MCP server. Only Slack is stated as MCP ('via the MCP server', config in the shared .mcp.json).",
+    "plugins_remove": [],
+    "plugins_notes": "code-simplifier is now confirmed primary: his post of 2026-01-09 reads 'We just open sourced the code-simplifier agent we use on the Claude Code team' (x.com/bcherny/status/2009450715081789767, title mirrored at https://news.ycombinator.com/item?id=46549822). ralph-loop: he named the 'ralph-wiggum plugin'; issues in the official marketplace still carry the old name ('ralph-wiggum:ralph-loop'), which supports the rename. commit-commands is not named by him, but its commit-push-pr.md is byte-identical (apart from one trailing blank line) to anthropics/claude-code/.claude/commands/commit-push-pr.md, the command he describes; present it as 'Anthropic's public copy', not as his recommendation.",
+    "artifacts_remove": [],
+    "settings_fix": {
+      "model": null,
+      "effortLevel": "xhigh",
+      "notes": "Outdated. Latest statement (2026-04-16, Opus 4.7 thread): 'Personally, I use xhigh effort for most tasks, and max effort for the hardest tasks'; he also recommends auto mode as the safer alternative to --dangerously-skip-permissions and /fewer-permission-prompts to tune the allowlist. 'Opus 4.5 with thinking for everything' (Jan 2026) and 'High for everything' (Feb 2026) are superseded. 'Permission requests routed to Opus by a hook' is a team tip, not his own setup. The rest (PostToolUse formatter, Stop hook, shared .mcp.json for Slack, agent field / --agent, isolation: worktree, Bash(bun run *) wildcard) is supported."
+    },
+    "stars": {
+      "anthropics/claude-plugins-official": 47610,
+      "anthropics/claude-code": 156097
+    },
+    "users_want": [
+      {
+        "point": "Readers ask what it costs: running 5-15 parallel Opus sessions looks out of reach without Anthropic-level token quotas",
+        "url": "https://news.ycombinator.com/item?id=46522828"
+      },
+      {
+        "point": "Readers ask for clarity on slash commands versus Agent Skills, which the Jan 2026 thread does not mention",
+        "url": "https://news.ycombinator.com/item?id=46522675"
+      }
+    ],
+    "new_unverified": [
+      "Whether xhigh/Opus is still his choice in Nov 2026: the newest primary statement found is from 2026-04-16",
+      "The Jan 31 date of the team-tips thread is now confirmed by the unrolled thread (https://threadreaderapp.com/thread/2017742741636321619); remove that item from 'unverified'",
+      "His /go skill is not public"
+    ]
+  },
+  {
+    "id": "simon-willison-agentic-engineering",
+    "role_ok": true,
+    "role_fix": null,
+    "role_evidence": "https://simonwillison.net/about/ : 'independent open source developer ... creator of Datasette ... and LLM ... co-creator of the Django Web Framework'.",
+    "philosophy": {
+      "status": "supported",
+      "evidence_url": "https://simonwillison.net/2026/Feb/23/agentic-engineering-patterns/",
+      "quote": "professional software engineers using coding agents to improve and accelerate their work by amplifying their existing expertise",
+      "quote_2": "Almost everything I might achieve with an MCP can be handled by a CLI tool instead. (https://simonwillison.net/2025/Oct/16/claude-skills/)",
+      "fix": null
+    },
+    "process": [
+      {
+        "step": "Open each session with 'First run the tests' (for example uv run pytest) so the agent knows the suite exists",
+        "status": "supported",
+        "evidence_url": "https://simonwillison.net/guides/agentic-engineering-patterns/first-run-the-tests/",
+        "fix": null,
+        "note": "His scope is 'Any time I start a new session with an agent against an existing project'."
+      },
+      {
+        "step": "Implement with 'Use red/green TDD'",
+        "status": "supported",
+        "evidence_url": "https://simonwillison.net/guides/agentic-engineering-patterns/red-green-tdd/",
+        "fix": null
+      },
+      {
+        "step": "Have the agent prove the feature by hand-testing it and recording a demo (showboat, with rodney for browser screenshots)",
+        "status": "supported",
+        "evidence_url": "https://simonwillison.net/guides/agentic-engineering-patterns/agentic-manual-testing/",
+        "fix": null
+      },
+      {
+        "step": "Understand unfamiliar code through linear walkthroughs and interactive explanations",
+        "status": "supported",
+        "evidence_url": "https://simonwillison.net/guides/agentic-engineering-patterns/linear-walkthroughs/",
+        "fix": null
+      },
+      {
+        "step": "Run agents in parallel for research, scouting attempts, small maintenance and carefully specified tasks, each in a fresh checkout",
+        "status": "supported",
+        "evidence_url": "https://simonwillison.net/2025/Oct/5/parallel-coding-agents/",
+        "fix": null,
+        "note": "'Send out a scout' is Josh Bleecher Snyder's pattern, which Simon says he tried with good results."
+      },
+      {
+        "step": "Use YOLO mode only in a sandbox (Docker, Codespaces, cloud agents) with scoped, budget-capped credentials",
+        "status": "partly",
+        "evidence_url": "https://simonwillison.net/2025/Oct/5/parallel-coding-agents/",
+        "fix": "Prefer YOLO mode in a sandbox or on someone else's computer (Docker, Codespaces, Codex Cloud, Claude Code for web) with test/staging credentials and a tight budget; he admits he also runs it locally when he is confident no malicious instructions can reach the context",
+        "note": "He recommends the sandbox but does not follow 'only': 'running in YOLO mode (no approvals) for tasks where I'm confident malicious instructions can't sneak into the context. (I need to start habitually running my local agents in Docker containers...)'."
+      },
+      {
+        "step": "Review the result and publish the transcript (claude-code-transcripts)",
+        "status": "partly",
+        "evidence_url": "https://simonwillison.net/2025/Dec/25/claude-code-transcripts/",
+        "fix": "Review the code before sharing it, and optionally publish the session transcript with claude-code-transcripts (he links transcripts from his commits)",
+        "note": "The post presents the tool and says his commit log links to transcripts; it does not describe publishing as a step of every session. 'Review' comes from the guide's anti-pattern chapter, not from this post."
+      }
+    ],
+    "tools_remove": ["llm"],
+    "tools_notes": "llm is his tool but none of the six cited sources mentions it as part of his coding-agent workflow. Docker is recommended but he says he has not made it a habit; keep it marked as 'recommended'.",
+    "mcp_remove": [],
+    "plugins_remove": [],
+    "artifacts_remove": [],
+    "artifacts_notes": "The four skills exist in simonw/skills and the repo is his, so they are not another author's work. But: the README is one line ('Skills for coding agents'), a search of simonwillison.net for 'simonw/skills' returns no results, and there is no license file. They can be linked, not copied, and should be labelled 'published without announcement', not 'recommended'.",
+    "settings_fix": {
+      "model": null,
+      "effortLevel": null,
+      "notes": "Soften '--dangerously-skip-permissions only in a container or on someone else's computer': that is his recommendation ('Option 2 is my favorite'), while he states he also runs YOLO locally for low-risk tasks. Mark 'Sonnet 4.5 / GPT-5-Codex' as his Oct 2025 daily drivers (13 months old). The rest is supported."
+    },
+    "stars": {
+      "simonw/skills": 43
+    },
+    "users_want": [
+      {
+        "point": "Showboat users ask for safeguards so agents cannot fake a demo by editing the Markdown directly",
+        "url": "https://github.com/simonw/showboat/issues/12"
+      },
+      {
+        "point": "Showboat users ask for HTML output of the demo documents",
+        "url": "https://github.com/simonw/showboat/issues/15"
+      }
+    ],
+    "new_unverified": [
+      "No primary source found for his model or effort choice after Oct 2025",
+      "The 'interactive explanations' chapter was fetched but only its title was checked"
+    ]
+  },
+  {
+    "id": "jesse-vincent-superpowers",
+    "role_ok": true,
+    "role_fix": null,
+    "role_evidence": "https://blog.fsck.com/about/ : 'I'm the founder and CEO of Prime Radiant, an applied AI research lab, and the creator of Superpowers'.",
+    "philosophy": {
+      "status": "supported",
+      "evidence_url": "https://blog.fsck.com/2026/10/09/what-a-year.md",
+      "quote": "good process management and guidance still gets a better end result than just letting the model do its thing",
+      "quote_2": "The agent checks for relevant skills before any task. Mandatory workflows, not suggestions. (https://github.com/obra/superpowers)",
+      "fix": null
+    },
+    "process": [
+      {
+        "step": "brainstorming: question-led design, played back for correction; written design doc for projects",
+        "status": "supported",
+        "evidence_url": "https://github.com/obra/superpowers#the-basic-workflow",
+        "fix": null
+      },
+      {
+        "step": "using-git-worktrees: isolated branch workspace with a clean test baseline",
+        "status": "supported",
+        "evidence_url": "https://github.com/obra/superpowers#the-basic-workflow",
+        "fix": null
+      },
+      {
+        "step": "writing-plans: bite-sized 2-5 minute tasks with exact paths, code and verification steps",
+        "status": "supported",
+        "evidence_url": "https://github.com/obra/superpowers#the-basic-workflow",
+        "fix": null
+      },
+      {
+        "step": "subagent-driven-development (fresh subagent per task plus review) or executing-plans (inline)",
+        "status": "supported",
+        "evidence_url": "https://github.com/obra/superpowers#the-basic-workflow",
+        "fix": null
+      },
+      {
+        "step": "test-driven-development: strict RED-GREEN-REFACTOR",
+        "status": "supported",
+        "evidence_url": "https://github.com/obra/superpowers#the-basic-workflow",
+        "fix": null
+      },
+      {
+        "step": "requesting-code-review between tasks; verification-before-completion before claiming done",
+        "status": "supported",
+        "evidence_url": "https://github.com/obra/superpowers#the-basic-workflow",
+        "fix": null,
+        "note": "verification-before-completion is listed in the README's skills library ('Ensure it's actually fixed'), not in the numbered workflow."
+      },
+      {
+        "step": "finishing-a-development-branch: merge, PR, keep or discard, then clean up the worktree",
+        "status": "supported",
+        "evidence_url": "https://github.com/obra/superpowers#the-basic-workflow",
+        "fix": null
+      }
+    ],
+    "tools_remove": [],
+    "tools_notes": "tmux (claude-session-driver) is listed as a tool but that plugin is missing from the preset's plugins list although it is in his marketplace; either add claude-session-driver@superpowers-marketplace or drop the tool. gh is not named in the README; it appears only inside two skill files.",
+    "mcp_remove": [],
+    "plugins_remove": [],
+    "plugins_notes": "All seven plugin ids are present in obra/superpowers-marketplace (.claude-plugin/marketplace.json) or in the official marketplace (superpowers pinned at sha 22f0b46, equal to HEAD). elements-of-style is his packaging of Strunk's 1918 text.",
+    "artifacts_remove": [],
+    "artifacts_notes": "All 14 skills exist at the cited commit and are his/Prime Radiant's. The repo has a 15th skill the preset omits: diagnosing-superpowers (new in 7.x, 'figure out what went wrong with superpowers in this session').",
+    "settings_fix": {
+      "model": null,
+      "effortLevel": null,
+      "notes": "'Restart Claude Code after install' comes from the Oct 2025 launch post; the current README does not repeat it for Claude Code. Everything else (v7.0.2, SessionStart matcher startup|clear|compact, both install paths) is confirmed."
+    },
+    "stars": {
+      "obra/superpowers": 319628,
+      "obra/superpowers-marketplace": 1330,
+      "anthropics/claude-plugins-official": 47610
+    },
+    "users_want": [
+      {
+        "point": "Most up-voted request: support for Claude Code Agent Teams (TeammateTool, SendMessage, TaskList)",
+        "url": "https://github.com/obra/superpowers/issues/429"
+      },
+      {
+        "point": "Complaint about 7.0: the rebuilt brainstorming asks too many questions ('v7's brainstorm questions are rather annoying')",
+        "url": "https://github.com/obra/superpowers/issues/2530"
+      }
+    ],
+    "new_unverified": [
+      "Whether Jesse personally still uses private-journal-mcp, episodic-memory and double-shot-latte in 2026: they are published in his marketplace, but the only first-person mention found is the Oct 2025 post (the 'feelings journal')",
+      "Licenses and HEAD SHAs of the satellite plugins remain unchecked"
+    ]
+  },
+  {
+    "id": "matt-pocock-skills",
+    "role_ok": true,
+    "role_fix": null,
+    "role_evidence": "GitHub profile org 'AI Hero'; README links aihero.dev and Total TypeScript assets; plugin.json author Matt Pocock.",
+    "philosophy": {
+      "status": "supported",
+      "evidence_url": "https://github.com/mattpocock/skills",
+      "quote": "These skills are designed to be small, easy to adapt, and composable. They work with any model.",
+      "fix": null
+    },
+    "process": [
+      {
+        "step": "Run /setup-matt-pocock-skills once per repo (issue tracker, triage labels, docs location)",
+        "status": "supported",
+        "evidence_url": "https://github.com/mattpocock/skills",
+        "fix": null
+      },
+      {
+        "step": "Align: /grill-me, or /grill-with-docs to also write a glossary and ADRs",
+        "status": "partly",
+        "evidence_url": "https://github.com/mattpocock/skills",
+        "fix": "Align: /grill-with-docs for code changes (also maintains GLOSSARY.md and ADRs); /grill-me for non-code plans",
+        "note": "Current README: '/grill-me - for non-code uses'; '/grill-with-docs - same as /grill-me, but adds more goodies'. The Mar 2026 AI Hero post still shows /grill-me for a code feature."
+      },
+      {
+        "step": "/to-spec: turn the conversation into a spec published to the issue tracker",
+        "status": "supported",
+        "evidence_url": "https://www.aihero.dev/5-agent-skills-i-use-every-day",
+        "fix": null
+      },
+      {
+        "step": "/to-tickets: split it into vertical-slice tickets with blocking edges",
+        "status": "supported",
+        "evidence_url": "https://www.aihero.dev/5-agent-skills-i-use-every-day",
+        "fix": null
+      },
+      {
+        "step": "/implement with /tdd red-green-refactor (/diagnosing-bugs for hard bugs)",
+        "status": "supported",
+        "evidence_url": "https://github.com/mattpocock/skills",
+        "fix": null
+      },
+      {
+        "step": "/code-review against standards and the spec",
+        "status": "supported",
+        "evidence_url": "https://github.com/mattpocock/skills",
+        "fix": null,
+        "note": "code-review is model-invoked; /implement closes out with it. Users reported a name clash with Claude Code's built-in /code-review (issue #483, closed)."
+      },
+      {
+        "step": "/improve-codebase-architecture weekly or after a burst of work; /handoff to pass context to another agent",
+        "status": "supported",
+        "evidence_url": "https://www.aihero.dev/5-agent-skills-i-use-every-day",
+        "fix": "/improve-codebase-architecture every few days (README) or weekly / after a surge of development (AI Hero post); /handoff to pass context to another agent",
+        "note": "AI Hero: 'Do this once a week or after a surge of development.' Current README: 'I recommend running it on your codebase once every few days.'"
+      }
+    ],
+    "tools_remove": [],
+    "mcp_remove": [],
+    "plugins_remove": ["mattpocock-skills@mattpocock"],
+    "plugins_notes": "The README documents the 'mattpocock' marketplace only for Codex and GitHub Copilot. For Claude Code it gives one command: 'claude plugin install mattpocock-skills@claude-plugins-official', and warns that installing two sources 'gives you every skill twice'. Drop the 'mattpocock' marketplace entry for Claude Code as well.",
+    "artifacts_remove": [
+      {
+        "kind": "skill",
+        "name": "git-guardrails-claude-code",
+        "reason": "Written by Matt, but it lives in skills/misc, which his own repo docs call 'kept around but rarely used, not promoted' (CLAUDE.md) and 'frozen and unmaintained. Every issue is closed' (SCOPE.md). It is not in the README and is not shipped by the plugin (plugin.json lists only engineering/ and productivity/ skills). Presenting it as part of his current setup is wrong."
+      }
+    ],
+    "settings_fix": {
+      "model": null,
+      "effortLevel": null,
+      "notes": "Remove 'Optional hooks come from git-guardrails-claude-code' (unmaintained, not in the plugin). Qualify '(auto-updates)': README says 'Updates itself by default', but the official marketplace pins sha 49dd158 (not HEAD) and open issue #1164 reports 'Claude Code plugin does not update - still stuck on version 1.2.3'."
+    },
+    "stars": {
+      "mattpocock/skills": 327052,
+      "anthropics/claude-plugins-official": 47610
+    },
+    "users_want": [
+      {
+        "point": "Users want the short original grill-me back after it was reworked ('Can we get the old grill-me back?'); Matt calls grill-me/grill-with-docs his most popular skills",
+        "url": "https://github.com/mattpocock/skills/issues/831"
+      },
+      {
+        "point": "Claude Code users report the plugin does not update and stays on an old version",
+        "url": "https://github.com/mattpocock/skills/issues/1164"
+      }
+    ],
+    "new_unverified": [
+      "The preset lists 12 of 27 promoted skills; notable omissions he documents as daily-use: ask-matt (router), triage, implement-spec, wayfinder, retro, domain-modeling, grilling",
+      "The AI Hero post is dated 'Updated Mar 16, 2026' but already uses the newer names (/to-spec, /to-tickets), so it has been edited since"
+    ]
+  },
+  {
+    "id": "geoffrey-huntley-ralph",
+    "role_ok": true,
+    "role_fix": null,
+    "role_evidence": "GitHub bio: 'i created the \"ralph loop\"' (https://github.com/ghuntley); ghuntley.com/ralph (14 Jul 2025).",
+    "philosophy": {
+      "status": "supported",
+      "evidence_url": "https://ghuntley.com/loop/",
+      "quote": "Standard software practices is to build it vertically brick by brick ... these days I approach everything as a loop.",
+      "quote_2": "In its purest form, Ralph is a Bash loop. (https://ghuntley.com/ralph/)",
+      "fix": null
+    },
+    "process": [
+      {
+        "step": "Talk through the idea and write one spec per topic in specs/*.md",
+        "status": "supported",
+        "evidence_url": "https://ghuntley.com/ralph/",
+        "fix": null,
+        "note": "His wording is 'write the specifications out, one per file, in the specifications folder'; 'one per topic' is Clayton Farr's phrasing."
+      },
+      {
+        "step": "Planning loop: generate or refresh a prioritised plan file (fix_plan.md / IMPLEMENTATION_PLAN.md)",
+        "status": "partly",
+        "evidence_url": "https://ghuntley.com/ralph/",
+        "fix": "Planning prompt: have Ralph study the specs and the source and create or update a prioritised @fix_plan.md, then switch from planning to building mode",
+        "note": "fix_plan.md is Huntley's. IMPLEMENTATION_PLAN.md is the file name used in Clayton Farr's Ralph Playbook, not in Huntley's posts."
+      },
+      {
+        "step": "Building loop: while :; do cat PROMPT.md | <agent> ; done, picking the single most important item per iteration",
+        "status": "supported",
+        "evidence_url": "https://ghuntley.com/ralph/",
+        "fix": null
+      },
+      {
+        "step": "Main context acts as scheduler; subagents search and summarise (many in parallel) but only one runs build/test",
+        "status": "supported",
+        "evidence_url": "https://ghuntley.com/ralph/",
+        "fix": null
+      },
+      {
+        "step": "Backpressure: tests, type checkers and static analysis; no placeholders; commit and tag when green",
+        "status": "supported",
+        "evidence_url": "https://ghuntley.com/ralph/",
+        "fix": null
+      },
+      {
+        "step": "Watch the stream; when it misbehaves, tune PROMPT.md / AGENT(S).md or reset and loop again",
+        "status": "partly",
+        "evidence_url": "https://ghuntley.com/ralph/",
+        "fix": "Watch the stream; when it misbehaves, tune the prompt (add a 'sign') and let Ralph keep @AGENT.md up to date, or git reset --hard and start the loop again",
+        "note": "Huntley's file is AGENT.md; AGENTS.md is the Farr playbook's name."
+      },
+      {
+        "step": "Prefer greenfield projects",
+        "status": "supported",
+        "evidence_url": "https://ghuntley.com/ralph/",
+        "fix": null
+      }
+    ],
+    "tools_remove": ["claude CLI headless (claude -p) in a bash loop", "ripgrep"],
+    "tools_notes": "Huntley's loop is 'while :; do cat PROMPT.md | claude-code ; done' and 'any tool that does not cap tool calls and usage'. 'claude -p --dangerously-skip-permissions --model opus' is Clayton Farr's loop.sh. Replace with: 'a coding-agent CLI piped a prompt file in a bash while-loop (his example: claude-code; he used Amp)'. ripgrep is mentioned only as how agents search and as a source of false 'not implemented' conclusions, not as a tool he uses.",
+    "mcp_remove": [],
+    "plugins_remove": ["ralph-loop@claude-plugins-official"],
+    "plugins_notes": "This is Anthropic's plugin, and Huntley's own post links a video with the words 'watch this to learn why the claude code plugin isn't it'. Listing it under his name contradicts what he published. Remove the claude-plugins-official marketplace from this preset too. The top-voted ralph issue in that repo makes the same point: 'Plugin deviates from original Ralph behavior (context should be fresh each iteration)'.",
+    "artifacts_remove": [],
+    "settings_fix": {
+      "model": null,
+      "effortLevel": null,
+      "notes": "Rewrite. 'Loops run unattended, so permissions are skipped and the run must be sandboxed' is not in either Huntley post (neither mentions sandboxing or --dangerously-skip-permissions); it comes from Clayton Farr's Ralph Playbook, which Huntley only forked. Attribute it to Farr explicitly or drop it. Remove the ralph-loop plugin usage line. The loop.sh/model attribution to Farr and the ghuntley/skills description ('the loop stack', README and LICENSE only) are correct."
+    },
+    "stars": {
+      "anthropics/claude-plugins-official": 47610,
+      "ghuntley/how-to-ralph-wiggum": 1776,
+      "ghuntley/how-to-build-a-coding-agent": 5928,
+      "ghuntley/skills": 4
+    },
+    "users_want": [
+      {
+        "point": "Users want the real technique, a fresh context every iteration, which Anthropic's plugin does not give (most up-voted ralph issue in the official marketplace)",
+        "url": "https://github.com/anthropics/claude-plugins-official/issues/125"
+      },
+      {
+        "point": "Users want a concrete how-to: Clayton Farr wrote the Ralph Playbook because the original post did not 'click', and Huntley forked it under his own account",
+        "url": "https://github.com/ghuntley/how-to-ralph-wiggum"
+      }
+    ],
+    "new_unverified": [
+      "Whether Huntley endorses the Farr playbook's details (sandbox, AGENTS.md, IMPLEMENTATION_PLAN.md, JTBD specs): the only signal is that he forked it",
+      "The videos linked from ghuntley.com/ralph were not watched, so his exact objection to the plugin is known only from the link text",
+      "ghuntley.com/ralph may show the full text only to subscribers (Farr's README says so); the fetched page contained the full prompt and loop sections"
+    ]
+  },
+  {
+    "id": "kieran-klaassen-compound-engineering",
+    "role_ok": true,
+    "role_fix": null,
+    "role_evidence": "Every byline (post of 2026-05-29, updated 2026-07-09): 'Kieran Klaassen is the general manager of Cora'; README: 'Maintained by Kieran Klaassen and Trevin Chow'. See new_unverified: his GitHub bio now reads differently.",
+    "philosophy": {
+      "status": "supported",
+      "evidence_url": "https://every.to/guides/compound-engineering",
+      "quote": "plan and review steps should comprise 80 percent of an engineer's time, and work and compound the other 20 percent",
+      "quote_2": "each unit of engineering work should make subsequent units easier - not harder",
+      "fix": null
+    },
+    "process": [
+      {
+        "step": "Ideate (/ce-ideate) and brainstorm requirements (/ce-brainstorm)",
+        "status": "supported",
+        "evidence_url": "https://every.to/source-code/compound-engineering-gets-an-upgrade",
+        "fix": null,
+        "note": "His expanded loop: 'Ideate -> brainstorm -> plan -> work -> review -> polish -> compound'. The README's core loop has six steps and treats ce-ideate as on-demand."
+      },
+      {
+        "step": "Plan: research the codebase and docs into an implementation-ready plan (/ce-plan)",
+        "status": "supported",
+        "evidence_url": "https://github.com/EveryInc/compound-engineering-plugin",
+        "fix": null
+      },
+      {
+        "step": "Work: execute in a worktree or branch with tests, lint and type checks (/ce-work)",
+        "status": "supported",
+        "evidence_url": "https://every.to/guides/compound-engineering",
+        "fix": null
+      },
+      {
+        "step": "Simplify fresh code and prune useless tests and comments (/ce-simplify-code)",
+        "status": "supported",
+        "evidence_url": "https://github.com/EveryInc/compound-engineering-plugin",
+        "fix": null
+      },
+      {
+        "step": "Multi-agent review with P1-P3 findings (/ce-code-review), plus browser tests (/ce-test-browser)",
+        "status": "partly",
+        "evidence_url": "https://github.com/EveryInc/compound-engineering-plugin/tree/main/skills/ce-code-review",
+        "fix": "Report-only multi-agent review with P0-P3 findings (/ce-code-review), plus browser tests (/ce-test-browser)",
+        "note": "The current skill uses a P0-P3 scale (P0 appears 63 times in skills/ce-code-review). P1-P3 is the older guide wording."
+      },
+      {
+        "step": "Polish UX with live browser feedback (/ce-polish)",
+        "status": "supported",
+        "evidence_url": "https://every.to/source-code/compound-engineering-gets-an-upgrade",
+        "fix": null
+      },
+      {
+        "step": "Compound: record the lesson as a test, lint rule, standard or docs/solutions entry (/ce-compound); /lfg runs the whole chain hands-off",
+        "status": "supported",
+        "evidence_url": "https://github.com/EveryInc/compound-engineering-plugin",
+        "fix": null
+      }
+    ],
+    "tools_remove": ["Codex CLI and Factory Droid (used by some of the team)", "agent-browser / Playwright (browser testing)"],
+    "tools_notes": "Droid/Codex 'used by some of the team' is not in any fetched source: the cited article URL (/the-c-suite/...) redirects to /chain-of-thought/compound-engineering-how-every-codes-with-agents, which now serves the guide and contains no mention of Droid. The README only lists Codex and Factory Droid as supported hosts; say that instead. Browser testing: ce-test-browser uses the host's native driver or agent-browser and states 'Never install or substitute standalone Playwright, Puppeteer ... or MCP'; replace with 'agent-browser (ce-test-browser)'. Playwright appears in the guide only for marketing screenshots.",
+    "mcp_remove": ["Playwright (screenshots, per the Every guide)"],
+    "mcp_notes": "The guide says 'Use Playwright to capture screenshots for marketing' and never calls it an MCP server. The plugin bundles no MCP config and its browser-test skill forbids adding one.",
+    "plugins_remove": [],
+    "artifacts_remove": [],
+    "artifacts_notes": "All 12 skills exist under skills/ at the cited commit; plugin.json author is 'Kieran Klaassen and Trevin Chow' (v3.38.2, 38 skills confirmed).",
+    "settings_fix": {
+      "model": null,
+      "effortLevel": null,
+      "notes": "Quote the guide exactly: 'My current preference is for Cursor with Opus 4.5 or Claude Code' (Opus 4.5 is attached to Cursor, and the sentence is about a year old). Fix the source: the 'How Every Codes With Agents' URL is /chain-of-thought/..., it is not paywalled, and it currently serves the same content as the guide. The alias cc and its conditions, install commands, version and the every-marketplace redirect are confirmed."
+    },
+    "stars": {
+      "EveryInc/compound-engineering-plugin": 26143
+    },
+    "users_want": [
+      {
+        "point": "Most up-voted open request: make the docs output path (docs/solutions, docs/plans) configurable",
+        "url": "https://github.com/EveryInc/compound-engineering-plugin/issues/338"
+      },
+      {
+        "point": "Users want compounded knowledge shared across projects, and have complained about the plugin's context cost (issue #63: 'Plugin uses 36k tokens of context')",
+        "url": "https://github.com/EveryInc/compound-engineering-plugin/issues/494"
+      }
+    ],
+    "new_unverified": [
+      "Current title: his GitHub bio now reads 'Compound Engineer - Frontier Team @ Every' (https://github.com/kieranklaassen), which may supersede 'general manager of Cora' (last confirmed in an Every byline updated 2026-07-09)",
+      "The guide text fetched on 2026-11-18 still describes the four-step loop and old command names (/plan, /changelog), although his May 2026 post says the guide was updated to the expanded loop",
+      "Date of the Every guide is not shown on the page"
+    ]
+  }
+]

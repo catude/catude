@@ -1,0 +1,1920 @@
+[
+ {
+  "id": " %d%% · %s",
+  "where": [
+   "live_tab.go:216"
+  ]
+ },
+ {
+  "id": "? help",
+  "where": [
+   "tui.go:1272"
+  ]
+ },
+ {
+  "id": "? help · , preferences",
+  "where": [
+   "tui.go:1414"
+  ]
+ },
+ {
+  "id": "(enter save · esc cancel)",
+  "where": [
+   "tui.go:1399"
+  ]
+ },
+ {
+  "id": "(switch View above to choose the tabs of the other one)",
+  "where": [
+   "prefs_view.go:250"
+  ]
+ },
+ {
+  "id": "%.0f%% of all subagent new tokens",
+  "where": [
+   "agents_tab.go:185"
+  ]
+ },
+ {
+  "id": "%d defined agents did not run in %d days: their descriptions still load into every session",
+  "where": [
+   "agents_tab.go:131"
+  ]
+ },
+ {
+  "id": "%d open · %d working",
+  "where": [
+   "live_tab.go:289"
+  ]
+ },
+ {
+  "id": "%d runs · %d in the background · %d stopped by you",
+  "where": [
+   "agents_tab.go:175"
+  ]
+ },
+ {
+  "id": "%d settings in effect in this project",
+  "where": [
+   "config_tab.go:455"
+  ]
+ },
+ {
+  "id": "%d subagent runs in %d days · %s new tokens · %s cache reads",
+  "where": [
+   "agents_tab.go:93"
+  ]
+ },
+ {
+  "id": "%d with sources · tag: %s (t changes)",
+  "where": [
+   "config_presets.go:153"
+  ]
+ },
+ {
+  "id": "%dd",
+  "where": [
+   "live_tab.go:127"
+  ]
+ },
+ {
+  "id": "%dh",
+  "where": [
+   "live_tab.go:125"
+  ]
+ },
+ {
+  "id": "%dm",
+  "where": [
+   "live_tab.go:123"
+  ]
+ },
+ {
+  "id": "%ds",
+  "where": [
+   "live_tab.go:121"
+  ]
+ },
+ {
+  "id": "%s applied to %s",
+  "where": [
+   "config_presets.go:118"
+  ]
+ },
+ {
+  "id": "%s finished and is waiting for you",
+  "where": [
+   "notify.go:51",
+   "notify.go:57"
+  ]
+ },
+ {
+  "id": "%s is off in this project",
+  "where": [
+   "here.go:90"
+  ]
+ },
+ {
+  "id": "%s is off in this project: new Claude Code sessions here will not connect it",
+  "where": [
+   "here.go:68"
+  ]
+ },
+ {
+  "id": "%s is on again in this project",
+  "where": [
+   "here.go:66",
+   "here.go:84"
+  ]
+ },
+ {
+  "id": "%s on average",
+  "where": [
+   "agents_tab.go:177"
+  ]
+ },
+ {
+  "id": "%s tokens in context",
+  "where": [
+   "tui.go:1133"
+  ]
+ },
+ {
+  "id": "%s: Claude sees only its name here (x again: only by /name, then off)",
+  "where": [
+   "here.go:86"
+  ]
+ },
+ {
+  "id": "%s: only when you type /%s here",
+  "where": [
+   "here.go:88"
+  ]
+ },
+ {
+  "id": "←→ tabs · ↑↓ move · / filter · e edit · space mark · P profile · , preferences · ? help · q quit",
+  "where": [
+   "tui.go:1337"
+  ]
+ },
+ {
+  "id": "↑ %d more",
+  "where": [
+   "live_tab.go:335"
+  ]
+ },
+ {
+  "id": "↑↓ choose · ←→ or space change · saved as you go · esc close",
+  "where": [
+   "prefs_view.go:204"
+  ]
+ },
+ {
+  "id": "↑↓ choose · enter enter load as a work profile (download pinned files, verify, audit) · pgup pgdn scroll · esc close",
+  "where": [
+   "tui.go:1393"
+  ]
+ },
+ {
+  "id": "↑↓ choose · t tag · / search · enter preview, enter again apply · esc back",
+  "where": [
+   "config_presets.go:224"
+  ]
+ },
+ {
+  "id": "↑↓ choose · x off in this project · r measure again · p compare with a work profile · ? help",
+  "where": [
+   "tui.go:1340"
+  ]
+ },
+ {
+  "id": "↑↓ choose · x off in this project (deferred MCP tools load only when searched)",
+  "where": [
+   "context_tab.go:205"
+  ]
+ },
+ {
+  "id": "↑↓ choose a session · enter open its conversation · o open its folder · ? help",
+  "where": [
+   "tui.go:1354"
+  ]
+ },
+ {
+  "id": "↑↓ choose app file · enter open its values · e edit file in your editor · r read again · , preferences · ? help",
+  "where": [
+   "tui.go:1373"
+  ]
+ },
+ {
+  "id": "↑↓ compare with yours · t kind of work · space compare with the selected · / filter · r download again · ? help",
+  "where": [
+   "tui.go:1356"
+  ]
+ },
+ {
+  "id": "↑↓ move · / filter · x off / name only in this project · e edit · space mark · ? help",
+  "where": [
+   "tui.go:1362"
+  ]
+ },
+ {
+  "id": "↑↓ move · / filter · x off in this project · m check health · space mark · ? help",
+  "where": [
+   "tui.go:1360"
+  ]
+ },
+ {
+  "id": "↑↓ move · / search · esc back (read-only: change a value in the file it comes from)",
+  "where": [
+   "tui.go:1377"
+  ]
+ },
+ {
+  "id": "↑↓ move · / search, #tag (#testing, #frontend…) · i i install · ? help",
+  "where": [
+   "tui.go:1358"
+  ]
+ },
+ {
+  "id": "↑↓ move · e edit the definition · space mark for a profile · r read again · ? help",
+  "where": [
+   "tui.go:1350"
+  ]
+ },
+ {
+  "id": "↑↓ move · enter change · space toggle / next value · d remove (default) · a only set / all · / search · e editor · esc back",
+  "where": [
+   "tui.go:1375"
+  ]
+ },
+ {
+  "id": "↑↓ move · enter/+ open · - close/parent · E/C all · / find · w diagram in browser · r rebuild · ←→ tabs · ? help",
+  "where": [
+   "tui.go:1368"
+  ]
+ },
+ {
+  "id": "↑↓ move · o open folder · c c clean safe item · r measure · ? help",
+  "where": [
+   "tui.go:1346"
+  ]
+ },
+ {
+  "id": "↑↓ move · r check again · ? help",
+  "where": [
+   "tui.go:1348"
+  ]
+ },
+ {
+  "id": "↓ %d more",
+  "where": [
+   "live_tab.go:328"
+  ]
+ },
+ {
+  "id": "+%d tabs in ,",
+  "where": [
+   "tui.go:1289"
+  ]
+ },
+ {
+  "id": "7 / 14 / 30 days",
+  "where": [
+   "help.go: help, what a key does"
+  ]
+ },
+ {
+  "id": "A command is a prompt saved in a Markdown file that you start by typing /name. Claude Code now treats commands like skills; the difference is that a skill can also be chosen by Claude itself.",
+  "where": [
+   "whatis.go:15"
+  ]
+ },
+ {
+  "id": "A hook is a shell command that Claude Code (not Claude) runs on an event: before or after a tool, when you send a message, when a session ends. Use one for what must always happen, such as formatting.",
+  "where": [
+   "whatis.go:17"
+  ]
+ },
+ {
+  "id": "A plugin is a package of skills, subagents, commands, hooks and MCP servers that you install and switch on together from a marketplace.",
+  "where": [
+   "whatis.go:21"
+  ]
+ },
+ {
+  "id": "A skill is a folder with a SKILL.md: instructions and files Claude loads only when a task needs them. Only its name and description are always in context. Use one for a way of doing something you repeat.",
+  "where": [
+   "whatis.go:11"
+  ]
+ },
+ {
+  "id": "A subagent is a separate Claude with its own context, tools and model. The main conversation hands it a task and gets back a summary, so long searches and reviews do not fill your context.",
+  "where": [
+   "whatis.go:13"
+  ]
+ },
+ {
+  "id": "a system notification when a Claude Code session finishes and waits for you",
+  "where": [
+   "prefs_view.go:233"
+  ]
+ },
+ {
+  "id": "Accent colour",
+  "where": [
+   "prefs_view.go:230"
+  ]
+ },
+ {
+  "id": "Accounts",
+  "where": [
+   "profiles.go:39"
+  ]
+ },
+ {
+  "id": "agent",
+  "where": [
+   "agents_tab.go:96"
+  ]
+ },
+ {
+  "id": "Agent map",
+  "where": [
+   "agents_tab.go:94"
+  ]
+ },
+ {
+  "id": "agents",
+  "where": [
+   "models.go: kind of work (Models tab)"
+  ]
+ },
+ {
+  "id": "Agents",
+  "where": [
+   "tui.go: tab name"
+  ]
+ },
+ {
+  "id": "all",
+  "where": [
+   "config_presets.go:148",
+   "models.go: kind of work (Models tab)"
+  ]
+ },
+ {
+  "id": "already so",
+  "where": [
+   "config_presets.go:197"
+  ]
+ },
+ {
+  "id": "amber",
+  "where": [
+   "prefs_view.go: preference value (accentChoices)"
+  ]
+ },
+ {
+  "id": "An MCP server gives Claude tools to reach another system: GitHub, a database, a browser. The definitions of its tools take context in every session where it is on.",
+  "where": [
+   "whatis.go:19"
+  ]
+ },
+ {
+  "id": "and %d more",
+  "where": [
+   "rename.go:80"
+  ]
+ },
+ {
+  "id": "Animations",
+  "where": [
+   "prefs_view.go:231"
+  ]
+ },
+ {
+  "id": "archived",
+  "where": [
+   "tui.go:1569"
+  ]
+ },
+ {
+  "id": "archived repository",
+  "where": [
+   "discover.go:101"
+  ]
+ },
+ {
+  "id": "ascii",
+  "where": [
+   "prefs_view.go: preference value (glyphChoices)"
+  ]
+ },
+ {
+  "id": "at least one tab must stay visible",
+  "where": [
+   "prefs_view.go:179"
+  ]
+ },
+ {
+  "id": "at this pace it runs out before the reset",
+  "where": [
+   "drain_view.go:90"
+  ]
+ },
+ {
+  "id": "Audit",
+  "where": [
+   "tui.go: tab name"
+  ]
+ },
+ {
+  "id": "auto",
+  "where": [
+   "prefs_view.go: preference value (glyphChoices)",
+   "prefs_view.go: preference value (themeChoices)"
+  ]
+ },
+ {
+  "id": "auto follows your system language (now: %s)",
+  "where": [
+   "prefs_view.go:313"
+  ]
+ },
+ {
+  "id": "auto follows your terminal background; mono uses no colour",
+  "where": [
+   "prefs_view.go:228"
+  ]
+ },
+ {
+  "id": "auto picks what your terminal and font can draw (now: %s)",
+  "where": [
+   "prefs_view.go:229"
+  ]
+ },
+ {
+  "id": "Available",
+  "where": [
+   "tui.go: tab name"
+  ]
+ },
+ {
+  "id": "back",
+  "where": [
+   "help.go: help, what a key does"
+  ]
+ },
+ {
+  "id": "back to the list of files",
+  "where": [
+   "help.go: help, what a key does"
+  ]
+ },
+ {
+  "id": "backup",
+  "where": [
+   "config_presets.go:120"
+  ]
+ },
+ {
+  "id": "backup %s",
+  "where": [
+   "here.go:103"
+  ]
+ },
+ {
+  "id": "Bell",
+  "where": [
+   "prefs_view.go:234"
+  ]
+ },
+ {
+  "id": "Biggest consumers you control",
+  "where": [
+   "context_tab.go:205"
+  ]
+ },
+ {
+  "id": "blue",
+  "where": [
+   "prefs_view.go: preference value (accentChoices)"
+  ]
+ },
+ {
+  "id": "built in",
+  "where": [
+   "agents_tab.go:129"
+  ]
+ },
+ {
+  "id": "built into Claude Code",
+  "where": [
+   "agents_tab.go:156"
+  ]
+ },
+ {
+  "id": "by %s · tags: %s · meant for the %s settings",
+  "where": [
+   "config_presets.go:181"
+  ]
+ },
+ {
+  "id": "By model",
+  "where": [
+   "tools_usage.go:197"
+  ]
+ },
+ {
+  "id": "By project",
+  "where": [
+   "tools_usage.go:204"
+  ]
+ },
+ {
+  "id": "catude health shows every day and version",
+  "where": [
+   "drain_view.go:80"
+  ]
+ },
+ {
+  "id": "change the selected setting",
+  "where": [
+   "help.go: help, what a key does"
+  ]
+ },
+ {
+  "id": "Changes in %s",
+  "where": [
+   "config_presets.go:189"
+  ]
+ },
+ {
+  "id": "check installed tools and versions again",
+  "where": [
+   "help.go: help, what a key does"
+  ]
+ },
+ {
+  "id": "choose a Claude app file · open its settings",
+  "where": [
+   "help.go: help, what a key does"
+  ]
+ },
+ {
+  "id": "choose a running session",
+  "where": [
+   "help.go: help, what a key does"
+  ]
+ },
+ {
+  "id": "Choose what goes in it",
+  "where": [
+   "wizard.go:347"
+  ]
+ },
+ {
+  "id": "Claude apps on this machine",
+  "where": [
+   "config_tab.go:403"
+  ]
+ },
+ {
+  "id": "Claude Code installations",
+  "where": [
+   "profiles.go:13"
+  ]
+ },
+ {
+  "id": "Claude Desktop servers are not part of Claude Code projects: change them in Claude Desktop",
+  "where": [
+   "here.go:60"
+  ]
+ },
+ {
+  "id": "clean a safe item (only files older than 1 hour)",
+  "where": [
+   "help.go: help, what a key does"
+  ]
+ },
+ {
+  "id": "coding",
+  "where": [
+   "models.go: kind of work (Models tab)"
+  ]
+ },
+ {
+  "id": "Commands",
+  "where": [
+   "tui.go: tab name"
+  ]
+ },
+ {
+  "id": "compare everything with the selected model instead",
+  "where": [
+   "help.go: help, what a key does"
+  ]
+ },
+ {
+  "id": "Compare the changelog of that version; it can also be a different kind of work.",
+  "where": [
+   "drain_view.go:35"
+  ]
+ },
+ {
+  "id": "compare the selected model with the one you use",
+  "where": [
+   "help.go: help, what a key does"
+  ]
+ },
+ {
+  "id": "Config",
+  "where": [
+   "help.go: help section title",
+   "tui.go: tab name"
+  ]
+ },
+ {
+  "id": "Configuration folders",
+  "where": [
+   "profiles.go:20"
+  ]
+ },
+ {
+  "id": "Configuration presets",
+  "where": [
+   "config_presets.go:152"
+  ]
+ },
+ {
+  "id": "context",
+  "where": [
+   "live_tab.go:216"
+  ]
+ },
+ {
+  "id": "Context",
+  "where": [
+   "help.go: help section title",
+   "tui.go: tab name"
+  ]
+ },
+ {
+  "id": "Context at the start of a session",
+  "where": [
+   "context_tab.go:136"
+  ]
+ },
+ {
+  "id": "cyan",
+  "where": [
+   "prefs_view.go: preference value (accentChoices)"
+  ]
+ },
+ {
+  "id": "dark",
+  "where": [
+   "prefs_view.go: preference value (themeChoices)"
+  ]
+ },
+ {
+  "id": "Debug",
+  "where": [
+   "debug.go:67"
+  ]
+ },
+ {
+  "id": "debug panel: versions, terminal, render time, background jobs",
+  "where": [
+   "help.go: help, what a key does"
+  ]
+ },
+ {
+  "id": "defined here",
+  "where": [
+   "agents_tab.go:129"
+  ]
+ },
+ {
+  "id": "delete the selected work profile",
+  "where": [
+   "help.go: help, what a key does"
+  ]
+ },
+ {
+  "id": "Desktop",
+  "where": [
+   "tui.go:1567"
+  ]
+ },
+ {
+  "id": "Discover",
+  "where": [
+   "help.go: help section title",
+   "tui.go: tab name"
+  ]
+ },
+ {
+  "id": "download the public results again",
+  "where": [
+   "help.go: help, what a key does"
+  ]
+ },
+ {
+  "id": "Each conversation starts with about %s tokens of context before your first message (largest %s).",
+  "where": [
+   "drain_view.go:27"
+  ]
+ },
+ {
+  "id": "Each subagent starts its own context and re-reads files. The Agents tab shows which ones and who launched them.",
+  "where": [
+   "drain_view.go:20"
+  ]
+ },
+ {
+  "id": "edit the file (a backup is taken first, then it is re-validated)",
+  "where": [
+   "help.go: help, what a key does"
+  ]
+ },
+ {
+  "id": "edit the selected work profile",
+  "where": [
+   "help.go: help, what a key does"
+  ]
+ },
+ {
+  "id": "enter again: apply to %s",
+  "where": [
+   "config_presets.go:215"
+  ]
+ },
+ {
+  "id": "enter open · n name · f search all · R/c resume in Claude · x export · D remove · esc back · ? help",
+  "where": [
+   "tui.go:1342"
+  ]
+ },
+ {
+  "id": "estimated ~%s at API list prices",
+  "where": [
+   "agents_tab.go:187"
+  ]
+ },
+ {
+  "id": "estimated cost ~%s at API list prices (models.dev, subagents excluded); on a Pro or Max plan you pay the subscription, not this",
+  "where": [
+   "models_tab.go:328"
+  ]
+ },
+ {
+  "id": "estimated cost: no price known for this model yet (the Models tab downloads prices)",
+  "where": [
+   "models_tab.go:326"
+  ]
+ },
+ {
+  "id": "Everything your Claude uses",
+  "where": [
+   "graph_tab.go:267"
+  ]
+ },
+ {
+  "id": "Everywhere",
+  "where": [
+   "help.go: help section title"
+  ]
+ },
+ {
+  "id": "expand or collapse everything",
+  "where": [
+   "help.go: help, what a key does"
+  ]
+ },
+ {
+  "id": "export the conversation to Markdown",
+  "where": [
+   "help.go: help, what a key does"
+  ]
+ },
+ {
+  "id": "F12 close",
+  "where": [
+   "tui.go:1396"
+  ]
+ },
+ {
+  "id": "FILES CHANGED (%d)",
+  "where": [
+   "rename.go:82"
+  ]
+ },
+ {
+  "id": "filter the list (enter keeps it, esc clears it)",
+  "where": [
+   "help.go: help, what a key does"
+  ]
+ },
+ {
+  "id": "filter: ",
+  "where": [
+   "tui.go:1405",
+   "tui.go:1407"
+  ]
+ },
+ {
+  "id": "find any node by name or kind",
+  "where": [
+   "help.go: help, what a key does"
+  ]
+ },
+ {
+  "id": "FIRST MESSAGE",
+  "where": [
+   "rename.go:71"
+  ]
+ },
+ {
+  "id": "Frequent changes to CLAUDE.md, tools or MCP servers in the middle of a conversation invalidate the cache.",
+  "where": [
+   "drain_view.go:32"
+  ]
+ },
+ {
+  "id": "from: %s",
+  "where": [
+   "config_tab.go:562"
+  ]
+ },
+ {
+  "id": "full",
+  "where": [
+   "prefs_view.go: preference value"
+  ]
+ },
+ {
+  "id": "Glyphs",
+  "where": [
+   "prefs_view.go:229"
+  ]
+ },
+ {
+  "id": "glyphs: %s · theme: %s · language: %s",
+  "where": [
+   "help.go:105"
+  ]
+ },
+ {
+  "id": "Graph",
+  "where": [
+   "help.go: help section title",
+   "tui.go: tab name"
+  ]
+ },
+ {
+  "id": "green",
+  "where": [
+   "prefs_view.go: preference value (accentChoices)"
+  ]
+ },
+ {
+  "id": "Headless runs (claude -p and the Agent SDK) spent %s (%s).",
+  "where": [
+   "drain_view.go:25"
+  ]
+ },
+ {
+  "id": "hidden",
+  "where": [
+   "prefs_view.go: preference value"
+  ]
+ },
+ {
+  "id": "high-contrast",
+  "where": [
+   "prefs_view.go: preference value (themeChoices)"
+  ]
+ },
+ {
+  "id": "Hooks",
+  "where": [
+   "tui.go: tab name"
+  ]
+ },
+ {
+  "id": "install",
+  "where": [
+   "discover.go:119"
+  ]
+ },
+ {
+  "id": "install / upgrade claude-swap (accounts)",
+  "where": [
+   "help.go: help, what a key does"
+  ]
+ },
+ {
+  "id": "install with the official claude command",
+  "where": [
+   "help.go: help, what a key does"
+  ]
+ },
+ {
+  "id": "instruction files are not switched off here: edit or move the file",
+  "where": [
+   "context_tab.go:320"
+  ]
+ },
+ {
+  "id": "Inventory",
+  "where": [
+   "tui.go:1512"
+  ]
+ },
+ {
+  "id": "jump to a tab (the number shown next to its name)",
+  "where": [
+   "help.go: help, what a key does"
+  ]
+ },
+ {
+  "id": "Key hints",
+  "where": [
+   "prefs_view.go:232"
+  ]
+ },
+ {
+  "id": "Keys",
+  "where": [
+   "help.go:105"
+  ]
+ },
+ {
+  "id": "kind of work: all, coding, reasoning, math & science, agents, knowledge",
+  "where": [
+   "help.go: help, what a key does"
+  ]
+ },
+ {
+  "id": "knowledge",
+  "where": [
+   "models.go: kind of work (Models tab)"
+  ]
+ },
+ {
+  "id": "Language",
+  "where": [
+   "prefs_view.go:226"
+  ]
+ },
+ {
+  "id": "last",
+  "where": [
+   "agents_tab.go:96"
+  ]
+ },
+ {
+  "id": "last activity %s ago",
+  "where": [
+   "live_tab.go:186"
+  ]
+ },
+ {
+  "id": "last change %s",
+  "where": [
+   "discover.go:105"
+  ]
+ },
+ {
+  "id": "Latest session",
+  "where": [
+   "tui.go:1523"
+  ]
+ },
+ {
+  "id": "launched by",
+  "where": [
+   "agents_tab.go:205"
+  ]
+ },
+ {
+  "id": "light",
+  "where": [
+   "prefs_view.go: preference value (themeChoices)"
+  ]
+ },
+ {
+  "id": "lists from every file combine",
+  "where": [
+   "config_tab.go:564"
+  ]
+ },
+ {
+  "id": "lite",
+  "where": [
+   "prefs_view.go: preference value"
+  ]
+ },
+ {
+  "id": "lite shows only the tabs you tick for it (ctlite opens catude in lite)",
+  "where": [
+   "prefs_view.go:227"
+  ]
+ },
+ {
+  "id": "Live",
+  "where": [
+   "help.go: help section title",
+   "tui.go: tab name"
+  ]
+ },
+ {
+  "id": "Live sessions",
+  "where": [
+   "live_tab.go:289"
+  ]
+ },
+ {
+  "id": "looking for running sessions…",
+  "where": [
+   "live_tab.go:287"
+  ]
+ },
+ {
+  "id": "magenta",
+  "where": [
+   "prefs_view.go: preference value (accentChoices)"
+  ]
+ },
+ {
+  "id": "mark the item for a new work profile",
+  "where": [
+   "help.go: help, what a key does"
+  ]
+ },
+ {
+  "id": "math & science",
+  "where": [
+   "models.go: kind of work (Models tab)"
+  ]
+ },
+ {
+  "id": "MCP",
+  "where": [
+   "tui.go: tab name"
+  ]
+ },
+ {
+  "id": "MCP and Skills: switch it off for this project only (skills: name only, then only by /name, then off)",
+  "where": [
+   "help.go: help, what a key does"
+  ]
+ },
+ {
+  "id": "MCP servers",
+  "where": [
+   "gallery.go:206"
+  ]
+ },
+ {
+  "id": "MCP: check health with claude mcp list",
+  "where": [
+   "help.go: help, what a key does"
+  ]
+ },
+ {
+  "id": "measure again (claude /context, 20–40 s, in the background)",
+  "where": [
+   "help.go: help, what a key does"
+  ]
+ },
+ {
+  "id": "measure with a work profile instead, to compare",
+  "where": [
+   "help.go: help, what a key does"
+  ]
+ },
+ {
+  "id": "models",
+  "where": [
+   "agents_tab.go:206"
+  ]
+ },
+ {
+  "id": "Models",
+  "where": [
+   "help.go: help section title",
+   "models_tab.go:168",
+   "tui.go: tab name"
+  ]
+ },
+ {
+  "id": "mono",
+  "where": [
+   "prefs_view.go: preference value (themeChoices)"
+  ]
+ },
+ {
+  "id": "most failures on %s (%.1f%%)",
+  "where": [
+   "drain_view.go:78"
+  ]
+ },
+ {
+  "id": "move · pgup pgdown g G: page, top, bottom",
+  "where": [
+   "help.go: help, what a key does"
+  ]
+ },
+ {
+  "id": "move the session to catude's trash (restorable)",
+  "where": [
+   "help.go: help, what a key does"
+  ]
+ },
+ {
+  "id": "n new · a save current setup · p presets · e edit · s switch · v verify · enter start · x other mode · d delete · ? help",
+  "where": [
+   "tui.go:1344"
+  ]
+ },
+ {
+  "id": "name only in this project",
+  "where": [
+   "here.go:34"
+  ]
+ },
+ {
+  "id": "name the conversation, as /rename does",
+  "where": [
+   "help.go: help, what a key does"
+  ]
+ },
+ {
+  "id": "name: ",
+  "where": [
+   "tui.go:1399"
+  ]
+ },
+ {
+  "id": "named %q · claude --resume shows this name",
+  "where": [
+   "rename.go:54"
+  ]
+ },
+ {
+  "id": "new tok",
+  "where": [
+   "agents_tab.go:96"
+  ]
+ },
+ {
+  "id": "new value for %s:",
+  "where": [
+   "tui.go:1386"
+  ]
+ },
+ {
+  "id": "new work profile (choose skills, agents, MCP, plugins; name; mode)",
+  "where": [
+   "help.go: help, what a key does"
+  ]
+ },
+ {
+  "id": "no agents defined and no subagent runs in this period",
+  "where": [
+   "agents_tab.go:125"
+  ]
+ },
+ {
+  "id": "no changes since %s",
+  "where": [
+   "discover.go:103"
+  ]
+ },
+ {
+  "id": "No Claude Code session is running. Start one (claude) and it appears here at once.",
+  "where": [
+   "live_tab.go:292"
+  ]
+ },
+ {
+  "id": "no definition now",
+  "where": [
+   "agents_tab.go:129"
+  ]
+ },
+ {
+  "id": "no runs in the last %d days. Its description is still loaded into every session so Claude can choose it: remove it if you do not need it.",
+  "where": [
+   "agents_tab.go:166"
+  ]
+ },
+ {
+  "id": "no transcript yet",
+  "where": [
+   "live_tab.go:255"
+  ]
+ },
+ {
+  "id": "not found among the installed skills and MCP servers (it may come from a plugin: use /plugin)",
+  "where": [
+   "context_tab.go:325"
+  ]
+ },
+ {
+  "id": "nothing matches",
+  "where": [
+   "config_presets.go:172"
+  ]
+ },
+ {
+  "id": "Notification",
+  "where": [
+   "prefs_view.go:233"
+  ]
+ },
+ {
+  "id": "off",
+  "where": [
+   "prefs_view.go: preference value"
+  ]
+ },
+ {
+  "id": "off in this project",
+  "where": [
+   "here.go:27",
+   "here.go:32"
+  ]
+ },
+ {
+  "id": "on",
+  "where": [
+   "prefs_view.go: preference value"
+  ]
+ },
+ {
+  "id": "One conversation in %s (%s) spent %s (%s).",
+  "where": [
+   "drain_view.go:30"
+  ]
+ },
+ {
+  "id": "Only %s of the input was read from the cache.",
+  "where": [
+   "drain_view.go:32"
+  ]
+ },
+ {
+  "id": "only by /name in this project",
+  "where": [
+   "here.go:36"
+  ]
+ },
+ {
+  "id": "only what the file sets / every documented setting",
+  "where": [
+   "help.go: help, what a key does"
+  ]
+ },
+ {
+  "id": "open catude in a project folder to switch things off for it",
+  "where": [
+   "here.go:51"
+  ]
+ },
+ {
+  "id": "open its conversation with live context",
+  "where": [
+   "help.go: help, what a key does"
+  ]
+ },
+ {
+  "id": "open its folder",
+  "where": [
+   "help.go: help, what a key does"
+  ]
+ },
+ {
+  "id": "open or close a node · - also jumps to its parent",
+  "where": [
+   "help.go: help, what a key does"
+  ]
+ },
+ {
+  "id": "open project / open session (live context)",
+  "where": [
+   "help.go: help, what a key does"
+  ]
+ },
+ {
+  "id": "open the folder",
+  "where": [
+   "help.go: help, what a key does"
+  ]
+ },
+ {
+  "id": "open the graph as a diagram in your browser",
+  "where": [
+   "help.go: help, what a key does"
+  ]
+ },
+ {
+  "id": "open the whole file in your editor (backup first)",
+  "where": [
+   "help.go: help, what a key does"
+  ]
+ },
+ {
+  "id": "Overview",
+  "where": [
+   "tui.go: tab name"
+  ]
+ },
+ {
+  "id": "plugin skills are switched on and off with their plugin (/plugin)",
+  "where": [
+   "here.go:72"
+  ]
+ },
+ {
+  "id": "Plugins",
+  "where": [
+   "tui.go: tab name"
+  ]
+ },
+ {
+  "id": "Plugins & marketplaces",
+  "where": [
+   "gallery.go:193"
+  ]
+ },
+ {
+  "id": "Plugins offered by the marketplaces you added. Installing one runs the official command: claude plugin install name@marketplace.",
+  "where": [
+   "whatis.go:23"
+  ]
+ },
+ {
+  "id": "Preferences",
+  "where": [
+   "prefs_view.go:204"
+  ]
+ },
+ {
+  "id": "preferences not saved:",
+  "where": [
+   "prefs_view.go:105"
+  ]
+ },
+ {
+  "id": "preferences: language, visible tabs, lite view, theme, accent colour, glyphs",
+  "where": [
+   "help.go: help, what a key does"
+  ]
+ },
+ {
+  "id": "Presets",
+  "where": [
+   "gallery.go:113"
+  ]
+ },
+ {
+  "id": "presets are written to the file selected on the left",
+  "where": [
+   "config_tab.go:200"
+  ]
+ },
+ {
+  "id": "presets: work profiles based on the public setups of well-known practitioners",
+  "where": [
+   "help.go: help, what a key does"
+  ]
+ },
+ {
+  "id": "press enter again to apply %s to %s (a backup is taken first)",
+  "where": [
+   "config_presets.go:109"
+  ]
+ },
+ {
+  "id": "previous / next tab",
+  "where": [
+   "help.go: help, what a key does"
+  ]
+ },
+ {
+  "id": "Process",
+  "where": [
+   "gallery.go:150"
+  ]
+ },
+ {
+  "id": "Profiles",
+  "where": [
+   "help.go: help section title",
+   "tui.go: tab name"
+  ]
+ },
+ {
+  "id": "projects",
+  "where": [
+   "agents_tab.go:212"
+  ]
+ },
+ {
+  "id": "quiet",
+  "where": [
+   "discover.go:73"
+  ]
+ },
+ {
+  "id": "quit",
+  "where": [
+   "help.go: help, what a key does"
+  ]
+ },
+ {
+  "id": "r measures again",
+  "where": [
+   "context_tab.go:329"
+  ]
+ },
+ {
+  "id": "r refresh · [ ] 7 / 14 / 30 days · ? help",
+  "where": [
+   "tui.go:1352"
+  ]
+ },
+ {
+  "id": "ran in this period, but no definition with this name is installed now (removed, or from a plugin that is off)",
+  "where": [
+   "agents_tab.go:162"
+  ]
+ },
+ {
+  "id": "read the transcripts again",
+  "where": [
+   "help.go: help, what a key does"
+  ]
+ },
+ {
+  "id": "reading the subagent runs of the last 30 days…",
+  "where": [
+   "agents_tab.go:88"
+  ]
+ },
+ {
+  "id": "reasoning",
+  "where": [
+   "models.go: kind of work (Models tab)"
+  ]
+ },
+ {
+  "id": "rebuild (re-reads files, tools and running processes)",
+  "where": [
+   "help.go: help, what a key does"
+  ]
+ },
+ {
+  "id": "Recent runs",
+  "where": [
+   "agents_tab.go:213"
+  ]
+ },
+ {
+  "id": "red",
+  "where": [
+   "prefs_view.go: preference value (accentChoices)"
+  ]
+ },
+ {
+  "id": "refreshes every second",
+  "where": [
+   "live_tab.go:285"
+  ]
+ },
+ {
+  "id": "reload / measure again",
+  "where": [
+   "help.go: help, what a key does"
+  ]
+ },
+ {
+  "id": "remove the setting from the file (back to the default)",
+  "where": [
+   "help.go: help, what a key does"
+  ]
+ },
+ {
+  "id": "resets in %s",
+  "where": [
+   "drain_view.go:87"
+  ]
+ },
+ {
+  "id": "resume the session in Claude Code, in its folder",
+  "where": [
+   "help.go: help, what a key does"
+  ]
+ },
+ {
+  "id": "ring when a Claude Code session finishes and waits for you (the bottom line always says so)",
+  "where": [
+   "prefs_view.go:234"
+  ]
+ },
+ {
+  "id": "risk %s: %s",
+  "where": [
+   "config_presets.go:184"
+  ]
+ },
+ {
+  "id": "running %s",
+  "where": [
+   "live_tab.go:151"
+  ]
+ },
+ {
+  "id": "runs",
+  "where": [
+   "agents_tab.go:96"
+  ]
+ },
+ {
+  "id": "safe",
+  "where": [
+   "prefs_view.go: preference value (glyphChoices)"
+  ]
+ },
+ {
+  "id": "save the marked items as a work profile",
+  "where": [
+   "help.go: help, what a key does"
+  ]
+ },
+ {
+  "id": "save your current setup as a profile (everything preselected)",
+  "where": [
+   "help.go: help, what a key does"
+  ]
+ },
+ {
+  "id": "Scripts, hooks and tools that start claude -p count against the same limits. Check what runs them.",
+  "where": [
+   "drain_view.go:25"
+  ]
+ },
+ {
+  "id": "scroll",
+  "where": [
+   "help.go: help, what a key does"
+  ]
+ },
+ {
+  "id": "search every conversation: ",
+  "where": [
+   "tui.go:1402"
+  ]
+ },
+ {
+  "id": "search the text of every conversation",
+  "where": [
+   "help.go: help, what a key does"
+  ]
+ },
+ {
+  "id": "Security",
+  "where": [
+   "tui.go:1520"
+  ]
+ },
+ {
+  "id": "Sessions",
+  "where": [
+   "help.go: help section title",
+   "tui.go: tab name"
+  ]
+ },
+ {
+  "id": "Settings",
+  "where": [
+   "gallery.go:212"
+  ]
+ },
+ {
+  "id": "shortcuts work in upper case too (except G, and P/R/D where they have their own action)",
+  "where": [
+   "help.go: help, what a key does"
+  ]
+ },
+ {
+  "id": "shown",
+  "where": [
+   "prefs_view.go: preference value"
+  ]
+ },
+ {
+  "id": "Skills",
+  "where": [
+   "tui.go: tab name"
+  ]
+ },
+ {
+  "id": "Skills · Agents · Commands · MCP · Plugins",
+  "where": [
+   "help.go: help section title"
+  ]
+ },
+ {
+  "id": "Sources",
+  "where": [
+   "config_presets.go:209",
+   "gallery.go:220"
+  ]
+ },
+ {
+  "id": "spinners while something loads",
+  "where": [
+   "prefs_view.go:231"
+  ]
+ },
+ {
+  "id": "start Claude Code with it · x: only this profile",
+  "where": [
+   "help.go: help, what a key does"
+  ]
+ },
+ {
+  "id": "Storage",
+  "where": [
+   "help.go: help section title",
+   "storage_tab.go:165",
+   "tui.go: tab name"
+  ]
+ },
+ {
+  "id": "subagent",
+  "where": [
+   "live_tab.go:164"
+  ]
+ },
+ {
+  "id": "Subagents spent %s fresh tokens (%s).",
+  "where": [
+   "drain_view.go:20"
+  ]
+ },
+ {
+  "id": "switch yes/no · next allowed value",
+  "where": [
+   "help.go: help, what a key does"
+  ]
+ },
+ {
+  "id": "switch: make it the active profile (catude claude / shell integration)",
+  "where": [
+   "help.go: help, what a key does"
+  ]
+ },
+ {
+  "id": "System prompt, tools, MCP servers, CLAUDE.md and skill descriptions. The Context tab shows what to trim.",
+  "where": [
+   "drain_view.go:28"
+  ]
+ },
+ {
+  "id": "Tabs in the full view",
+  "where": [
+   "prefs_view.go:246"
+  ]
+ },
+ {
+  "id": "Tabs in the lite view",
+  "where": [
+   "prefs_view.go:248"
+  ]
+ },
+ {
+  "id": "terminal",
+  "where": [
+   "live_tab.go:101"
+  ]
+ },
+ {
+  "id": "The cache was rebuilt %s times after a pause of more than 5 minutes: %s tokens written again (%s).",
+  "where": [
+   "drain_view.go:22"
+  ]
+ },
+ {
+  "id": "the highlight colour of tabs, titles and the selection",
+  "where": [
+   "prefs_view.go:230"
+  ]
+ },
+ {
+  "id": "the line of shortcuts at the bottom (? always shows them all)",
+  "where": [
+   "prefs_view.go:232"
+  ]
+ },
+ {
+  "id": "The prompt cache expires after a pause; the next message sends the whole conversation again. Long breaks in a big conversation cost the most: /compact or a new session before a break helps.",
+  "where": [
+   "drain_view.go:23"
+  ]
+ },
+ {
+  "id": "Theme",
+  "where": [
+   "prefs_view.go:228"
+  ]
+ },
+ {
+  "id": "this Claude Code version writes its transcript in a format catude does not read yet: update catude",
+  "where": [
+   "live_tab.go:258"
+  ]
+ },
+ {
+  "id": "this console may not have a font for these characters: use Windows Terminal",
+  "where": [
+   "prefs_view.go:315"
+  ]
+ },
+ {
+  "id": "this conversation is open in Claude Code: name it there with /rename",
+  "where": [
+   "rename.go:45"
+  ]
+ },
+ {
+  "id": "this help (any key closes it)",
+  "where": [
+   "help.go: help, what a key does"
+  ]
+ },
+ {
+  "id": "this view only shows the result: open the file the value comes from to change it",
+  "where": [
+   "config_tab.go:277",
+   "config_tab.go:288"
+  ]
+ },
+ {
+  "id": "to-do %d/%d",
+  "where": [
+   "live_tab.go:222"
+  ]
+ },
+ {
+  "id": "tokens: %s new input · %s cache writes · %s output · %s cache reads",
+  "where": [
+   "agents_tab.go:181"
+  ]
+ },
+ {
+  "id": "Tool calls: %d, %.1f%% failed · %d compactions",
+  "where": [
+   "drain_view.go:76"
+  ]
+ },
+ {
+  "id": "tools",
+  "where": [
+   "agents_tab.go:207"
+  ]
+ },
+ {
+  "id": "Tools",
+  "where": [
+   "gallery.go:164",
+   "help.go: help section title",
+   "tui.go: tab name"
+  ]
+ },
+ {
+  "id": "TOOLS",
+  "where": [
+   "rename.go:89"
+  ]
+ },
+ {
+  "id": "Tools your Claude setup uses",
+  "where": [
+   "tools_usage.go:44"
+  ]
+ },
+ {
+  "id": "unicode",
+  "where": [
+   "prefs_view.go: preference value (glyphChoices)"
+  ]
+ },
+ {
+  "id": "Usage",
+  "where": [
+   "help.go: help section title",
+   "tui.go: tab name"
+  ]
+ },
+ {
+  "id": "Used before you type",
+  "where": [
+   "context_tab.go:162"
+  ]
+ },
+ {
+  "id": "verify: ask Claude Code whether every item of the profile loads",
+  "where": [
+   "help.go: help, what a key does"
+  ]
+ },
+ {
+  "id": "Very long conversations re-send a big context with every message. Start a new one when the task changes.",
+  "where": [
+   "drain_view.go:30"
+  ]
+ },
+ {
+  "id": "View",
+  "where": [
+   "prefs_view.go:227"
+  ]
+ },
+ {
+  "id": "waiting for you",
+  "where": [
+   "live_tab.go:178"
+  ]
+ },
+ {
+  "id": "was",
+  "where": [
+   "config_presets.go:202"
+  ]
+ },
+ {
+  "id": "What its users ask for",
+  "where": [
+   "gallery.go:215"
+  ]
+ },
+ {
+  "id": "wheel scrolls · click a tab to open it",
+  "where": [
+   "help.go: help, what a key does"
+  ]
+ },
+ {
+  "id": "Where Claude reads configuration on this machine",
+  "where": [
+   "tui.go:1498"
+  ]
+ },
+ {
+  "id": "Where your tokens went",
+  "where": [
+   "drain_view.go:47"
+  ]
+ },
+ {
+  "id": "wins over: %s",
+  "where": [
+   "config_tab.go:567"
+  ]
+ },
+ {
+  "id": "With Claude Code %s each response used %s fresh tokens on average, against %s with %s.",
+  "where": [
+   "drain_view.go:34"
+  ]
+ },
+ {
+  "id": "Work profiles",
+  "where": [
+   "workprofiles.go:133"
+  ]
+ },
+ {
+  "id": "working",
+  "where": [
+   "live_tab.go:180"
+  ]
+ },
+ {
+  "id": "You use ",
+  "where": [
+   "models_tab.go:210"
+  ]
+ },
+ {
+  "id": "your conversation",
+  "where": [
+   "agents_tab.go:201"
+  ]
+ }
+]

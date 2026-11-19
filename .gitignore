@@ -1,0 +1,10 @@
+bin/
+dist/
+dist-linux/
+snapshot.txt
+*.exe
+*.test
+
+# private launch notes (strategy, not product)
+research/lanzamiento-*.md
+metrics.csv

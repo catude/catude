@@ -1,0 +1,16 @@
+{
+  "name": "catude",
+  "owner": {
+    "name": "catude"
+  },
+  "description": "catude, a terminal UI for Claude Code and Claude Desktop, as slash commands inside Claude Code.",
+  "plugins": [
+    {
+      "name": "catude",
+      "source": "./plugin",
+      "description": "Ask Claude about your own Claude setup with catude: where configuration is read, security findings, context use of recent sessions and which model to pick. Needs the catude program on your PATH.",
+      "category": "productivity",
+      "homepage": "https://github.com/catude/catude"
+    }
+  ]
+}

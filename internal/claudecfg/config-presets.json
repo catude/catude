@@ -1,0 +1,1206 @@
+{
+  "retrieved": "2026-11-18",
+  "presets": [
+    {
+      "id": "privacy-no-telemetry",
+      "name": "Privacy: no telemetry, error reports or feedback uploads",
+      "summary": "Turns off Anthropic usage metrics, error reports, session surveys and the /feedback upload path, one variable each, while keeping auto-updates.",
+      "tags": [
+        "privacy",
+        "telemetry"
+      ],
+      "app": "code-settings",
+      "scope": "user",
+      "settings": {
+        "env": {
+          "DISABLE_TELEMETRY": "1",
+          "DISABLE_ERROR_REPORTING": "1",
+          "CLAUDE_CODE_DISABLE_FEEDBACK_SURVEY": "1",
+          "DISABLE_FEEDBACK_COMMAND": "1"
+        }
+      },
+      "risk": "medium",
+      "riskReason": "DISABLE_TELEMETRY also stops feature-flag fetching, so flag-gated features (Remote Control, Claude-drafted feedback, PowerShell tool by default on Windows with Git Bash, among others) become unavailable.",
+      "by": "Anthropic docs",
+      "sources": [
+        {
+          "url": "https://code.claude.com/docs/en/data-usage",
+          "quote": "Metrics never include your code, prompts, or file paths. Set DISABLE_TELEMETRY=1 to opt out.",
+          "retrieved": "2026-11-18"
+        },
+        {
+          "url": "https://code.claude.com/docs/en/data-usage",
+          "quote": "Set DISABLE_ERROR_REPORTING=1 to opt out.",
+          "retrieved": "2026-11-18"
+        },
+        {
+          "url": "https://code.claude.com/docs/en/data-usage",
+          "quote": "To disable these surveys, set CLAUDE_CODE_DISABLE_FEEDBACK_SURVEY=1.",
+          "retrieved": "2026-11-18"
+        },
+        {
+          "url": "https://code.claude.com/docs/en/data-usage",
+          "quote": "To opt out, set the DISABLE_FEEDBACK_COMMAND environment variable to 1.",
+          "retrieved": "2026-11-18"
+        },
+        {
+          "url": "https://code.claude.com/docs/en/env-vars",
+          "quote": "Claude Code turns some features on through feature flags it fetches from Anthropic. Claude Code skips that fetch in these sessions:",
+          "retrieved": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "privacy-no-nonessential-traffic",
+      "name": "Privacy: block all non-essential traffic",
+      "summary": "One switch that stops auto-updates, telemetry, error reporting, /feedback, release notes and other non-essential network calls.",
+      "tags": [
+        "privacy",
+        "telemetry",
+        "updates"
+      ],
+      "app": "code-settings",
+      "scope": "user",
+      "settings": {
+        "env": {
+          "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1"
+        }
+      },
+      "risk": "medium",
+      "riskReason": "Also disables auto-updates and feature-flag fetching; you must run claude update yourself. Does not cover the WebFetch domain check or marketplace auto-install.",
+      "by": "Anthropic docs",
+      "sources": [
+        {
+          "url": "https://code.claude.com/docs/en/data-usage",
+          "quote": "You can turn each off individually with the environment variables below, or disable all non-essential traffic at once by setting CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC.",
+          "retrieved": "2026-11-18"
+        },
+        {
+          "url": "https://code.claude.com/docs/en/env-vars",
+          "quote": "Set to any non-empty value, such as 1, to disable nonessential network traffic: auto-updates, telemetry, error reporting, the /feedback command",
+          "retrieved": "2026-11-18"
+        },
+        {
+          "url": "https://code.claude.com/docs/en/data-usage",
+          "quote": "This variable doesn't affect the WebFetch check or official plugin marketplace auto-install",
+          "retrieved": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "privacy-short-local-retention",
+      "name": "Privacy: keep local transcripts for 7 days",
+      "summary": "Deletes local session transcripts (stored in plaintext under ~/.claude/projects/) after 7 days instead of the default 30.",
+      "tags": [
+        "privacy",
+        "memory"
+      ],
+      "app": "code-settings",
+      "scope": "user",
+      "settings": {
+        "cleanupPeriodDays": 7
+      },
+      "risk": "low",
+      "by": "Anthropic docs",
+      "sources": [
+        {
+          "url": "https://code.claude.com/docs/en/data-usage",
+          "quote": "Claude Code clients store session transcripts locally in plaintext under ~/.claude/projects/ for 30 days by default to enable session resumption. Adjust the period with cleanupPeriodDays.",
+          "retrieved": "2026-11-18"
+        },
+        {
+          "url": "https://code.claude.com/docs/en/settings-example",
+          "quote": "Delete session transcripts and other local session data after 7 days",
+          "retrieved": "2026-11-18"
+        }
+      ],
+      "note": "Sessions older than 7 days disappear from /resume."
+    },
+    {
+      "id": "protect-secrets-project",
+      "name": "Protect secrets: deny reading .env and secrets/",
+      "summary": "Denies Claude reads of the project's .env files and secrets folder, as in Anthropic's example team settings.",
+      "tags": [
+        "security"
+      ],
+      "app": "code-settings",
+      "scope": "project",
+      "settings": {
+        "permissions": {
+          "deny": [
+            "Read(./.env)",
+            "Read(./.env.*)",
+            "Read(./secrets/**)"
+          ]
+        }
+      },
+      "risk": "low",
+      "by": "Anthropic docs",
+      "sources": [
+        {
+          "url": "https://code.claude.com/docs/en/settings-example",
+          "quote": "Deny reads of env files and the secrets folder by the file tools and file-reading commands",
+          "retrieved": "2026-11-18"
+        },
+        {
+          "url": "https://code.claude.com/docs/en/settings-reference",
+          "quote": "Use it for files that hold API keys, secrets, or environment values: Claude Code excludes matching files from file discovery and search results, denies reads of them, and blocks the Edit and Write tools on the matching paths.",
+          "retrieved": "2026-11-18"
+        },
+        {
+          "url": "https://code.claude.com/docs/en/settings-example",
+          "quote": "Read(./.env) on its own stops the file tools and commands that name the file, such as cat .env, but not grep -r run over the directory; the sandbox block in this file closes that gap",
+          "retrieved": "2026-11-18"
+        }
+      ],
+      "note": "Deny rules don't stop commands that read files without naming them (grep -r); pair with a sandbox preset for OS-level enforcement."
+    },
+    {
+      "id": "protect-home-credentials-trailofbits",
+      "name": "Protect home-directory credentials (Trail of Bits list)",
+      "summary": "Denies reads of SSH/GPG keys, cloud, registry and git credentials, keychains and wallets, and edits to shell config and ~/.ssh.",
+      "tags": [
+        "security"
+      ],
+      "app": "code-settings",
+      "scope": "user",
+      "settings": {
+        "permissions": {
+          "deny": [
+            "Edit(~/.bashrc)",
+            "Edit(~/.zshrc)",
+            "Edit(~/.ssh/**)",
+            "Read(~/.ssh/**)",
+            "Read(~/.gnupg/**)",
+            "Read(~/.aws/**)",
+            "Read(~/.azure/**)",
+            "Read(~/.config/gh/**)",
+            "Read(~/.git-credentials)",
+            "Read(~/.docker/config.json)",
+            "Read(~/.kube/**)",
+            "Read(~/.npmrc)",
+            "Read(~/.npm/**)",
+            "Read(~/.pypirc)",
+            "Read(~/.gem/credentials)",
+            "Read(~/Library/Keychains/**)",
+            "Read(~/Library/Application Support/**/metamask*/**)",
+            "Read(~/Library/Application Support/**/electrum*/**)",
+            "Read(~/Library/Application Support/**/exodus*/**)",
+            "Read(~/Library/Application Support/**/phantom*/**)",
+            "Read(~/Library/Application Support/**/solflare*/**)"
+          ]
+        }
+      },
+      "risk": "low",
+      "by": "Trail of Bits",
+      "sources": [
+        {
+          "url": "https://github.com/trailofbits/claude-code-config/blob/2109be998c09f0c271fb9f46a283bbc92db5b5a7/README.md",
+          "quote": "Hardening reads: The settings.json template includes Read and Edit deny rules that block access to credentials and secrets:",
+          "retrieved": "2026-11-18"
+        },
+        {
+          "url": "https://github.com/trailofbits/claude-code-config/blob/2109be998c09f0c271fb9f46a283bbc92db5b5a7/README.md",
+          "quote": "Shell config -- ~/.bashrc, ~/.zshrc (edit denied, prevents backdoor planting)",
+          "retrieved": "2026-11-18"
+        },
+        {
+          "url": "https://github.com/trailofbits/claude-code-config/blob/2109be998c09f0c271fb9f46a283bbc92db5b5a7/README.md",
+          "quote": "Without /sandbox, deny rules only block Claude's built-in tools -- Bash commands bypass them. With /sandbox enabled, the same rules are enforced at the OS level (Seatbelt/bubblewrap), so Bash commands are also blocked. Use both.",
+          "retrieved": "2026-11-18"
+        },
+        {
+          "url": "https://github.com/trailofbits/claude-code-config/blob/2109be998c09f0c271fb9f46a283bbc92db5b5a7/settings.json",
+          "quote": "\"Read(~/.ssh/**)\",",
+          "retrieved": "2026-11-18"
+        }
+      ],
+      "note": "The Edit and Read deny entries of Trail of Bits' settings.json at commit 2109be9 (2026-08-24), without its Bash deny rules."
+    },
+    {
+      "id": "sandbox-credential-protection",
+      "name": "Sandbox: hide AWS/SSH credentials and tokens from commands",
+      "summary": "Turns on the Bash sandbox and blocks sandboxed commands from reading ~/.aws/credentials and ~/.ssh or seeing GITHUB_TOKEN and NPM_TOKEN.",
+      "tags": [
+        "sandbox",
+        "security",
+        "linux"
+      ],
+      "app": "code-settings",
+      "scope": "user",
+      "settings": {
+        "sandbox": {
+          "enabled": true,
+          "credentials": {
+            "files": [
+              {
+                "path": "~/.aws/credentials",
+                "mode": "deny"
+              },
+              {
+                "path": "~/.ssh",
+                "mode": "deny"
+              }
+            ],
+            "envVars": [
+              {
+                "name": "GITHUB_TOKEN",
+                "mode": "deny"
+              },
+              {
+                "name": "NPM_TOKEN",
+                "mode": "deny"
+              }
+            ]
+          }
+        }
+      },
+      "risk": "medium",
+      "riskReason": "Sandboxed commands that need these credentials (aws CLI, git over SSH, npm publish) fail; the sandbox doesn't run on native Windows.",
+      "by": "Anthropic docs",
+      "sources": [
+        {
+          "url": "https://code.claude.com/docs/en/sandboxing",
+          "quote": "The example below blocks reads of the AWS credentials file and the SSH directory and removes GITHUB_TOKEN and NPM_TOKEN from the environment of sandboxed commands:",
+          "retrieved": "2026-11-18"
+        },
+        {
+          "url": "https://code.claude.com/docs/en/sandboxing",
+          "quote": "There is no built-in credential deny list, so only the files and variables you list are restricted.",
+          "retrieved": "2026-11-18"
+        },
+        {
+          "url": "https://code.claude.com/docs/en/sandboxing",
+          "quote": "The sandbox runs on macOS, Linux, and WSL2. On native Windows, Claude Code runs commands unsandboxed.",
+          "retrieved": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "scrub-subprocess-credentials",
+      "name": "Strip credentials from subprocess environments",
+      "summary": "Removes credential variables from the environment of Bash commands, hooks and stdio MCP servers that Claude Code starts.",
+      "tags": [
+        "security"
+      ],
+      "app": "code-settings",
+      "scope": "user",
+      "settings": {
+        "env": {
+          "CLAUDE_CODE_SUBPROCESS_ENV_SCRUB": "1"
+        }
+      },
+      "risk": "medium",
+      "riskReason": "Tools that read credentials from env vars stop working inside Claude, and it turns sandbox auto-allow off.",
+      "by": "Anthropic docs",
+      "sources": [
+        {
+          "url": "https://code.claude.com/docs/en/env-vars",
+          "quote": "Set to 1 to strip credentials from the environments of the subprocesses Claude Code starts, such as Bash commands, hooks, and stdio MCP servers.",
+          "retrieved": "2026-11-18"
+        },
+        {
+          "url": "https://code.claude.com/docs/en/sandboxing",
+          "quote": "To strip credentials from all subprocesses regardless of sandboxing, set CLAUDE_CODE_SUBPROCESS_ENV_SCRUB.",
+          "retrieved": "2026-11-18"
+        },
+        {
+          "url": "https://code.claude.com/docs/en/settings-reference",
+          "quote": "CLAUDE_CODE_SUBPROCESS_ENV_SCRUB turns auto-allow off",
+          "retrieved": "2026-11-18"
+        }
+      ],
+      "note": "GitHub tokens and proxy settings are left in place by design."
+    },
+    {
+      "id": "disable-bypass-permissions",
+      "name": "Disable bypass-permissions mode",
+      "summary": "Rejects --dangerously-skip-permissions and agent definitions that ask for bypassPermissions.",
+      "tags": [
+        "security",
+        "enterprise"
+      ],
+      "app": "code-settings",
+      "scope": "user",
+      "settings": {
+        "permissions": {
+          "disableBypassPermissionsMode": "disable"
+        }
+      },
+      "risk": "low",
+      "by": "Anthropic docs",
+      "sources": [
+        {
+          "url": "https://code.claude.com/docs/en/settings-reference",
+          "quote": "Prevent anyone from entering bypassPermissions mode. Claude Code then rejects the --dangerously-skip-permissions flag",
+          "retrieved": "2026-11-18"
+        },
+        {
+          "url": "https://github.com/anthropics/claude-code/blob/91963195817f0384deb6eb60911d20a916144fa6/examples/settings/settings-lax.json",
+          "quote": "\"disableBypassPermissionsMode\": \"disable\"",
+          "retrieved": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "block-outside-working-directories",
+      "name": "Keep file tools inside the working directories",
+      "summary": "Claude's file tools refuse reads and writes outside the folders you work in, in every permission mode.",
+      "tags": [
+        "security"
+      ],
+      "app": "code-settings",
+      "scope": "user",
+      "settings": {
+        "permissions": {
+          "blockReadsOutsideWorkingDirectories": true,
+          "blockWritesOutsideWorkingDirectories": true
+        }
+      },
+      "risk": "medium",
+      "riskReason": "Needs Claude Code v2.1.314+ for the write block, removes the EnterWorktree/ExitWorktree tools, and other folders need /add-dir. Shell commands are not limited unless the sandbox is on.",
+      "by": "Anthropic docs",
+      "sources": [
+        {
+          "url": "https://code.claude.com/docs/en/settings-reference",
+          "quote": "Make Claude's file tools refuse reads outside your working directories in every permission mode, including bypassPermissions.",
+          "retrieved": "2026-11-18"
+        },
+        {
+          "url": "https://code.claude.com/docs/en/settings-reference",
+          "quote": "Make the Write, Edit, and NotebookEdit tools refuse paths outside your working directories in every permission mode, including bypassPermissions",
+          "retrieved": "2026-11-18"
+        },
+        {
+          "url": "https://code.claude.com/docs/en/settings-reference",
+          "quote": "Once the key is on, Claude Code also removes the EnterWorktree and ExitWorktree tools or refuses calls to them.",
+          "retrieved": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "manual-permission-mode",
+      "name": "Start in Manual mode (review every action)",
+      "summary": "Every terminal session starts in Manual mode instead of auto mode, so edits and commands ask first.",
+      "tags": [
+        "security"
+      ],
+      "app": "code-settings",
+      "scope": "user",
+      "settings": {
+        "permissions": {
+          "defaultMode": "default"
+        }
+      },
+      "risk": "low",
+      "by": "Anthropic docs",
+      "sources": [
+        {
+          "url": "https://code.claude.com/docs/en/permission-modes",
+          "quote": "This example makes every terminal session on your machine start in Manual mode, whose config value is default.",
+          "retrieved": "2026-11-18"
+        },
+        {
+          "url": "https://code.claude.com/docs/en/permission-modes",
+          "quote": "| default | Reads only | Reviewing every action yourself, sensitive work |",
+          "retrieved": "2026-11-18"
+        }
+      ],
+      "note": "More permission prompts."
+    },
+    {
+      "id": "confirm-git-push",
+      "name": "Ask before git push",
+      "summary": "Forces a confirmation prompt before any git push command Claude writes, as in Anthropic's example team settings.",
+      "tags": [
+        "git",
+        "security"
+      ],
+      "app": "code-settings",
+      "scope": "project",
+      "settings": {
+        "permissions": {
+          "ask": [
+            "Bash(git push *)"
+          ]
+        }
+      },
+      "risk": "low",
+      "by": "Anthropic docs",
+      "sources": [
+        {
+          "url": "https://code.claude.com/docs/en/settings-example",
+          "quote": "Confirm before git push commands",
+          "retrieved": "2026-11-18"
+        },
+        {
+          "url": "https://code.claude.com/docs/en/settings-example",
+          "quote": "Rules match the command and path as written. Bash(git push *) doesn't match git -C . push.",
+          "retrieved": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "audit-config-changes",
+      "name": "Audit settings changes to a log",
+      "summary": "A ConfigChange hook appends a JSON line (time, source, file) to ~/claude-config-audit.log whenever a settings or skills file changes mid-session.",
+      "tags": [
+        "security",
+        "enterprise"
+      ],
+      "app": "code-settings",
+      "scope": "user",
+      "settings": {
+        "hooks": {
+          "ConfigChange": [
+            {
+              "matcher": "",
+              "hooks": [
+                {
+                  "type": "command",
+                  "command": "jq -c '{timestamp: now | todate, source: .source, file: .file_path}' >> ~/claude-config-audit.log"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "risk": "low",
+      "by": "Anthropic docs",
+      "sources": [
+        {
+          "url": "https://code.claude.com/docs/en/hooks-guide",
+          "quote": "Track when settings or skills files change during a session. The ConfigChange event fires when an external process or editor modifies a configuration file, so you can log changes for compliance or block unauthorized modifications.",
+          "retrieved": "2026-11-18"
+        },
+        {
+          "url": "https://code.claude.com/docs/en/hooks-guide",
+          "quote": "This example appends each event to an audit log. Add this to ~/.claude/settings.json:",
+          "retrieved": "2026-11-18"
+        }
+      ],
+      "note": "Requires jq on PATH."
+    },
+    {
+      "id": "sandbox-auto-allow",
+      "name": "Sandboxed Bash with fewer prompts",
+      "summary": "Runs Bash commands inside the OS sandbox and lets sandboxed commands run without a permission prompt.",
+      "tags": [
+        "sandbox",
+        "autonomy",
+        "linux"
+      ],
+      "app": "code-settings",
+      "scope": "user",
+      "settings": {
+        "sandbox": {
+          "enabled": true,
+          "autoAllowBashIfSandboxed": true
+        }
+      },
+      "risk": "medium",
+      "riskReason": "Sandboxed commands, including ones that modify files inside the working directory, run without asking; on native Windows commands run unsandboxed.",
+      "by": "Anthropic docs",
+      "sources": [
+        {
+          "url": "https://code.claude.com/docs/en/settings-reference",
+          "quote": "To keep the sandbox on and run sandboxed commands without a permission prompt, set both keys in your sandbox block:",
+          "retrieved": "2026-11-18"
+        },
+        {
+          "url": "https://code.claude.com/docs/en/sandboxing",
+          "quote": "To enable the sandbox across all of your projects, set sandbox.enabled to true in your user settings at ~/.claude/settings.json.",
+          "retrieved": "2026-11-18"
+        },
+        {
+          "url": "https://code.claude.com/docs/en/sandboxing",
+          "quote": "The sandbox runs on macOS, Linux, and WSL2. On native Windows, Claude Code runs commands unsandboxed.",
+          "retrieved": "2026-11-18"
+        }
+      ],
+      "note": "On Linux and WSL2 the sandbox needs bubblewrap and socat."
+    },
+    {
+      "id": "sandbox-strict",
+      "name": "Strict sandbox (no unsandboxed fallback)",
+      "summary": "Turns the sandbox on, refuses to start if it can't run, and stops Claude from retrying blocked commands outside it.",
+      "tags": [
+        "sandbox",
+        "security",
+        "enterprise",
+        "linux"
+      ],
+      "app": "code-settings",
+      "scope": "user",
+      "settings": {
+        "sandbox": {
+          "enabled": true,
+          "failIfUnavailable": true,
+          "allowUnsandboxedCommands": false
+        }
+      },
+      "risk": "high",
+      "riskReason": "Claude Code exits at startup on native Windows or where bubblewrap/socat are missing; tools incompatible with the sandbox can't run unless added to excludedCommands.",
+      "by": "Anthropic docs",
+      "sources": [
+        {
+          "url": "https://code.claude.com/docs/en/sandboxing",
+          "quote": "The following managed settings configuration enables the sandbox, refuses to start Claude Code when the platform is unsupported or a dependency is missing, and prevents the model from retrying commands outside the sandbox:",
+          "retrieved": "2026-11-18"
+        },
+        {
+          "url": "https://code.claude.com/docs/en/sandboxing",
+          "quote": "A false in your user settings, --settings, or managed settings holds even when a project's settings set true.",
+          "retrieved": "2026-11-18"
+        },
+        {
+          "url": "https://code.claude.com/docs/en/sandboxing",
+          "quote": "The sandbox doesn't run on native Windows, so with failIfUnavailable set, Claude Code exits at startup on those machines.",
+          "retrieved": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "anthropic-strict-lockdown",
+      "name": "Enterprise-like lockdown (Anthropic settings-strict example)",
+      "summary": "No bypass mode, every Bash command asks, web search/fetch denied, and the sandbox can't be weakened, from Anthropic's settings-strict.json.",
+      "tags": [
+        "enterprise",
+        "security",
+        "sandbox"
+      ],
+      "app": "code-settings",
+      "scope": "user",
+      "settings": {
+        "permissions": {
+          "disableBypassPermissionsMode": "disable",
+          "ask": [
+            "Bash"
+          ],
+          "deny": [
+            "WebSearch",
+            "WebFetch"
+          ]
+        },
+        "sandbox": {
+          "autoAllowBashIfSandboxed": false,
+          "excludedCommands": [],
+          "network": {
+            "allowUnixSockets": [],
+            "allowAllUnixSockets": false,
+            "allowLocalBinding": false,
+            "allowedDomains": []
+          },
+          "enableWeakerNestedSandbox": false
+        }
+      },
+      "risk": "medium",
+      "riskReason": "Every Bash command needs approval and Claude loses web search and fetch.",
+      "by": "Anthropic (anthropics/claude-code examples)",
+      "sources": [
+        {
+          "url": "https://github.com/anthropics/claude-code/blob/91963195817f0384deb6eb60911d20a916144fa6/examples/settings/README.md",
+          "quote": "Example Claude Code settings files, primarily intended for organization-wide deployments. Use these as starting points",
+          "retrieved": "2026-11-18"
+        },
+        {
+          "url": "https://github.com/anthropics/claude-code/blob/91963195817f0384deb6eb60911d20a916144fa6/examples/settings/README.md",
+          "quote": "These examples are community-maintained snippets which may be unsupported or incorrect. You are responsible for the correctness of your own settings configuration.",
+          "retrieved": "2026-11-18"
+        },
+        {
+          "url": "https://github.com/anthropics/claude-code/blob/91963195817f0384deb6eb60911d20a916144fa6/examples/settings/settings-strict.json",
+          "quote": "\"ask\": [\n      \"Bash\"\n    ],\n    \"deny\": [\n      \"WebSearch\",\n      \"WebFetch\"\n    ]",
+          "retrieved": "2026-11-18"
+        }
+      ],
+      "note": "Published file at commit 9196319 (2026-10-08). Left out: allowManagedPermissionRulesOnly, allowManagedHooksOnly and strictKnownMarketplaces (they only work from managed settings, which catude doesn't write), and httpProxyPort/socksProxyPort set to null (null isn't a valid number). The published file doesn't set sandbox.enabled."
+    },
+    {
+      "id": "unattended-auto-mode",
+      "name": "Long unattended runs (auto mode, no waiting on prompts)",
+      "summary": "Starts sessions in auto mode and denies, instead of waiting on, anything that would still need a permission prompt.",
+      "tags": [
+        "autonomy"
+      ],
+      "app": "code-settings",
+      "scope": "user",
+      "settings": {
+        "permissions": {
+          "defaultMode": "auto",
+          "denyInsteadOfPrompting": true
+        }
+      },
+      "risk": "medium",
+      "riskReason": "A classifier approves actions instead of you; Claude can't ask questions or leave plan mode. Needs Claude Code v2.1.319+.",
+      "by": "Anthropic docs",
+      "sources": [
+        {
+          "url": "https://code.claude.com/docs/en/settings-reference",
+          "quote": "Set this to true to keep a session running when nobody is there to answer a permission prompt.",
+          "retrieved": "2026-11-18"
+        },
+        {
+          "url": "https://code.claude.com/docs/en/settings-reference",
+          "quote": "In ~/.claude/settings.json, this example starts sessions in auto mode and denies whatever would still fall back to a prompt:",
+          "retrieved": "2026-11-18"
+        },
+        {
+          "url": "https://code.claude.com/docs/en/permission-modes",
+          "quote": "| auto | Everything, with background safety checks | Long tasks, reducing prompt fatigue |",
+          "retrieved": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "cost-sonnet-default",
+      "name": "Lower cost: Sonnet as default model",
+      "summary": "Starts every session on the latest Sonnet, which Anthropic says handles most coding tasks and costs less than Opus.",
+      "tags": [
+        "cost",
+        "models"
+      ],
+      "app": "code-settings",
+      "scope": "user",
+      "settings": {
+        "model": "sonnet"
+      },
+      "risk": "low",
+      "by": "Anthropic docs",
+      "sources": [
+        {
+          "url": "https://code.claude.com/docs/en/costs",
+          "quote": "Sonnet handles most coding tasks well and costs less than Opus. Reserve Opus for complex architectural decisions or multi-step reasoning.",
+          "retrieved": "2026-11-18"
+        },
+        {
+          "url": "https://code.claude.com/docs/en/model-config",
+          "quote": "| sonnet | Uses the latest Sonnet model for daily coding tasks |",
+          "retrieved": "2026-11-18"
+        }
+      ],
+      "note": "An organization default model set by an admin still wins. Switch with /model when a task needs Opus."
+    },
+    {
+      "id": "cost-subagents-haiku",
+      "name": "Lower cost: all subagents on Haiku",
+      "summary": "Runs every subagent, teammate and workflow agent on Haiku, overriding the model their definitions ask for.",
+      "tags": [
+        "cost",
+        "models"
+      ],
+      "app": "code-settings",
+      "scope": "user",
+      "settings": {
+        "env": {
+          "CLAUDE_CODE_SUBAGENT_MODEL": "haiku",
+          "CLAUDE_CODE_SUBAGENT_MODEL_FORCE": "1"
+        }
+      },
+      "risk": "medium",
+      "riskReason": "Overrides the model field in agent definitions; subagents doing complex work may do it worse on Haiku.",
+      "by": "Anthropic docs",
+      "sources": [
+        {
+          "url": "https://code.claude.com/docs/en/costs",
+          "quote": "The subagent's own requests still draw on your usage. To spend less on them, choose a smaller model for a subagent or run every subagent on one model.",
+          "retrieved": "2026-11-18"
+        },
+        {
+          "url": "https://code.claude.com/docs/en/sub-agents",
+          "quote": "For example, to run every subagent on Haiku, set both variables in the env block of a settings file:",
+          "retrieved": "2026-11-18"
+        }
+      ],
+      "note": "Requires Claude Code v2.1.257 or later."
+    },
+    {
+      "id": "cost-no-idle-requests",
+      "name": "Lower cost: no background requests while idle",
+      "summary": "Turns off session recaps, prompt suggestions and goal check-ins, and holds messages from other sessions instead of starting turns.",
+      "tags": [
+        "cost"
+      ],
+      "app": "code-settings",
+      "scope": "user",
+      "settings": {
+        "awaySummaryEnabled": false,
+        "promptSuggestionEnabled": false,
+        "crossSessionInbound": "hold",
+        "env": {
+          "CLAUDE_CODE_GOAL_CHECKIN_MINUTES": "0"
+        }
+      },
+      "risk": "low",
+      "by": "Anthropic docs",
+      "sources": [
+        {
+          "url": "https://code.claude.com/docs/en/costs",
+          "quote": "Session recap and idle compaction can use tokens while you're idle.",
+          "retrieved": "2026-11-18"
+        },
+        {
+          "url": "https://code.claude.com/docs/en/costs",
+          "quote": "To stop these requests, turn prompt suggestions off.",
+          "retrieved": "2026-11-18"
+        },
+        {
+          "url": "https://code.claude.com/docs/en/costs",
+          "quote": "To hold inbound messages instead of delivering them, set crossSessionInbound to hold",
+          "retrieved": "2026-11-18"
+        },
+        {
+          "url": "https://code.claude.com/docs/en/costs",
+          "quote": "To turn check-ins off, set CLAUDE_CODE_GOAL_CHECKIN_MINUTES to 0.",
+          "retrieved": "2026-11-18"
+        }
+      ],
+      "note": "Idle compaction is left on: it replaces a long idle conversation with a summary, so it usually lowers the cost of the next message."
+    },
+    {
+      "id": "quieter-ui",
+      "name": "Quieter UI",
+      "summary": "Hides spinner tips and the turn-duration line and reduces animations.",
+      "tags": [
+        "ui"
+      ],
+      "app": "code-settings",
+      "scope": "user",
+      "settings": {
+        "spinnerTipsEnabled": false,
+        "prefersReducedMotion": true,
+        "showTurnDuration": false
+      },
+      "risk": "low",
+      "by": "Anthropic docs",
+      "sources": [
+        {
+          "url": "https://code.claude.com/docs/en/settings-example",
+          "quote": "Hide the tips that rotate under the spinner",
+          "retrieved": "2026-11-18"
+        },
+        {
+          "url": "https://code.claude.com/docs/en/settings-reference",
+          "quote": "Reduce or turn off interface animations such as the spinner, shimmer, and flash effects.",
+          "retrieved": "2026-11-18"
+        },
+        {
+          "url": "https://code.claude.com/docs/en/settings-reference",
+          "quote": "Show or hide the turn duration message after each response",
+          "retrieved": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "fullscreen-renderer",
+      "name": "Flicker-free fullscreen renderer",
+      "summary": "Uses the alt-screen renderer with virtualized scrollback, which reduces flicker and keeps memory flat in long conversations.",
+      "tags": [
+        "ui",
+        "performance"
+      ],
+      "app": "code-settings",
+      "scope": "user",
+      "settings": {
+        "tui": "fullscreen"
+      },
+      "risk": "low",
+      "by": "Anthropic docs",
+      "sources": [
+        {
+          "url": "https://code.claude.com/docs/en/settings-reference",
+          "quote": "Use \"fullscreen\" for the flicker-free alt-screen renderer with virtualized scrollback",
+          "retrieved": "2026-11-18"
+        },
+        {
+          "url": "https://code.claude.com/docs/en/env-vars",
+          "quote": "a research preview that reduces flicker and keeps memory flat in long conversations",
+          "retrieved": "2026-11-18"
+        }
+      ],
+      "note": "Switch back with /tui default."
+    },
+    {
+      "id": "notify-terminal-bell",
+      "name": "Terminal bell when Claude needs you",
+      "summary": "Rings the terminal bell in any terminal when a task finishes or a permission prompt is waiting.",
+      "tags": [
+        "notifications"
+      ],
+      "app": "code-settings",
+      "scope": "user",
+      "settings": {
+        "preferredNotifChannel": "terminal_bell"
+      },
+      "risk": "low",
+      "by": "Anthropic docs",
+      "sources": [
+        {
+          "url": "https://code.claude.com/docs/en/settings-reference",
+          "quote": "Set \"terminal_bell\" to ring the bell character in any terminal.",
+          "retrieved": "2026-11-18"
+        },
+        {
+          "url": "https://code.claude.com/docs/en/settings-example",
+          "quote": "Ring the terminal bell for notifications, such as a finished task or a waiting permission prompt",
+          "retrieved": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "notify-desktop-macos",
+      "name": "Desktop notification when Claude needs input (macOS)",
+      "summary": "A Notification hook that shows a macOS notification through osascript whenever Claude is waiting for you.",
+      "tags": [
+        "notifications"
+      ],
+      "app": "code-settings",
+      "scope": "user",
+      "settings": {
+        "hooks": {
+          "Notification": [
+            {
+              "matcher": "",
+              "hooks": [
+                {
+                  "type": "command",
+                  "command": "osascript -e 'display notification \"Claude Code needs your attention\" with title \"Claude Code\"'"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "risk": "low",
+      "by": "Anthropic docs",
+      "sources": [
+        {
+          "url": "https://code.claude.com/docs/en/hooks-guide",
+          "quote": "Get a desktop notification whenever Claude finishes working and needs your input, so you can switch to other tasks without checking the terminal.",
+          "retrieved": "2026-11-18"
+        },
+        {
+          "url": "https://code.claude.com/docs/en/hooks-guide",
+          "quote": "osascript routes notifications through the built-in Script Editor app.",
+          "retrieved": "2026-11-18"
+        }
+      ],
+      "note": "Script Editor needs notification permission in System Settings > Notifications."
+    },
+    {
+      "id": "notify-desktop-linux",
+      "name": "Desktop notification when Claude needs input (Linux)",
+      "summary": "A Notification hook that runs notify-send whenever Claude is waiting for you.",
+      "tags": [
+        "notifications",
+        "linux"
+      ],
+      "app": "code-settings",
+      "scope": "user",
+      "settings": {
+        "hooks": {
+          "Notification": [
+            {
+              "matcher": "",
+              "hooks": [
+                {
+                  "type": "command",
+                  "command": "notify-send 'Claude Code' 'Claude Code needs your attention'"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "risk": "low",
+      "by": "Anthropic docs",
+      "sources": [
+        {
+          "url": "https://code.claude.com/docs/en/hooks-guide",
+          "quote": "Get a desktop notification whenever Claude finishes working and needs your input, so you can switch to other tasks without checking the terminal.",
+          "retrieved": "2026-11-18"
+        },
+        {
+          "url": "https://code.claude.com/docs/en/hooks-guide",
+          "quote": "notify-send needs a desktop notification daemon, which headless servers, SSH sessions, and most containers don't have.",
+          "retrieved": "2026-11-18"
+        }
+      ],
+      "note": "Install libnotify-bin (Debian/Ubuntu) if notify-send is missing."
+    },
+    {
+      "id": "notify-desktop-windows",
+      "name": "Dialog when Claude needs input (Windows)",
+      "summary": "A Notification hook that opens a PowerShell message box whenever Claude is waiting for you.",
+      "tags": [
+        "notifications",
+        "windows"
+      ],
+      "app": "code-settings",
+      "scope": "user",
+      "settings": {
+        "hooks": {
+          "Notification": [
+            {
+              "matcher": "",
+              "hooks": [
+                {
+                  "type": "command",
+                  "command": "powershell.exe -Command \"[System.Reflection.Assembly]::LoadWithPartialName('System.Windows.Forms'); [System.Windows.Forms.MessageBox]::Show('Claude Code needs your attention', 'Claude Code')\""
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "risk": "low",
+      "by": "Anthropic docs",
+      "sources": [
+        {
+          "url": "https://code.claude.com/docs/en/hooks-guide",
+          "quote": "Get a desktop notification whenever Claude finishes working and needs your input, so you can switch to other tasks without checking the terminal.",
+          "retrieved": "2026-11-18"
+        },
+        {
+          "url": "https://code.claude.com/docs/en/hooks-guide",
+          "quote": "This command opens a dialog box rather than a notification in the corner of your screen, so the dialog can open behind your terminal window.",
+          "retrieved": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "updates-stable-channel",
+      "name": "Stable update channel",
+      "summary": "Auto-updates follow a release about a week old that skips releases with major regressions.",
+      "tags": [
+        "updates"
+      ],
+      "app": "code-settings",
+      "scope": "user",
+      "settings": {
+        "autoUpdatesChannel": "stable"
+      },
+      "risk": "low",
+      "by": "Anthropic docs",
+      "sources": [
+        {
+          "url": "https://code.claude.com/docs/en/settings-reference",
+          "quote": "Set \"stable\" for a version that is typically about one week old and skips releases with major regressions, or \"latest\" for the most recent release.",
+          "retrieved": "2026-11-18"
+        },
+        {
+          "url": "https://code.claude.com/docs/en/setup",
+          "quote": "A newly launched model can require a Claude Code version newer than the stable channel serves.",
+          "retrieved": "2026-11-18"
+        }
+      ],
+      "note": "Homebrew installs ignore this key."
+    },
+    {
+      "id": "git-no-ai-attribution",
+      "name": "No Claude attribution in commits and PRs",
+      "summary": "Removes the Co-Authored-By trailer, the pull request attribution text and the session link.",
+      "tags": [
+        "git"
+      ],
+      "app": "code-settings",
+      "scope": "user",
+      "settings": {
+        "attribution": {
+          "commit": "",
+          "pr": "",
+          "sessionUrl": false
+        }
+      },
+      "risk": "low",
+      "by": "Anthropic docs",
+      "sources": [
+        {
+          "url": "https://code.claude.com/docs/en/settings-reference",
+          "quote": "In a settings file that earlier versions also read, set commit and pr to empty strings and sessionUrl to false instead.",
+          "retrieved": "2026-11-18"
+        }
+      ],
+      "note": "Check your team's or project's AI-disclosure policy first."
+    },
+    {
+      "id": "otel-prometheus-local",
+      "name": "Your own usage metrics on a local Prometheus endpoint",
+      "summary": "Turns on Claude Code's OpenTelemetry metrics and exposes them for Prometheus at http://localhost:9464/metrics, with nothing sent to a third party.",
+      "tags": [
+        "telemetry",
+        "cost"
+      ],
+      "app": "code-settings",
+      "scope": "user",
+      "settings": {
+        "env": {
+          "CLAUDE_CODE_ENABLE_TELEMETRY": "1",
+          "OTEL_METRICS_EXPORTER": "prometheus"
+        }
+      },
+      "risk": "low",
+      "by": "Anthropic docs",
+      "sources": [
+        {
+          "url": "https://code.claude.com/docs/en/monitoring-usage",
+          "quote": "For Prometheus, scraped from http://localhost:9464/metrics:",
+          "retrieved": "2026-11-18"
+        },
+        {
+          "url": "https://code.claude.com/docs/en/env-vars",
+          "quote": "Set to 1 to enable OpenTelemetry data collection for metrics and logging. Required before configuring OTel exporters. Set it in your shell, user settings, or managed settings. Ignored in project and local settings.",
+          "retrieved": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "windows-powershell",
+      "name": "Windows: PowerShell tool and ! shell",
+      "summary": "Lets Claude run PowerShell natively instead of through Git Bash, and runs your ! commands in PowerShell.",
+      "tags": [
+        "windows"
+      ],
+      "app": "code-settings",
+      "scope": "user",
+      "settings": {
+        "defaultShell": "powershell",
+        "env": {
+          "CLAUDE_CODE_USE_POWERSHELL_TOOL": "1"
+        }
+      },
+      "risk": "low",
+      "by": "Anthropic docs",
+      "sources": [
+        {
+          "url": "https://code.claude.com/docs/en/env-vars",
+          "quote": "When enabled on Windows, Claude can run PowerShell commands natively instead of routing through Git Bash.",
+          "retrieved": "2026-11-18"
+        },
+        {
+          "url": "https://code.claude.com/docs/en/env-vars",
+          "quote": "Claude Code routes shell commands through Git Bash unless you set CLAUDE_CODE_USE_POWERSHELL_TOOL=1",
+          "retrieved": "2026-11-18"
+        },
+        {
+          "url": "https://code.claude.com/docs/en/settings-reference",
+          "quote": "\"powershell\" works only while the PowerShell tool is on.",
+          "retrieved": "2026-11-18"
+        }
+      ],
+      "note": "Useful mainly with telemetry/feature flags off or on Bedrock/Vertex/Foundry, where the tool isn't on by default."
+    },
+    {
+      "id": "trailofbits-settings",
+      "name": "Trail of Bits settings.json (as published)",
+      "summary": "Trail of Bits' opinionated defaults: targeted telemetry opt-outs, credential and destructive-command deny rules, rm -rf and push-to-main blocking hooks, one-year history.",
+      "tags": [
+        "security",
+        "privacy",
+        "telemetry",
+        "git"
+      ],
+      "app": "code-settings",
+      "scope": "user",
+      "settings": {
+        "cleanupPeriodDays": 365,
+        "env": {
+          "DISABLE_TELEMETRY": "1",
+          "DISABLE_ERROR_REPORTING": "1",
+          "CLAUDE_CODE_DISABLE_FEEDBACK_SURVEY": "1",
+          "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1",
+          "CLAUDE_CODE_MAX_SUBAGENT_SPAWN_DEPTH": "3"
+        },
+        "enableAllProjectMcpServers": false,
+        "permissions": {
+          "deny": [
+            "Bash(rm -rf *)",
+            "Bash(rm -fr *)",
+            "Bash(sudo *)",
+            "Bash(mkfs *)",
+            "Bash(dd *)",
+            "Bash(wget *|bash*)",
+            "Bash(wget *| bash*)",
+            "Bash(git push --force*)",
+            "Bash(git push *--force*)",
+            "Bash(git reset --hard*)",
+            "Edit(~/.bashrc)",
+            "Edit(~/.zshrc)",
+            "Edit(~/.ssh/**)",
+            "Read(~/.ssh/**)",
+            "Read(~/.gnupg/**)",
+            "Read(~/.aws/**)",
+            "Read(~/.azure/**)",
+            "Read(~/.config/gh/**)",
+            "Read(~/.git-credentials)",
+            "Read(~/.docker/config.json)",
+            "Read(~/.kube/**)",
+            "Read(~/.npmrc)",
+            "Read(~/.npm/**)",
+            "Read(~/.pypirc)",
+            "Read(~/.gem/credentials)",
+            "Read(~/Library/Keychains/**)",
+            "Read(~/Library/Application Support/**/metamask*/**)",
+            "Read(~/Library/Application Support/**/electrum*/**)",
+            "Read(~/Library/Application Support/**/exodus*/**)",
+            "Read(~/Library/Application Support/**/phantom*/**)",
+            "Read(~/Library/Application Support/**/solflare*/**)"
+          ]
+        },
+        "hooks": {
+          "PreToolUse": [
+            {
+              "matcher": "Bash",
+              "hooks": [
+                {
+                  "type": "command",
+                  "command": "CMD=$(jq -r '.tool_input.command'); if echo \"$CMD\" | grep -qiE '(^|;[[:space:]]*|&&[[:space:]]*|[|][|][[:space:]]*|[|][[:space:]]*)rm[[:space:]]' && echo \"$CMD\" | grep -qiE '(^|[[:space:]])-[a-zA-Z]*[rR]|--recursive' && echo \"$CMD\" | grep -qiE '(^|[[:space:]])-[a-zA-Z]*[fF]|--force'; then echo 'BLOCKED: Use trash instead of rm -rf' >&2; exit 2; fi"
+                },
+                {
+                  "type": "command",
+                  "command": "CMD=$(jq -r '.tool_input.command'); if echo \"$CMD\" | grep -qE 'git[[:space:]]+push.*(main|master)'; then echo 'BLOCKED: Use feature branches, not direct push to main' >&2; exit 2; fi"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "risk": "medium",
+      "riskReason": "Turns on experimental agent teams (more token use), disables telemetry and so feature-flag fetching, and its hooks need jq and a POSIX shell. Trail of Bits pairs it with bypass mode plus sandboxing, which this preset doesn't set.",
+      "by": "Trail of Bits",
+      "sources": [
+        {
+          "url": "https://github.com/trailofbits/claude-code-config/blob/2109be998c09f0c271fb9f46a283bbc92db5b5a7/README.md",
+          "quote": "Opinionated defaults, documentation, and workflows for Claude Code at Trail of Bits.",
+          "retrieved": "2026-11-18"
+        },
+        {
+          "url": "https://github.com/trailofbits/claude-code-config/blob/2109be998c09f0c271fb9f46a283bbc92db5b5a7/README.md",
+          "quote": "env (privacy) -- disables three non-essential outbound streams: Statsig telemetry (DISABLE_TELEMETRY), Sentry error reporting (DISABLE_ERROR_REPORTING), and feedback surveys (CLAUDE_CODE_DISABLE_FEEDBACK_SURVEY). Avoid the umbrella CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC -- it also disables auto-updates.",
+          "retrieved": "2026-11-18"
+        },
+        {
+          "url": "https://github.com/trailofbits/claude-code-config/blob/2109be998c09f0c271fb9f46a283bbc92db5b5a7/README.md",
+          "quote": "enableAllProjectMcpServers: false -- this is the default, set explicitly so it doesn't get flipped by accident. Project .mcp.json files live in git, so a compromised repo could ship malicious MCP servers.",
+          "retrieved": "2026-11-18"
+        },
+        {
+          "url": "https://github.com/trailofbits/claude-code-config/blob/2109be998c09f0c271fb9f46a283bbc92db5b5a7/README.md",
+          "quote": "cleanupPeriodDays: 365 -- keeps conversation history for a year instead of the default 30 days, so /insights has more data",
+          "retrieved": "2026-11-18"
+        },
+        {
+          "url": "https://github.com/trailofbits/claude-code-config/blob/2109be998c09f0c271fb9f46a283bbc92db5b5a7/README.md",
+          "quote": "hooks -- two PreToolUse hooks on Bash that block rm -rf and direct push to main",
+          "retrieved": "2026-11-18"
+        },
+        {
+          "url": "https://github.com/trailofbits/claude-code-config/blob/2109be998c09f0c271fb9f46a283bbc92db5b5a7/settings.json",
+          "quote": "\"CLAUDE_CODE_MAX_SUBAGENT_SPAWN_DEPTH\": \"3\"",
+          "retrieved": "2026-11-18"
+        }
+      ],
+      "note": "Exact settings.json at commit 2109be9 (2026-08-24) except $schema and statusLine, which points to a script (~/.claude/statusline.sh) you install separately from the same repo."
+    }
+  ]
+}

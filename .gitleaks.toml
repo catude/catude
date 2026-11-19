@@ -1,0 +1,22 @@
+# gitleaks configuration for catude: the default rules, plus one narrow exception.
+[extend]
+useDefault = true
+
+# The preset data pins every skill/agent/command to a public git commit SHA (40 hex characters), which has
+# the same shape as a Sourcegraph access token. Only that rule is relaxed, and only in these data files;
+# every other rule still scans them, and this rule still scans the rest of the repository.
+[[allowlists]]
+description = "public git commit SHAs in preset data"
+targetRules = ["sourcegraph-access-token"]
+paths = [
+  '''^internal/presets/presets\.json$''',
+  '''^research/presets-[a-z]\.json$''',
+]
+
+# The settings reference lists the NAMES of Claude Code's documented environment variables
+# ("key":"ANTHROPIC_API_KEY", "CLAUDE_CODE_OAUTH_TOKEN"…), copied from Anthropic's docs; it holds no values
+# (reference_test.go checks every app's list). Only the generic-api-key rule is relaxed, only in that file.
+[[allowlists]]
+description = "documented environment variable names in the settings reference"
+targetRules = ["generic-api-key"]
+paths = ['''^internal/claudecfg/reference\.json$''']
