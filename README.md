@@ -15,7 +15,7 @@
   <a href="#install"><b>Install</b></a> ·
   <a href="#what-it-answers">What it answers</a> ·
   <a href="#command-line">Command line</a> ·
-  <a href="docs/usage.md">Docs</a> ·
+  <a href="https://catude.github.io/catude/"><b>Docs</b></a> ·
   <a href="docs/security.md">Security</a> ·
   <a href="docs/comparison.md">Alternatives</a>
 </p>

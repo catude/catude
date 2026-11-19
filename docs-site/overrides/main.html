@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block extrahead %}
+  {%- set title = (page.meta.title if page and page.meta and page.meta.title else (page.title ~ " - " ~ config.site_name if page and page.title and not page.is_homepage else "catude: why your Claude Code usage runs out")) -%}
+  {%- set description = (page.meta.description if page and page.meta and page.meta.description else config.site_description) -%}
+  {%- set image = config.site_url ~ "assets/social-preview.png" -%}
+  <meta property="og:type" content="{{ 'website' if page and page.is_homepage else 'article' }}">
+  <meta property="og:site_name" content="catude">
+  <meta property="og:title" content="{{ title }}">
+  <meta property="og:description" content="{{ description }}">
+  <meta property="og:url" content="{{ page.canonical_url }}">
+  <meta property="og:image" content="{{ image }}">
+  <meta property="og:image:alt" content="catude: a cat with a terminal prompt for a face">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ title }}">
+  <meta name="twitter:description" content="{{ description }}">
+  <meta name="twitter:image" content="{{ image }}">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  {#- Machine-readable versions of the docs, for AI assistants -#}
+  <link rel="alternate" type="text/markdown" title="This page as Markdown" href="{{ page.canonical_url }}index.md">
+  <link rel="alternate" type="text/plain" title="llms.txt" href="{{ config.site_url }}llms.txt">
+  {%- if page and page.is_homepage %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "catude",
+    "alternateName": "ct",
+    "description": {{ config.site_description | tojson }},
+    "url": {{ config.site_url | tojson }},
+    "image": {{ image | tojson }},
+    "applicationCategory": "DeveloperApplication",
+    "applicationSubCategory": "Command-line tool",
+    "operatingSystem": "Windows, macOS, Linux",
+    "license": "https://opensource.org/licenses/MIT",
+    "isAccessibleForFree": true,
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "codeRepository": "https://github.com/catude/catude",
+    "downloadUrl": "https://github.com/catude/catude/releases/latest",
+    "softwareHelp": { "@type": "CreativeWork", "url": {{ config.site_url | tojson }} },
+    "sameAs": ["https://github.com/catude/catude", "https://www.producthunt.com/posts/catude"],
+    "inLanguage": "en"
+  }
+  </script>
+  {%- endif %}
+  {%- if page and page.meta and page.meta.faq %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {%- for item in page.meta.faq %}
+      { "@type": "Question", "name": {{ item.q | tojson }}, "acceptedAnswer": { "@type": "Answer", "text": {{ item.a | tojson }} } }{{ "," if not loop.last }}
+      {%- endfor %}
+    ]
+  }
+  </script>
+  {%- endif %}
+{% endblock %}

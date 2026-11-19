@@ -1,0 +1,76 @@
+/* catude colours: Claude's clay (#D97757) on near-black (#141413) */
+:root,
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: #141413;
+  --md-primary-fg-color--light: #3d3d3a;
+  --md-primary-fg-color--dark: #000000;
+  --md-primary-bg-color: #faf9f5;
+  --md-accent-fg-color: #c2613f;
+  --md-typeset-a-color: #b3532f;
+}
+
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #141413;
+  --md-primary-fg-color--light: #3d3d3a;
+  --md-primary-fg-color--dark: #000000;
+  --md-primary-bg-color: #faf9f5;
+  --md-accent-fg-color: #e08a6d;
+  --md-typeset-a-color: #e5957a;
+  --md-default-bg-color: #1f1e1d;
+}
+
+.md-header,
+.md-tabs {
+  background-color: #141413;
+}
+
+/* Hero on the home page */
+.ct-hero {
+  text-align: center;
+  margin: 0.5rem 0 1.5rem;
+}
+.ct-hero img {
+  width: 96px;
+  height: 96px;
+}
+.ct-hero p.ct-lead {
+  font-size: 1.15rem;
+  line-height: 1.5;
+  max-width: 40rem;
+  margin: 0.75rem auto;
+}
+
+.md-typeset img[src$=".gif"],
+.md-typeset img[src$=".png"] {
+  border-radius: 6px;
+}
+
+/* "Copy as Markdown" and "Ask Claude" buttons at the top of every page */
+.ct-ai-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0 0 1rem;
+  font-size: 0.7rem;
+}
+.ct-ai-actions a,
+.ct-ai-actions button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.25rem 0.6rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--md-default-fg-color--light);
+  cursor: pointer;
+  font: inherit;
+  text-decoration: none;
+}
+.ct-ai-actions a:hover,
+.ct-ai-actions button:hover,
+.ct-ai-actions a:focus-visible,
+.ct-ai-actions button:focus-visible {
+  border-color: var(--md-accent-fg-color);
+  color: var(--md-accent-fg-color);
+}

@@ -15,7 +15,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: lycheeverse/lychee-action@v2
         with:
-          args: --no-progress --exclude-path research --exclude "github.com/catude/catude/(releases|actions)" --exclude "threadreaderapp.com|x.com|twitter.com|medium.com|every.to|youtube.com|linkedin.com" --exclude-path assets "**/*.md"
+          args: --no-progress --exclude-path research --exclude "github.com/catude/catude/(releases|actions)" --exclude "threadreaderapp.com|x.com|twitter.com|medium.com|every.to|youtube.com|linkedin.com|claude.ai/new|producthunt.com" --exclude "catude.github.io" --exclude-path assets "**/*.md"
           fail: true
   style:
     runs-on: ubuntu-latest
