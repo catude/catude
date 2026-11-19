@@ -12,7 +12,7 @@ jobs:
   links:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - uses: lycheeverse/lychee-action@v2
         with:
           args: --no-progress --exclude-path research --exclude "github.com/catude/catude/(releases|actions)" --exclude "threadreaderapp.com|x.com|twitter.com|medium.com|every.to|youtube.com|linkedin.com|claude.ai/new|producthunt.com" --exclude "catude.github.io" --exclude-path assets "**/*.md"
@@ -20,7 +20,7 @@ jobs:
   style:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: no em dashes in the English docs
         run: |
           if grep -rn --include='*.md' "—" README.md CONTRIBUTING.md CHANGELOG.md docs/*.md; then

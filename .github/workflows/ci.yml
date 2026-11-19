@@ -15,8 +15,8 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-go@v5
+      - uses: actions/checkout@v7
+      - uses: actions/setup-go@v6
         with:
           go-version: stable # always the latest Go with its security fixes; go.mod keeps the minimum for go install
       - name: gofmt
@@ -40,8 +40,8 @@ jobs:
         os: [ubuntu-latest, macos-latest, windows-latest]
     runs-on: ${{ matrix.os }}
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-go@v5
+      - uses: actions/checkout@v7
+      - uses: actions/setup-go@v6
         with:
           go-version: stable # always the latest Go with its security fixes; go.mod keeps the minimum for go install
       - run: go test -race -count=1 ./...
@@ -50,8 +50,8 @@ jobs:
     # go install users may have an older Go: the minimum in go.mod must still build and pass
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-go@v5
+      - uses: actions/checkout@v7
+      - uses: actions/setup-go@v6
         with:
           go-version-file: go.mod
       - run: go build ./... && go test -count=1 ./...
@@ -63,8 +63,8 @@ jobs:
       matrix:
         target: [linux/amd64, linux/arm64, darwin/amd64, darwin/arm64, windows/amd64, windows/arm64]
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-go@v5
+      - uses: actions/checkout@v7
+      - uses: actions/setup-go@v6
         with:
           go-version: stable # always the latest Go with its security fixes; go.mod keeps the minimum for go install
       - name: build ${{ matrix.target }}
@@ -75,7 +75,7 @@ jobs:
           ext=""; [ "$GOOS" = windows ] && ext=".exe"
           GOOS=$GOOS GOARCH=$GOARCH go build -trimpath -ldflags "-s -w -X main.version=dev-${GITHUB_SHA::7}" -o "dist/catude-$GOOS-$GOARCH$ext" ./cmd/catude
           ls -l dist
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         if: github.event_name == 'pull_request'
         with:
           name: catude-${{ strategy.job-index }}
@@ -85,8 +85,8 @@ jobs:
   vulnerabilities:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-go@v5
+      - uses: actions/checkout@v7
+      - uses: actions/setup-go@v6
         with:
           go-version: stable # always the latest Go with its security fixes; go.mod keeps the minimum for go install
       - run: go install golang.org/x/vuln/cmd/govulncheck@latest
@@ -95,10 +95,10 @@ jobs:
   secrets:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           fetch-depth: 0
-      - uses: gitleaks/gitleaks-action@v2
+      - uses: gitleaks/gitleaks-action@v3
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITLEAKS_VERSION: latest # the [[allowlists]] format of .gitleaks.toml needs gitleaks 8.25 or later
