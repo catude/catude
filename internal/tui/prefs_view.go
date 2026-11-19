@@ -21,7 +21,7 @@ type Options struct {
 var (
 	themeChoices  = []string{"auto", "dark", "light", "high-contrast", "mono"}
 	glyphChoices  = []string{"auto", "unicode", "safe", "ascii"}
-	accentChoices = []string{"amber", "blue", "green", "magenta", "cyan", "red"}
+	accentChoices = []string{"clay", "amber", "blue", "green", "magenta", "cyan", "red"}
 )
 
 // tabID is the stable name of a tab in the preferences file.

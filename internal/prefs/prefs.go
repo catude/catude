@@ -13,7 +13,7 @@ import (
 type Prefs struct {
 	Theme        string   `json:"theme,omitempty"`    // auto | dark | light | high-contrast | mono
 	Glyphs       string   `json:"glyphs,omitempty"`   // auto | unicode | safe | ascii
-	Accent       string   `json:"accent,omitempty"`   // amber | blue | green | magenta | cyan | red
+	Accent       string   `json:"accent,omitempty"`   // clay (default) | amber | blue | green | magenta | cyan | red
 	Tabs         []string `json:"tabs,omitempty"`     // tabs shown in the full view (ids); empty = DefaultTabs
 	LiteTabs     []string `json:"liteTabs,omitempty"` // tabs shown in the lite view; empty = DefaultLite
 	Lite         bool     `json:"lite,omitempty"`     // open in the lite view

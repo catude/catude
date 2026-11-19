@@ -31,14 +31,53 @@
   <img alt="MIT" src="https://img.shields.io/badge/license-MIT-blue">
 </p>
 
-<p align="center"><img alt="TL;DR: catude why, switch things off per project, the agent map, the audit, one binary" src="assets/tldr.gif" width="900"></p>
+<p align="center"><img alt="TL;DR: where your tokens went, switches per project, the agent map, work profiles, presets, Discover, config, audit, live sessions" src="assets/tldr.gif" width="900"></p>
 
 > **TL;DR**
-> - `catude why` tells you where your Claude Code tokens went: cache rebuilt after pauses, subagents, `claude -p`, the context before you type.
-> - `x` switches a skill or MCP server off for one project, with the settings Claude Code documents.
-> - The agent map shows which subagents run, who launches them and what they cost.
-> - The audit finds secrets in permission rules, `curl | sh`, hidden Unicode and 22 other risks in what you installed.
-> - One binary, no account, no telemetry, reads local files only. Windows, macOS, Linux, WSL.
+> - **`catude why`**: where your Claude Code tokens went (cache rebuilt after pauses, subagents, `claude -p`, the context before you type) and what to change.
+> - **Switch things off per project**: `x` turns a skill or MCP server off for one project, with the settings Claude Code documents.
+> - **Agent map**: which subagents run, who launches them, the tools they use and what they cost.
+> - **Work profiles**: one set of skills, agents, MCP servers and plugins per kind of work; `ct switch` changes which one plain `claude` starts with.
+> - **Presets of the best**: start from the published setups of Boris Cherny, Simon Willison, Mitchell Hashimoto, Matt Pocock and 11 more, each with its sources.
+> - **Discover**: 177 plugins, 89 skills, 55 marketplaces and 25 MCP servers, checked at their source; `i` twice installs with the official `claude` command.
+> - **Config**: every documented setting of Claude Code and Claude Desktop, which file wins, and 30 presets that quote their source.
+> - **Audit**: 25 rules for secrets in permission rules, `curl | sh`, hidden Unicode and other risks in what you installed.
+> - **Live**: what every running session is doing, with a notice (or a system notification) when one waits for you.
+> - **One binary**: no account, no telemetry, reads local files only. Windows, macOS, Linux, WSL. 10 languages.
+
+## Try it
+
+<details open>
+<summary><b>Windows</b> (PowerShell)</summary>
+
+```powershell
+irm https://raw.githubusercontent.com/catude/catude/main/scripts/install.ps1 | iex
+```
+
+Then open a new terminal and run `catude why` or `catude`.
+</details>
+
+<details>
+<summary><b>Linux, macOS, WSL</b> (experimental)</summary>
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/catude/catude/main/scripts/install.sh | sh
+```
+
+Then open a new terminal and run `catude why` or `catude`. The Linux and macOS builds are tested on every change but
+have little real-world use so far: [please report what you find](https://github.com/catude/catude/issues/new/choose).
+</details>
+
+<details>
+<summary><b>With Go</b> (any system)</summary>
+
+```sh
+go install github.com/catude/catude/cmd/catude@latest
+```
+</details>
+
+Each script downloads the [latest release](https://github.com/catude/catude/releases/latest), checks its checksum and
+puts `catude` and the short `ct` on your PATH, without administrator rights. More options in [Install](#install).
 
 <p align="center"><img alt="catude: where the tokens went, the agent map, every file Claude reads and the live sessions" src="assets/demo.gif" width="900"></p>
 

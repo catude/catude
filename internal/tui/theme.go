@@ -35,11 +35,12 @@ var Glyphs = "unicode"
 // Theme is the active colour theme name.
 var Theme = "auto"
 
-// Accent is the highlight colour chosen in Preferences ("" = amber).
+// Accent is the highlight colour chosen in Preferences ("" = clay, the terracotta of Claude).
 var Accent = ""
 
 // every accent keeps at least 4.5:1 contrast against the text drawn on it and against the background
 var accents = map[string]lipgloss.AdaptiveColor{
+	"clay":    {Light: "#B5512E", Dark: "#D97757"},
 	"amber":   {Light: "#C2410C", Dark: "#F59E0B"},
 	"blue":    {Light: "#1D4ED8", Dark: "#60A5FA"},
 	"green":   {Light: "#15803D", Dark: "#4ADE80"},
@@ -200,7 +201,7 @@ func dropRune(r rune) bool {
 // ---- themes ----
 
 var (
-	accent   lipgloss.TerminalColor = lipgloss.AdaptiveColor{Light: "#C2410C", Dark: "#F59E0B"}
+	accent   lipgloss.TerminalColor = lipgloss.AdaptiveColor{Light: "#B5512E", Dark: "#D97757"}
 	muted    lipgloss.TerminalColor = lipgloss.AdaptiveColor{Light: "#4B5563", Dark: "#9CA3AF"}
 	sTitle   lipgloss.Style
 	sTab     lipgloss.Style
@@ -230,14 +231,14 @@ func applyTheme(name string) {
 	warn := lipgloss.TerminalColor(lipgloss.AdaptiveColor{Light: "#A16207", Dark: "#EAB308"})
 	high := lipgloss.TerminalColor(lipgloss.AdaptiveColor{Light: "#B91C1C", Dark: "#EF4444"})
 	onAccent := lipgloss.TerminalColor(lipgloss.AdaptiveColor{Light: "#FFFFFF", Dark: "#111827"})
-	accent = lipgloss.AdaptiveColor{Light: "#C2410C", Dark: "#F59E0B"}
+	accent = lipgloss.AdaptiveColor{Light: "#B5512E", Dark: "#D97757"}
 	muted = lipgloss.AdaptiveColor{Light: "#4B5563", Dark: "#9CA3AF"}
 	switch name {
 	case "dark":
-		accent, muted, onAccent = lipgloss.Color("#F59E0B"), lipgloss.Color("#9CA3AF"), lipgloss.Color("#111827")
+		accent, muted, onAccent = lipgloss.Color("#D97757"), lipgloss.Color("#9CA3AF"), lipgloss.Color("#111827")
 		ok, warn, high = lipgloss.Color("#22C55E"), lipgloss.Color("#EAB308"), lipgloss.Color("#EF4444")
 	case "light":
-		accent, muted, onAccent = lipgloss.Color("#C2410C"), lipgloss.Color("#4B5563"), lipgloss.Color("#FFFFFF")
+		accent, muted, onAccent = lipgloss.Color("#B5512E"), lipgloss.Color("#4B5563"), lipgloss.Color("#FFFFFF")
 		ok, warn, high = lipgloss.Color("#15803D"), lipgloss.Color("#A16207"), lipgloss.Color("#B91C1C")
 	case "high-contrast":
 		accent = lipgloss.AdaptiveColor{Light: "#000000", Dark: "#FFFF00"}

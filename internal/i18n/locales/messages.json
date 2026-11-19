@@ -592,6 +592,12 @@
   ]
  },
  {
+  "id": "clay",
+  "where": [
+   "prefs_view.go: preference value (accentChoices)"
+  ]
+ },
+ {
   "id": "clean a safe item (only files older than 1 hour)",
   "where": [
    "help.go: help, what a key does"

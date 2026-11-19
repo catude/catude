@@ -137,7 +137,7 @@ func TestPreferencesTabsLiteAndTheme(t *testing.T) {
 	}
 	m.pv.sel = 4 // accent colour
 	m, _ = key(m, "l")
-	if m.prefs.Accent != "blue" || Accent != "blue" {
+	if m.prefs.Accent != "amber" || Accent != "amber" { // the default is clay; the next one is amber
 		t.Errorf("accent: %q / %q", m.prefs.Accent, Accent)
 	}
 	m, _ = key(m, "esc")
