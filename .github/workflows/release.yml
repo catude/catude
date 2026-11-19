@@ -1,11 +1,15 @@
 name: release
 # Pushing a tag like v0.1.0 builds every platform with GoReleaser (.goreleaser.yaml) and publishes the
 # archives and checksums.txt on the GitHub release. The install scripts download from there.
+# Each archive also gets a signed build provenance attestation: anyone can check that a download was
+# built here, from this repository, with  gh attestation verify FILE --repo catude/catude
 on:
   push:
     tags: ["v*"]
 permissions:
   contents: write
+  id-token: write
+  attestations: write
 jobs:
   release:
     runs-on: ubuntu-latest
@@ -23,3 +27,9 @@ jobs:
           args: release --clean
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/attest-build-provenance@v2
+        with:
+          subject-path: |
+            dist/*.tar.gz
+            dist/*.zip
+            dist/checksums.txt

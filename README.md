@@ -153,9 +153,56 @@ finishes and waits for you; turn on the bell or a system notification in prefere
 
 A work profile is a set of skills, agents, commands, MCP servers and plugins for one kind of work: frontend,
 backend, writing. Press `n` to build one, `a` to save your current setup, `s` to make it the one plain `claude`
-starts with. Start from one of 15 [presets](docs/presets.md) based on the public setups of known practitioners, load
-one from a file or URL (validated, pinned, hash-checked and audited first), or copy a profile's MCP servers into
-Claude Desktop with `catude profile desktop NAME`. [Guide](docs/profiles.md)
+starts with. Start from one of the [15 presets below](#presets-and-where-they-come-from), load one from a file or
+URL (validated, pinned, hash-checked and audited first), or copy a profile's MCP servers into Claude Desktop with
+`catude profile desktop NAME`. [Guide](docs/profiles.md)
+
+## Presets, and where they come from
+
+<p align="center"><img alt="Presets gallery: work profiles based on the public setups of known practitioners" src="assets/screenshots/presets.png" width="900"></p>
+
+Two kinds of presets, and every one says where it comes from. Nothing is invented: each preset quotes or links the
+public source it is based on, and catude shows that source before you apply anything.
+
+**Work profiles based on what practitioners published** (Profiles tab, `p`; `catude presets`). Only files under an
+open licence and pinned to a commit are installed; ideas without published files become a profile you complete.
+
+| Preset | The idea | Main sources |
+|---|---|---|
+| Armin Ronacher | Simple, observable tooling (Makefiles, logs, CLIs) over clever automation | [mitsuhiko/agent-stuff](https://github.com/mitsuhiko/agent-stuff), [lucumr.pocoo.org](https://lucumr.pocoo.org/2025/6/12/agentic-coding/) |
+| Boris Cherny | A mostly vanilla setup run in parallel; give Claude a way to verify its own work | [his threads on how the Claude Code team works](https://threadreaderapp.com/thread/2007179832300581177) |
+| Dex Horthy | The whole workflow built around managing context: research, plan, implement | [humanlayer/advanced-context-engineering-for-coding-agents](https://github.com/humanlayer/advanced-context-engineering-for-coding-agents/blob/main/ace-fca.md), [humanlayer/12-factor-agents](https://github.com/humanlayer/12-factor-agents) |
+| Geoffrey Huntley | The "Ralph" loop: the same prompt fed to a fresh agent until the work is done | [ghuntley.com/ralph](https://ghuntley.com/ralph/), [ghuntley/how-to-build-a-coding-agent](https://github.com/ghuntley/how-to-build-a-coding-agent) |
+| Harper Reed | Spec, then plan, then small test-driven steps | [harperreed/dotfiles](https://github.com/harperreed/dotfiles/tree/master/.claude), [harper.blog](https://harper.blog/2025/02/16/my-llm-codegen-workflow-atm/) |
+| IndyDevDan | Reusable prompts, subagents and hooks instead of vibe coding | [disler/claude-code-hooks-mastery](https://github.com/disler/claude-code-hooks-mastery) |
+| Jesse Vincent | Superpowers: mandatory skills for brainstorming, planning and TDD | [obra/superpowers](https://github.com/obra/superpowers), [blog.fsck.com](https://blog.fsck.com/2025/10/09/superpowers/) |
+| Kieran Klaassen | Compound engineering: every task makes the next one easier | [EveryInc/compound-engineering-plugin](https://github.com/EveryInc/compound-engineering-plugin) |
+| Lauren Tan | pstack: make one agent trustworthy on a whole problem before going wide | [cursor/plugins: pstack](https://github.com/cursor/plugins/tree/main/pstack) |
+| Matt Pocock | Small, composable skills that keep you in control | [mattpocock/skills](https://github.com/mattpocock/skills) |
+| Mitchell Hashimoto | Real agents, not chat; when an agent fails, fix the harness | [ghostty AGENTS.md](https://github.com/ghostty-org/ghostty/blob/main/AGENTS.md), [mitchellh.com](https://mitchellh.com/writing/my-ai-adoption-journey) |
+| Peter Steinberger | Short prompts, screenshots and many agents in parallel | [steipete/agent-scripts](https://github.com/steipete/agent-scripts), [steipete.me](https://steipete.me/posts/just-talk-to-it) |
+| Simon Willison | Agentic engineering patterns: spend the time saved on testing and review | [simonwillison.net](https://simonwillison.net/guides/agentic-engineering-patterns/) |
+| Steve Yegge | Beads: a dependency-aware issue graph as the agent's memory | [gastownhall/beads](https://github.com/gastownhall/beads) |
+| Thorsten Ball | An agent is an LLM, a loop and tools: brief it well | [ampcode.com](https://ampcode.com/how-to-build-an-agent) |
+
+**30 configuration presets** (Config tab, `p`). Each one is a small group of documented settings for one goal, with
+the exact sentence of its source quoted next to it, and a preview of what it would change in your file:
+
+| Goal | Presets | Sources |
+|---|---|---|
+| Privacy | no telemetry or feedback uploads, block non-essential traffic, keep transcripts 7 days | [data usage](https://code.claude.com/docs/en/data-usage), [settings reference](https://code.claude.com/docs/en/settings-reference) |
+| Security | protect `.env` and credentials, strip credentials from subprocesses, no bypass mode, manual mode, audit setting changes | [Trail of Bits claude-code-config](https://github.com/trailofbits/claude-code-config), [permission modes](https://code.claude.com/docs/en/permission-modes) |
+| Sandbox | hide AWS/SSH credentials from commands, sandboxed Bash with fewer prompts, strict sandbox | [sandboxing](https://code.claude.com/docs/en/sandboxing) |
+| Lockdown | the enterprise-like strict example, and the lax one for long unattended runs | [anthropics/claude-code example settings](https://github.com/anthropics/claude-code/tree/main/examples/settings) |
+| Cost | Sonnet as default, subagents on Haiku, no background requests while idle | [costs](https://code.claude.com/docs/en/costs), [model config](https://code.claude.com/docs/en/model-config), [subagents](https://code.claude.com/docs/en/sub-agents) |
+| Git, UI, notifications, updates, Windows | ask before `git push`, no attribution, quieter UI, a bell or desktop notification when Claude needs you, stable channel, PowerShell tool | [hooks guide](https://code.claude.com/docs/en/hooks-guide), [setup](https://code.claude.com/docs/en/setup), [env vars](https://code.claude.com/docs/en/env-vars) |
+| Telemetry | your own usage metrics on a local Prometheus endpoint | [monitoring usage](https://code.claude.com/docs/en/monitoring-usage) |
+
+The **Discover** catalog follows the same rule: every plugin, skill and MCP server links to its repository and
+licence, and installs only through the official `claude plugin` and `claude mcp` commands.
+
+Presets reflect what each person or organisation published, at the link shown; they are not affiliated with or
+endorsed by them. A correction or a new source is a welcome [pull request](CONTRIBUTING.md).
 
 ## Every setting, and which one wins
 

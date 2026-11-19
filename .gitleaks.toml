@@ -20,3 +20,10 @@ paths = [
 description = "documented environment variable names in the settings reference"
 targetRules = ["generic-api-key"]
 paths = ['''^internal/claudecfg/reference\.json$''']
+
+# Tests feed invented credentials (example.com URLs with token=…, ghp_ followed by repeated letters) to the
+# redaction and audit code, to prove they are masked. Only the generic-api-key rule is relaxed, only in tests.
+[[allowlists]]
+description = "invented credentials in tests of the redaction and audit code"
+targetRules = ["generic-api-key"]
+paths = ['''_test\.go$''']

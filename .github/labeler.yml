@@ -1,0 +1,27 @@
+tui:
+  - changed-files:
+      - any-glob-to-any-file: internal/tui/**
+cli:
+  - changed-files:
+      - any-glob-to-any-file: cmd/**
+config:
+  - changed-files:
+      - any-glob-to-any-file: [internal/claudecfg/**, internal/paths/**]
+usage:
+  - changed-files:
+      - any-glob-to-any-file: [internal/sessions/**, internal/agentmap/**, internal/live/**]
+security:
+  - changed-files:
+      - any-glob-to-any-file: [internal/audit/**, internal/redact/**, SECURITY.md]
+catalog:
+  - changed-files:
+      - any-glob-to-any-file: [internal/catalog/**, internal/presets/**, internal/claudecfg/config-presets.json]
+i18n:
+  - changed-files:
+      - any-glob-to-any-file: [internal/i18n/**, docs/translations/**]
+docs:
+  - changed-files:
+      - any-glob-to-any-file: ["**/*.md", assets/**]
+ci:
+  - changed-files:
+      - any-glob-to-any-file: [.github/**, .goreleaser.yaml, scripts/**]

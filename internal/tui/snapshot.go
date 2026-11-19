@@ -3,9 +3,9 @@ package tui
 import (
 	"time"
 
+	"context"
 	livesess "github.com/catude/catude/internal/live"
 	"github.com/catude/catude/internal/models"
-	"context"
 	"strings"
 
 	"github.com/catude/catude/internal/audit"

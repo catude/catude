@@ -1,0 +1,28 @@
+name: docs
+# Pull requests that touch Markdown: every link still works, and the writing rule of the project holds
+# (no em dashes, see CONTRIBUTING.md).
+on:
+  pull_request:
+    paths: ["**/*.md"]
+  schedule:
+    - cron: "11 6 1 * *"
+permissions:
+  contents: read
+jobs:
+  links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: lycheeverse/lychee-action@v2
+        with:
+          args: --no-progress --exclude-path research --exclude "github.com/catude/catude/(releases|actions)" --exclude "threadreaderapp.com|x.com|twitter.com|medium.com|every.to|youtube.com|linkedin.com" --exclude-path assets "**/*.md"
+          fail: true
+  style:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: no em dashes in the English docs
+        run: |
+          if grep -rn --include='*.md' "—" README.md CONTRIBUTING.md CHANGELOG.md docs/*.md; then
+            echo "Use a colon, a comma or two sentences instead of an em dash."; exit 1
+          fi

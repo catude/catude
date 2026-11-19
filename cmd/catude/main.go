@@ -2,11 +2,11 @@
 package main
 
 import (
-	"github.com/catude/catude/internal/i18n"
 	"context"
 	"encoding/json"
 	"flag"
 	"fmt"
+	"github.com/catude/catude/internal/i18n"
 	"io"
 	"os"
 	"runtime/debug"
