@@ -11,3 +11,4 @@ metrics.csv
 
 # documentation site build output (mkdocs build)
 site/
+__pycache__/

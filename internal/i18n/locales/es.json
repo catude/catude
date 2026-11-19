@@ -314,5 +314,6 @@
   "instruction files are not switched off here: edit or move the file": "los archivos de instrucciones no se desactivan aquí: edita o mueve el archivo",
   "not found among the installed skills and MCP servers (it may come from a plugin: use /plugin)": "no está entre las skills y servidores MCP instalados (puede venir de un plugin: usa /plugin)",
   "r measures again": "r vuelve a medir",
-  "resets in %s": "se reinicia en %s"
+  "resets in %s": "se reinicia en %s",
+  "clay": "arcilla"
 }

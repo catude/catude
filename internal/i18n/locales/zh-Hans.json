@@ -314,5 +314,6 @@
   "instruction files are not switched off here: edit or move the file": "指令文件不能在这里关闭：请编辑或移动该文件",
   "not found among the installed skills and MCP servers (it may come from a plugin: use /plugin)": "在已安装的技能和 MCP 服务器中找不到 (可能来自插件：请用 /plugin)",
   "r measures again": "r 重新测量",
-  "resets in %s": "%s 后重置"
+  "resets in %s": "%s 后重置",
+  "clay": "陶土色"
 }

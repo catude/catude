@@ -314,5 +314,6 @@
   "instruction files are not switched off here: edit or move the file": "指示ファイルはここではオフにできません。ファイルを編集または移動してください",
   "not found among the installed skills and MCP servers (it may come from a plugin: use /plugin)": "インストール済みのスキルと MCP サーバーに見つかりません (プラグイン由来の可能性があります: /plugin を使用)",
   "r measures again": "r で再測定",
-  "resets in %s": "%s 後にリセット"
+  "resets in %s": "%s 後にリセット",
+  "clay": "クレイ"
 }
