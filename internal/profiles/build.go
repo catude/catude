@@ -356,7 +356,13 @@ func (s *Staged) fromGitHub(ctx context.Context, fetch Fetcher, cache map[string
 		}
 		out := dst
 		if isDir {
-			out = filepath.Join(dst, filepath.FromSlash(rel))
+			// SafeRelPath already refused "..", absolute paths and drive letters; check again where the
+			// path is used, so no archive entry can ever be written outside dst
+			local := filepath.FromSlash(rel)
+			if !filepath.IsLocal(local) {
+				return fmt.Errorf("%s: unsafe path %q in archive", key, h.Name)
+			}
+			out = filepath.Join(dst, local)
 		}
 		if err := writeFile(out, b); err != nil {
 			return err

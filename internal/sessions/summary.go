@@ -106,7 +106,6 @@ func Rename(path, title string) error {
 	if err != nil {
 		return err
 	}
-	defer f.Close()
 	// a file that does not end in a newline gets one first, so the line stays a line of its own
 	if fi.Size() > 0 {
 		r, err := os.Open(path)
@@ -120,5 +119,5 @@ func Rename(path, title string) error {
 		}
 	}
 	_, err = f.Write(append(b, '\n'))
-	return err
+	return errors.Join(err, f.Close())
 }

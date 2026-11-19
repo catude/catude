@@ -250,8 +250,10 @@ func appendRC(line string, out io.Writer) error {
 		if err != nil {
 			return err
 		}
-		fmt.Fprintln(f, "\n"+line)
-		f.Close()
+		_, werr := fmt.Fprintln(f, "\n"+line)
+		if err := errors.Join(werr, f.Close()); err != nil {
+			return fmt.Errorf("updating ~/%s: %w", rc, err)
+		}
 		fmt.Fprintln(out, "  ✓ updated ~/"+rc)
 		done = true
 		if rc != ".profile" {

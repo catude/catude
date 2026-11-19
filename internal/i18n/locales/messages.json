@@ -8,19 +8,19 @@
  {
   "id": "? help",
   "where": [
-   "tui.go:1272"
+   "tui.go:1273"
   ]
  },
  {
   "id": "? help · , preferences",
   "where": [
-   "tui.go:1414"
+   "tui.go:1415"
   ]
  },
  {
   "id": "(enter save · esc cancel)",
   "where": [
-   "tui.go:1399"
+   "tui.go:1400"
   ]
  },
  {
@@ -136,7 +136,7 @@
  {
   "id": "%s tokens in context",
   "where": [
-   "tui.go:1133"
+   "tui.go:1134"
   ]
  },
  {
@@ -154,7 +154,7 @@
  {
   "id": "←→ tabs · ↑↓ move · / filter · e edit · space mark · P profile · , preferences · ? help · q quit",
   "where": [
-   "tui.go:1337"
+   "tui.go:1338"
   ]
  },
  {
@@ -172,7 +172,7 @@
  {
   "id": "↑↓ choose · enter enter load as a work profile (download pinned files, verify, audit) · pgup pgdn scroll · esc close",
   "where": [
-   "tui.go:1393"
+   "tui.go:1394"
   ]
  },
  {
@@ -184,7 +184,7 @@
  {
   "id": "↑↓ choose · x off in this project · r measure again · p compare with a work profile · ? help",
   "where": [
-   "tui.go:1340"
+   "tui.go:1341"
   ]
  },
  {
@@ -196,73 +196,73 @@
  {
   "id": "↑↓ choose a session · enter open its conversation · o open its folder · ? help",
   "where": [
-   "tui.go:1354"
+   "tui.go:1355"
   ]
  },
  {
   "id": "↑↓ choose app file · enter open its values · e edit file in your editor · r read again · , preferences · ? help",
   "where": [
-   "tui.go:1373"
+   "tui.go:1374"
   ]
  },
  {
   "id": "↑↓ compare with yours · t kind of work · space compare with the selected · / filter · r download again · ? help",
   "where": [
-   "tui.go:1356"
+   "tui.go:1357"
   ]
  },
  {
   "id": "↑↓ move · / filter · x off / name only in this project · e edit · space mark · ? help",
   "where": [
-   "tui.go:1362"
+   "tui.go:1363"
   ]
  },
  {
   "id": "↑↓ move · / filter · x off in this project · m check health · space mark · ? help",
   "where": [
-   "tui.go:1360"
+   "tui.go:1361"
   ]
  },
  {
   "id": "↑↓ move · / search · esc back (read-only: change a value in the file it comes from)",
   "where": [
-   "tui.go:1377"
+   "tui.go:1378"
   ]
  },
  {
   "id": "↑↓ move · / search, #tag (#testing, #frontend…) · i i install · ? help",
   "where": [
-   "tui.go:1358"
+   "tui.go:1359"
   ]
  },
  {
   "id": "↑↓ move · e edit the definition · space mark for a profile · r read again · ? help",
   "where": [
-   "tui.go:1350"
+   "tui.go:1351"
   ]
  },
  {
   "id": "↑↓ move · enter change · space toggle / next value · d remove (default) · a only set / all · / search · e editor · esc back",
   "where": [
-   "tui.go:1375"
+   "tui.go:1376"
   ]
  },
  {
   "id": "↑↓ move · enter/+ open · - close/parent · E/C all · / find · w diagram in browser · r rebuild · ←→ tabs · ? help",
   "where": [
-   "tui.go:1368"
+   "tui.go:1369"
   ]
  },
  {
   "id": "↑↓ move · o open folder · c c clean safe item · r measure · ? help",
   "where": [
-   "tui.go:1346"
+   "tui.go:1347"
   ]
  },
  {
   "id": "↑↓ move · r check again · ? help",
   "where": [
-   "tui.go:1348"
+   "tui.go:1349"
   ]
  },
  {
@@ -274,7 +274,7 @@
  {
   "id": "+%d tabs in ,",
   "where": [
-   "tui.go:1289"
+   "tui.go:1290"
   ]
  },
  {
@@ -395,7 +395,7 @@
  {
   "id": "archived",
   "where": [
-   "tui.go:1569"
+   "tui.go:1570"
   ]
  },
  {
@@ -710,7 +710,7 @@
  {
   "id": "Desktop",
   "where": [
-   "tui.go:1567"
+   "tui.go:1568"
   ]
  },
  {
@@ -759,7 +759,7 @@
  {
   "id": "enter open · n name · f search all · R/c resume in Claude · x export · D remove · esc back · ? help",
   "where": [
-   "tui.go:1342"
+   "tui.go:1343"
   ]
  },
  {
@@ -807,7 +807,7 @@
  {
   "id": "F12 close",
   "where": [
-   "tui.go:1396"
+   "tui.go:1397"
   ]
  },
  {
@@ -825,8 +825,8 @@
  {
   "id": "filter: ",
   "where": [
-   "tui.go:1405",
-   "tui.go:1407"
+   "tui.go:1406",
+   "tui.go:1408"
   ]
  },
  {
@@ -935,7 +935,7 @@
  {
   "id": "Inventory",
   "where": [
-   "tui.go:1512"
+   "tui.go:1513"
   ]
  },
  {
@@ -995,7 +995,7 @@
  {
   "id": "Latest session",
   "where": [
-   "tui.go:1523"
+   "tui.go:1524"
   ]
  },
  {
@@ -1142,7 +1142,7 @@
  {
   "id": "n new · a save current setup · p presets · e edit · s switch · v verify · enter start · x other mode · d delete · ? help",
   "where": [
-   "tui.go:1344"
+   "tui.go:1345"
   ]
  },
  {
@@ -1160,7 +1160,7 @@
  {
   "id": "name: ",
   "where": [
-   "tui.go:1399"
+   "tui.go:1400"
   ]
  },
  {
@@ -1178,7 +1178,7 @@
  {
   "id": "new value for %s:",
   "where": [
-   "tui.go:1386"
+   "tui.go:1387"
   ]
  },
  {
@@ -1450,7 +1450,7 @@
  {
   "id": "r refresh · [ ] 7 / 14 / 30 days · ? help",
   "where": [
-   "tui.go:1352"
+   "tui.go:1353"
   ]
  },
  {
@@ -1582,7 +1582,7 @@
  {
   "id": "search every conversation: ",
   "where": [
-   "tui.go:1402"
+   "tui.go:1403"
   ]
  },
  {
@@ -1594,7 +1594,7 @@
  {
   "id": "Security",
   "where": [
-   "tui.go:1520"
+   "tui.go:1521"
   ]
  },
  {
@@ -1878,7 +1878,7 @@
  {
   "id": "Where Claude reads configuration on this machine",
   "where": [
-   "tui.go:1498"
+   "tui.go:1499"
   ]
  },
  {

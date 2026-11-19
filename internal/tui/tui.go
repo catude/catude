@@ -4,6 +4,7 @@ package tui
 
 import (
 	"context"
+	"errors"
 	"fmt"
 	"github.com/charmbracelet/x/ansi"
 	"io"
@@ -1062,11 +1063,11 @@ func backupFile(p string) (string, error) {
 	if err != nil {
 		return "", err
 	}
-	if _, err := io.Copy(out, in); err != nil {
-		out.Close()
+	_, err = io.Copy(out, in)
+	if err = errors.Join(err, out.Close()); err != nil {
 		return "", err
 	}
-	return dst, out.Close()
+	return dst, nil
 }
 
 // ---- rows ----
