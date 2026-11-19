@@ -12,6 +12,7 @@ package instr
 
 import (
 	"encoding/json"
+	"errors"
 	"os"
 	"path/filepath"
 	"regexp"
@@ -192,9 +193,8 @@ func Fixes(env paths.Env, backup func(string) (string, error)) []Fix {
 					if err != nil {
 						return err
 					}
-					defer f.Close()
 					_, err = f.WriteString("\n" + line + "\n")
-					return err
+					return errors.Join(err, f.Close())
 				}})
 		}
 	}

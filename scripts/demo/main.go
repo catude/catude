@@ -11,6 +11,7 @@ package main
 
 import (
 	"encoding/json"
+	"errors"
 	"flag"
 	"fmt"
 	"os"
@@ -322,9 +323,9 @@ func appendLines(p string, t *tl) {
 	if err != nil {
 		return
 	}
-	defer f.Close()
-	for _, l := range t.lines {
-		f.WriteString(l + "\n")
+	_, err = f.WriteString(strings.Join(t.lines, "\n") + "\n")
+	if err = errors.Join(err, f.Close()); err != nil {
+		fmt.Fprintln(os.Stderr, "demo: appending to", p+":", err)
 	}
 }
 

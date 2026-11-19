@@ -96,15 +96,21 @@ func Parse(text string) (Composition, error) {
 		if len(cells) < 2 || strings.Trim(cells[0], "-: ") == "" || isHeader(cells[0]) {
 			continue
 		}
+		at := func(i int) string { // cell i, or "" when the row is shorter
+			if i < len(cells) {
+				return cells[i]
+			}
+			return ""
+		}
 		switch {
-		case strings.HasPrefix(section, "estimated usage") && len(cells) >= 2:
-			c.Categories = append(c.Categories, Row{Name: cells[0], Tokens: Number(cells[1])})
+		case strings.HasPrefix(section, "estimated usage"):
+			c.Categories = append(c.Categories, Row{Name: at(0), Tokens: Number(at(1))})
 		case strings.HasPrefix(section, "memory") && len(cells) >= 3:
-			c.Memory = append(c.Memory, Row{Name: cells[1], Source: cells[0], Tokens: Number(cells[2])})
+			c.Memory = append(c.Memory, Row{Name: at(1), Source: at(0), Tokens: Number(at(2))})
 		case strings.HasPrefix(section, "skills") && len(cells) >= 3:
-			c.Skills = append(c.Skills, Row{Name: cells[0], Source: cells[1], Tokens: Number(cells[2])})
+			c.Skills = append(c.Skills, Row{Name: at(0), Source: at(1), Tokens: Number(at(2))})
 		case strings.HasPrefix(section, "mcp tools") && len(cells) >= 3:
-			c.MCPTools = append(c.MCPTools, Row{Name: cells[0], Source: cells[1], Tokens: Number(cells[2])})
+			c.MCPTools = append(c.MCPTools, Row{Name: at(0), Source: at(1), Tokens: Number(at(2))})
 		}
 	}
 	if c.Max == 0 && len(c.Categories) == 0 {
