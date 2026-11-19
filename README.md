@@ -22,13 +22,23 @@
 
 <p align="center">
   <a href="https://github.com/catude/catude/actions/workflows/ci.yml"><img alt="Tests" src="https://github.com/catude/catude/actions/workflows/ci.yml/badge.svg"></a>
-  <a href="https://github.com/catude/catude/releases"><img alt="Latest release" src="https://img.shields.io/github/v/release/catude/catude?color=F59E0B"></a>
+  <a href="https://github.com/catude/catude/actions/workflows/codeql.yml"><img alt="CodeQL" src="https://github.com/catude/catude/actions/workflows/codeql.yml/badge.svg"></a>
+  <a href="https://github.com/catude/catude/releases"><img alt="Latest release" src="https://img.shields.io/github/v/release/catude/catude?color=D97757"></a>
+  <a href="#security-you-can-check"><img alt="Signed build provenance" src="https://img.shields.io/badge/releases-signed%20provenance-D97757"></a>
   <img alt="Windows, macOS, Linux, WSL" src="https://img.shields.io/badge/runs%20on-Windows%20%C2%B7%20macOS%20%C2%B7%20Linux%20%C2%B7%20WSL-informational">
-  <img alt="Single binary" src="https://img.shields.io/badge/single%20binary-no%20runtime-success">
   <img alt="No telemetry" src="https://img.shields.io/badge/telemetry-none-success">
   <img alt="10 languages" src="https://img.shields.io/badge/languages-10-blueviolet">
   <img alt="MIT" src="https://img.shields.io/badge/license-MIT-blue">
 </p>
+
+<p align="center"><img alt="TL;DR: catude why, switch things off per project, the agent map, the audit, one binary" src="assets/tldr.gif" width="900"></p>
+
+> **TL;DR**
+> - `catude why` tells you where your Claude Code tokens went: cache rebuilt after pauses, subagents, `claude -p`, the context before you type.
+> - `x` switches a skill or MCP server off for one project, with the settings Claude Code documents.
+> - The agent map shows which subagents run, who launches them and what they cost.
+> - The audit finds secrets in permission rules, `curl | sh`, hidden Unicode and 22 other risks in what you installed.
+> - One binary, no account, no telemetry, reads local files only. Windows, macOS, Linux, WSL.
 
 <p align="center"><img alt="catude: where the tokens went, the agent map, every file Claude reads and the live sessions" src="assets/demo.gif" width="900"></p>
 
@@ -167,23 +177,93 @@ public source it is based on, and catude shows that source before you apply anyt
 **Work profiles based on what practitioners published** (Profiles tab, `p`; `catude presets`). Only files under an
 open licence and pinned to a commit are installed; ideas without published files become a profile you complete.
 
-| Preset | The idea | Main sources |
-|---|---|---|
-| Armin Ronacher | Simple, observable tooling (Makefiles, logs, CLIs) over clever automation | [mitsuhiko/agent-stuff](https://github.com/mitsuhiko/agent-stuff), [lucumr.pocoo.org](https://lucumr.pocoo.org/2025/6/12/agentic-coding/) |
-| Boris Cherny | A mostly vanilla setup run in parallel; give Claude a way to verify its own work | [his threads on how the Claude Code team works](https://threadreaderapp.com/thread/2007179832300581177) |
-| Dex Horthy | The whole workflow built around managing context: research, plan, implement | [humanlayer/advanced-context-engineering-for-coding-agents](https://github.com/humanlayer/advanced-context-engineering-for-coding-agents/blob/main/ace-fca.md), [humanlayer/12-factor-agents](https://github.com/humanlayer/12-factor-agents) |
-| Geoffrey Huntley | The "Ralph" loop: the same prompt fed to a fresh agent until the work is done | [ghuntley.com/ralph](https://ghuntley.com/ralph/), [ghuntley/how-to-build-a-coding-agent](https://github.com/ghuntley/how-to-build-a-coding-agent) |
-| Harper Reed | Spec, then plan, then small test-driven steps | [harperreed/dotfiles](https://github.com/harperreed/dotfiles/tree/master/.claude), [harper.blog](https://harper.blog/2025/02/16/my-llm-codegen-workflow-atm/) |
-| IndyDevDan | Reusable prompts, subagents and hooks instead of vibe coding | [disler/claude-code-hooks-mastery](https://github.com/disler/claude-code-hooks-mastery) |
-| Jesse Vincent | Superpowers: mandatory skills for brainstorming, planning and TDD | [obra/superpowers](https://github.com/obra/superpowers), [blog.fsck.com](https://blog.fsck.com/2025/10/09/superpowers/) |
-| Kieran Klaassen | Compound engineering: every task makes the next one easier | [EveryInc/compound-engineering-plugin](https://github.com/EveryInc/compound-engineering-plugin) |
-| Lauren Tan | pstack: make one agent trustworthy on a whole problem before going wide | [cursor/plugins: pstack](https://github.com/cursor/plugins/tree/main/pstack) |
-| Matt Pocock | Small, composable skills that keep you in control | [mattpocock/skills](https://github.com/mattpocock/skills) |
-| Mitchell Hashimoto | Real agents, not chat; when an agent fails, fix the harness | [ghostty AGENTS.md](https://github.com/ghostty-org/ghostty/blob/main/AGENTS.md), [mitchellh.com](https://mitchellh.com/writing/my-ai-adoption-journey) |
-| Peter Steinberger | Short prompts, screenshots and many agents in parallel | [steipete/agent-scripts](https://github.com/steipete/agent-scripts), [steipete.me](https://steipete.me/posts/just-talk-to-it) |
-| Simon Willison | Agentic engineering patterns: spend the time saved on testing and review | [simonwillison.net](https://simonwillison.net/guides/agentic-engineering-patterns/) |
-| Steve Yegge | Beads: a dependency-aware issue graph as the agent's memory | [gastownhall/beads](https://github.com/gastownhall/beads) |
-| Thorsten Ball | An agent is an LLM, a loop and tools: brief it well | [ampcode.com](https://ampcode.com/how-to-build-an-agent) |
+<table>
+<tr>
+<td width="33%" valign="top"><pre> ███  ████ 
+█   █ █   █
+█████ ████ 
+█   █ █  █ 
+█   █ █   █</pre><b>Armin Ronacher</b><br><sub>Simple, observable tooling (Makefiles, logs, CLIs) over clever automation</sub><br><br><a href="https://github.com/mitsuhiko/agent-stuff">mitsuhiko/agent-stuff</a><br><a href="https://lucumr.pocoo.org/2025/6/12/agentic-coding/">lucumr.pocoo.org</a><br><br><code>catude profile load preset:armin-ronacher</code></td>
+<td width="33%" valign="top"><pre>████   ████
+█   █ █    
+████  █    
+█   █ █    
+████   ████</pre><b>Boris Cherny</b><br><sub>A mostly vanilla setup run in parallel; give Claude a way to verify its own work</sub><br><br><a href="https://threadreaderapp.com/thread/2007179832300581177">his threads on how the Claude Code team works</a><br><br><code>catude profile load preset:boris-cherny-claude-code</code></td>
+<td width="33%" valign="top"><pre>████  █   █
+█   █ █   █
+█   █ █████
+█   █ █   █
+████  █   █</pre><b>Dex Horthy</b><br><sub>The whole workflow built around managing context: research, plan, implement</sub><br><br><a href="https://github.com/humanlayer/advanced-context-engineering-for-coding-agents/blob/main/ace-fca.md">humanlayer/advanced-context-engineering-for-coding-agents</a><br><a href="https://github.com/humanlayer/12-factor-agents">humanlayer/12-factor-agents</a><br><br><code>catude profile load preset:dex-horthy</code></td>
+</tr>
+<tr>
+<td width="33%" valign="top"><pre> ████ █   █
+█     █   █
+█  ██ █████
+█   █ █   █
+ ████ █   █</pre><b>Geoffrey Huntley</b><br><sub>The "Ralph" loop: the same prompt fed to a fresh agent until the work is done</sub><br><br><a href="https://ghuntley.com/ralph/">ghuntley.com/ralph</a><br><a href="https://github.com/ghuntley/how-to-build-a-coding-agent">ghuntley/how-to-build-a-coding-agent</a><br><br><code>catude profile load preset:geoffrey-huntley-ralph</code></td>
+<td width="33%" valign="top"><pre>█   █ ████ 
+█   █ █   █
+█████ ████ 
+█   █ █  █ 
+█   █ █   █</pre><b>Harper Reed</b><br><sub>Spec, then plan, then small test-driven steps</sub><br><br><a href="https://github.com/harperreed/dotfiles/tree/master/.claude">harperreed/dotfiles</a><br><a href="https://harper.blog/2025/02/16/my-llm-codegen-workflow-atm/">harper.blog</a><br><br><code>catude profile load preset:harper-reed</code></td>
+<td width="33%" valign="top"><pre>█████
+  █  
+  █  
+  █  
+█████</pre><b>IndyDevDan</b><br><sub>Reusable prompts, subagents and hooks instead of vibe coding</sub><br><br><a href="https://github.com/disler/claude-code-hooks-mastery">disler/claude-code-hooks-mastery</a><br><br><code>catude profile load preset:indydevdan</code></td>
+</tr>
+<tr>
+<td width="33%" valign="top"><pre>  ███ █   █
+    █ █   █
+    █ █   █
+█   █  █ █ 
+ ███    █  </pre><b>Jesse Vincent</b><br><sub>Superpowers: mandatory skills for brainstorming, planning and TDD</sub><br><br><a href="https://github.com/obra/superpowers">obra/superpowers</a><br><a href="https://blog.fsck.com/2025/10/09/superpowers/">blog.fsck.com</a><br><br><code>catude profile load preset:jesse-vincent-superpowers</code></td>
+<td width="33%" valign="top"><pre>█   █ █   █
+█  █  █  █ 
+███   ███  
+█  █  █  █ 
+█   █ █   █</pre><b>Kieran Klaassen</b><br><sub>Compound engineering: every task makes the next one easier</sub><br><br><a href="https://github.com/EveryInc/compound-engineering-plugin">EveryInc/compound-engineering-plugin</a><br><br><code>catude profile load preset:kieran-klaassen-compound-engineering</code></td>
+<td width="33%" valign="top"><pre>█     █████
+█       █  
+█       █  
+█       █  
+█████   █  </pre><b>Lauren Tan</b><br><sub>pstack: make one agent trustworthy on a whole problem before going wide</sub><br><br><a href="https://github.com/cursor/plugins/tree/main/pstack">cursor/plugins: pstack</a><br><br><code>catude profile load preset:lauren-tan-pstack</code></td>
+</tr>
+<tr>
+<td width="33%" valign="top"><pre>█   █ ████ 
+██ ██ █   █
+█ █ █ ████ 
+█   █ █    
+█   █ █    </pre><b>Matt Pocock</b><br><sub>Small, composable skills that keep you in control</sub><br><br><a href="https://github.com/mattpocock/skills">mattpocock/skills</a><br><br><code>catude profile load preset:matt-pocock-skills</code></td>
+<td width="33%" valign="top"><pre>█   █ █   █
+██ ██ █   █
+█ █ █ █████
+█   █ █   █
+█   █ █   █</pre><b>Mitchell Hashimoto</b><br><sub>Real agents, not chat; when an agent fails, fix the harness</sub><br><br><a href="https://github.com/ghostty-org/ghostty/blob/main/AGENTS.md">ghostty AGENTS.md</a><br><a href="https://mitchellh.com/writing/my-ai-adoption-journey">mitchellh.com</a><br><br><code>catude profile load preset:mitchell-hashimoto</code></td>
+<td width="33%" valign="top"><pre>████   ████
+█   █ █    
+████   ███ 
+█         █
+█     ████ </pre><b>Peter Steinberger</b><br><sub>Short prompts, screenshots and many agents in parallel</sub><br><br><a href="https://github.com/steipete/agent-scripts">steipete/agent-scripts</a><br><a href="https://steipete.me/posts/just-talk-to-it">steipete.me</a><br><br><code>catude profile load preset:peter-steinberger</code></td>
+</tr>
+<tr>
+<td width="33%" valign="top"><pre> ████ █   █
+█     █   █
+ ███  █ █ █
+    █ ██ ██
+████  █   █</pre><b>Simon Willison</b><br><sub>Agentic engineering patterns: spend the time saved on testing and review</sub><br><br><a href="https://simonwillison.net/guides/agentic-engineering-patterns/">simonwillison.net</a><br><br><code>catude profile load preset:simon-willison-agentic-engineering</code></td>
+<td width="33%" valign="top"><pre> ████ █   █
+█      █ █ 
+ ███    █  
+    █   █  
+████    █  </pre><b>Steve Yegge</b><br><sub>Beads: a dependency-aware issue graph as the agent's memory</sub><br><br><a href="https://github.com/gastownhall/beads">gastownhall/beads</a><br><br><code>catude profile load preset:steve-yegge</code></td>
+<td width="33%" valign="top"><pre>█████ ████ 
+  █   █   █
+  █   ████ 
+  █   █   █
+  █   ████ </pre><b>Thorsten Ball</b><br><sub>An agent is an LLM, a loop and tools: brief it well</sub><br><br><a href="https://ampcode.com/how-to-build-an-agent">ampcode.com</a><br><br><code>catude profile load preset:thorsten-ball</code></td>
+</tr>
+</table>
 
 **30 configuration presets** (Config tab, `p`). Each one is a small group of documented settings for one goal, with
 the exact sentence of its source quoted next to it, and a preview of what it would change in your file:
@@ -293,7 +373,17 @@ Inside Claude Code: `/plugin install catude --marketplace catude/catude` adds `/
    `claude mcp`; per-project switches use the settings Anthropic documents.
 5. **Measured numbers.** When a number is an estimate (a cost at list prices), catude says so.
 
-[Security model](docs/security.md) · [Report a vulnerability](SECURITY.md)
+### Security you can check
+
+| | |
+|---|---|
+| **Every change is scanned** | [CodeQL](https://github.com/catude/catude/actions/workflows/codeql.yml) (code scanning), `govulncheck` (known vulnerabilities in Go and its dependencies) and `gitleaks` (secrets) run on every pull request and push, next to the tests on Windows, macOS and Linux ([ci.yml](.github/workflows/ci.yml)) |
+| **Protected main branch** | Changes arrive through pull requests that must pass every check; no force pushes |
+| **Dependencies kept current** | Dependabot opens updates for Go modules and GitHub Actions; releases are built with the latest Go and its security fixes |
+| **Verifiable downloads** | Every release has a `checksums.txt` and a signed build provenance attestation: `gh attestation verify catude_*.zip --repo catude/catude` proves a file was built here, from this source |
+| **Small surface** | One static binary, no runtime, no telemetry, no account; it goes online only for what you ask |
+
+[Security model](docs/security.md) · [Report a vulnerability](SECURITY.md) (privately, through GitHub)
 
 ## FAQ
 
