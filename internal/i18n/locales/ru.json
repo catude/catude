@@ -314,5 +314,6 @@
   "instruction files are not switched off here: edit or move the file": "файлы инструкций здесь не отключаются: измените или переместите файл",
   "not found among the installed skills and MCP servers (it may come from a plugin: use /plugin)": "не найдено среди установленных навыков и серверов MCP (возможно, это из плагина: используйте /plugin)",
   "r measures again": "r измерит снова",
-  "resets in %s": "сброс через %s"
+  "resets in %s": "сброс через %s",
+  "clay": "глиняный"
 }

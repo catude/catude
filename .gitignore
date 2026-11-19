@@ -8,3 +8,7 @@ snapshot.txt
 # private launch notes (strategy, not product)
 research/lanzamiento-*.md
 metrics.csv
+
+# documentation site build output (mkdocs build)
+site/
+__pycache__/

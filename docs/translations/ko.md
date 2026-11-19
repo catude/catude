@@ -123,7 +123,7 @@ Abbreviations used below:
 
 | English | Korean | Source | Exact string seen |
 |---|---|---|---|
-| token / tokens | 토큰 | CC-ko `prompt-caching` | 「[캐시된 토큰 요금](…)」 |
+| token / tokens | 토큰 | CC-ko `prompt-caching` | 「캐시된 토큰 요금」 |
 | prompt cache / cache | 프롬프트 캐시 / 캐시 | CC-ko `prompt-caching` | 「# Claude Code가 프롬프트 캐싱을 사용하는 방법」 |
 | invalidate the cache | 캐시를 무효화 | CC-ko `prompt-caching` | 「## 캐시를 무효화하는 작업」 |
 | cache writes / reads | 캐시 쓰기 / 캐시 읽기 | CC-ko `prompt-caching` | 「캐시 쓰기 요금이 더 낮은 5분 TTL」 (읽기 by analogy) |

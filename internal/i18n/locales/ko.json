@@ -314,5 +314,6 @@
   "instruction files are not switched off here: edit or move the file": "지침 파일은 여기서 끌 수 없습니다. 파일을 편집하거나 옮기세요",
   "not found among the installed skills and MCP servers (it may come from a plugin: use /plugin)": "설치된 스킬과 MCP 서버에서 찾을 수 없습니다 (플러그인에서 온 것일 수 있습니다: /plugin 사용)",
   "r measures again": "r 다시 측정",
-  "resets in %s": "%s 후 초기화"
+  "resets in %s": "%s 후 초기화",
+  "clay": "클레이"
 }

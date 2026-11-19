@@ -15,7 +15,7 @@
   <a href="#install"><b>Install</b></a> ·
   <a href="#what-it-answers">What it answers</a> ·
   <a href="#command-line">Command line</a> ·
-  <a href="docs/usage.md">Docs</a> ·
+  <a href="https://catude.github.io/catude/"><b>Docs</b></a> ·
   <a href="docs/security.md">Security</a> ·
   <a href="docs/comparison.md">Alternatives</a>
 </p>
@@ -118,7 +118,7 @@ curl -fsSL https://raw.githubusercontent.com/catude/catude/main/scripts/install.
 go install github.com/catude/catude/cmd/catude@latest
 ```
 
-Or download the archive for your system from [Releases](../../releases). The first run offers to install itself,
+Or download the archive for your system from [Releases](https://github.com/catude/catude/releases). The first run offers to install itself,
 with the answers already selected; `catude uninstall` removes it. Then:
 
 ```sh

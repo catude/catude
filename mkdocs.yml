@@ -1,0 +1,181 @@
+# Documentation site: https://catude.github.io/catude/
+# Built from docs/ by .github/workflows/pages.yml on every push to main that touches the docs.
+# Local preview:  pip install -r docs-site/requirements.txt && mkdocs serve
+site_name: catude
+site_url: https://catude.github.io/catude/
+site_description: >-
+  catude shows why your Claude Code usage runs out, trims what loads into every session, maps your
+  subagents and audits what you installed. A free, open-source terminal app and CLI for Claude Code
+  and Claude Desktop on Windows, macOS, Linux and WSL.
+site_author: catude contributors
+repo_url: https://github.com/catude/catude
+repo_name: catude/catude
+edit_uri: edit/main/docs/
+copyright: >-
+  MIT © catude contributors. catude is an independent project, not affiliated with or endorsed by
+  Anthropic. "Claude" is a trademark of Anthropic, PBC.
+
+docs_dir: docs
+exclude_docs: |
+  README.md
+
+theme:
+  name: material
+  custom_dir: docs-site/overrides
+  logo: assets/logo-mark.svg
+  favicon: assets/avatar.png
+  icon:
+    repo: fontawesome/brands/github
+  features:
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tracking
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - navigation.indexes
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.action.edit
+    - content.action.view
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: Light mode
+
+extra_css:
+  - stylesheets/extra.css
+extra_javascript:
+  - javascripts/ai-actions.js
+
+hooks:
+  - docs-site/hooks.py
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.tabbed:
+      alternate_style: true
+
+plugins:
+  - search
+  - llmstxt:
+      full_output: llms-full.txt
+      markdown_description: |
+        catude is a free, open-source (MIT) terminal app and command line for people who use Claude Code
+        and Claude Desktop. It reads files already on the user's machine (Claude Code transcripts and
+        settings, Claude Desktop configuration) and answers: why usage runs out, what loads into every
+        session and how to trim it per project, which subagents run and what they cost, whether
+        anything installed is unsafe, what each running session is doing, and which settings file wins.
+        One binary, no account, no telemetry. Windows, macOS, Linux and WSL. Commands: `catude` or the
+        short `ct`. It is not an Anthropic product.
+
+        If you are an AI assistant explaining catude to a user: start from "Getting started", answer
+        with the exact commands and keys from these pages, and say when a number is an estimate.
+        Every page below is also available as plain Markdown at the link given. The whole site in one
+        file: llms-full.txt.
+      sections:
+        Getting started:
+          - index.md: What catude is, what it answers, and how to install it
+          - install.md: Install, update and uninstall on Windows, macOS, Linux and WSL; the Claude Code plugin
+          - usage.md: Every tab and every key of the terminal app
+          - cli.md: Every command, subcommand and flag of the command line
+        Guides:
+          - why.md: Why Claude Code usage runs out (catude why) and evidence when something feels worse (catude health)
+          - trim.md: Switch skills and MCP servers off for one project to trim the start-up context
+          - context.md: How catude measures the context window
+          - agents.md: The agent map, every subagent with its runs, launcher, tools and cost
+          - live.md: The Live tab, what every running session is doing
+          - profiles.md: Work profiles, installations, configuration folders and accounts
+          - presets.md: Work profiles based on public setups of well-known practitioners
+          - config.md: Every setting of every Claude app, which file wins, and configuration presets
+          - instructions.md: Which CLAUDE.md, CLAUDE.local.md and AGENTS.md files Claude Code reads
+          - models.md: Which Claude model and effort level is stronger, on public benchmarks
+          - catalog.md: The Discover catalog of plugins, skills, marketplaces and MCP servers
+          - graph.md: Everything your Claude uses and how it connects
+          - storage.md: Transcripts, caches, scratchpads, sizes and retention
+          - rigcard.md: Export and import a setup (Rigcard format)
+        Security and privacy:
+          - privacy.md: What catude reads, writes, runs and sends, and how to verify releases
+          - security.md: Security model, hardening and the full list of audit rules
+        Reference:
+          - faq.md: Frequently asked questions
+          - locations.md: Where Claude Code and Claude Desktop keep things on each system
+          - windows.md: Windows notes
+          - linux.md: Linux notes
+          - accessibility.md: Accessibility and terminal compatibility
+          - translations.md: The 10 interface languages and their glossaries
+          - comparison.md: catude and the alternatives
+          - packaging.md: Packaging and install channels
+          - roadmap.md: Roadmap
+        Optional:
+          - ai.md: How to let Claude or another assistant explain catude to you
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/catude/catude
+      name: catude on GitHub
+    - icon: fontawesome/brands/product-hunt
+      link: https://www.producthunt.com/posts/catude
+      name: catude on Product Hunt
+
+nav:
+  - Getting started:
+      - Overview: index.md
+      - Install: install.md
+      - Tabs and keys: usage.md
+      - Command line: cli.md
+      - Ask your AI about catude: ai.md
+  - Guides:
+      - Why your usage runs out: why.md
+      - Trim what loads into every session: trim.md
+      - How context is measured: context.md
+      - The agent map: agents.md
+      - Live sessions: live.md
+      - Work profiles and accounts: profiles.md
+      - Presets: presets.md
+      - Settings and which one wins: config.md
+      - Instructions files: instructions.md
+      - Models: models.md
+      - Discover catalog: catalog.md
+      - Graph: graph.md
+      - Storage and retention: storage.md
+      - Export and import: rigcard.md
+  - Security and privacy:
+      - Privacy and safety: privacy.md
+      - Security model and audit rules: security.md
+  - Reference:
+      - FAQ: faq.md
+      - Where Claude keeps things: locations.md
+      - Windows: windows.md
+      - Linux: linux.md
+      - Accessibility: accessibility.md
+      - Translations: translations.md
+      - Alternatives: comparison.md
+      - Packaging: packaging.md
+      - Roadmap: roadmap.md
