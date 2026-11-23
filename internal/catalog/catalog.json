@@ -1,275 +1,275 @@
 {
- "generated": "2026-11-18",
+ "generated": "2026-11-23",
  "marketplaces": [
   {
    "name": "claude-plugins-official",
    "repo": "anthropics/claude-plugins-official",
    "add": "claude plugin marketplace add anthropics/claude-plugins-official",
-   "stars": 47542,
-   "stars_approx": true,
+   "stars": 48009,
    "license": "Apache-2.0",
    "description": "Anthropic official marketplace (~317 plugins). Added automatically on the first interactive session; add manually only on fresh machines/scripts. Anthropic plugins (code-review, commit-commands, feature-dev, security-guidance, frontend-design, skill-creator, LSP plugins...) plus partner plugins (GitHub, Playwright, Context7, Sentry, Linear, Figma, Supabase, Vercel, Stripe, Semgrep, SonarQube, superpowers, mattpocock-skills...). Auto-update on by default.",
    "official": true,
-   "url": "https://github.com/anthropics/claude-plugins-official"
+   "url": "https://github.com/anthropics/claude-plugins-official",
+   "pushed": "2026-11-23"
   },
   {
    "name": "claude-community",
    "repo": "anthropics/claude-plugins-community",
    "add": "claude plugin marketplace add anthropics/claude-plugins-community",
-   "stars": 4911,
-   "stars_approx": true,
+   "stars": 4941,
    "license": "Apache-2.0",
    "description": "Anthropic community marketplace (~2,280 third-party plugins submitted to Anthropic, read-only mirror). Install with @claude-community. Entries are pinned to commit SHAs. Auto-update off by default.",
    "official": true,
-   "url": "https://github.com/anthropics/claude-plugins-community"
+   "url": "https://github.com/anthropics/claude-plugins-community",
+   "pushed": "2026-11-23"
   },
   {
    "name": "anthropic-agent-skills",
    "repo": "anthropics/skills",
    "add": "claude plugin marketplace add anthropics/skills",
-   "stars": 196516,
-   "stars_approx": true,
+   "stars": 199153,
    "license": null,
    "description": "Anthropic Agent Skills repo as a marketplace: document-skills (docx, xlsx, pptx, pdf), example-skills (skill-creator, mcp-builder, frontend-design, webapp-testing, algorithmic-art...), claude-api, academy-guide, discernment-nudge.",
    "official": true,
-   "url": "https://github.com/anthropics/skills"
+   "url": "https://github.com/anthropics/skills",
+   "pushed": "2026-11-16"
   },
   {
    "name": "knowledge-work-plugins",
    "repo": "anthropics/knowledge-work-plugins",
    "add": "claude plugin marketplace add anthropics/knowledge-work-plugins",
-   "stars": 36381,
-   "stars_approx": true,
+   "stars": 36718,
    "license": "Apache-2.0",
    "description": "Anthropic plugins for knowledge workers (primarily Cowork, also Claude Code): productivity, enterprise-search, sales, finance, data, legal, marketing, customer-support, product-management, engineering, design, HR, plus partner plugins (~123). Auto-update off by default.",
    "official": true,
-   "url": "https://github.com/anthropics/knowledge-work-plugins"
+   "url": "https://github.com/anthropics/knowledge-work-plugins",
+   "pushed": "2026-11-22"
   },
   {
    "name": "claude-for-financial-services",
    "repo": "anthropics/financial-services",
    "add": "claude plugin marketplace add anthropics/financial-services",
-   "stars": 41362,
-   "stars_approx": true,
+   "stars": 41467,
    "license": "Apache-2.0",
    "description": "Anthropic financial-services plugins (19): financial-analysis, investment-banking, equity-research, private-equity, fund-admin, KYC screener, model builder, LSEG and S&P Global connectors. Repo was renamed from anthropics/financial-services-plugins.",
    "official": true,
-   "url": "https://github.com/anthropics/financial-services"
+   "url": "https://github.com/anthropics/financial-services",
+   "pushed": "2026-11-12"
   },
   {
    "name": "claude-for-legal",
    "repo": "anthropics/claude-for-legal",
    "add": "claude plugin marketplace add anthropics/claude-for-legal",
-   "stars": 10028,
-   "stars_approx": true,
+   "stars": 10071,
    "license": "Apache-2.0",
    "description": "Anthropic legal plugins (13): commercial, privacy, product, corporate, employment, regulatory, AI governance, litigation, IP, law-student, legal-clinic.",
    "official": true,
-   "url": "https://github.com/anthropics/claude-for-legal"
+   "url": "https://github.com/anthropics/claude-for-legal",
+   "pushed": "2026-11-21"
   },
   {
    "name": "superpowers-marketplace",
    "repo": "obra/superpowers-marketplace",
    "add": "claude plugin marketplace add obra/superpowers-marketplace",
-   "stars": 1329,
-   "stars_approx": true,
+   "stars": 1336,
    "license": "MIT",
    "description": "Jesse Vincent (obra) curated marketplace (10 plugins): superpowers (core skills: brainstorming, plans, TDD, systematic debugging, subagent-driven development), superpowers-chrome, elements-of-style, episodic-memory, superpowers-lab, superpowers-developing-for-claude-code, claude-session-driver, private-journal-mcp, double-shot-latte. superpowers is also in claude-plugins-official.",
    "official": false,
-   "url": "https://github.com/obra/superpowers-marketplace"
+   "url": "https://github.com/obra/superpowers-marketplace",
+   "pushed": "2026-11-22"
   },
   {
    "name": "mattpocock",
    "repo": "mattpocock/skills",
    "add": "claude plugin marketplace add mattpocock/skills",
-   "stars": 326503,
-   "stars_approx": true,
+   "stars": 330794,
    "license": "MIT",
    "description": "Matt Pocock \"Skills for Real Engineers\" as a single plugin (mattpocock-skills): grilling, to-spec/to-tickets, tdd, code-review, diagnosing-bugs, domain-modeling, codebase-design, handoff, writing-for-agents... Also available as mattpocock-skills@claude-plugins-official.",
    "official": false,
-   "url": "https://github.com/mattpocock/skills"
+   "url": "https://github.com/mattpocock/skills",
+   "pushed": "2026-11-19"
   },
   {
    "name": "cursor-plugins",
    "repo": "cursor/plugins",
    "add": "claude plugin marketplace add cursor/plugins",
-   "stars": 16787,
-   "stars_approx": true,
+   "stars": 18582,
    "license": null,
    "description": "Cursor official plugins repo, also a Claude Code marketplace: pstack (rigorous agent workflows \"if you want to go fast, go deep first\") and origin-apps. pstack upstream is backnotprop/pstack.",
    "official": false,
-   "url": "https://github.com/cursor/plugins"
+   "url": "https://github.com/cursor/plugins",
+   "pushed": "2026-11-22"
   },
   {
    "name": "trailofbits",
    "repo": "trailofbits/skills",
    "add": "claude plugin marketplace add trailofbits/skills",
-   "stars": 8247,
-   "stars_approx": true,
+   "stars": 8358,
    "license": "CC-BY-SA-4.0",
    "description": "Trail of Bits security skills (47 plugins): static-analysis (CodeQL/Semgrep/SARIF), differential-review, insecure-defaults, supply-chain-risk-auditor, variant-analysis, sharp-edges, property-based-testing, mutation-testing, semgrep-rule-creator, smart-contract auditing, yara-authoring... License CC-BY-SA-4.0.",
    "official": false,
-   "url": "https://github.com/trailofbits/skills"
+   "url": "https://github.com/trailofbits/skills",
+   "pushed": "2026-11-21"
   },
   {
    "name": "claude-code-workflows",
    "repo": "wshobson/agents",
    "add": "claude plugin marketplace add wshobson/agents",
-   "stars": 42612,
-   "stars_approx": true,
+   "stars": 42816,
    "license": "MIT",
    "description": "Seth Hobson agents/skills/commands collection (~94 plugins): tdd-workflows, comprehensive-review, security-scanning, unit-testing, code-documentation, kubernetes-operations, cicd-automation, cloud-infrastructure, data-engineering, incident-response, language packs (python-development, javascript-typescript...).",
    "official": false,
-   "url": "https://github.com/wshobson/agents"
+   "url": "https://github.com/wshobson/agents",
+   "pushed": "2026-11-23"
   },
   {
    "name": "compound-engineering-plugin",
    "repo": "EveryInc/compound-engineering-plugin",
    "add": "claude plugin marketplace add EveryInc/compound-engineering-plugin",
-   "stars": 26136,
-   "stars_approx": true,
+   "stars": 26204,
    "license": "MIT",
    "description": "Every Inc. Compound Engineering plugin: brainstorm, plan, work, review and \"compound\" learnings back into the repo with specialized agents.",
    "official": false,
-   "url": "https://github.com/EveryInc/compound-engineering-plugin"
+   "url": "https://github.com/EveryInc/compound-engineering-plugin",
+   "pushed": "2026-11-20"
   },
   {
    "name": "ecc",
    "repo": "affaan-m/ECC",
    "add": "claude plugin marketplace add affaan-m/ECC",
-   "stars": 305143,
-   "stars_approx": true,
+   "stars": 309175,
    "license": "MIT",
    "description": "Everything Claude Code (ECC) harness: one plugin with ~72 agents, ~327 skills, hooks, rules and install profiles. Very large; review before installing (context cost). Repo renamed from affaan-m/everything-claude-code.",
    "official": false,
-   "url": "https://github.com/affaan-m/ECC"
+   "url": "https://github.com/affaan-m/ECC",
+   "pushed": "2026-11-23"
   },
   {
    "name": "thedotmack",
    "repo": "thedotmack/claude-mem",
    "add": "claude plugin marketplace add thedotmack/claude-mem",
-   "stars": 117891,
-   "stars_approx": true,
+   "stars": 119150,
    "license": "Apache-2.0",
    "description": "claude-mem: persistent memory across sessions (hooks capture tool use, compress it and re-inject relevant context). Also cmem-pro (sends data to cmem.ai cloud).",
    "official": false,
-   "url": "https://github.com/thedotmack/claude-mem"
+   "url": "https://github.com/thedotmack/claude-mem",
+   "pushed": "2026-11-23"
   },
   {
    "name": "ui-ux-pro-max-skill",
    "repo": "nextlevelbuilder/ui-ux-pro-max-skill",
    "add": "claude plugin marketplace add nextlevelbuilder/ui-ux-pro-max-skill",
-   "stars": 150754,
-   "stars_approx": true,
+   "stars": 153000,
    "license": "MIT",
    "description": "UI/UX Pro Max design-intelligence skill: searchable styles, palettes, typography, charts and UX guidelines for React/Next.js/Vue/Svelte/SwiftUI/Flutter...",
    "official": false,
-   "url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill"
+   "url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
+   "pushed": "2026-11-23"
   },
   {
    "name": "voltagent-subagents",
    "repo": "VoltAgent/awesome-claude-code-subagents",
    "add": "claude plugin marketplace add VoltAgent/awesome-claude-code-subagents",
-   "stars": 26620,
-   "stars_approx": true,
+   "stars": 26737,
    "license": "MIT",
    "description": "100+ specialized subagents grouped in 10 plugins: voltagent-core-dev, -lang, -infra, -qa-sec, -data-ai, -dev-exp, -domains, -biz, -meta, -research.",
    "official": false,
-   "url": "https://github.com/VoltAgent/awesome-claude-code-subagents"
+   "url": "https://github.com/VoltAgent/awesome-claude-code-subagents",
+   "pushed": "2026-11-02"
   },
   {
    "name": "ruflo",
    "repo": "ruvnet/ruflo",
    "add": "claude plugin marketplace add ruvnet/ruflo",
-   "stars": 81936,
-   "stars_approx": true,
+   "stars": 82296,
    "license": "MIT",
    "description": "Ruflo (formerly claude-flow): multi-agent swarm orchestration, ~49 plugins (ruflo-core, swarm, rag-memory, security-audit, testgen, agentdb...). Heavy/opinionated; review before installing. Repo renamed from ruvnet/claude-flow.",
    "official": false,
-   "url": "https://github.com/ruvnet/ruflo"
+   "url": "https://github.com/ruvnet/ruflo",
+   "pushed": "2026-11-23"
   },
   {
    "name": "chrome-devtools-plugins",
    "repo": "ChromeDevTools/chrome-devtools-mcp",
    "add": "claude plugin marketplace add ChromeDevTools/chrome-devtools-mcp",
-   "stars": 57976,
-   "stars_approx": true,
+   "stars": 58908,
    "license": "Apache-2.0",
    "description": "Chrome DevTools team marketplace with one plugin (chrome-devtools-mcp) bundling the MCP server plus skills for performance traces, network, console and screenshots. Also in claude-plugins-official.",
    "official": false,
-   "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp"
+   "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+   "pushed": "2026-11-23"
   },
   {
    "name": "humanizer",
    "repo": "blader/humanizer",
    "add": "claude plugin marketplace add blader/humanizer",
-   "stars": 70216,
-   "stars_approx": true,
+   "stars": 72472,
    "license": "MIT",
    "description": "humanizer skill: rewrites AI-sounding text to remove typical signs of LLM writing without changing meaning.",
    "official": false,
-   "url": "https://github.com/blader/humanizer"
+   "url": "https://github.com/blader/humanizer",
+   "pushed": "2026-11-19"
   },
   {
    "name": "claude-hud",
    "repo": "jarrodwatts/claude-hud",
    "add": "claude plugin marketplace add jarrodwatts/claude-hud",
-   "stars": 29229,
-   "stars_approx": true,
+   "stars": 29292,
    "license": "MIT",
    "description": "claude-hud plugin: always-visible statusline with context usage, active tools, running agents and todo progress.",
    "official": false,
-   "url": "https://github.com/jarrodwatts/claude-hud"
+   "url": "https://github.com/jarrodwatts/claude-hud",
+   "pushed": "2026-11-20"
   },
   {
    "name": "planning-with-files",
    "repo": "OthmanAdi/planning-with-files",
    "add": "claude plugin marketplace add OthmanAdi/planning-with-files",
-   "stars": 28111,
-   "stars_approx": true,
+   "stars": 28197,
    "license": "MIT",
    "description": "Persistent markdown planning files with lifecycle hooks that re-inject plan context and recover after /clear or compaction.",
    "official": false,
-   "url": "https://github.com/OthmanAdi/planning-with-files"
+   "url": "https://github.com/OthmanAdi/planning-with-files",
+   "pushed": "2026-11-21"
   },
   {
    "name": "context-engineering-marketplace",
    "repo": "muratcankoylan/Agent-Skills-for-Context-Engineering",
    "add": "claude plugin marketplace add muratcankoylan/Agent-Skills-for-Context-Engineering",
-   "stars": 18369,
-   "stars_approx": true,
+   "stars": 18403,
    "license": "MIT",
    "description": "context-engineering plugin: skills on context fundamentals, degradation patterns, compression, multi-agent and harness engineering.",
    "official": false,
-   "url": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering"
+   "url": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering",
+   "pushed": "2026-11-21"
   },
   {
    "name": "playwright-skill",
    "repo": "lackeyjb/playwright-skill",
    "add": "claude plugin marketplace add lackeyjb/playwright-skill",
-   "stars": 3302,
-   "stars_approx": true,
+   "stars": 3314,
    "license": "MIT",
    "description": "Playwright browser-automation skill: Claude writes and runs custom Playwright scripts for testing pages and validating UX.",
    "official": false,
-   "url": "https://github.com/lackeyjb/playwright-skill"
+   "url": "https://github.com/lackeyjb/playwright-skill",
+   "pushed": "2026-11-01"
   },
   {
    "name": "claude-code-plugins-plus",
    "repo": "jeremylongshore/tons-of-skills-marketplace",
    "add": "claude plugin marketplace add jeremylongshore/tons-of-skills-marketplace",
-   "stars": 2925,
-   "stars_approx": true,
+   "stars": 2943,
    "license": "MIT",
    "description": "Very large community catalog (~428 plugins: API, DevOps, security, ML packs). Quality varies by plugin; review each one. Repo renamed from jeremylongshore/claude-code-plugins-plus-skills.",
    "official": false,
-   "url": "https://github.com/jeremylongshore/tons-of-skills-marketplace"
+   "url": "https://github.com/jeremylongshore/tons-of-skills-marketplace",
+   "pushed": "2026-11-22"
   },
   {
    "name": "skills",
    "repo": "microsoft/skills",
    "add": "claude plugin marketplace add microsoft/skills",
-   "stars": 3222,
+   "stars": 3237,
    "license": "MIT",
    "description": "Marketplace of microsoft/skills.",
    "official": false,
@@ -279,13 +279,14 @@
     "python",
     "typescript",
     "dotnet"
-   ]
+   ],
+   "pushed": "2026-11-20"
   },
   {
    "name": "gemini-skills",
    "repo": "google-gemini/gemini-skills",
    "add": "claude plugin marketplace add google-gemini/gemini-skills",
-   "stars": 4516,
+   "stars": 4546,
    "license": "Apache-2.0",
    "description": "Marketplace of google-gemini/gemini-skills.",
    "official": false,
@@ -294,13 +295,14 @@
     "ai-ml",
     "backend",
     "cloud"
-   ]
+   ],
+   "pushed": "2026-11-19"
   },
   {
    "name": "firebase",
    "repo": "firebase/agent-skills",
    "add": "claude plugin marketplace add firebase/agent-skills",
-   "stars": 519,
+   "stars": 525,
    "license": "Apache-2.0",
    "description": "Marketplace of firebase/agent-skills.",
    "official": false,
@@ -310,13 +312,14 @@
     "database",
     "auth",
     "mobile"
-   ]
+   ],
+   "pushed": "2026-11-09"
   },
   {
    "name": "dart-flutter",
    "repo": "flutter/agent-plugins",
    "add": "claude plugin marketplace add flutter/agent-plugins",
-   "stars": 3192,
+   "stars": 3201,
    "license": "BSD-3-Clause",
    "description": "Marketplace of flutter/agent-plugins.",
    "official": false,
@@ -325,13 +328,14 @@
     "mobile",
     "frontend",
     "testing"
-   ]
+   ],
+   "pushed": "2026-11-19"
   },
   {
    "name": "gsap-skills",
    "repo": "greensock/gsap-skills",
    "add": "claude plugin marketplace add greensock/gsap-skills",
-   "stars": 18686,
+   "stars": 18935,
    "license": "MIT",
    "description": "Marketplace of greensock/gsap-skills.",
    "official": false,
@@ -340,13 +344,14 @@
     "frontend",
     "design",
     "performance"
-   ]
+   ],
+   "pushed": "2026-07-29"
   },
   {
    "name": "obsidian-skills",
    "repo": "obsidianmd/obsidian-skills",
    "add": "claude plugin marketplace add obsidianmd/obsidian-skills",
-   "stars": 53151,
+   "stars": 53504,
    "license": "MIT",
    "description": "Marketplace of obsidianmd/obsidian-skills.",
    "official": false,
@@ -355,7 +360,8 @@
     "productivity",
     "docs",
     "writing"
-   ]
+   ],
+   "pushed": "2026-11-20"
   },
   {
    "name": "datadog-labs",
@@ -370,7 +376,8 @@
     "observability",
     "ai-ml",
     "debugging"
-   ]
+   ],
+   "pushed": "2026-11-20"
   },
   {
    "name": "brave-search",
@@ -385,13 +392,14 @@
     "web-data",
     "research",
     "ai-ml"
-   ]
+   ],
+   "pushed": "2026-11-19"
   },
   {
    "name": "firecrawl-skills",
    "repo": "firecrawl/skills",
    "add": "claude plugin marketplace add firecrawl/skills",
-   "stars": 159,
+   "stars": 167,
    "license": "ISC",
    "description": "Marketplace of firecrawl/skills.",
    "official": false,
@@ -400,7 +408,8 @@
     "web-data",
     "research",
     "backend"
-   ]
+   ],
+   "pushed": "2026-11-11"
   },
   {
    "name": "fal-community",
@@ -415,13 +424,14 @@
     "media",
     "ai-ml",
     "design"
-   ]
+   ],
+   "pushed": "2026-11-07"
   },
   {
    "name": "minimax-skills",
    "repo": "MiniMax-AI/skills",
    "add": "claude plugin marketplace add MiniMax-AI/skills",
-   "stars": 13868,
+   "stars": 13900,
    "license": "MIT",
    "description": "Marketplace of MiniMax-AI/skills.",
    "official": false,
@@ -430,13 +440,14 @@
     "frontend",
     "mobile",
     "documents"
-   ]
+   ],
+   "pushed": "2026-11-10"
   },
   {
    "name": "svelte",
    "repo": "sveltejs/ai-tools",
    "add": "claude plugin marketplace add sveltejs/ai-tools",
-   "stars": 342,
+   "stars": 344,
    "license": "MIT",
    "description": "Marketplace of sveltejs/ai-tools.",
    "official": false,
@@ -445,13 +456,14 @@
     "frontend",
     "typescript",
     "mcp"
-   ]
+   ],
+   "pushed": "2026-11-20"
   },
   {
    "name": "vue-skills",
    "repo": "vuejs-ai/skills",
    "add": "claude plugin marketplace add vuejs-ai/skills",
-   "stars": 3356,
+   "stars": 3367,
    "license": "MIT",
    "description": "Marketplace of vuejs-ai/skills.",
    "official": false,
@@ -460,13 +472,14 @@
     "frontend",
     "typescript",
     "testing"
-   ]
+   ],
+   "pushed": "2026-10-23"
   },
   {
    "name": "agent-browser",
    "repo": "vercel-labs/agent-browser",
    "add": "claude plugin marketplace add vercel-labs/agent-browser",
-   "stars": 52574,
+   "stars": 53484,
    "license": "Apache-2.0",
    "description": "Marketplace of vercel-labs/agent-browser.",
    "official": false,
@@ -475,13 +488,14 @@
     "browser",
     "testing",
     "web-data"
-   ]
+   ],
+   "pushed": "2026-11-23"
   },
   {
    "name": "addy-agent-skills",
    "repo": "addyosmani/agent-skills",
    "add": "claude plugin marketplace add addyosmani/agent-skills",
-   "stars": 118859,
+   "stars": 119857,
    "license": "MIT",
    "description": "Marketplace of addyosmani/agent-skills.",
    "official": false,
@@ -491,13 +505,14 @@
     "planning",
     "review",
     "testing"
-   ]
+   ],
+   "pushed": "2026-11-18"
   },
   {
    "name": "addy-web-quality-skills",
    "repo": "addyosmani/web-quality-skills",
    "add": "claude plugin marketplace add addyosmani/web-quality-skills",
-   "stars": 3106,
+   "stars": 3122,
    "license": "MIT",
    "description": "Marketplace of addyosmani/web-quality-skills.",
    "official": false,
@@ -506,13 +521,14 @@
     "frontend",
     "performance",
     "accessibility"
-   ]
+   ],
+   "pushed": "2026-08-24"
   },
   {
    "name": "marketingskills",
    "repo": "coreyhaines31/marketingskills",
    "add": "claude plugin marketplace add coreyhaines31/marketingskills",
-   "stars": 61175,
+   "stars": 62118,
    "license": "MIT",
    "description": "Marketplace of coreyhaines31/marketingskills.",
    "official": false,
@@ -521,13 +537,14 @@
     "marketing",
     "writing",
     "product"
-   ]
+   ],
+   "pushed": "2026-11-20"
   },
   {
    "name": "agricidaniel-claude-seo",
    "repo": "AgriciDaniel/claude-seo",
    "add": "claude plugin marketplace add AgriciDaniel/claude-seo",
-   "stars": 30588,
+   "stars": 31722,
    "license": "MIT",
    "description": "Marketplace of AgriciDaniel/claude-seo.",
    "official": false,
@@ -536,13 +553,14 @@
     "marketing",
     "web-data",
     "research"
-   ]
+   ],
+   "pushed": "2026-11-16"
   },
   {
    "name": "impeccable",
    "repo": "pbakaus/impeccable",
    "add": "claude plugin marketplace add pbakaus/impeccable",
-   "stars": 112693,
+   "stars": 115218,
    "license": "Apache-2.0",
    "description": "Marketplace of pbakaus/impeccable.",
    "official": false,
@@ -551,13 +569,14 @@
     "design",
     "frontend",
     "review"
-   ]
+   ],
+   "pushed": "2026-11-23"
   },
   {
    "name": "taste-skill",
    "repo": "Leonxlnx/taste-skill",
    "add": "claude plugin marketplace add Leonxlnx/taste-skill",
-   "stars": 118205,
+   "stars": 120311,
    "license": "MIT",
    "description": "Marketplace of Leonxlnx/taste-skill.",
    "official": false,
@@ -566,13 +585,14 @@
     "design",
     "frontend",
     "marketing"
-   ]
+   ],
+   "pushed": "2026-11-22"
   },
   {
    "name": "interface-design",
    "repo": "Dammyjay93/interface-design",
    "add": "claude plugin marketplace add Dammyjay93/interface-design",
-   "stars": 5998,
+   "stars": 6026,
    "license": "MIT",
    "description": "Marketplace of Dammyjay93/interface-design.",
    "official": false,
@@ -581,13 +601,14 @@
     "design",
     "frontend",
     "review"
-   ]
+   ],
+   "pushed": "2026-06-20"
   },
   {
    "name": "visual-explainer-marketplace",
    "repo": "nicobailon/visual-explainer",
    "add": "claude plugin marketplace add nicobailon/visual-explainer",
-   "stars": 11166,
+   "stars": 11229,
    "license": "MIT",
    "description": "Marketplace of nicobailon/visual-explainer.",
    "official": false,
@@ -596,13 +617,14 @@
     "docs",
     "design",
     "review"
-   ]
+   ],
+   "pushed": "2026-11-05"
   },
   {
    "name": "frontend-slides",
    "repo": "zarazhangrui/frontend-slides",
    "add": "claude plugin marketplace add zarazhangrui/frontend-slides",
-   "stars": 32531,
+   "stars": 32787,
    "license": "MIT",
    "description": "Marketplace of zarazhangrui/frontend-slides.",
    "official": false,
@@ -611,13 +633,14 @@
     "documents",
     "design",
     "frontend"
-   ]
+   ],
+   "pushed": "2026-06-23"
   },
   {
    "name": "caveman",
    "repo": "JuliusBrussee/caveman",
    "add": "claude plugin marketplace add JuliusBrussee/caveman",
-   "stars": 121235,
+   "stars": 122233,
    "license": "Apache-2.0",
    "description": "Marketplace of JuliusBrussee/caveman.",
    "official": false,
@@ -626,13 +649,14 @@
     "productivity",
     "performance",
     "meta"
-   ]
+   ],
+   "pushed": "2026-11-23"
   },
   {
    "name": "fullstack-dev-skills",
    "repo": "Jeffallan/claude-skills",
    "add": "claude plugin marketplace add Jeffallan/claude-skills",
-   "stars": 12438,
+   "stars": 12494,
    "license": "MIT",
    "description": "Marketplace of Jeffallan/claude-skills.",
    "official": false,
@@ -642,13 +666,14 @@
     "frontend",
     "devops",
     "architecture"
-   ]
+   ],
+   "pushed": "2026-11-23"
   },
   {
    "name": "claude-code-skills",
    "repo": "alirezarezvani/claude-skills",
    "add": "claude plugin marketplace add alirezarezvani/claude-skills",
-   "stars": 30054,
+   "stars": 30305,
    "license": "MIT",
    "description": "Marketplace of alirezarezvani/claude-skills.",
    "official": false,
@@ -658,13 +683,14 @@
     "marketing",
     "product",
     "backend"
-   ]
+   ],
+   "pushed": "2026-11-23"
   },
   {
    "name": "n8n-mcp-skills",
    "repo": "czlonkowski/n8n-skills",
    "add": "claude plugin marketplace add czlonkowski/n8n-skills",
-   "stars": 6670,
+   "stars": 6699,
    "license": "MIT",
    "description": "Marketplace of czlonkowski/n8n-skills.",
    "official": false,
@@ -673,13 +699,14 @@
     "productivity",
     "mcp",
     "backend"
-   ]
+   ],
+   "pushed": "2026-11-18"
   },
   {
    "name": "conorluddy",
    "repo": "conorluddy/ios-simulator-skill",
    "add": "claude plugin marketplace add conorluddy/ios-simulator-skill",
-   "stars": 1330,
+   "stars": 1335,
    "license": "MIT",
    "description": "Marketplace of conorluddy/ios-simulator-skill.",
    "official": false,
@@ -688,13 +715,14 @@
     "mobile",
     "testing",
     "accessibility"
-   ]
+   ],
+   "pushed": "2026-11-08"
   },
   {
    "name": "agent-toolkit",
    "repo": "softaworks/agent-toolkit",
    "add": "claude plugin marketplace add softaworks/agent-toolkit",
-   "stars": 2700,
+   "stars": 2709,
    "license": "MIT",
    "description": "Marketplace of softaworks/agent-toolkit.",
    "official": false,
@@ -704,13 +732,14 @@
     "writing",
     "productivity",
     "architecture"
-   ]
+   ],
+   "pushed": "2026-03-05"
   },
   {
    "name": "dev-browser-marketplace",
    "repo": "SawyerHood/dev-browser",
    "add": "claude plugin marketplace add SawyerHood/dev-browser",
-   "stars": 6740,
+   "stars": 6753,
    "license": "MIT",
    "description": "Marketplace of SawyerHood/dev-browser.",
    "official": false,
@@ -719,13 +748,14 @@
     "browser",
     "testing",
     "web-data"
-   ]
+   ],
+   "pushed": "2026-11-03"
   },
   {
    "name": "ai-skills",
    "repo": "sanjay3290/ai-skills",
    "add": "claude plugin marketplace add sanjay3290/ai-skills",
-   "stars": 457,
+   "stars": 459,
    "license": "Apache-2.0",
    "description": "Marketplace of sanjay3290/ai-skills.",
    "official": false,
@@ -734,7 +764,8 @@
     "productivity",
     "database",
     "research"
-   ]
+   ],
+   "pushed": "2026-11-02"
   }
  ],
  "skills": [
@@ -742,7 +773,7 @@
    "name": "anthropics/skills (collection)",
    "repo": "anthropics/skills",
    "path": "skills",
-   "stars": 196516,
+   "stars": 199153,
    "license": "Apache-2.0",
    "description": "Anthropic official Agent Skills: document skills (docx, xlsx, pptx, pdf) and examples (skill-creator, mcp-builder, frontend-design, webapp-testing...). Install as plugins from anthropic-agent-skills.",
    "category": "collection",
@@ -751,13 +782,14 @@
     "documents",
     "design",
     "meta"
-   ]
+   ],
+   "pushed": "2026-11-16"
   },
   {
    "name": "skill-creator",
    "repo": "anthropics/skills",
    "path": "skills/skill-creator",
-   "stars": 196516,
+   "stars": 199153,
    "license": null,
    "description": "Create, improve and evaluate skills (evals, description optimization). Also skill-creator@claude-plugins-official.",
    "category": "meta",
@@ -766,13 +798,14 @@
     "meta",
     "testing",
     "writing"
-   ]
+   ],
+   "pushed": "2026-11-16"
   },
   {
    "name": "frontend-design",
    "repo": "anthropics/skills",
    "path": "skills/frontend-design",
-   "stars": 196516,
+   "stars": 199153,
    "license": null,
    "description": "Distinctive, production-grade frontend interfaces that avoid generic AI aesthetics.",
    "category": "design",
@@ -780,13 +813,14 @@
    "tags": [
     "frontend",
     "design"
-   ]
+   ],
+   "pushed": "2026-11-16"
   },
   {
    "name": "mcp-builder",
    "repo": "anthropics/skills",
    "path": "skills/mcp-builder",
-   "stars": 196516,
+   "stars": 199153,
    "license": null,
    "description": "Guide for building high-quality MCP servers.",
    "category": "devtools",
@@ -795,13 +829,14 @@
     "mcp",
     "backend",
     "ai-ml"
-   ]
+   ],
+   "pushed": "2026-11-16"
   },
   {
    "name": "webapp-testing",
    "repo": "anthropics/skills",
    "path": "skills/webapp-testing",
-   "stars": 196516,
+   "stars": 199153,
    "license": null,
    "description": "Test local web apps with Playwright (screenshots, logs, interaction).",
    "category": "testing",
@@ -810,26 +845,28 @@
     "testing",
     "browser",
     "frontend"
-   ]
+   ],
+   "pushed": "2026-11-16"
   },
   {
    "name": "pdf",
    "repo": "anthropics/skills",
    "path": "skills/pdf",
-   "stars": 196516,
+   "stars": 199153,
    "license": null,
    "description": "Read, create, merge, split and fill PDF files.",
    "category": "docs",
    "url": "https://github.com/anthropics/skills/tree/main/skills/pdf",
    "tags": [
     "documents"
-   ]
+   ],
+   "pushed": "2026-11-16"
   },
   {
    "name": "docx",
    "repo": "anthropics/skills",
    "path": "skills/docx",
-   "stars": 196516,
+   "stars": 199153,
    "license": null,
    "description": "Create and edit Word documents incl. tracked changes.",
    "category": "docs",
@@ -837,13 +874,14 @@
    "tags": [
     "documents",
     "writing"
-   ]
+   ],
+   "pushed": "2026-11-16"
   },
   {
    "name": "xlsx",
    "repo": "anthropics/skills",
    "path": "skills/xlsx",
-   "stars": 196516,
+   "stars": 199153,
    "license": null,
    "description": "Create and edit spreadsheets with formulas and formatting.",
    "category": "data",
@@ -851,13 +889,14 @@
    "tags": [
     "documents",
     "data"
-   ]
+   ],
+   "pushed": "2026-11-16"
   },
   {
    "name": "pptx",
    "repo": "anthropics/skills",
    "path": "skills/pptx",
-   "stars": 196516,
+   "stars": 199153,
    "license": null,
    "description": "Create and edit PowerPoint decks.",
    "category": "docs",
@@ -865,13 +904,14 @@
    "tags": [
     "documents",
     "design"
-   ]
+   ],
+   "pushed": "2026-11-16"
   },
   {
    "name": "obra/superpowers (collection)",
    "repo": "obra/superpowers",
    "path": "skills",
-   "stars": 319067,
+   "stars": 324434,
    "license": "MIT",
    "description": "Agentic skills framework and methodology: brainstorm -> plan -> subagent-driven implementation with review, red/green TDD, systematic debugging.",
    "category": "collection",
@@ -881,13 +921,14 @@
     "tdd",
     "debugging",
     "planning"
-   ]
+   ],
+   "pushed": "2026-11-03"
   },
   {
    "name": "test-driven-development",
    "repo": "obra/superpowers",
    "path": "skills/test-driven-development",
-   "stars": 319067,
+   "stars": 324434,
    "license": "MIT",
    "description": "Strict RED/GREEN/REFACTOR TDD discipline.",
    "category": "testing",
@@ -896,13 +937,14 @@
     "tdd",
     "testing",
     "workflow"
-   ]
+   ],
+   "pushed": "2026-11-03"
   },
   {
    "name": "systematic-debugging",
    "repo": "obra/superpowers",
    "path": "skills/systematic-debugging",
-   "stars": 319067,
+   "stars": 324434,
    "license": "MIT",
    "description": "Root-cause-first debugging process.",
    "category": "debugging",
@@ -910,13 +952,14 @@
    "tags": [
     "debugging",
     "workflow"
-   ]
+   ],
+   "pushed": "2026-11-03"
   },
   {
    "name": "brainstorming",
    "repo": "obra/superpowers",
    "path": "skills/brainstorming",
-   "stars": 319067,
+   "stars": 324434,
    "license": "MIT",
    "description": "Refine an idea into a design through questions before any code.",
    "category": "workflow",
@@ -925,13 +968,14 @@
     "planning",
     "design",
     "workflow"
-   ]
+   ],
+   "pushed": "2026-11-03"
   },
   {
    "name": "writing-plans",
    "repo": "obra/superpowers",
    "path": "skills/writing-plans",
-   "stars": 319067,
+   "stars": 324434,
    "license": "MIT",
    "description": "Turn a design into a detailed, bite-sized implementation plan.",
    "category": "workflow",
@@ -939,13 +983,14 @@
    "tags": [
     "planning",
     "workflow"
-   ]
+   ],
+   "pushed": "2026-11-03"
   },
   {
    "name": "subagent-driven-development",
    "repo": "obra/superpowers",
    "path": "skills/subagent-driven-development",
-   "stars": 319067,
+   "stars": 324434,
    "license": "MIT",
    "description": "Dispatch each plan task to a fresh subagent and review it before continuing.",
    "category": "workflow",
@@ -953,13 +998,14 @@
    "tags": [
     "workflow",
     "review"
-   ]
+   ],
+   "pushed": "2026-11-03"
   },
   {
    "name": "requesting-code-review",
    "repo": "obra/superpowers",
    "path": "skills/requesting-code-review",
-   "stars": 319067,
+   "stars": 324434,
    "license": "MIT",
    "description": "Request an independent code review between tasks.",
    "category": "code-review",
@@ -967,13 +1013,14 @@
    "tags": [
     "review",
     "workflow"
-   ]
+   ],
+   "pushed": "2026-11-03"
   },
   {
    "name": "mattpocock/skills (collection)",
    "repo": "mattpocock/skills",
    "path": "skills",
-   "stars": 326503,
+   "stars": 330794,
    "license": "MIT",
    "description": "Matt Pocock \"Skills for Real Engineers\" (engineering + productivity skills).",
    "category": "collection",
@@ -983,13 +1030,14 @@
     "tdd",
     "review",
     "architecture"
-   ]
+   ],
+   "pushed": "2026-11-19"
   },
   {
    "name": "tdd",
    "repo": "mattpocock/skills",
    "path": "skills/engineering/tdd",
-   "stars": 326503,
+   "stars": 330794,
    "license": "MIT",
    "description": "Test-first red-green-refactor workflow with integration tests.",
    "category": "testing",
@@ -997,26 +1045,28 @@
    "tags": [
     "tdd",
     "testing"
-   ]
+   ],
+   "pushed": "2026-11-19"
   },
   {
    "name": "grilling",
    "repo": "mattpocock/skills",
    "path": "skills/productivity/grilling",
-   "stars": 326503,
+   "stars": 330794,
    "license": "MIT",
    "description": "Stress-test a plan by being interviewed relentlessly before building.",
    "category": "workflow",
    "url": "https://github.com/mattpocock/skills/tree/main/skills/productivity/grilling",
    "tags": [
     "planning"
-   ]
+   ],
+   "pushed": "2026-11-19"
   },
   {
    "name": "to-spec",
    "repo": "mattpocock/skills",
    "path": "skills/engineering/to-spec",
-   "stars": 326503,
+   "stars": 330794,
    "license": "MIT",
    "description": "Turn a conversation into a written spec.",
    "category": "workflow",
@@ -1024,13 +1074,14 @@
    "tags": [
     "planning",
     "docs"
-   ]
+   ],
+   "pushed": "2026-11-19"
   },
   {
    "name": "code-review",
    "repo": "mattpocock/skills",
    "path": "skills/engineering/code-review",
-   "stars": 326503,
+   "stars": 330794,
    "license": "MIT",
    "description": "Structured code review skill.",
    "category": "code-review",
@@ -1038,13 +1089,14 @@
    "tags": [
     "review",
     "git"
-   ]
+   ],
+   "pushed": "2026-11-19"
   },
   {
    "name": "diagnosing-bugs",
    "repo": "mattpocock/skills",
    "path": "skills/engineering/diagnosing-bugs",
-   "stars": 326503,
+   "stars": 330794,
    "license": "MIT",
    "description": "Systematic bug diagnosis.",
    "category": "debugging",
@@ -1052,26 +1104,28 @@
    "tags": [
     "debugging",
     "performance"
-   ]
+   ],
+   "pushed": "2026-11-19"
   },
   {
    "name": "codebase-design",
    "repo": "mattpocock/skills",
    "path": "skills/engineering/codebase-design",
-   "stars": 326503,
+   "stars": 330794,
    "license": "MIT",
    "description": "Deep-module vocabulary for designing interfaces and seams.",
    "category": "architecture",
    "url": "https://github.com/mattpocock/skills/tree/main/skills/engineering/codebase-design",
    "tags": [
     "architecture"
-   ]
+   ],
+   "pushed": "2026-11-19"
   },
   {
    "name": "domain-modeling",
    "repo": "mattpocock/skills",
    "path": "skills/engineering/domain-modeling",
-   "stars": 326503,
+   "stars": 330794,
    "license": "MIT",
    "description": "Build a domain model, glossary and ADRs.",
    "category": "architecture",
@@ -1079,13 +1133,14 @@
    "tags": [
     "architecture",
     "docs"
-   ]
+   ],
+   "pushed": "2026-11-19"
   },
   {
    "name": "trailofbits/skills (collection)",
    "repo": "trailofbits/skills",
    "path": "plugins",
-   "stars": 8247,
+   "stars": 8358,
    "license": "CC-BY-SA-4.0",
    "description": "Trail of Bits security research, vulnerability detection and audit skills (47 plugins).",
    "category": "security",
@@ -1094,13 +1149,14 @@
     "security",
     "review",
     "testing"
-   ]
+   ],
+   "pushed": "2026-11-21"
   },
   {
    "name": "static-analysis",
    "repo": "trailofbits/skills",
    "path": "plugins/static-analysis",
-   "stars": 8247,
+   "stars": 8358,
    "license": "CC-BY-SA-4.0",
    "description": "CodeQL, Semgrep and SARIF parsing toolkit.",
    "category": "security",
@@ -1108,13 +1164,14 @@
    "tags": [
     "security",
     "review"
-   ]
+   ],
+   "pushed": "2026-11-21"
   },
   {
    "name": "differential-review",
    "repo": "trailofbits/skills",
    "path": "plugins/differential-review",
-   "stars": 8247,
+   "stars": 8358,
    "license": "CC-BY-SA-4.0",
    "description": "Security-focused review of code changes with git history and blast-radius estimation.",
    "category": "security",
@@ -1123,13 +1180,14 @@
     "security",
     "review",
     "git"
-   ]
+   ],
+   "pushed": "2026-11-21"
   },
   {
    "name": "insecure-defaults",
    "repo": "trailofbits/skills",
    "path": "plugins/insecure-defaults",
-   "stars": 8247,
+   "stars": 8358,
    "license": "CC-BY-SA-4.0",
    "description": "Detect hardcoded credentials, fallback secrets and weak defaults.",
    "category": "security",
@@ -1137,13 +1195,14 @@
    "tags": [
     "security",
     "review"
-   ]
+   ],
+   "pushed": "2026-11-21"
   },
   {
    "name": "property-based-testing",
    "repo": "trailofbits/skills",
    "path": "plugins/property-based-testing",
-   "stars": 8247,
+   "stars": 8358,
    "license": "CC-BY-SA-4.0",
    "description": "Write and triage property-based tests (Hypothesis, fast-check, proptest, Echidna/Medusa).",
    "category": "testing",
@@ -1151,13 +1210,14 @@
    "tags": [
     "testing",
     "security"
-   ]
+   ],
+   "pushed": "2026-11-21"
   },
   {
    "name": "pstack",
    "repo": "backnotprop/pstack",
    "path": null,
-   "stars": 4398,
+   "stars": 4843,
    "license": "MIT",
    "description": "Skills and principles for rigorous AI-assisted engineering (architect, deslop, plan/execute...). Install: claude plugin install pstack@cursor-plugins or npx skills add backnotprop/pstack.",
    "category": "collection",
@@ -1166,13 +1226,14 @@
     "workflow",
     "planning",
     "review"
-   ]
+   ],
+   "pushed": "2026-11-20"
   },
   {
    "name": "vercel-labs/agent-skills",
    "repo": "vercel-labs/agent-skills",
    "path": "skills",
-   "stars": 34295,
+   "stars": 34768,
    "license": null,
    "description": "Vercel's official agent skills (react-best-practices, web design guidelines...). Install: npx skills add vercel-labs/agent-skills.",
    "category": "collection",
@@ -1181,13 +1242,14 @@
     "frontend",
     "performance",
     "design"
-   ]
+   ],
+   "pushed": "2026-11-20"
   },
   {
    "name": "react-best-practices",
    "repo": "vercel-labs/agent-skills",
    "path": "skills/react-best-practices",
-   "stars": 34295,
+   "stars": 34768,
    "license": null,
    "description": "React/Next.js performance best practices from Vercel.",
    "category": "frontend",
@@ -1196,13 +1258,14 @@
     "frontend",
     "performance",
     "typescript"
-   ]
+   ],
+   "pushed": "2026-11-20"
   },
   {
    "name": "ui-ux-pro-max",
    "repo": "nextlevelbuilder/ui-ux-pro-max-skill",
    "path": null,
-   "stars": 150754,
+   "stars": 153000,
    "license": "MIT",
    "description": "Design intelligence: searchable UI styles, palettes, font pairings, chart types and UX rules.",
    "category": "design",
@@ -1210,26 +1273,28 @@
    "tags": [
     "design",
     "frontend"
-   ]
+   ],
+   "pushed": "2026-11-23"
   },
   {
    "name": "humanizer",
    "repo": "blader/humanizer",
    "path": null,
-   "stars": 70216,
+   "stars": 72472,
    "license": "MIT",
    "description": "Remove signs of AI-generated writing from text.",
    "category": "docs",
    "url": "https://github.com/blader/humanizer",
    "tags": [
     "writing"
-   ]
+   ],
+   "pushed": "2026-11-19"
   },
   {
    "name": "playwright-skill",
    "repo": "lackeyjb/playwright-skill",
    "path": null,
-   "stars": 3302,
+   "stars": 3314,
    "license": "MIT",
    "description": "General-purpose Playwright browser automation via generated scripts.",
    "category": "testing",
@@ -1237,13 +1302,14 @@
    "tags": [
     "browser",
     "testing"
-   ]
+   ],
+   "pushed": "2026-11-01"
   },
   {
    "name": "scientific-agent-skills",
    "repo": "K-Dense-AI/scientific-agent-skills",
    "path": null,
-   "stars": 57567,
+   "stars": 58144,
    "license": "MIT",
    "description": "170+ scientific skills (bioinformatics, chemistry, data analysis, databases). Install: npx skills add K-Dense-AI/scientific-agent-skills. Renamed from claude-scientific-skills.",
    "category": "data",
@@ -1252,13 +1318,14 @@
     "science",
     "data",
     "research"
-   ]
+   ],
+   "pushed": "2026-11-16"
   },
   {
    "name": "context-engineering",
    "repo": "muratcankoylan/Agent-Skills-for-Context-Engineering",
    "path": null,
-   "stars": 18369,
+   "stars": 18403,
    "license": "MIT",
    "description": "Context-engineering and multi-agent architecture skills for building agent systems.",
    "category": "meta",
@@ -1266,13 +1333,14 @@
    "tags": [
     "ai-ml",
     "meta"
-   ]
+   ],
+   "pushed": "2026-11-21"
   },
   {
    "name": "planning-with-files",
    "repo": "OthmanAdi/planning-with-files",
    "path": null,
-   "stars": 28111,
+   "stars": 28197,
    "license": "MIT",
    "description": "File-based persistent planning that survives /clear and compaction.",
    "category": "workflow",
@@ -1280,13 +1348,14 @@
    "tags": [
     "planning",
     "productivity"
-   ]
+   ],
+   "pushed": "2026-11-21"
   },
   {
    "name": "algorithmic-art",
    "repo": "anthropics/skills",
    "path": "skills/algorithmic-art",
-   "stars": 197059,
+   "stars": 199153,
    "license": "Apache-2.0",
    "description": "Generates p5.js generative art with seeded randomness and adjustable parameters.",
    "category": "design",
@@ -1298,13 +1367,14 @@
    ],
    "publisher": "anthropic",
    "kind": "skill",
-   "install": "claude plugin install example-skills@anthropic-agent-skills"
+   "install": "claude plugin install example-skills@anthropic-agent-skills",
+   "pushed": "2026-11-16"
   },
   {
    "name": "canvas-design",
    "repo": "anthropics/skills",
    "path": "skills/canvas-design",
-   "stars": 197059,
+   "stars": 199153,
    "license": "Apache-2.0",
    "description": "Produces posters and other static visual pieces as PNG or PDF files from a written design philosophy.",
    "category": "design",
@@ -1316,13 +1386,14 @@
    ],
    "publisher": "anthropic",
    "kind": "skill",
-   "install": "claude plugin install example-skills@anthropic-agent-skills"
+   "install": "claude plugin install example-skills@anthropic-agent-skills",
+   "pushed": "2026-11-16"
   },
   {
    "name": "theme-factory",
    "repo": "anthropics/skills",
    "path": "skills/theme-factory",
-   "stars": 197059,
+   "stars": 199153,
    "license": "Apache-2.0",
    "description": "Applies one of ten preset color and font themes, or a new one, to slides, documents, reports and HTML pages.",
    "category": "design",
@@ -1334,13 +1405,14 @@
    ],
    "publisher": "anthropic",
    "kind": "skill",
-   "install": "claude plugin install example-skills@anthropic-agent-skills"
+   "install": "claude plugin install example-skills@anthropic-agent-skills",
+   "pushed": "2026-11-16"
   },
   {
    "name": "brand-guidelines",
    "repo": "anthropics/skills",
    "path": "skills/brand-guidelines",
-   "stars": 197059,
+   "stars": 199153,
    "license": "Apache-2.0",
    "description": "Applies Anthropic brand colors and typography to artifacts; useful as a template for encoding your own brand rules.",
    "category": "design",
@@ -1352,13 +1424,14 @@
    ],
    "publisher": "anthropic",
    "kind": "skill",
-   "install": "claude plugin install example-skills@anthropic-agent-skills"
+   "install": "claude plugin install example-skills@anthropic-agent-skills",
+   "pushed": "2026-11-16"
   },
   {
    "name": "internal-comms",
    "repo": "anthropics/skills",
    "path": "skills/internal-comms",
-   "stars": 197059,
+   "stars": 199153,
    "license": "Apache-2.0",
    "description": "Drafts internal communications such as status reports, leadership updates, newsletters and FAQs in set formats.",
    "category": "writing",
@@ -1370,13 +1443,14 @@
    ],
    "publisher": "anthropic",
    "kind": "skill",
-   "install": "claude plugin install example-skills@anthropic-agent-skills"
+   "install": "claude plugin install example-skills@anthropic-agent-skills",
+   "pushed": "2026-11-16"
   },
   {
    "name": "doc-coauthoring",
    "repo": "anthropics/skills",
    "path": "skills/doc-coauthoring",
-   "stars": 197059,
+   "stars": 199153,
    "license": "Apache-2.0",
    "description": "Guides a structured co-writing workflow for specs, proposals and decision documents, from context gathering to reader testing.",
    "category": "writing",
@@ -1388,13 +1462,14 @@
    ],
    "publisher": "anthropic",
    "kind": "skill",
-   "install": "claude plugin install example-skills@anthropic-agent-skills"
+   "install": "claude plugin install example-skills@anthropic-agent-skills",
+   "pushed": "2026-11-16"
   },
   {
    "name": "slack-gif-creator",
    "repo": "anthropics/skills",
    "path": "skills/slack-gif-creator",
-   "stars": 197059,
+   "stars": 199153,
    "license": "Apache-2.0",
    "description": "Creates animated GIFs sized and validated for Slack emoji and messages.",
    "category": "media",
@@ -1406,13 +1481,14 @@
    ],
    "publisher": "anthropic",
    "kind": "skill",
-   "install": "claude plugin install example-skills@anthropic-agent-skills"
+   "install": "claude plugin install example-skills@anthropic-agent-skills",
+   "pushed": "2026-11-16"
   },
   {
    "name": "web-artifacts-builder",
    "repo": "anthropics/skills",
    "path": "skills/web-artifacts-builder",
-   "stars": 197059,
+   "stars": 199153,
    "license": "Apache-2.0",
    "description": "Builds multi-component HTML artifacts with React, Tailwind CSS and shadcn/ui, bundled into a single file.",
    "category": "frontend",
@@ -1424,13 +1500,14 @@
    ],
    "publisher": "anthropic",
    "kind": "skill",
-   "install": "claude plugin install example-skills@anthropic-agent-skills"
+   "install": "claude plugin install example-skills@anthropic-agent-skills",
+   "pushed": "2026-11-16"
   },
   {
    "name": "using-git-worktrees",
    "repo": "obra/superpowers",
    "path": "skills/using-git-worktrees",
-   "stars": 319806,
+   "stars": 324434,
    "license": "MIT",
    "description": "Creates an isolated git worktree before feature work or plan execution, with checks on directory choice and safety.",
    "category": "git",
@@ -1442,13 +1519,14 @@
    ],
    "publisher": "community",
    "kind": "skill",
-   "install": "claude plugin install superpowers@claude-plugins-official"
+   "install": "claude plugin install superpowers@claude-plugins-official",
+   "pushed": "2026-11-03"
   },
   {
    "name": "executing-plans",
    "repo": "obra/superpowers",
    "path": "skills/executing-plans",
-   "stars": 319806,
+   "stars": 324434,
    "license": "MIT",
    "description": "Executes a written implementation plan in batches inside the current session, with review checkpoints between batches.",
    "category": "planning",
@@ -1460,13 +1538,14 @@
    ],
    "publisher": "community",
    "kind": "skill",
-   "install": "claude plugin install superpowers@claude-plugins-official"
+   "install": "claude plugin install superpowers@claude-plugins-official",
+   "pushed": "2026-11-03"
   },
   {
    "name": "finishing-a-development-branch",
    "repo": "obra/superpowers",
    "path": "skills/finishing-a-development-branch",
-   "stars": 319806,
+   "stars": 324434,
    "license": "MIT",
    "description": "Once tests pass, presents structured options to merge, open a PR or clean up the branch and worktree.",
    "category": "git",
@@ -1478,13 +1557,14 @@
    ],
    "publisher": "community",
    "kind": "skill",
-   "install": "claude plugin install superpowers@claude-plugins-official"
+   "install": "claude plugin install superpowers@claude-plugins-official",
+   "pushed": "2026-11-03"
   },
   {
    "name": "receiving-code-review",
    "repo": "obra/superpowers",
    "path": "skills/receiving-code-review",
-   "stars": 319806,
+   "stars": 324434,
    "license": "MIT",
    "description": "Makes the agent verify review feedback technically before applying it, instead of agreeing by default.",
    "category": "review",
@@ -1496,13 +1576,14 @@
    ],
    "publisher": "community",
    "kind": "skill",
-   "install": "claude plugin install superpowers@claude-plugins-official"
+   "install": "claude plugin install superpowers@claude-plugins-official",
+   "pushed": "2026-11-03"
   },
   {
    "name": "verification-before-completion",
    "repo": "obra/superpowers",
    "path": "skills/verification-before-completion",
-   "stars": 319806,
+   "stars": 324434,
    "license": "MIT",
    "description": "Requires running verification commands and reading their output before claiming work is fixed, complete or passing.",
    "category": "testing",
@@ -1514,13 +1595,14 @@
    ],
    "publisher": "community",
    "kind": "skill",
-   "install": "claude plugin install superpowers@claude-plugins-official"
+   "install": "claude plugin install superpowers@claude-plugins-official",
+   "pushed": "2026-11-03"
   },
   {
    "name": "dispatching-parallel-agents",
    "repo": "obra/superpowers",
    "path": "skills/dispatching-parallel-agents",
-   "stars": 319806,
+   "stars": 324434,
    "license": "MIT",
    "description": "Splits two or more independent problems across parallel subagents, one per problem domain.",
    "category": "workflow",
@@ -1532,13 +1614,14 @@
    ],
    "publisher": "community",
    "kind": "skill",
-   "install": "claude plugin install superpowers@claude-plugins-official"
+   "install": "claude plugin install superpowers@claude-plugins-official",
+   "pushed": "2026-11-03"
   },
   {
    "name": "writing-skills",
    "repo": "obra/superpowers",
    "path": "skills/writing-skills",
-   "stars": 319806,
+   "stars": 324434,
    "license": "MIT",
    "description": "Applies a test-first method to writing and editing skills, checking that a skill changes agent behavior before deploying it.",
    "category": "meta",
@@ -1550,13 +1633,14 @@
    ],
    "publisher": "community",
    "kind": "skill",
-   "install": "claude plugin install superpowers@claude-plugins-official"
+   "install": "claude plugin install superpowers@claude-plugins-official",
+   "pushed": "2026-11-03"
   },
   {
    "name": "to-tickets",
    "repo": "mattpocock/skills",
    "path": "skills/engineering/to-tickets",
-   "stars": 327258,
+   "stars": 330794,
    "license": "MIT",
    "description": "Breaks a plan or spec into thin end-to-end tickets with declared blocking dependencies and publishes them to the issue tracker.",
    "category": "planning",
@@ -1568,13 +1652,14 @@
    ],
    "publisher": "community",
    "kind": "skill",
-   "install": "claude plugin install mattpocock-skills@mattpocock"
+   "install": "claude plugin install mattpocock-skills@mattpocock",
+   "pushed": "2026-11-19"
   },
   {
    "name": "handoff",
    "repo": "mattpocock/skills",
    "path": "skills/productivity/handoff",
-   "stars": 327258,
+   "stars": 330794,
    "license": "MIT",
    "description": "Compacts the current conversation into a handoff document another agent can pick up.",
    "category": "productivity",
@@ -1586,13 +1671,14 @@
    ],
    "publisher": "community",
    "kind": "skill",
-   "install": "claude plugin install mattpocock-skills@mattpocock"
+   "install": "claude plugin install mattpocock-skills@mattpocock",
+   "pushed": "2026-11-19"
   },
   {
    "name": "writing-for-agents",
    "repo": "mattpocock/skills",
    "path": "skills/productivity/writing-for-agents",
-   "stars": 327258,
+   "stars": 330794,
    "license": "MIT",
    "description": "Guidance for writing documents aimed at agents, such as skills, AGENTS.md and CLAUDE.md.",
    "category": "meta",
@@ -1604,13 +1690,14 @@
    ],
    "publisher": "community",
    "kind": "skill",
-   "install": "claude plugin install mattpocock-skills@mattpocock"
+   "install": "claude plugin install mattpocock-skills@mattpocock",
+   "pushed": "2026-11-19"
   },
   {
    "name": "improve-codebase-architecture",
    "repo": "mattpocock/skills",
    "path": "skills/engineering/improve-codebase-architecture",
-   "stars": 327258,
+   "stars": 330794,
    "license": "MIT",
    "description": "Scans a codebase for places to deepen modules, presents them as an HTML report and then interviews you on the chosen one.",
    "category": "architecture",
@@ -1622,13 +1709,14 @@
    ],
    "publisher": "community",
    "kind": "skill",
-   "install": "claude plugin install mattpocock-skills@mattpocock"
+   "install": "claude plugin install mattpocock-skills@mattpocock",
+   "pushed": "2026-11-19"
   },
   {
    "name": "triage",
    "repo": "mattpocock/skills",
    "path": "skills/engineering/triage",
-   "stars": 327258,
+   "stars": 330794,
    "license": "MIT",
    "description": "Moves issues and external PRs through triage states, categorises and verifies them, and writes agent-ready briefs.",
    "category": "planning",
@@ -1640,13 +1728,14 @@
    ],
    "publisher": "community",
    "kind": "skill",
-   "install": "claude plugin install mattpocock-skills@mattpocock"
+   "install": "claude plugin install mattpocock-skills@mattpocock",
+   "pushed": "2026-11-19"
   },
   {
    "name": "git-guardrails-claude-code",
    "repo": "mattpocock/skills",
    "path": "skills/misc/git-guardrails-claude-code",
-   "stars": 327258,
+   "stars": 330794,
    "license": "MIT",
    "description": "Sets up Claude Code hooks that block dangerous git commands such as push, reset --hard, clean and branch -D.",
    "category": "git",
@@ -1658,13 +1747,14 @@
    ],
    "publisher": "community",
    "kind": "skill",
-   "install": "claude plugin install mattpocock-skills@mattpocock"
+   "install": "claude plugin install mattpocock-skills@mattpocock",
+   "pushed": "2026-11-19"
   },
   {
    "name": "grill-with-docs",
    "repo": "mattpocock/skills",
    "path": "skills/engineering/grill-with-docs",
-   "stars": 327258,
+   "stars": 330794,
    "license": "MIT",
    "description": "Interviews you hard about a plan or design while recording decisions as ADRs and glossary entries.",
    "category": "planning",
@@ -1676,13 +1766,14 @@
    ],
    "publisher": "community",
    "kind": "skill",
-   "install": "claude plugin install mattpocock-skills@mattpocock"
+   "install": "claude plugin install mattpocock-skills@mattpocock",
+   "pushed": "2026-11-19"
   },
   {
    "name": "sentry-skills",
    "repo": "getsentry/skills",
    "path": "skills",
-   "stars": 1179,
+   "stars": 1195,
    "license": "Apache-2.0",
    "description": "Skills Sentry engineers use day to day: commits, PR writing, code and security review, bug finding and skill authoring.",
    "category": "review",
@@ -1695,13 +1786,14 @@
    ],
    "publisher": "vendor",
    "kind": "collection",
-   "install": "claude plugin install sentry-skills@sentry-skills"
+   "install": "claude plugin install sentry-skills@sentry-skills",
+   "pushed": "2026-11-14"
   },
   {
    "name": "hashicorp-agent-skills",
    "repo": "hashicorp/agent-skills",
    "path": "",
-   "stars": 931,
+   "stars": 936,
    "license": "MPL-2.0",
    "description": "HashiCorp skills for Terraform (style guide, modules, providers, tests, stacks, policy) and Packer image builds.",
    "category": "infra",
@@ -1713,13 +1805,14 @@
    ],
    "publisher": "vendor",
    "kind": "collection",
-   "install": "claude plugin install terraform@hashicorp"
+   "install": "claude plugin install terraform@hashicorp",
+   "pushed": "2026-11-04"
   },
   {
    "name": "supabase-agent-skills",
    "repo": "supabase/agent-skills",
    "path": "skills",
-   "stars": 3102,
+   "stars": 3125,
    "license": "MIT",
    "description": "Supabase product skill and a Postgres best-practices skill for queries, schema design and configuration.",
    "category": "database",
@@ -1731,13 +1824,14 @@
    ],
    "publisher": "vendor",
    "kind": "collection",
-   "install": "claude plugin install postgres-best-practices@supabase-agent-skills"
+   "install": "claude plugin install postgres-best-practices@supabase-agent-skills",
+   "pushed": "2026-11-12"
   },
   {
    "name": "callstack-react-native",
    "repo": "callstackincubator/agent-skills",
    "path": "",
-   "stars": 1713,
+   "stars": 1717,
    "license": "MIT",
    "description": "Callstack React Native skills for performance, navigation, upgrades, library development, testing and native-to-RN migration.",
    "category": "mobile",
@@ -1749,13 +1843,14 @@
    ],
    "publisher": "vendor",
    "kind": "collection",
-   "install": "claude plugin install building-react-native-apps@callstack-agent-skills"
+   "install": "claude plugin install building-react-native-apps@callstack-agent-skills",
+   "pushed": "2026-10-08"
   },
   {
    "name": "microsoft-skills",
    "repo": "microsoft/skills",
    "path": "",
-   "stars": 3222,
+   "stars": 3237,
    "license": "MIT",
    "description": "Microsoft collection of Azure SDK skills for Python, .NET, TypeScript, Java and Rust, plus AKS, cost and a repository wiki generator.",
    "category": "cloud",
@@ -1768,13 +1863,14 @@
    ],
    "publisher": "vendor",
    "kind": "collection",
-   "install": null
+   "install": null,
+   "pushed": "2026-11-20"
   },
   {
    "name": "dotnet-skills",
    "repo": "dotnet/skills",
    "path": "",
-   "stars": 6270,
+   "stars": 6335,
    "license": "MIT",
    "description": ".NET team skills grouped into plugins for C#, ASP.NET Core, Blazor, EF Core, MSBuild, NuGet, testing, diagnostics and upgrades.",
    "category": "dotnet",
@@ -1786,13 +1882,14 @@
    ],
    "publisher": "vendor",
    "kind": "collection",
-   "install": "claude plugin install dotnet@dotnet-agent-skills"
+   "install": "claude plugin install dotnet@dotnet-agent-skills",
+   "pushed": "2026-11-22"
   },
   {
    "name": "stitch-skills",
    "repo": "google-labs-code/stitch-skills",
    "path": "",
-   "stars": 10310,
+   "stars": 12050,
    "license": "Apache-2.0",
    "description": "Google Labs skills around Stitch for generating designs, managing design systems and turning designs into React or shadcn/ui code.",
    "category": "design",
@@ -1804,13 +1901,14 @@
    ],
    "publisher": "vendor",
    "kind": "collection",
-   "install": null
+   "install": null,
+   "pushed": "2026-11-20"
   },
   {
    "name": "elastic-agent-skills",
    "repo": "elastic/agent-skills",
    "path": "",
-   "stars": 608,
+   "stars": 613,
    "license": "Apache-2.0",
    "description": "Elastic skills for Elasticsearch (ES|QL, ingest, index design), Kibana, Observability, Security and Elastic Cloud.",
    "category": "database",
@@ -1822,13 +1920,14 @@
    ],
    "publisher": "vendor",
    "kind": "collection",
-   "install": "claude plugin install elastic-elasticsearch@elastic-agent-skills"
+   "install": "claude plugin install elastic-elasticsearch@elastic-agent-skills",
+   "pushed": "2026-11-20"
   },
   {
    "name": "grafana-skills",
    "repo": "grafana/skills",
    "path": "",
-   "stars": 313,
+   "stars": 316,
    "license": "Apache-2.0",
    "description": "Grafana skills for dashboards, PromQL, alerting, the LGTM stack (Loki, Tempo, Mimir, Pyroscope), k6 load tests and plugins.",
    "category": "observability",
@@ -1840,7 +1939,8 @@
    ],
    "publisher": "vendor",
    "kind": "collection",
-   "install": "claude plugin install grafana-core@grafana-skills"
+   "install": "claude plugin install grafana-core@grafana-skills",
+   "pushed": "2026-11-22"
   },
   {
    "name": "pulumi-agent-skills",
@@ -1858,13 +1958,14 @@
    ],
    "publisher": "vendor",
    "kind": "collection",
-   "install": "claude plugin install pulumi@pulumi-agent-skills"
+   "install": "claude plugin install pulumi@pulumi-agent-skills",
+   "pushed": "2026-11-19"
   },
   {
    "name": "wordpress-agent-skills",
    "repo": "WordPress/agent-skills",
    "path": "",
-   "stars": 2385,
+   "stars": 2394,
    "license": "GPL-2.0-or-later",
    "description": "WordPress project skills for blocks, block themes, plugins, the Interactivity API, Playground, PHPStan and performance.",
    "category": "backend",
@@ -1876,13 +1977,14 @@
    ],
    "publisher": "vendor",
    "kind": "collection",
-   "install": null
+   "install": null,
+   "pushed": "2026-11-23"
   },
   {
    "name": "elevenlabs-skills",
    "repo": "elevenlabs/skills",
    "path": "",
-   "stars": 573,
+   "stars": 582,
    "license": "MIT",
    "description": "ElevenLabs skills for text to speech, speech to text, dubbing, music, sound effects and voice agents.",
    "category": "media",
@@ -1894,7 +1996,8 @@
    ],
    "publisher": "vendor",
    "kind": "collection",
-   "install": null
+   "install": null,
+   "pushed": "2026-11-18"
   },
   {
    "name": "prisma-skills",
@@ -1912,13 +2015,14 @@
    ],
    "publisher": "vendor",
    "kind": "collection",
-   "install": null
+   "install": null,
+   "pushed": "2026-11-10"
   },
   {
    "name": "playwright-cli",
    "repo": "microsoft/playwright-cli",
    "path": "skills/playwright-cli",
-   "stars": 15285,
+   "stars": 15397,
    "license": "Apache-2.0",
    "description": "Skill that teaches agents to drive a browser with the Playwright CLI, which uses fewer tokens than the Playwright MCP server.",
    "category": "browser",
@@ -1930,13 +2034,14 @@
    ],
    "publisher": "vendor",
    "kind": "skill",
-   "install": null
+   "install": null,
+   "pushed": "2026-11-18"
   },
   {
    "name": "gstack",
    "repo": "garrytan/gstack",
    "path": "",
-   "stars": 141985,
+   "stars": 142412,
    "license": "MIT",
    "description": "Garry Tan's opinionated set of role-based skills (CEO, eng manager, designer, reviewer, QA, release) that opens a real browser for QA; installed with its own setup script.",
    "category": "workflow",
@@ -1949,13 +2054,14 @@
    ],
    "publisher": "community",
    "kind": "collection",
-   "install": null
+   "install": null,
+   "pushed": "2026-11-23"
   },
   {
    "name": "pm-skills",
    "repo": "phuryn/pm-skills",
    "path": "",
-   "stars": 28140,
+   "stars": 28241,
    "license": "MIT",
    "description": "Product management skills split into plugins for discovery, strategy, execution (PRDs, OKRs, roadmaps), market research, analytics and go-to-market.",
    "category": "product",
@@ -1967,13 +2073,14 @@
    ],
    "publisher": "community",
    "kind": "collection",
-   "install": "claude plugin install pm-execution@pm-skills"
+   "install": "claude plugin install pm-execution@pm-skills",
+   "pushed": "2026-11-08"
   },
   {
    "name": "ui-skills",
    "repo": "ibelick/ui-skills",
    "path": "",
-   "stars": 11187,
+   "stars": 11331,
    "license": "MIT",
    "description": "Small UI skills to fix accessibility, metadata and motion performance, set a baseline UI and improve existing screens.",
    "category": "frontend",
@@ -1985,13 +2092,14 @@
    ],
    "publisher": "community",
    "kind": "collection",
-   "install": null
+   "install": null,
+   "pushed": "2026-11-21"
   },
   {
    "name": "context-engineering-kit",
    "repo": "NeoLabHQ/context-engineering-kit",
    "path": "",
-   "stars": 1840,
+   "stars": 1847,
    "license": "GPL-3.0",
    "description": "Thirteen plugins of commands and skills for reflection, spec-driven and subagent-driven development, TDD, review and git; GPL-3.0.",
    "category": "workflow",
@@ -2004,13 +2112,14 @@
    ],
    "publisher": "community",
    "kind": "collection",
-   "install": "claude plugin install reflexion@context-engineering-kit"
+   "install": "claude plugin install reflexion@context-engineering-kit",
+   "pushed": "2026-08-26"
   },
   {
    "name": "claude-code-skills",
    "repo": "alirezarezvani/claude-skills",
    "path": "",
-   "stars": 30054,
+   "stars": 30305,
    "license": "MIT",
    "description": "Very large multi-domain library (about 120 plugins) covering engineering, marketing, product, C-level advisory, compliance and regulated industries.",
    "category": "business",
@@ -2023,13 +2132,14 @@
    ],
    "publisher": "community",
    "kind": "collection",
-   "install": null
+   "install": null,
+   "pushed": "2026-11-23"
   },
   {
    "name": "wondelai-skills",
    "repo": "wondelai/skills",
    "path": "",
-   "stars": 2727,
+   "stars": 2769,
    "license": "MIT",
    "description": "Skills that apply frameworks from well-known books (Clean Code, DDIA, Lean Startup, Refactoring UI, Crossing the Chasm and others).",
    "category": "business",
@@ -2042,13 +2152,14 @@
    ],
    "publisher": "community",
    "kind": "collection",
-   "install": "claude plugin install code-craftsmanship@wondelai-skills"
+   "install": "claude plugin install code-craftsmanship@wondelai-skills",
+   "pushed": "2026-11-21"
   },
   {
    "name": "jezweb-skills",
    "repo": "jezweb/claude-skills",
    "path": "",
-   "stars": 1120,
+   "stars": 1126,
    "license": "MIT",
    "description": "Practical skills in ten plugins: Cloudflare apps, Tailwind and shadcn/ui frontends, design assets, WordPress, Shopify, writing and dev tools.",
    "category": "frontend",
@@ -2061,7 +2172,8 @@
    ],
    "publisher": "community",
    "kind": "collection",
-   "install": "claude plugin install dev-tools@jezweb-skills"
+   "install": "claude plugin install dev-tools@jezweb-skills",
+   "pushed": "2026-10-09"
   },
   {
    "name": "aws-skills",
@@ -2079,13 +2191,14 @@
    ],
    "publisher": "community",
    "kind": "collection",
-   "install": "claude plugin install aws-iac@aws-skills"
+   "install": "claude plugin install aws-iac@aws-skills",
+   "pushed": "2026-06-15"
   },
   {
    "name": "posit-dev-skills",
    "repo": "posit-dev/skills",
    "path": "",
-   "stars": 568,
+   "stars": 574,
    "license": "MIT",
    "description": "Posit skills for R package development, Shiny apps, Quarto documents, ggsql and Posit Connect deployment.",
    "category": "data",
@@ -2097,13 +2210,14 @@
    ],
    "publisher": "vendor",
    "kind": "collection",
-   "install": "claude plugin install shiny@posit-dev-skills"
+   "install": "claude plugin install shiny@posit-dev-skills",
+   "pushed": "2026-11-12"
   },
   {
    "name": "agent-toolkit",
    "repo": "softaworks/agent-toolkit",
    "path": "",
-   "stars": 2700,
+   "stars": 2709,
    "license": "MIT",
    "description": "Collection of standalone skills for READMEs, C4 and Mermaid diagrams, commit messages, meeting updates and handoff documents.",
    "category": "docs",
@@ -2116,13 +2230,14 @@
    ],
    "publisher": "community",
    "kind": "collection",
-   "install": null
+   "install": null,
+   "pushed": "2026-03-05"
   },
   {
    "name": "antfu-skills",
    "repo": "antfu/skills",
    "path": "",
-   "stars": 6086,
+   "stars": 6092,
    "license": "MIT",
    "description": "Anthony Fu's skills for Vue, Nuxt, Vite, Vitepress, UnoCSS, Pinia and pnpm, plus his own PR and triage conventions.",
    "category": "frontend",
@@ -2134,13 +2249,14 @@
    ],
    "publisher": "community",
    "kind": "collection",
-   "install": null
+   "install": null,
+   "pushed": "2026-11-16"
   },
   {
    "name": "mcollina-skills",
    "repo": "mcollina/skills",
    "path": "",
-   "stars": 1972,
+   "stars": 1981,
    "license": "MIT",
    "description": "Matteo Collina's skills for Node.js core, Fastify, TypeScript typing, linting and OAuth.",
    "category": "backend",
@@ -2152,13 +2268,14 @@
    ],
    "publisher": "community",
    "kind": "collection",
-   "install": null
+   "install": null,
+   "pushed": "2026-11-16"
   },
   {
    "name": "bmad-method",
    "repo": "bmad-code-org/BMAD-METHOD",
    "path": "",
-   "stars": 55509,
+   "stars": 55636,
    "license": "MIT",
    "description": "Agile planning framework with analyst, PM, architect and developer agent skills; installed with its own npx installer.",
    "category": "planning",
@@ -2170,13 +2287,14 @@
    ],
    "publisher": "community",
    "kind": "collection",
-   "install": null
+   "install": null,
+   "pushed": "2026-11-23"
   },
   {
    "name": "lambdatest-agent-skills",
    "repo": "LambdaTest/agent-skills",
    "path": "",
-   "stars": 392,
+   "stars": 394,
    "license": "MIT",
    "description": "TestMu AI (LambdaTest) skills for test frameworks (Playwright, Selenium, Appium, Cypress and others), API testing and migrations.",
    "category": "testing",
@@ -2188,13 +2306,14 @@
    ],
    "publisher": "vendor",
    "kind": "collection",
-   "install": null
+   "install": null,
+   "pushed": "2026-11-17"
   },
   {
    "name": "security-audit",
    "repo": "cloudflare/security-audit-skill",
    "path": "",
-   "stars": 75182,
+   "stars": 77227,
    "license": "MIT",
    "description": "Cloudflare defensive security review workflow that looks for vulnerabilities crossing real trust boundaries and proposes minimal fixes.",
    "category": "security",
@@ -2206,7 +2325,8 @@
    ],
    "publisher": "vendor",
    "kind": "skill",
-   "install": null
+   "install": null,
+   "pushed": "2026-09-14"
   }
  ],
  "plugins": [
@@ -5073,74 +5193,83 @@
   {
    "name": "ccusage",
    "repo": "ccusage/ccusage",
-   "stars": 19467,
+   "stars": 19551,
    "kind": "usage-cost",
    "description": "CLI that analyzes local Claude Code JSONL logs: daily/monthly/session/5-hour-block token usage and cost. Run: npx ccusage@20.0.51 (repo moved from ryoppippi/ccusage).",
-   "url": "https://github.com/ccusage/ccusage"
+   "url": "https://github.com/ccusage/ccusage",
+   "pushed": "2026-11-23"
   },
   {
    "name": "Claude-Code-Usage-Monitor",
    "repo": "Maciek-roboblog/Claude-Code-Usage-Monitor",
-   "stars": 8807,
+   "stars": 8816,
    "kind": "usage-cost",
    "description": "Real-time terminal usage monitor with burn rate, predictions and limit warnings. Install: uv tool install claude-monitor.",
-   "url": "https://github.com/Maciek-roboblog/Claude-Code-Usage-Monitor"
+   "url": "https://github.com/Maciek-roboblog/Claude-Code-Usage-Monitor",
+   "pushed": "2026-07-05"
   },
   {
    "name": "CodexBar",
    "repo": "steipete/CodexBar",
-   "stars": 23193,
+   "stars": 23291,
    "kind": "usage-cost",
    "description": "macOS menu-bar app showing Claude Code and Codex usage limits without logging in.",
-   "url": "https://github.com/steipete/CodexBar"
+   "url": "https://github.com/steipete/CodexBar",
+   "pushed": "2026-11-21"
   },
   {
    "name": "ccstatusline",
    "repo": "sirmalloc/ccstatusline",
-   "stars": 13617,
+   "stars": 13670,
    "kind": "statusline",
    "description": "Highly customizable statusline (powerline, themes, model, context, git, cost). Run: npx ccstatusline@2.2.34.",
-   "url": "https://github.com/sirmalloc/ccstatusline"
+   "url": "https://github.com/sirmalloc/ccstatusline",
+   "pushed": "2026-11-16"
   },
   {
    "name": "claude-hud",
    "repo": "jarrodwatts/claude-hud",
-   "stars": 29229,
+   "stars": 29292,
    "kind": "statusline",
    "description": "Plugin statusline with context usage, active tools, running agents, todos. claude plugin install claude-hud@claude-hud.",
-   "url": "https://github.com/jarrodwatts/claude-hud"
+   "url": "https://github.com/jarrodwatts/claude-hud",
+   "pushed": "2026-11-20"
   },
   {
    "name": "claude-powerline",
    "repo": "Owloops/claude-powerline",
-   "stars": 1180,
+   "stars": 1181,
    "kind": "statusline",
    "description": "Vim-style powerline statusline (npm @owloops/claude-powerline).",
-   "url": "https://github.com/Owloops/claude-powerline"
+   "url": "https://github.com/Owloops/claude-powerline",
+   "pushed": "2026-11-22"
   },
   {
    "name": "claude-swap",
    "repo": "realiti4/claude-swap",
-   "stars": 4783,
+   "stars": 4914,
    "kind": "account-switcher",
    "description": "Multi-account switcher for Claude Code (also VS Code ext): cswap add / cswap switch, rate-limit-aware rotation (--strategy), usage dashboard, parallel sessions. Install: uv tool install claude-swap (or pipx). Python 3.12+. Handles OAuth credentials locally: review before use.",
-   "url": "https://github.com/realiti4/claude-swap"
+   "url": "https://github.com/realiti4/claude-swap",
+   "pushed": "2026-11-21"
   },
   {
    "name": "claude-squad",
    "repo": "smtg-ai/claude-squad",
-   "stars": 8822,
+   "stars": 8851,
    "kind": "session-manager",
    "description": "TUI to run many Claude Code/Codex/OpenCode/Amp agents in tmux + git worktrees.",
-   "url": "https://github.com/smtg-ai/claude-squad"
+   "url": "https://github.com/smtg-ai/claude-squad",
+   "pushed": "2026-11-13"
   },
   {
    "name": "ccmanager",
    "repo": "kbwo/ccmanager",
-   "stars": 1279,
+   "stars": 1280,
    "kind": "session-manager",
    "description": "Session manager for Claude Code and other agent CLIs across git worktrees (npm ccmanager).",
-   "url": "https://github.com/kbwo/ccmanager"
+   "url": "https://github.com/kbwo/ccmanager",
+   "pushed": "2026-10-27"
   },
   {
    "name": "Crystal / Nimbalyst",
@@ -5148,47 +5277,53 @@
    "stars": 3128,
    "kind": "session-manager",
    "description": "Desktop app running parallel Claude Code/Codex sessions in worktrees (Crystal is now Nimbalyst).",
-   "url": "https://github.com/stravu/crystal"
+   "url": "https://github.com/stravu/crystal",
+   "pushed": "2026-02-26"
   },
   {
    "name": "opcode",
    "repo": "winfunc/opcode",
-   "stars": 22450,
+   "stars": 22461,
    "kind": "gui",
    "description": "Desktop GUI/toolkit for Claude Code: custom agents, interactive sessions, background agents, usage analytics (formerly Claudia).",
-   "url": "https://github.com/winfunc/opcode"
+   "url": "https://github.com/winfunc/opcode",
+   "pushed": "2026-11-06"
   },
   {
    "name": "CloudCLI (claudecodeui)",
    "repo": "siteboon/claudecodeui",
-   "stars": 14660,
+   "stars": 14732,
    "kind": "gui",
    "description": "Web/mobile UI for Claude Code, Codex, Cursor CLI and OpenCode sessions.",
-   "url": "https://github.com/siteboon/claudecodeui"
+   "url": "https://github.com/siteboon/claudecodeui",
+   "pushed": "2026-11-19"
   },
   {
    "name": "claude-code-viewer",
    "repo": "d-kimuson/claude-code-viewer",
-   "stars": 1306,
+   "stars": 1305,
    "kind": "gui",
    "description": "Web client to browse and continue Claude Code projects/sessions.",
-   "url": "https://github.com/d-kimuson/claude-code-viewer"
+   "url": "https://github.com/d-kimuson/claude-code-viewer",
+   "pushed": "2026-08-18"
   },
   {
    "name": "happy",
    "repo": "slopus/happy",
-   "stars": 24677,
+   "stars": 24769,
    "kind": "mobile",
    "description": "Open-source mobile/desktop client to drive Claude Code/Codex sessions remotely, reusing your subscriptions.",
-   "url": "https://github.com/slopus/happy"
+   "url": "https://github.com/slopus/happy",
+   "pushed": "2026-11-22"
   },
   {
    "name": "claudecode.nvim",
    "repo": "coder/claudecode.nvim",
-   "stars": 3159,
+   "stars": 3163,
    "kind": "editor",
    "description": "Neovim IDE integration implementing the Claude Code IDE protocol (by Coder).",
-   "url": "https://github.com/coder/claudecode.nvim"
+   "url": "https://github.com/coder/claudecode.nvim",
+   "pushed": "2026-11-16"
   },
   {
    "name": "claude-code-ide.el",
@@ -5196,119 +5331,134 @@
    "stars": 1689,
    "kind": "editor",
    "description": "Emacs integration for Claude Code with MCP-based IDE tools.",
-   "url": "https://github.com/manzaltu/claude-code-ide.el"
+   "url": "https://github.com/manzaltu/claude-code-ide.el",
+   "pushed": "2026-11-20"
   },
   {
    "name": "claude-agent-acp",
    "repo": "agentclientprotocol/claude-agent-acp",
-   "stars": 2785,
+   "stars": 2803,
    "kind": "editor",
    "description": "Agent Client Protocol adapter to use Claude Agent SDK/Claude Code from ACP clients such as Zed (moved from zed-industries/claude-code-acp).",
-   "url": "https://github.com/agentclientprotocol/claude-agent-acp"
+   "url": "https://github.com/agentclientprotocol/claude-agent-acp",
+   "pushed": "2026-11-23"
   },
   {
    "name": "claude-code-router",
    "repo": "musistudio/claude-code-router",
-   "stars": 38203,
+   "stars": 38327,
    "kind": "router",
    "description": "Local proxy to route Claude Code requests to other model providers.",
-   "url": "https://github.com/musistudio/claude-code-router"
+   "url": "https://github.com/musistudio/claude-code-router",
+   "pushed": "2026-11-21"
   },
   {
    "name": "tweakcc",
    "repo": "Piebald-AI/tweakcc",
-   "stars": 2616,
+   "stars": 2619,
    "kind": "customization",
    "description": "Customize Claude Code system prompts, toolsets, themes, spinners (patches the install; unofficial).",
-   "url": "https://github.com/Piebald-AI/tweakcc"
+   "url": "https://github.com/Piebald-AI/tweakcc",
+   "pushed": "2026-11-21"
   },
   {
    "name": "rtk",
    "repo": "rtk-ai/rtk",
-   "stars": 86885,
+   "stars": 87532,
    "kind": "token-optimization",
    "description": "Rust CLI proxy that compresses output of common dev commands to cut token usage.",
-   "url": "https://github.com/rtk-ai/rtk"
+   "url": "https://github.com/rtk-ai/rtk",
+   "pushed": "2026-11-23"
   },
   {
    "name": "claude-mem",
    "repo": "thedotmack/claude-mem",
-   "stars": 117891,
+   "stars": 119150,
    "kind": "memory",
    "description": "Persistent cross-session memory plugin (claude plugin install claude-mem@thedotmack).",
-   "url": "https://github.com/thedotmack/claude-mem"
+   "url": "https://github.com/thedotmack/claude-mem",
+   "pushed": "2026-11-23"
   },
   {
    "name": "claude-code-templates (aitmpl)",
    "repo": "davila7/claude-code-templates",
-   "stars": 33908,
+   "stars": 34115,
    "kind": "registry",
    "description": "Registry + CLI of agents, commands, skills, hooks, MCPs and settings; analytics and health-check. Run: npx claude-code-templates@latest. Not a /plugin marketplace repo (no root .claude-plugin/marketplace.json).",
-   "url": "https://github.com/davila7/claude-code-templates"
+   "url": "https://github.com/davila7/claude-code-templates",
+   "pushed": "2026-11-23"
   },
   {
    "name": "rulesync",
    "repo": "dyoshikawa/rulesync",
-   "stars": 1622,
+   "stars": 1638,
    "kind": "config-sync",
    "description": "Generate/sync rules, MCP and commands config across Claude Code, Cursor, Copilot and other agents.",
-   "url": "https://github.com/dyoshikawa/rulesync"
+   "url": "https://github.com/dyoshikawa/rulesync",
+   "pushed": "2026-11-23"
   },
   {
    "name": "claude-code-action",
    "repo": "anthropics/claude-code-action",
-   "stars": 9991,
+   "stars": 10053,
    "kind": "ci",
    "description": "Official GitHub Action to run Claude Code on PRs/issues (@claude mentions, automation).",
-   "url": "https://github.com/anthropics/claude-code-action"
+   "url": "https://github.com/anthropics/claude-code-action",
+   "pushed": "2026-11-21"
   },
   {
    "name": "claude-code-security-review",
    "repo": "anthropics/claude-code-security-review",
-   "stars": 6975,
+   "stars": 7060,
    "kind": "ci",
    "description": "Official GitHub Action for AI security review of PR diffs.",
-   "url": "https://github.com/anthropics/claude-code-security-review"
+   "url": "https://github.com/anthropics/claude-code-security-review",
+   "pushed": "2026-02-11"
   },
   {
    "name": "claude-code-hooks-mastery",
    "repo": "disler/claude-code-hooks-mastery",
-   "stars": 3987,
+   "stars": 3992,
    "kind": "reference",
    "description": "Worked examples of every Claude Code hook event.",
-   "url": "https://github.com/disler/claude-code-hooks-mastery"
+   "url": "https://github.com/disler/claude-code-hooks-mastery",
+   "pushed": "2026-03-04"
   },
   {
    "name": "awesome-claude-code",
    "repo": "hesreallyhim/awesome-claude-code",
-   "stars": 58219,
+   "stars": 58628,
    "kind": "awesome-list",
    "description": "Curated list of Claude Code skills, hooks, slash commands, tooling and workflows.",
-   "url": "https://github.com/hesreallyhim/awesome-claude-code"
+   "url": "https://github.com/hesreallyhim/awesome-claude-code",
+   "pushed": "2026-11-23"
   },
   {
    "name": "awesome-claude-skills",
    "repo": "ComposioHQ/awesome-claude-skills",
-   "stars": 79706,
+   "stars": 80098,
    "kind": "awesome-list",
    "description": "Curated list of Claude Skills and resources.",
-   "url": "https://github.com/ComposioHQ/awesome-claude-skills"
+   "url": "https://github.com/ComposioHQ/awesome-claude-skills",
+   "pushed": "2026-09-18"
   },
   {
    "name": "claude-code-tips",
    "repo": "ykdojo/claude-code-tips",
-   "stars": 10351,
+   "stars": 10367,
    "kind": "guide",
    "description": "45+ practical Claude Code tips incl. statusline script.",
-   "url": "https://github.com/ykdojo/claude-code-tips"
+   "url": "https://github.com/ykdojo/claude-code-tips",
+   "pushed": "2026-09-25"
   },
   {
    "name": "claude-code-best-practice",
    "repo": "shanraisshan/claude-code-best-practice",
-   "stars": 69156,
+   "stars": 69333,
    "kind": "guide",
    "description": "Community best-practice compendium for Claude Code configuration.",
-   "url": "https://github.com/shanraisshan/claude-code-best-practice"
+   "url": "https://github.com/shanraisshan/claude-code-best-practice",
+   "pushed": "2026-11-23"
   }
  ],
  "practices": [
